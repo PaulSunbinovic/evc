@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>idangerous.swiper实现可触摸控制的tab选项卡代码</title>
+
+<style type="text/css">
+body{margin:0;font-family:"microsoft yahei";font-size:13px;line-height:1.5;background:#eee;}
+
+.wrap{margin:100px auto 0 auto;}
+.tabs{height:40px;}
+.tabs a{display:block;float:left;width:33.33%;color:#333;text-align:center;background:#eee;line-height:40px;font-size:16px;text-decoration:none;}
+.tabs a.active{color:#fff;background:#333;border-radius:5px 5px 0px 0px;}
+.swiper-container{background:#333;height:325px;border-radius:0 0 5px 5px;width:100%;border-top:0;}
+.swiper-slide{height:325px;width:100%;background:none;color:#fff;}
+.content-slide{padding:40px;}
+.content-slide p{text-indent:2em;line-height:1.9;}
+</style>
+
+<link rel="stylesheet" href="css/idangerous.swiper.css">
+
+</head>
+<body>
+
+<div class="wrap">
+    <div class="tabs">
+        <a href="#" hidefocus="true" class="active">手机端</a>
+        <a href="#" hidefocus="true">选项卡</a>
+        <a href="#" hidefocus="true">切换效果</a>
+    </div>    
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="content-slide">
+            <h2>17素材 - www.17sucai.com</h2>
+            <p>17素材专注于提供免费素材下载,其内容涵盖设计素材,PSD素材,矢量素材,图片素材,图标素材,设计字体等免费素材.下载免费素材尽在17素材免费素材网</p>
+            <p>17素材专注于提供免费素材下载,其内容涵盖设计素材,PSD素材,矢量素材,图片素材,图标素材,设计字体等免费素材.下载免费素材尽在17素材免费素材网</p>
+            <p>17素材专注于提供免费素材下载,其内容涵盖设计素材,PSD素材,矢量素材,图片素材,图标素材,设计字体等免费素材.下载免费素材尽在17素材免费素材网</p>
+          </div>
+          </div>
+        <div class="swiper-slide">
+            <div class="content-slide">
+            <h2>17素材 - www.17sucai.com</h2>
+            <p>17素材专注于提供免费素材下载,其内容涵盖设计素材,PSD素材,矢量素材,图片素材,图标素材,设计字体等免费素材.下载免费素材尽在17素材免费素材网</p>
+            <p>17素材专注于提供免费素材下载,其内容涵盖设计素材,PSD素材,矢量素材,图片素材,图标素材,设计字体等免费素材.下载免费素材尽在17素材免费素材网</p>
+            <p>17素材专注于提供免费素材下载,其内容涵盖设计素材,PSD素材,矢量素材,图片素材,图标素材,设计字体等免费素材.下载免费素材尽在17素材免费素材网</p>
+          </div>
+          </div>
+        <div class="swiper-slide">
+            <div class="content-slide">
+            <h2>17素材 - www.17sucai.com</h2>
+            <p>17素材专注于提供免费素材下载,其内容涵盖设计素材,PSD素材,矢量素材,图片素材,图标素材,设计字体等免费素材.下载免费素材尽在17素材免费素材网</p>
+            <p>17素材专注于提供免费素材下载,其内容涵盖设计素材,PSD素材,矢量素材,图片素材,图标素材,设计字体等免费素材.下载免费素材尽在17素材免费素材网</p>
+            <p>17素材专注于提供免费素材下载,其内容涵盖设计素材,PSD素材,矢量素材,图片素材,图标素材,设计字体等免费素材.下载免费素材尽在17素材免费素材网</p>
+          </div>
+          </div>
+      </div>
+   </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script> 
+<script type="text/javascript" src="js/idangerous.swiper.min.js"></script> 
+<script type="text/javascript">
+var tabsSwiper = new Swiper('.swiper-container',{
+	speed:500,
+	onSlideChangeStart: function(){
+		$(".tabs .active").removeClass('active');
+		$(".tabs a").eq(tabsSwiper.activeIndex).addClass('active');
+	}
+});
+
+$(".tabs a").on('touchstart mousedown',function(e){
+	e.preventDefault()
+	$(".tabs .active").removeClass('active');
+	$(this).addClass('active');
+	tabsSwiper.swipeTo($(this).index());
+});
+
+$(".tabs a").click(function(e){
+	e.preventDefault();
+});
+</script>
+</body>
+</html>

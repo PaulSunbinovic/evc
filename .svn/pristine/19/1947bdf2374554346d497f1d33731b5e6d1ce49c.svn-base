@@ -1,0 +1,70 @@
+[ 2015-10-26T20:35:18+08:00 ] 192.168.1.109 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003524s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004038s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003734s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.044834s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045266s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002998s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002320s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001801s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003465s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011604s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002523s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002833s ]
+
+[ 2015-10-26T20:35:18+08:00 ] 192.168.1.109 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002810s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003312s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002855s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-10-26T20:35:18+08:00 ] 192.168.1.109 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002537s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002969s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001515s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001759s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-10-26T20:35:22+08:00 ] 192.168.1.109 /evc/index.php/Usr/doonoffdvc?dvcid=1&tm=&oprt=on&everyday=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002639s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003083s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002657s ]
+
+[ 2015-10-26T23:17:44+08:00 ] 192.168.1.109 /evc/index.php/Usr/doonoffdvc?dvcid=1&tm=&oprt=on&everyday=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002935s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003296s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002496s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002730s ]
+
+[ 2015-10-26T23:18:00+08:00 ] 192.168.1.109 /evc/index.php/Usr/doonoffdvc?dvcid=1&tm=&oprt=on&everyday=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002881s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003348s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003397s ]
+
+[ 2015-10-26T23:34:17+08:00 ] 192.168.1.109 /evc/index.php/Usr/doonoffdvc?dvcid=1&tm=&oprt=on&everyday=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002762s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003238s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002200s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002439s ]
+

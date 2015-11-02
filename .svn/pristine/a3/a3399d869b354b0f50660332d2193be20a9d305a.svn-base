@@ -1,0 +1,95 @@
+<?php
+// 本类由系统自动生成，仅供测试用途
+
+//include_once("./CCPRestSmsSDK.php");
+//$ccp=D('CCP');
+
+
+class DvcAction extends Action {
+	public function scan(){
+		$sn=$_GET['sn'];
+		//根据sn获取dvcid
+		$dvcid=1;
+		if(C('psnvs')==1){
+			session('openid','12345');
+			
+			$this->bind($dvcid);
+		}else{
+
+			header("location: https://open.weixin.qq.com/connect/oauth2/authorize?appid=".C('appid')."&redirect_uri=http://www.evchar.cn/evc/oauth2_openid.php&response_type=code&scope=snsapi_base&state=bindWXWC".$dvcid."&connect_redirect=1#wechat_redirect");
+		}
+		
+    }
+
+    public function bind($dvcid){
+    	if(!$dvcid){
+    		$dvcid=$_GET['dvcid'];
+    	}
+    	$this->assign('dvcid',$dvcid);
+    	$this->assign('ttl','绑定设备');
+    	$this->display('bind');
+    }
+
+    public function dogetsmsvrf(){
+    	$rdmnb=rand(1000,9999);
+    	$vrf=M('vrf');
+    	$vrfo=$vrf->where('openid='.session('openid'))->find();
+    	if($vrfo){//有则改之
+    		$dt=array(
+    				'vrfnb'=>$rdmnb,
+    			);
+    		$vrf->where('vrfid='.$vrfo['vrfid'])->setField($dt);
+    	}else{//无则加冕
+    		$dt=array(
+    				'openid'=>session('openid'),
+    				'vrfnb'=>$rdmnb,
+    			);
+    		$vrf->data($dt)->add();
+    	}
+    	//发送短信有点问题，先跳过
+
+		
+
+
+
+    	$this->ajaxReturn($dt,'json');//随便返回，其实没东西要返回的，意思一下而已
+    }
+	    
+    public function dobind(){
+    	$vrfnb=$_GET['vrfnb'];
+    	$dvcid=$_GET['dvcid'];
+    	$vrf=M('vrf');
+    	$vrfo=$vrf->where('openid='.session('openid'))->find();
+    	if($vrfo['vrfnb']==$vrfnb){
+    		//成功，绑定成功
+    		$url=C('javaback').'/device/bindOwner.action?deviceId='.$dvcid.'&wechatId='.session('openid');
+    		if(C('psnvs')==1){
+    			$json='{"data": {"id":4,"owner":3,"sn":"004","model":1,"city":null,"longitude":"121.570077","latitude":"31.219745","address":" 上海浦东嘉里大酒店 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},"code":"A00000","msg":" 绑定桩主成功"}';
+    		}else{
+    			$json=https_request($url);
+    		}
+    		$arr=json_decode($json,true);
+    		$data['vrf']=1;
+    		$data['arr']=$arr;
+    		$data['url']=__APP__;
+    		$this->ajaxReturn($data,'json');
+    	}else{
+    		//失败
+    		$data['vrf']=0;
+    		$this->ajaxReturn($data,'json');
+    	}
+
+    }
+
+
+
+    public function sendsms(){
+    	
+
+		
+    }
+
+    
+
+}
+

@@ -1,0 +1,1548 @@
+[ 2015-10-14T16:22:43+08:00 ] 0.0.0.0 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.012976s ]
+INFO: [ route_check ] --END-- [ RunTime:0.013434s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003892s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004241s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.096679s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.097294s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.014731s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.005150s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.007149s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.007590s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.036250s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.005987s ]
+INFO: [ view_end ] --END-- [ RunTime:0.006456s ]
+
+[ 2015-10-14T16:24:09+08:00 ] 0.0.0.0 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003598s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004025s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002619s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.029090s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029575s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.003820s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002901s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002416s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002627s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012796s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002172s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002456s ]
+
+[ 2015-10-14T16:25:06+08:00 ] 0.0.0.0 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003459s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003821s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002921s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.027409s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027975s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002257s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.004119s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001369s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002420s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011512s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002960s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003486s ]
+
+[ 2015-10-14T16:25:59+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002334s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002626s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002008s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002440s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.024624s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025113s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001835s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001504s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001438s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001620s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007433s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001778s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002048s ]
+
+[ 2015-10-14T16:26:17+08:00 ] 192.168.1.105 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003008s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003349s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002679s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.026699s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027059s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001792s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002778s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001850s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002069s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009590s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002161s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002447s ]
+
+[ 2015-10-14T16:27:18+08:00 ] 192.168.1.105 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003335s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003815s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001890s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002184s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.022996s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023483s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001604s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001724s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002378s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002372s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009156s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002470s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002931s ]
+
+[ 2015-10-14T18:23:04+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001463s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001649s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001737s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017892s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018132s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001675s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001255s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001125s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001581s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006173s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001882s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002141s ]
+
+[ 2015-10-14T19:30:22+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.005573s ]
+INFO: [ route_check ] --END-- [ RunTime:0.005900s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003080s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.030073s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030589s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002715s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002579s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002342s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003967s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012825s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003311s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003758s ]
+
+[ 2015-10-14T19:30:29+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003919s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004342s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002204s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002586s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.035125s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035581s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002605s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.003254s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002120s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002804s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012017s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003102s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003561s ]
+
+[ 2015-10-14T20:14:06+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004220s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004633s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002365s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.032745s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033256s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002386s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.003399s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002694s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003028s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012931s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003291s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003771s ]
+
+[ 2015-10-14T20:48:24+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003008s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003364s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002240s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002562s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.041659s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042277s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.003011s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002964s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002687s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003694s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013942s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.007344s ]
+INFO: [ view_end ] --END-- [ RunTime:0.007891s ]
+
+[ 2015-10-14T20:57:13+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004229s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004670s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003060s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.044177s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044673s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.003284s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.005071s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002600s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003391s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.016138s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.004335s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004811s ]
+
+[ 2015-10-14T20:59:30+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.007833s ]
+INFO: [ route_check ] --END-- [ RunTime:0.008546s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004016s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.031469s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031968s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002958s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002620s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002195s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003235s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012240s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003207s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003649s ]
+
+[ 2015-10-14T21:00:32+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003749s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004272s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004062s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.038275s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038921s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.003385s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002085s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002373s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003674s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012807s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003271s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003629s ]
+
+[ 2015-10-14T21:04:16+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003239s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004215s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002882s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003183s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.040948s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041429s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.007311s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.005052s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.004056s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.004526s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.022283s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.004607s ]
+INFO: [ view_end ] --END-- [ RunTime:0.005092s ]
+
+[ 2015-10-14T21:04:42+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002683s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003006s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001998s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002256s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.032250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032692s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002092s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002482s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002162s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.006140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013766s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002417s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002767s ]
+
+[ 2015-10-14T21:05:23+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002844s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003153s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003795s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.026968s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027338s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002265s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002108s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001522s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002057s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008990s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003728s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004184s ]
+
+[ 2015-10-14T21:05:39+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.017425s ]
+INFO: [ route_check ] --END-- [ RunTime:0.018053s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.004440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004882s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.032363s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033007s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.004562s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002989s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002270s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003693s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.014969s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.006154s ]
+INFO: [ view_end ] --END-- [ RunTime:0.006647s ]
+
+[ 2015-10-14T21:08:58+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003168s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003617s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004161s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.034361s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034859s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.003114s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.003188s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002577s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.005251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015733s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003904s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004428s ]
+
+[ 2015-10-14T21:09:20+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004506s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004967s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003828s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.032068s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032627s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.003025s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002829s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001623s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002020s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010803s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002146s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002431s ]
+
+[ 2015-10-14T21:09:57+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002432s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002871s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002217s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002619s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.037586s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037992s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001844s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001772s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001793s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003770s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010228s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003453s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003935s ]
+
+[ 2015-10-14T21:11:47+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003789s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004142s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002784s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.027360s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027951s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002424s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002049s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001586s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002283s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009411s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001914s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002188s ]
+
+[ 2015-10-14T21:12:21+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003863s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004373s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002157s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002538s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.030528s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030986s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002307s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002999s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002956s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003047s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012731s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002237s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002496s ]
+
+[ 2015-10-14T21:12:49+08:00 ] 192.168.1.100 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002505s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002804s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002628s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.026420s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026855s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002499s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001933s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001886s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002790s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010089s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002699s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003048s ]
+
+[ 2015-10-14T21:13:49+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003069s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003492s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001852s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002158s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.024264s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024761s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.003156s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002497s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001688s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002733s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011409s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002496s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002874s ]
+
+[ 2015-10-14T21:15:13+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002467s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002794s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001864s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.026367s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026946s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001982s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001812s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001299s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002050s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008351s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001989s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002363s ]
+
+[ 2015-10-14T21:19:57+08:00 ] 192.168.1.100 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003540s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003972s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002525s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002981s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.026330s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026844s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002209s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002129s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002057s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002619s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010204s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002332s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002708s ]
+
+[ 2015-10-14T21:22:04+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003428s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003875s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003791s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.032858s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033269s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.004057s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002230s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001575s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002975s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012104s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002837s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003230s ]
+
+[ 2015-10-14T21:30:38+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003437s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003794s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003870s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004319s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.036604s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037131s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.003095s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.003307s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002516s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003632s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013848s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003869s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004317s ]
+
+[ 2015-10-14T21:31:22+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001793s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002071s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001402s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001752s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.022233s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022704s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001888s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001823s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001408s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002383s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009023s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002775s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003281s ]
+
+[ 2015-10-14T21:32:02+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003171s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003778s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001776s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002023s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.031727s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032316s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001990s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001969s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001761s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009111s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002261s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003201s ]
+
+[ 2015-10-14T21:32:19+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002663s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002972s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003224s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.040601s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041066s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002904s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.003255s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002479s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003343s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013375s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003366s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003811s ]
+
+[ 2015-10-14T21:32:48+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.005585s ]
+INFO: [ route_check ] --END-- [ RunTime:0.005915s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002702s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.033357s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033782s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002714s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002035s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001936s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002430s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010134s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003554s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004086s ]
+
+[ 2015-10-14T21:33:15+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.005011s ]
+INFO: [ route_check ] --END-- [ RunTime:0.005517s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.004176s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004773s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.042494s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043064s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001863s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002509s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.003825s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002943s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012266s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002891s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003315s ]
+
+[ 2015-10-14T21:34:06+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002918s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003241s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002649s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.025843s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026179s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.003542s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002121s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002456s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003230s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012522s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003764s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004233s ]
+
+[ 2015-10-14T21:34:11+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002356s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002674s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001872s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002130s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.027020s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027973s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002554s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.003823s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001542s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001974s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011930s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003721s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004059s ]
+
+[ 2015-10-14T21:35:27+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003810s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004327s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001880s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002203s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.037894s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038576s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002142s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002186s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.003353s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012265s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002297s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002806s ]
+
+[ 2015-10-14T21:36:04+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002148s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002562s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001685s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.020896s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021330s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001285s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001435s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000998s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001576s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006077s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001725s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001993s ]
+
+[ 2015-10-14T21:36:21+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004249s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004623s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002830s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003272s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.029637s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030156s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001991s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002125s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001597s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002692s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009566s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002908s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003322s ]
+
+[ 2015-10-14T21:42:05+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.006158s ]
+INFO: [ route_check ] --END-- [ RunTime:0.007118s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002729s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003028s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.030031s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030565s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.004258s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002025s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001804s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002492s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011587s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003422s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003844s ]
+
+[ 2015-10-14T21:42:25+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001865s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002237s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001642s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.025567s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026014s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001623s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001180s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001029s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001890s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006620s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002584s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003045s ]
+
+[ 2015-10-14T21:48:20+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003191s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003566s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001970s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.031097s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032028s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002762s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001996s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001470s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002019s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009556s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002787s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003280s ]
+
+[ 2015-10-14T21:49:33+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004353s ]
+INFO: [ route_check ] --END-- [ RunTime:0.005069s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003720s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004185s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.048780s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049797s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.003350s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002657s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002448s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002991s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012842s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.004026s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004521s ]
+
+[ 2015-10-14T21:50:45+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.007377s ]
+INFO: [ route_check ] --END-- [ RunTime:0.008024s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004288s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.041434s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042398s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002814s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002906s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002363s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.005246s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.014343s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003901s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004306s ]
+
+[ 2015-10-14T21:50:51+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004225s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004762s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004203s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.040575s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041203s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002663s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.003847s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002426s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.006153s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.016650s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.005685s ]
+INFO: [ view_end ] --END-- [ RunTime:0.006564s ]
+
+[ 2015-10-14T21:51:09+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001958s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002287s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002180s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002632s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.027560s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028097s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001632s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001913s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001059s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003295s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009134s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002527s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002989s ]
+
+[ 2015-10-14T21:53:45+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002944s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003458s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001885s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002270s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.029812s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030175s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002029s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001613s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001463s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002397s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008537s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002333s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002669s ]
+
+[ 2015-10-14T21:55:02+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003392s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003830s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003246s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004117s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.028515s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028952s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001593s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.007088s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002328s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.007776s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.020226s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003833s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004791s ]
+
+[ 2015-10-14T21:56:15+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003018s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003349s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003105s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003854s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.032464s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032943s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002317s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001467s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001035s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.004925s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010683s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003518s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004100s ]
+
+[ 2015-10-14T21:56:43+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002576s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002905s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002126s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003651s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.029865s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030373s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.003214s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.003244s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002396s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.006329s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.017251s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002974s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003477s ]
+
+[ 2015-10-14T21:57:06+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001807s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002191s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001918s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.021757s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022282s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001358s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001922s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001389s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001595s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007385s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001555s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001900s ]
+
+[ 2015-10-14T21:57:38+08:00 ] 192.168.1.100 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002867s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003285s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001880s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.024317s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025265s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001349s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001709s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001056s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002370s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007570s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002432s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002893s ]
+
+[ 2015-10-14T21:58:21+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002790s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003188s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003440s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.032083s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033060s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002843s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002920s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001503s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.014270s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.023092s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002851s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003429s ]
+
+[ 2015-10-14T21:58:56+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003483s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004011s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004106s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.039132s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039848s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002723s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002193s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001744s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.004546s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012630s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.004038s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004636s ]
+
+[ 2015-10-14T21:59:47+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004768s ]
+INFO: [ route_check ] --END-- [ RunTime:0.005425s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.004782s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005581s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.036961s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038005s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001928s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002246s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002532s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002803s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010964s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002529s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002992s ]
+
+[ 2015-10-14T22:00:22+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003310s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004551s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002791s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.029551s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030156s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001882s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001690s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001229s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002292s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008404s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002375s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002843s ]
+
+[ 2015-10-14T22:00:54+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003123s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003560s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001817s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002114s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.024310s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025133s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001914s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001533s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001106s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003403s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008937s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002681s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003144s ]
+
+[ 2015-10-14T22:01:01+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003988s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004604s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003178s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003757s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.045097s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045643s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002806s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002804s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002347s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002941s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012906s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003506s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003946s ]
+
+[ 2015-10-14T22:02:21+08:00 ] 0.0.0.0 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003885s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 36 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.066786s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067236s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001395s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001384s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001242s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002026s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007052s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001914s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002370s ]
+
+[ 2015-10-14T22:02:23+08:00 ] 0.0.0.0 /evc/index.php/Cmn/dspdvc?ctlgtd=121.576464&ctlttd=31.224494
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003095s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003526s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004315s ]
+
+[ 2015-10-14T22:02:25+08:00 ] 0.0.0.0 /evc/index.php/Cmn/vrfusrstat?x=usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003788s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004609s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003511s ]
+
+[ 2015-10-14T22:02:25+08:00 ] 0.0.0.0 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003319s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003872s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002215s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002655s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.066182s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066831s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001958s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002814s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001448s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002818s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010353s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.006675s ]
+INFO: [ view_end ] --END-- [ RunTime:0.007164s ]
+
+[ 2015-10-14T22:02:25+08:00 ] 0.0.0.0 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004134s ]
+INFO: [ route_check ] --END-- [ RunTime:0.005188s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002846s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-10-14T22:02:25+08:00 ] 0.0.0.0 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003443s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004289s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001733s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002038s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-10-14T22:02:28+08:00 ] 0.0.0.0 /evc/index.php/Usr/zhxx
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003138s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003741s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002939s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003463s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.075772s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.076583s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001661s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002017s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001297s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002011s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008599s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002599s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003560s ]
+
+[ 2015-10-14T22:04:07+08:00 ] 0.0.0.0 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003053s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003455s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001672s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001965s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.028047s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028532s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002533s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002362s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001722s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009998s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002461s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002854s ]
+
+[ 2015-10-14T22:06:00+08:00 ] 0.0.0.0 /evc/index.php/Usr/fnddvcbydvcid?dvcid=8
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004922s ]
+INFO: [ route_check ] --END-- [ RunTime:0.005279s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002319s ]
+
+[ 2015-10-14T22:06:03+08:00 ] 0.0.0.0 /evc/index.php/Usr/fnddvcbydvcid?dvcid=6
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002404s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002895s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001557s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001861s ]
+
+[ 2015-10-14T22:06:05+08:00 ] 0.0.0.0 /evc/index.php/Usr/fnddvcbydvcid?dvcid=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002885s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003344s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001961s ]
+
+[ 2015-10-14T22:06:10+08:00 ] 0.0.0.0 /evc/index.php/Usr/fnddvcbydvcid?dvcid=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003346s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003705s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.004061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004522s ]
+
+[ 2015-10-14T22:06:12+08:00 ] 0.0.0.0 /evc/index.php/Usr/fnddvcbydvcid?dvcid=8
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002543s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002916s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001621s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001880s ]
+
+[ 2015-10-14T22:06:14+08:00 ] 0.0.0.0 /evc/index.php/Usr/fnddvcbydvcid?dvcid=6
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002554s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002984s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001763s ]
+
+[ 2015-10-14T22:06:16+08:00 ] 0.0.0.0 /evc/index.php/Usr/fnddvcbydvcid?dvcid=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002321s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002661s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001769s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002085s ]
+
+[ 2015-10-14T22:07:34+08:00 ] 0.0.0.0 /evc/index.php/Usr/zhxx
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003201s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003802s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002127s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002605s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.033939s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034587s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002337s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.004352s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001809s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002998s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012886s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003080s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003590s ]
+
+[ 2015-10-14T22:08:46+08:00 ] 0.0.0.0 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004115s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004670s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002949s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.026243s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026871s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002386s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002233s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000997s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001929s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008626s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002276s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002662s ]
+
+[ 2015-10-14T22:09:05+08:00 ] 0.0.0.0 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004078s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004619s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003269s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.041521s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042213s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.006706s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002752s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001522s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002947s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.016192s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003222s ]
+INFO: [ view_end ] --END-- [ RunTime:0.006099s ]
+
+[ 2015-10-14T23:15:39+08:00 ] 192.168.1.100 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003436s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004140s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002225s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002493s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.027924s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028259s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002496s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.003689s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001904s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002213s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012387s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002209s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002461s ]
+
+[ 2015-10-14T23:16:21+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004305s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004798s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002865s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.031033s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031489s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002179s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002231s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001477s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002047s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009286s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002627s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003012s ]
+
+[ 2015-10-14T23:16:27+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003218s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003838s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002262s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002699s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.029725s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030168s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001883s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001815s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001252s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002013s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008033s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002377s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003251s ]
+
+[ 2015-10-14T23:16:55+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003080s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003692s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.004765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005400s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.026400s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027006s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002292s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002006s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001280s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001571s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008277s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001843s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002225s ]
+
+[ 2015-10-14T23:17:14+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003466s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003927s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002990s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.025032s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025538s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001367s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002335s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002100s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002253s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009324s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.005519s ]
+INFO: [ view_end ] --END-- [ RunTime:0.005998s ]
+
+[ 2015-10-14T23:17:49+08:00 ] 192.168.1.100 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002575s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002935s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001947s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002229s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.024607s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025010s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001968s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001671s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001253s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001999s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008472s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002210s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002548s ]
+
+[ 2015-10-14T23:25:00+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004343s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004760s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003185s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003580s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.031132s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031690s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002325s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001924s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002683s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.005628s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.014253s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002633s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003092s ]
+
+[ 2015-10-14T23:25:16+08:00 ] 192.168.1.109 /evc/index.php/Usr/shouzhi
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003772s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004413s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002822s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.036498s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037063s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002054s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.003875s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002356s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002512s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012650s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002646s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003184s ]
+

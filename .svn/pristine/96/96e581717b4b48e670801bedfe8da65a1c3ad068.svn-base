@@ -1,0 +1,125 @@
+<?php
+// 本类由系统自动生成，仅供测试用途
+class CmnAction extends Action {
+	public function hd_idx(){
+		$this->display('hd_idx');
+    }
+    public function hd_std(){
+		$this->display('hd_std');
+    }
+    public function ft_std(){
+    	$this->display('ft_std');
+    }
+    public function hd_apntpnt(){
+		$this->display('hd_apnt');
+    }
+
+
+	
+	//呈现桩display device
+	public function dspdvc(){
+		import('@.SS.SSAction');
+		$ss = new SSAction();
+		$usro=$ss->setss();
+		//默认车还没搞,现在都是只管一辆车的情况下
+		//如果有人就把他到车型对应到桩找出来，否则就全找出来
+		if($usro){
+			$qry='?model='.$usro['carList'][0]['carModelId'].'&longitude='.$_GET['ctlgtd'].'&latitude='.$_GET['ctlttd'];
+		}else{
+			$qry='&longitude='.$_GET['ctlgtd'].'&latitude='.$_GET['ctlttd'];
+		}
+		//java后台
+		$url=C('javaback').'/device/getAll.action'.$qry;
+		if(C('psnvs')==1){
+			$json='{"data":[{"id":1,"owner":2,"sn":"001","model":1,"city":null,"longitude":"121.572673","latitude":"31.212916","address":"我的位置","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},{"id":2,"owner":2,"sn":"002","model":1,"city":null,"longitude":"121.575215","latitude":"31.203762","address":"龙沟新苑桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},{"id":3,"owner":2,"sn":"003","model":1,"city":null,"longitude":"121.557141","latitude":"31.216039","address":"世纪公园桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},{"id":4,"owner":2,"sn":"004","model":1,"city":null,"longitude":"121.570077","latitude":"31.219745","address":"上海浦东嘉里大酒店桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},{"id":5,"owner":2,"sn":"005","model":1,"city":null,"longitude":"121.566699","latitude":"31.214171","address":"上海人家99短租公寓桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},{"id":6,"owner":2,"sn":"006","model":1,"city":null,"longitude":"121.581845","latitude":"31.219382","address":"汤臣湖庭花园桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},{"id":7,"owner":2,"sn":"007","model":1,"city":null,"longitude":"121.564004","latitude":"31.200898","address":"花木新村桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},{"id":8,"owner":2,"sn":"008","model":1,"city":null,"longitude":"121.506252","latitude":"31.245374","address":"上海东方明珠电视塔桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},{"id":9,"owner":1,"sn":"FFFF","model":1,"city":null,"longitude":"120.208989","latitude":"30.213697","address":"钱龙大厦","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""}],"code":"A00000","msg":"获取设备列表成功"}';
+		}else{
+			$json=https_request($url);
+		}
+		//$json=https_request($url);
+		$arr_jv=json_decode($json,true);
+		//百度LBS
+		// $url='http://api.map.baidu.com/geosearch/v3/nearby?location='.$_GET['ctlgtd'].','.$_GET['ctlttd'].'&geotable_id='.C('tbid').'&radius=20000&ak='.C('svak').'&filter=deviceId:[1,2,3]';
+		// $json=https_request($url);
+		// $arr_bd=json_decode($json,true);
+		// $arr_bd=$arr_bd['contents'];
+		// //然后根据java后台到数据从百度LBS中
+		
+		$dvcls=$arr_jv['data'];
+		$data['dvcls']=$dvcls;
+		$this->ajaxReturn($data,'json');
+
+	}
+
+	
+
+	public function vrfusrstat(){//暂时有个漏洞，进入index的时候验证过的，所以原则上session中openid有无就可以说明他是否已经注册过了
+		$x=$_GET['x'];
+		//fortest start
+		// $openid='ojxMBuJe07gSZDUwp0ZHGHEMHOR8';
+		// session('openid',$openid);
+		//fortest over
+		$openid=session('openid');
+		if($openid){
+			if($x=='usrct'){
+				$mtd='url';
+				$url=__APP__.'/Usr/'.$x;	
+			}else if($x=='apnt'){
+				
+				$mtd='trg';
+				
+			}
+			
+		}else{
+			$mtd='url';
+			$url='https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx682ad2cc417fe8b9&redirect_uri='.C('HOST').'/oauth2_openid.php&response_type=code&scope=snsapi_base&state='.$x.'#wechat_redirect';
+		
+		}
+		
+		$data['mtd']=$mtd;
+		$data['url']=$url;
+    	
+		$this->ajaxReturn($data,'json');
+	}
+
+	//为了扫码
+	public function gtdvc(){
+		$dvcid=$_GET['dvcid'];
+		//获取opid crid dvcid
+		//获取openid因为可能是从外面进来的人
+		
+		//不管session对于openid有的没的
+		//都重新授权一遍
+		$url='https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx682ad2cc417fe8b9&redirect_uri='.C('HOST').'/oauth2_openid.php&response_type=code&scope=snsapi_base&state=qr&aaa=111#wechat_redirect';
+	}
+	public function qr(){
+		$openid=session('openid');
+		
+		import('@.SS.SSAction');
+		$ss = new SSAction();
+		$usro=$ss->setss();
+		$crls=$usro['carList'];
+		//默认
+		$cro=$crls[0];
+		foreach ($crls as $crv) {
+			if($crv['isDefault']==true){
+				//重写
+				$cro=$crv;
+				break;
+			}
+		}
+		$crid=$cro['id'];
+
+		$dvcid=$_GET['dvcid'];
+
+		$url=C('javaback').'/order/deviceMatchUser.action?wechatId='.$openid.'&deviceId='.$dvcid.'&carId='.$crid;
+		$json=https_request($url);
+		$arr=json_decode($json,true);
+
+		$this->assign('msg',$arr['msg']);
+		$this->display('Index/mtchrslt');
+	}
+
+
+
+
+}

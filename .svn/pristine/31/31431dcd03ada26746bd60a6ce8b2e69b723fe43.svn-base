@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit">
+<!-- 避免IE使用兼容模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>电车惠</title>
+<script src="__PUBLIC__/pblc/btstp3/js/jquery.js"></script>
+<script src="__PUBLIC__/pblc/btstp3/js/jquery-migrate-1.1.0.min.js"></script>
+
+<!-- 移动设备 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<!-- bootstrap -->
+<link href="__PUBLIC__/pblc/btstp3/css/bootstrap.css" rel="stylesheet">
+<link href="data:text/css;charset=utf-8," data-href="__PUBLIC__/pblc/btstp3/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="__PUBLIC__/pblc/btstp3/css/patch.css" rel="stylesheet">
+<script src="__PUBLIC__/pblc/btstp3/js/ie-emulation-modes-warning.js"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="__PUBLIC__/ICON/apple-touch-icon.png">
+<link rel="icon" href="ICON/favicon.ico">
+
+
+<link href="__PUBLIC__/CSS/index/base.css" rel="stylesheet">
+
+<script type="text/javascript" src='__PUBLIC__/JS/index/usrct.js'></script>
+<link href="__PUBLIC__/CSS/index/usrct.css" rel="stylesheet">
+<script>var fnddvcbydvcid='__URL__/fnddvcbydvcid';</script>
+</head>
+<body>
+
+	
+	<!--
+	<iframe src="head.html"  frameborder="0" style="width:100%;height:100%;" scrolling="no"></iframe>
+	-->
+	
+
+	<include file='Cmn:hd_std' />
+
+	<!--主体开始-->
+	<div class='col-md-12 col-xs-12 bd'>
+		<div class='col-md-12 col-xs-12' style='padding:10px;margin-bottom:0px;background-color: #fff'>
+			
+		  	<div class='col-md-12 col-xs-12'>
+				<div><h3 class='pull-left' >{$usrdto['user']['nickName']}</h3><img src="{$usrdto['user']['headImgUrl']}" style='width:25px;height:25px;margin-left: 20px;margin-top:20px' class='img-circle pull-left'></div>
+				
+				<div class='clearfix'></div>
+				<table class='table table-responsive'>
+					<tr><td>等级：<td></td><td>环保大师<i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i></td></tr>
+					<tr><td>车型：<td></td><td>
+						<volist name='crls' id='crv'>
+							{$crv['brdmdl']['brand']}&nbsp;&nbsp;{$crv['brdmdl']['model']}<br>
+						</volist>
+					</td></tr>
+					<tr><td>当前状态：<td></td><td>充电中</td></tr>
+				</table>
+				<div class='clearfix'></div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class='col-md-12 col-xs-12' style='margin-bottom: 20px'>
+			<a class='btn btn-success btn-lg btn-block' href='__URL__/zhxx'>账户信息</a>
+		</div>
+		
+		<div>
+		<div class='col-md-12 col-xs-12'>
+		  <div class='col-md-12 col-xs-12' style='text-align: center;padding-bottom: 5px;border-bottom: 1px solid #ccc;font-size: 18px'>我的电桩</div>
+		  
+		    
+		      <div style='padding-top:50px'>
+		     
+				<link href="__PUBLIC__/pblc/btstp3/switch/bootstrap-switch.css" rel="stylesheet">
+		        <table class='table table-responsive table-striped'>
+		        	<thead>
+		        		<tr><th>桩名</th><th>当前状态</th><th>定时情况</th></tr>
+		        	</thead>
+		        	<tbody>
+
+			        	<volist name='dvcls' id='dvcv'>
+			        		<tr><td>{$dvcv['address']}</td>
+			        		<td>
+			        		<div>
+			        			
+			        			<?php if($dvcv['status']=='on'){ ?><!--?-->
+      							<input class="form-control" type="checkbox" checked id="dvc_{$dvcv['dvcid']}" onchange="onoff({$dvcv['id']})">
+      							<?php }else{ ?>
+      							<input class="form-control" type="checkbox" id="dvc_{$dvcv['id']}" onchange="onoff({$dvcv['id']})">
+      							<?php } ?>
+      							
+      								
+      							
+    						</div>
+    						</td>
+							<td>
+								<a class='btn btn-success' onclick="clc({$dvcv['id']})" id='btn_{$dvcv['id']}'>
+									<i class='glyphicon glyphicon-time'></i> <tm id='tm_{$dvcv['id']}'>未设定</tm>									
+								</a>
+							</td>
+    						</tr>
+			        	</volist>
+		        	</tbody>
+		        	
+		        </table>
+				<script src='__PUBLIC__/pblc/btstp3/switch/bootstrap-switch.js'></script>
+				<script>
+				$(function(argument) {
+			      $('[type="checkbox"]').bootstrapSwitch();
+			    })
+				</script>
+		      </div>
+		      
+		     
+		    </div>
+		  </div>
+		</div>
+	</div>
+	
+	
+	
+
+
+	<!--主体结束-->
+
+	<!--foot-->
+
+	<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id='modal' style='display: none'>
+	  需要定时吗<b class="caret"></b>	
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" id='cls'><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">定时设置</h4>
+      </div>
+      <div class="modal-body">
+      	<div class='col-md-12 col-xs-12' style='text-align: center;font-size: 18px'><a id='dvcnm'></a></div>
+		
+			
+		
+		<div class='col-md-12 col-xs-12' style='margin-top:20px'>
+			
+		     <div class="input-group">
+		     <span class="input-group-btn">
+		        <button class="btn btn-success" type="button"><i class='glyphicon glyphicon-time'></i> 打开</button>
+		      </span>
+		      <input class="form-control" placeholder="设置时间" id="optm" type="time" style='padding-top:0px'>
+		      <span class="input-group-btn">
+		        <button class="btn btn-warning" type="button" id="cncloptm"><i class='glyphicon glyphicon-remove'></i> 取消</button>
+		      </span>
+		    </div>
+		</div>
+		<!--
+       <div class='col-md-12 col-xs-12' style='margin-top:20px'>
+			 <div class="input-group">
+		     <span class="input-group-btn">
+		        <button class="btn btn-success" type="button"><i class='glyphicon glyphicon-time'></i> 关闭</button>
+		      </span>
+		      <input class="form-control" placeholder="设置时间" id="clstm" type="time" style='padding-top:0px'>
+		      <span class="input-group-btn">
+		        <button class="btn btn-warning" type="button" id="cnclclstm"><i class='glyphicon glyphicon-remove'></i> 取消</button>
+		      </span>
+		    </div>
+		</div>
+		-->
+		<div class='col-md-12 col-xs-12' style='margin-top:20px'>
+		<script>var dosttm='__URL__/dosttm';</script>
+		<buttom class='btn btn-primary btn-lg btn-block' id='sttm'>完成设定</buttom>
+		</div>
+		<div class="clearfix"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script>var doonoffdvc='__URL__/doonoffdvc';</script>
+
+
+<!-- bootstrap -->
+<script src="__PUBLIC__/pblc/btstp3/js/bootstrap.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="__PUBLIC__/pblc/btstp3/js/ie10-viewport-bug-workaround.js"></script>
+<script type="text/javascript">var vrfusrstat='__APP__/Cmn/vrfusrstat';</script>
+<script type="text/javascript" src='__PUBLIC__/JS/index/base.js'></script>
+
+</body>
+</html>

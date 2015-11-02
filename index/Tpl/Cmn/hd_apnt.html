@@ -1,0 +1,59 @@
+<!--导航开始-->
+<div class='col-md-12 col-xs-12 nvgt'>
+	<div class='col-md-3 col-xs-3'>
+		<a class='pull-left hd_a_left' href="javascript:history.go(-1);"><i class='glyphicon glyphicon-menu-left'></i></a>
+	</div>
+	<div class='col-md-6 col-xs-6' style="text-align: center">
+		<a style='color:#fff'>{$ttl}</a>
+	</div>
+	<div class='col-md-3 col-xs-3'>
+	</div>
+	
+</div>
+<!--导航结束-->
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id='modal' style='display: none'>
+	  附近 <b class="caret"></b>	
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document" style="width:200px;margin:80px auto;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">选择范围</h4>
+      </div>
+      <div class="modal-body">
+
+        <ul class="dropdown-menu" style="display:block;position: relative">
+			<li>
+				<a href='__URL__/index/lth/1000'>10公里</a>
+			</li>
+			<li class="divider"></li>
+			<li>
+				<a href='__URL__/index/lth/2500'>25公里</a>
+			</li>
+			<li class="divider"></li>
+			<li>
+				<a href='__URL__/index/lth/5000'>50公里</a>
+			</li>
+			<li class="divider"></li>
+			<li>
+				<a href='__URL__/index/lth/10000'>100公里</a>
+			</li>
+			<li class="divider"></li>
+			<li>
+				<a href='__URL__/index/lth/all'>不限</a>
+			</li>
+		</ul>
+		<div class="clearfix"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,544 @@
+[ 2015-09-08T15:39:41+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002457s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013811s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013989s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001051s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000884s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000693s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004077s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001193s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001333s ]
+
+[ 2015-09-08T15:40:09+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000901s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001038s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013281s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013466s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001020s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000894s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000636s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001073s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004094s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001188s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001395s ]
+
+[ 2015-09-08T15:40:44+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000742s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000877s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012572s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012805s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000656s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000548s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000459s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000739s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002764s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000857s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-09-08T15:41:10+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000820s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012069s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012218s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000608s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000516s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000361s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000614s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002403s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000678s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000791s ]
+
+[ 2015-09-08T17:29:44+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001714s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001921s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.021269s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021463s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001304s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001197s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001011s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001395s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005304s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001374s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001528s ]
+
+[ 2015-09-08T17:30:50+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001988s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015665s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016004s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001102s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001202s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000750s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001186s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004826s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001104s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001290s ]
+
+[ 2015-09-08T19:16:59+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000902s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001047s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014942s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015157s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001049s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000964s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000626s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001943s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005271s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001672s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001881s ]
+
+[ 2015-09-08T19:32:17+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001233s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015043s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015216s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000817s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000878s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000505s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000909s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003479s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003819s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004250s ]
+
+[ 2015-09-08T20:02:13+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001203s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001390s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014933s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015119s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000798s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000664s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000524s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003334s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001147s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001325s ]
+
+[ 2015-09-08T20:04:30+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002447s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.027908s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028298s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002088s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001560s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001183s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001521s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007118s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002022s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002450s ]
+
+[ 2015-09-08T20:08:39+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003206s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003500s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.030309s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030682s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002639s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002010s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001542s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003993s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011036s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002245s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002513s ]
+
+[ 2015-09-08T20:09:06+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001889s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.028533s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028900s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001971s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001950s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001290s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002723s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009005s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002254s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002669s ]
+
+[ 2015-09-08T20:14:27+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002863s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003310s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.029087s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029426s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001521s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001367s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001155s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001606s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006430s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002568s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002898s ]
+
+[ 2015-09-08T20:15:20+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001840s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002207s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.028936s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029309s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001825s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001665s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001207s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002181s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007926s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002913s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003334s ]
+
+[ 2015-09-08T20:16:38+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002127s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.028209s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028843s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.003831s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002131s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001709s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002088s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010885s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.004071s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004672s ]
+
+[ 2015-09-08T20:16:56+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001830s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.025816s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026281s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001665s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001109s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001420s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001892s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008032s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001801s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002108s ]
+
+[ 2015-09-08T20:17:28+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001898s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.025811s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026119s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001795s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001205s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001203s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002059s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007125s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002741s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003147s ]
+
+[ 2015-09-08T20:18:34+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001876s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.024860s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025150s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001320s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.003104s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001419s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001780s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008604s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001816s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002121s ]
+
+[ 2015-09-08T20:19:47+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001938s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002226s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.039302s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039746s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002150s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001809s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001475s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002921s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009453s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002976s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003482s ]
+
+[ 2015-09-08T20:20:20+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001871s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002245s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.024164s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024543s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001252s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001169s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001007s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001999s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006218s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002082s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002426s ]
+
+[ 2015-09-08T20:29:38+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001716s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001988s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.026570s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026910s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001402s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001601s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002222s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009216s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002386s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002715s ]
+
+[ 2015-09-08T20:35:21+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002667s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.026123s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026568s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002889s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001675s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002747s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002897s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011814s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003033s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003439s ]
+
+[ 2015-09-08T20:35:59+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001796s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.031252s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031716s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001511s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001585s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002276s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002348s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008518s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002041s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002297s ]
+
+[ 2015-09-08T20:47:24+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002377s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.034591s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035364s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002543s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002860s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001926s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002215s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010763s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002429s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002887s ]
+
+[ 2015-09-08T20:47:45+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002088s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002467s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.024064s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024522s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001801s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001826s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000900s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001562s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007048s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001567s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001818s ]
+
+[ 2015-09-08T20:48:17+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002452s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.025633s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025917s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.003411s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001855s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000878s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001342s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008270s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002723s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003132s ]
+
+[ 2015-09-08T20:58:51+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002815s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.026984s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027371s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002629s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001447s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001014s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001713s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007561s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002161s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002465s ]
+
+[ 2015-09-08T21:11:15+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002937s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.029707s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030077s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002012s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002383s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002203s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010799s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003707s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003951s ]
+
+[ 2015-09-08T21:13:53+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002207s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002569s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.026934s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027246s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001439s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001250s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000959s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001465s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005714s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002004s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002316s ]
+
+[ 2015-09-08T21:14:10+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002221s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002654s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.026410s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026696s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001237s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001070s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000774s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001275s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004961s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001403s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001619s ]
+
+[ 2015-09-08T22:00:25+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000984s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001135s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013019s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013226s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000741s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000640s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000471s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001181s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003355s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000878s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000995s ]
+
+[ 2015-09-08T22:01:12+08:00 ] 127.0.0.1 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001270s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013469s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013667s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000873s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000963s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000848s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000938s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004397s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000821s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000939s ]
+

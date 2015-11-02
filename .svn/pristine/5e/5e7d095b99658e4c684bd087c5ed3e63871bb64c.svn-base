@@ -1,0 +1,20 @@
+<?php
+class SSAction extends Action{
+	function setss(){
+		
+		$openid=session('openid');
+
+		$url=C('javaback').'/user/get.action?wechatId='.$openid;
+
+		$json_usr=https_request($url);
+		$arr_usr=json_decode($json_usr,TRUE);
+
+		$this->assign('usrdto',$arr_usr['data']);
+		$this->assign('carls',$arr_usr['data']['carList']);
+
+		return $arr_usr['data'];
+	}
+
+	
+}
+?>

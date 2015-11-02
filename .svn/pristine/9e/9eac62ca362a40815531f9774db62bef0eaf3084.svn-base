@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit">
+<!-- 避免IE使用兼容模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>电车惠</title>
+<script src="__PUBLIC__/pblc/btstp3/js/jquery.js"></script>
+<script src="__PUBLIC__/pblc/btstp3/js/jquery-migrate-1.1.0.min.js"></script>
+
+<!-- 移动设备 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<!-- bootstrap -->
+<link href="__PUBLIC__/pblc/btstp3/css/bootstrap.css" rel="stylesheet">
+<link href="data:text/css;charset=utf-8," data-href="__PUBLIC__/pblc/btstp3/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="__PUBLIC__/pblc/btstp3/css/patch.css" rel="stylesheet">
+<script src="__PUBLIC__/pblc/btstp3/js/ie-emulation-modes-warning.js"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="__PUBLIC__/ICON/apple-touch-icon.png">
+<link rel="icon" href="ICON/favicon.ico">
+
+
+<link href="__PUBLIC__/CSS/index/base.css" rel="stylesheet">
+
+<script type="text/javascript" src='__PUBLIC__/JS/index/hstr_pay.js'></script>
+<link href="__PUBLIC__/CSS/index/regist.css" rel="stylesheet">
+
+
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/pblc/ISCRL/scrollbar.css">
+<script type="application/javascript" src="__PUBLIC__/pblc/ISCRL/iscroll.js"></script>
+<script type="text/javascript" src='__PUBLIC__/pblc/ISCRL/int.js'></script>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/pblc/ISCRL/int.css">
+
+</head>
+<body>
+	
+	<include file='Cmn:hd_std' />
+	<script>
+	//返回键CSS失效了，修改下
+	// var dvls=$('.nvgt').children('div');
+	// $(dvls[0]).css('margin-top','10px');
+	</script>
+
+	<!--主体开始-->
+	<div class='col-md-12 col-xs-12 bd' style='padding-top:10px'>
+		<div class='col-md-6 col-xs-6'><a class='btn btn-default btn-block' href='__URL__/hstr_odr'>订单记录</a></div>
+		<div class='col-md-6 col-xs-6'><a class='btn btn-success btn-block' href='#'>充值记录</a></div>
+	</div>
+
+	<div class='col-md-12 col-xs-12 nopadding' style='position:fixed;top:90px;z-index: 1000;border-bottom: 1px solid #ccc;height:40px;text-align: center;line-height: 40px;'>
+		<div class='col-md-1 col-xs-1 nopadding'>&nbsp;&nbsp;</div>
+		<div class='col-md-5 col-xs-5 nopadding'>订单流水号</div>
+		<div class='col-md-3 col-xs-3 nopadding'>充值时间</div>
+		<div class='col-md-3 col-xs-3 nopadding'>金额（元）</div>
+		
+	</div>
+	<div id="wrapper">
+		<div id="scroller">
+			<div id="pullDown" style="text-align: center">
+				<span class="pullDownLabel">下拉刷新</span>
+			</div>
+			
+			<ul id="thelist" style='text-align: center;'>
+			<script type="text/javascript">var srlnb=0;//serial number</script>
+				<volist name='payls' id='payv'>
+					<script type="text/javascript">srlnb++;</script>
+					<li>
+						<div class='col-md-12 col-xs-12 nopadding'>
+							<div class='col-md-1 col-xs-1 nopadding'>{$i}</div>
+							<div class='col-md-5 col-xs-5 nopadding'>{$payv['transactionId']}</div>
+							<div class='col-md-3 col-xs-3 nopadding'>{$payv['createTime']}</div>
+							<div class='col-md-3 col-xs-3 nopadding'>{$payv['money']}</div>
+						</div>
+					</li>
+				</volist>
+			</ul>
+			
+			<div id="pullUp" style="text-align: center">
+				<span class="pullUpLabel" id='pullUp-msg'>{$upstr}</span>
+			</div>
+			
+		</div>
+	</div>
+		<script type="text/javascript">
+		var dodnfrsh='__URL__/dodnfrsh_pay';//do slidedown fresh
+		var doupld='__URL__/doupld_pay';//do slideup loading
+		//slideDown 和 slideUp函数写在hstr_odr.js里面//
+		var nwpg=0;//now page 当前页必然是第0页初始时候
+		</script>
+		
+	
+	
+
+
+
+
+
+<!-- bootstrap -->
+<script src="__PUBLIC__/pblc/btstp3/js/bootstrap.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="__PUBLIC__/pblc/btstp3/js/ie10-viewport-bug-workaround.js"></script>
+<script type="text/javascript">var vrfusrstat='__APP__/Cmn/vrfusrstat';</script>
+<script type="text/javascript" src='__PUBLIC__/JS/index/base.js'></script>
+
+</body>
+</html>
