@@ -137,7 +137,7 @@ class Log
 				$second=substr($time,12,2);
 				$time=$year.'-'.$month.'-'.$day.'+'.$hour.':'.$minute.':'.$second;
 				
-				$tm_str=$year.$month.$day.$hour.$minute.$second;
+				$tm_str=$year.$month.$day;
 				$flnm='log/log_'.$tm_str.'.txt';
 
 				$url=$urlprx.'/index.php/Index/mysqlforrcd/out_trade_no/'.$arr['out_trade_no'].'/transaction_id/'.$arr['transaction_id'].'/openid/'.$arr['openid'].'/time_end/'.$arr['time_end'].'/total_fee/'.$arr['total_fee'].'/return_code/'.$arr['return_code'];
