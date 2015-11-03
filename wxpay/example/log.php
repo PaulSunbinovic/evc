@@ -143,17 +143,18 @@ class Log
 				//若PHP库没有则添加到库并给JAVA后台送参数
 				if($json=='no'){
 
-					
-					$url=$urlprx.'/index.php/Index/odr/mtd/get/openid/'.$arr['openid'];
-					$odrid=$this->https_request($url);
+					//结束的时候清一下战场，反正也用不到了
+					// $url=$urlprx.'/index.php/Index/odr/mtd/get/openid/'.$arr['openid'];
+					// $odrid=$this->https_request($url);
 					$url=$urlprx.'/index.php/Index/odr/mtd/dlt/openid/'.$arr['openid'];
 					$this->https_request($url);
 					// 
 					// $odrid=$_SESSION['odrid'];
-					
+					//有两个作用，第一个是填满后续的字段，第二个作用是进行校验
 					$url1='http://120.26.80.165/pay/callback.action?wechatId='.$arr['openid'].'&money='.$arr['total_fee'].'&paymentOrderId='.$odrid.'&transactionId='.$arr['transaction_id'].'&outTradeNo='.$arr['out_trade_no'].'&bankType='.$arr['bank_type'].'&payTime='.$time;
 					
 					$json1=$this->https_request($url1);
+					$this->logger($json1,'./log/logforpaymentodr.txt');
 				}
 			}
 		}
@@ -184,6 +185,19 @@ class Log
 		curl_close($crl);
 		
 		return $output; 
+	}
+	function logger($log_content,$log_filename){
+		//日志大小 10000
+		$max_size=10000;//默认字节Byte
+		if(!$log_filename){
+			$log_filename='logforpaymentodr.txt';//默认根目录
+		}
+		
+		if(file_exists($log_filename)&&abs(filesize($log_filename))>$max_size){
+			unlink($log_filename);
+		}
+		//date_default_timezone_set('PRC');
+		file_put_contents($log_filename, date('Y-m-d H:i:s',time()).' '.$log_content."\r\n",FILE_APPEND);//双引号才换行
 	}
 
 }

@@ -264,5 +264,55 @@ class IndexAction extends Action {
 		$this->display('cmnt');
 	}
 
+	//--------------以下的订单暂时由我们index承担
+	function odr(){
+		$mtd=$_GET['mtd'];
+		$odr=M('odr');
+		if($mtd=='add'){
+			$openid=$_GET['openid'];
+			$odrid=$_GET['odrid'];
+			$dt=array(
+					'openid'=>$openid,
+					'odrid'=>$odrid,
+				);
+			$odr->data($dt)->add();
+		}else if($mtd=='dlt'){
+			$openid=$_GET['openid'];
+			$odr->where("openid='".$openid."'")->delete();
+		}
+
+	}
+	function mysqlforrcd(){
+
+		$rcd=M('rcd');
+
+		$out_trade_no=$_GET['out_trade_no'];
+		$transaction_id=$_GET['transaction_id'];
+		$openid=$_GET['openid'];
+		$time_end=$_GET['time_end'];
+		$total_fee=$_GET['total_fee'];
+		$return_code=$_GET['return_code'];
+		//由于交易id是唯一的，所以只要看交易id就OK了
+		$rcdo=$rcd->where("out_trade_no='".$out_trade_no."'")->find();
+		//没有的话我们就加上去，这样，下次再来看的时候就知道，已经加过了，不用理会了，保证我们只理会一次系统请求
+		//因为啊，我们的微信支付成功后，我发现要发好几次请求，这样是不对的，我们只要搞一次就行了，不然会给java后台充好几次值
+		//通过我们这样干预，就行了
+		if($rcdo){
+			$rslt='yes';
+		}else{
+			$dt=array(
+					'out_trade_no'=>$out_trade_no,
+					'transaction_id'=>$transaction_id,
+					'openid'=>$openid,
+					'time_end'=>$time_end,
+					'total_fee'=>$total_fee,
+					'return_code'=>$return_code,
+				);
+			$rcd->data($dt)->add();
+			$rslt='no';
+		}
+		return $rslt;
+	}
+
 
 }

@@ -53,6 +53,7 @@ function https_request($url,$data=null){
 	
 	return $output; 
 }
+
 $url="http://120.26.80.165/pay/create.action?wechatId=".$openId.'&money='.$money;
 $json=https_request($url);
 $arr=json_decode($json,true);
