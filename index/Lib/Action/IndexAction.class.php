@@ -279,6 +279,11 @@ class IndexAction extends Action {
 		}else if($mtd=='dlt'){
 			$openid=$_GET['openid'];
 			$odr->where("openid='".$openid."'")->delete();
+		}else if($mtd=='get'){
+			$openid=$_GET['openid'];
+			$odro=$odr->where("openid='".$openid."'")->find();
+			$odrid=$odro['odrid'];
+			echo $odrid;
 		}
 
 	}
@@ -311,7 +316,7 @@ class IndexAction extends Action {
 			$rcd->data($dt)->add();
 			$rslt='no';
 		}
-		return $rslt;
+		echo $rslt;
 	}
 
 

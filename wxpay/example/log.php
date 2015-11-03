@@ -136,16 +136,19 @@ class Log
 				$minute=substr($time,10,2);
 				$second=substr($time,12,2);
 				$time=$year.'-'.$month.'-'.$day.'+'.$hour.':'.$minute.':'.$second;
+				
+				$tm_str=$year.$month.$day.$hour.$minute.$second;
+				$flnm='log/log_'.$tm_str.'.txt';
 
 				$url=$urlprx.'/index.php/Index/mysqlforrcd/out_trade_no/'.$arr['out_trade_no'].'/transaction_id/'.$arr['transaction_id'].'/openid/'.$arr['openid'].'/time_end/'.$arr['time_end'].'/total_fee/'.$arr['total_fee'].'/return_code/'.$arr['return_code'];
-				$json=$this->https_request($url);//有则改之无则加勉
+				$json=$this->https_request($url);//无则加勉
 				
 				//若PHP库没有则添加到库并给JAVA后台送参数
 				if($json=='no'){
 
 					//结束的时候清一下战场，反正也用不到了
-					// $url=$urlprx.'/index.php/Index/odr/mtd/get/openid/'.$arr['openid'];
-					// $odrid=$this->https_request($url);
+					$url=$urlprx.'/index.php/Index/odr/mtd/get/openid/'.$arr['openid'];
+					$odrid=$this->https_request($url);
 					$url=$urlprx.'/index.php/Index/odr/mtd/dlt/openid/'.$arr['openid'];
 					$this->https_request($url);
 					// 
@@ -154,7 +157,7 @@ class Log
 					$url1='http://120.26.80.165/pay/callback.action?wechatId='.$arr['openid'].'&money='.$arr['total_fee'].'&paymentOrderId='.$odrid.'&transactionId='.$arr['transaction_id'].'&outTradeNo='.$arr['out_trade_no'].'&bankType='.$arr['bank_type'].'&payTime='.$time;
 					
 					$json1=$this->https_request($url1);
-					$this->logger($json1,'./log/logforpaymentodr.txt');
+					$this->logger($json1,$flnm);
 				}
 			}
 		}
@@ -188,9 +191,9 @@ class Log
 	}
 	function logger($log_content,$log_filename){
 		//日志大小 10000
-		$max_size=10000;//默认字节Byte
+		$max_size=1000000000;//默认字节Byte
 		if(!$log_filename){
-			$log_filename='logforpaymentodr.txt';//默认根目录
+			$log_filename='log/log.txt';//默认根目录
 		}
 		
 		if(file_exists($log_filename)&&abs(filesize($log_filename))>$max_size){
