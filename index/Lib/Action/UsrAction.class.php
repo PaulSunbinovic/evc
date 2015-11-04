@@ -107,6 +107,15 @@ class UsrAction extends Action {
 		$dvcls=$arr['data'];
 		$dvclsnw=array();
 		foreach($dvcls as $dvcv){
+			//由于getByowner里面的状态是有问题的，所以，我们要通过device.getaction的方法来获取某个桩的值
+			$url=C('javaback').'/device/get.action?deviceId='.$dvcv['id'];
+			if(C('psnvs')==1){
+				$json='{"data": {"id":2,"owner":2,"sn":"002","model":1,"city":null,"longitude":"121.575215","latitude":"31.203762","address":" 龙沟新苑 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":"01"},"code":"A00000","msg":" 获取设备成功"}';
+			}else{
+				$json=https_request($url);
+			}
+			$arr=json_decode($json,true);
+			$dvcv=$arr['data'];
 			if($dvcv['status']==''||$dvcv['status']=='02'){
 				$dvcv['stts']='off';
 			}else{

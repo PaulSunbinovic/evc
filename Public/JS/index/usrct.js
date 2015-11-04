@@ -130,7 +130,7 @@ function doonff(oprt,tm,everyday){
                         var i=0;
                         var int=self.setInterval(
                                 function(){
-                                    if(i==5){
+                                    if(i==10){
                                         check(dvcid);
                                         $('#cancel_loading').trigger('click');
                                         alert('操作失败！');
