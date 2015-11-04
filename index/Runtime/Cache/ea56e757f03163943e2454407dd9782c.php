@@ -84,23 +84,10 @@
 		</div>
 		<div class='col-md-12 col-xs-12' style='margin-bottom: 20px'>
 			<a class='btn btn-info btn-lg btn-block' href='__URL__/zhxx'><i class='glyphicon glyphicon-user'></i> 账户信息</a>
-			<div class="progress">
-  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;height:100px;">
-    <span class="sr-only">45% Complete</span>
-  </div>
-</div>
+			
 		</div>
 		
-		<script>
-		//这里搞个设备数组库
-		var dvcls=new Array();
-		<?php if(is_array($dvcls)): $i = 0; $__LIST__ = $dvcls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dvcv): $mod = ($i % 2 );++$i;?>//暂时默认为空初始时间，等到马哥得到定时的接口搞定后，再赋值，从uct.php开始
-		dvcls[<?php echo ($dvcv['id']); ?>]='';<?php endforeach; endif; else: echo "" ;endif; ?>
-		var dvcsttsls=new Array();
-		<?php if(is_array($dvcls)): $i = 0; $__LIST__ = $dvcls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dvcv): $mod = ($i % 2 );++$i;?>//暂时默认为空初始时间，等到马哥得到定时的接口搞定后，再赋值，从uct.php开始
-		dvcsttsls[<?php echo ($dvcv['id']); ?>]="<?php echo ($dvcv['stts']); ?>";<?php endforeach; endif; else: echo "" ;endif; ?>
 		
-		</script>
 		
 		<div class='col-md-12 col-xs-12'>
 		  	<div class='col-md-12 col-xs-12' style='text-align: center;padding-bottom: 5px;border-bottom: 1px solid #ccc;font-size: 18px'>我的电桩</div>
@@ -125,7 +112,7 @@
 			        		<tr><th>桩名</th><th>当前状态</th><th>定时情况</th></tr>
 			        	</thead>
 			        	<tbody>
-
+							<script>var dotakesample='__URL__/dotakesample'</script>
 				        	<?php if(is_array($dvcls)): $i = 0; $__LIST__ = $dvcls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dvcv): $mod = ($i % 2 );++$i;?><tr><td><?php echo ($dvcv['address']); ?></td>
 				        		<td>
 				        		<div>
@@ -216,13 +203,53 @@
 <script>var doonoffdvc='__URL__/doonoffdvc';</script>
 
 
+
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal_loading" id='modal_loading' style='display: none'>
+	  loading<b class="caret"></b>	
+</button>
+
+<!-- Modal -->
+<div class="modal" id="myModal_loading" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document" style='margin-top:200px;' >
+    <div class="modal-content">
+      
+      <div class="modal-body">
+      	<div class='col-md-12 col-xs-12' style='text-align: center;font-size: 18px'>俺正在全力以赴...</div>
+      	<div class='clearfix'></div>
+      	<div class="progress">
+		  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;height:100px;">
+		    <span class="sr-only">loading...</span>
+		  </div>
+		</div>
+		<div class="modal-footer">
+	        <button type="button" class="btn btn-danger btn-lg btn-block" data-dismiss="modal" id='cancel_loading' style='display:none'>取消</button>
+	        
+	    </div>
+		
+		
+    </div>
+  </div>
+</div>
+
+
 <!-- bootstrap -->
 <script src="__PUBLIC__/pblc/btstp3/js/bootstrap.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="__PUBLIC__/pblc/btstp3/js/ie10-viewport-bug-workaround.js"></script>
 <script type="text/javascript">var vrfusrstat='__APP__/Cmn/vrfusrstat';</script>
 <script type="text/javascript" src='__PUBLIC__/JS/index/base.js'></script>
-
+<script>
+	//这里搞个设备数组库
+		
+	var dvcls=new Array();
+	<?php if(is_array($dvcls)): $i = 0; $__LIST__ = $dvcls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dvcv): $mod = ($i % 2 );++$i;?>//暂时默认为空初始时间，等到马哥得到定时的接口搞定后，再赋值，从uct.php开始
+		dvcls[<?php echo ($dvcv['id']); ?>]='';<?php endforeach; endif; else: echo "" ;endif; ?>
+		var dvcsttsls=new Array();
+		<?php if(is_array($dvcls)): $i = 0; $__LIST__ = $dvcls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dvcv): $mod = ($i % 2 );++$i;?>//暂时默认为空初始时间，等到马哥得到定时的接口搞定后，再赋值，从uct.php开始
+		dvcsttsls[<?php echo ($dvcv['id']); ?>]="<?php echo ($dvcv['stts']); ?>";
+		check(<?php echo ($dvcv['id']); ?>);<?php endforeach; endif; else: echo "" ;endif; ?>
+	
+</script>
 
 
 

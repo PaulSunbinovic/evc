@@ -1,7 +1,0 @@
-.overflowhidden{overflow: hidden;height:80px;}
-.extend{color:#aaa;background-color:#efefef;padding:3px;}
-.cmnt{border-bottom: dashed 1px #ccc;padding-top: 10px;padding-bottom: 10px;}
-.cmnttm{font-size: 12px;color:#ccc;margin-top:10px;}
-.approve{color:#888;margin-top:10px;margin-right:10px;font-size:12px;}
-
-

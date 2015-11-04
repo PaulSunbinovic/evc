@@ -1,3 +1,0 @@
-.cmt a{color:#999;font-size: 11px;}
-.cmtdalg{padding-left:3%;padding-right:3%;padding-top:10px;position: fixed;top:40px;width:100%;z-index: 100;background-color: #fff;}
-.cmtbd{position: relative;top:170px;}

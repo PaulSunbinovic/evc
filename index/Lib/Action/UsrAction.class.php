@@ -98,7 +98,7 @@ class UsrAction extends Action {
 
 		$url=C('javaback').'/device/getByOwner.action?wechatId='.session('openid');
 		if(C('psnvs')==1){
-			$json='{"data": [{"id":1,"owner":1,"sn":"001","model":1,"city":null,"longitude":"121.572673","latitude":"31.212916","address":" 我的位 置","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""}, {"id":6,"owner":1,"sn":"006","model":1,"city":null,"longitude":"121.581845","latitude":"31.219382","address":" 汤臣湖庭花园 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""}, {"id":8,"owner":1,"sn":"008","model":1,"city":null,"longitude":"121.506252","latitude":"31.245374","address":" 上海东方明珠电视塔 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""}],"code":"A00000","msg":" 获取设备成功"}';
+			$json='{"data": [{"id":1,"owner":1,"sn":"001","model":1,"city":null,"longitude":"121.572673","latitude":"31.212916","address":" 我的位 置","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""}, {"id":6,"owner":1,"sn":"006","model":1,"city":null,"longitude":"121.581845","latitude":"31.219382","address":" 汤臣湖庭花园 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""}, {"id":8,"owner":1,"sn":"008","model":1,"city":null,"longitude":"121.506252","latitude":"31.245374","address":" 上海东方明珠电视塔 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":"01"}],"code":"A00000","msg":" 获取设备成功"}';
 		}else{
 			$json=https_request($url);
 		}
@@ -164,7 +164,7 @@ class UsrAction extends Action {
 		
 		$url=C('javaback').'/device/operate.action?deviceId='.$dvcid.'&wechatId='.$openid.'&operation='.$oprt.$str;
 		if(C('psnvs')==1){
-			$json='{"data":null,"code":"A00001","msg":"系统错误"}';
+			$json='{"data":null,"code":"A00000","msg":"系统错误"}';
 		}else{
 			$json=https_request($url);
 		}
@@ -602,4 +602,21 @@ class UsrAction extends Action {
 		$this->display('shouzhi');
 	}
 
+	public function dotakesample(){
+		$url=C('javaback').'/http://120.26.80.165/device/get.action?deviceId='.$_GET['dvcid'];
+		if(C('psnvs')==1){
+			$json='{"data":{"id":2,"owner":2,"sn":"002","model":1,"city":null,"longitude":"121.575215","latitude":"31.203762","address":" 龙沟新苑 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":"01"},"code":"A00000","msg":" 获取设备成功"}';
+		}else{
+			$json=https_request($url);
+		}
+		$arr=json_decode($json,true);
+		if($arr['data']['status']=='01'){
+			$data['rslt']='on';
+		}else if($arr['data']['status']=='02'){
+			$data['rslt']='off';
+		}else{
+			$data['rslt']='skip';
+		}
+		$this->ajaxReturn($data,'json');
+	}
 }

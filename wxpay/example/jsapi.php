@@ -1,4 +1,8 @@
 <?php 
+
+// session_start();
+// $openId=$_SESSION['openid'];
+
 ini_set('date.timezone','Asia/Shanghai');
 //error_reporting(E_ERROR);
 require_once "../lib/WxPay.Api.php";
@@ -54,6 +58,22 @@ function https_request($url,$data=null){
 	return $output; 
 }
 
+function logger($log_content,$log_filename){
+	//日志大小 10000
+	$max_size=1000000000;//默认字节Byte
+	if(!$log_filename){
+		$log_filename='log/log.txt';//默认根目录
+	}
+	
+	if(file_exists($log_filename)&&abs(filesize($log_filename))>$max_size){
+		unlink($log_filename);
+	}
+	//date_default_timezone_set('PRC');
+	file_put_contents($log_filename, date('Y-m-d H:i:s',time()).' '.$log_content."\r\n",FILE_APPEND);//双引号才换行
+}
+
+//客户欲充这么多钱，然后如果他充值成功了，那么就要回调，如果他想冲100元，回调的时候真的 成功的 充了100元就OK了，否则会有记录的
+//这里有个小问题，就是他充值的时候会 连续 访问jsapi.php，具体原因不明，所以我们要设置一个阀，防止连续的调用
 $url="http://120.26.80.165/pay/create.action?wechatId=".$openId.'&money='.$money;
 $json=https_request($url);
 $arr=json_decode($json,true);

@@ -1,4 +1,0 @@
-/*手机列表*/
-.plist{ position:absolute; width:100%; top:40px;bottom:20px;height:35px;}
-.plist .bul{ position:absolute; height:100%; overflow:visible; white-space:nowrap;}
-.plist .bul .bull{ display:inline-block;  height:100%; white-space:normal;}
