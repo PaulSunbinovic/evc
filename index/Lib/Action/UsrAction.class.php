@@ -612,7 +612,7 @@ class UsrAction extends Action {
 	}
 
 	public function dotakesample(){
-		$url=C('javaback').'/http://120.26.80.165/device/get.action?deviceId='.$_GET['dvcid'];
+		$url=C('javaback').'/device/get.action?deviceId='.$_GET['dvcid'];
 		if(C('psnvs')==1){
 			$json='{"data":{"id":2,"owner":2,"sn":"002","model":1,"city":null,"longitude":"121.575215","latitude":"31.203762","address":" 龙沟新苑 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":"01"},"code":"A00000","msg":" 获取设备成功"}';
 		}else{
