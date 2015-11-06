@@ -1,11 +1,11 @@
-<script src="__PUBLIC__/pblc/btstp3/js/jquery.js"></script>
+<?php if (!defined('THINK_PATH')) exit();?><script src="__PUBLIC__/pblc/btstp3/js/jquery.js"></script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script>
 //设置微信js的参数 PS：在服务号中也需要设置
-var appId="{$spkg['appId']}";
-var timestamp="{$spkg['timestamp']}";
-var nonceStr="{$spkg['nonceStr']}";
-var signature="{$spkg['signature']}";
+var appId="<?php echo ($spkg['appId']); ?>";
+var timestamp="<?php echo ($spkg['timestamp']); ?>";
+var nonceStr="<?php echo ($spkg['nonceStr']); ?>";
+var signature="<?php echo ($spkg['signature']); ?>";
 	/*
 * 注意：
 * 1. 所有的JS接口只能在公众号绑定的域名下调用，公众号开发者需要先登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。
