@@ -52,9 +52,12 @@ function adjstrt(pnt){
 // ----------------------以下都是杜撰到点，因为测试点都在上海，定位到杭州没有意义，反正定位很准已经没问题了
 // ctlgtd=121.576464;120.208989;120.207281;
 // ctlttd=31.224494;30.213697;30.213426;
-ctlgtd=121.576464;
-ctlttd=31.224494;
-
+//上海版
+// ctlgtd=121.576464;
+// ctlttd=31.224494;
+//北京版
+ctlgtd=116.449877;
+ctlttd=39.967977;
 
 mypoint=new BMap.Point(ctlgtd,ctlttd)
 var icon={path:icnpth,width:23,height:23,};
