@@ -106,27 +106,31 @@ class UsrAction extends Action {
 		$arr=json_decode($json,true);
 		$dvcls=$arr['data'];
 		$dvclsnw=array();
+
+		//根据BOB的意思，我们这里只管第一个桩
+		$i=0;
 		foreach($dvcls as $dvcv){
+			if($i<1){$i=$i+1;}else{break;}
 			//由于getByowner里面的状态是有问题的，所以，我们要通过device.getaction的方法来获取某个桩的值
 			$url=C('javaback').'/device/get.action?deviceId='.$dvcv['id'];
 			if(C('psnvs')==1){
-				$json='{"data": {"id":2,"owner":2,"sn":"002","model":1,"city":null,"longitude":"121.575215","latitude":"31.203762","address":" 龙沟新苑 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":"01"},"code":"A00000","msg":" 获取设备成功"}';
+				$json='{"data": {"id":2,"owner":2,"sn":"002","model":1,"city":null,"longitude":"121.575215","latitude":"31.203762","address":" 龙沟新苑 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":"02"},"code":"A00000","msg":" 获取设备成功"}';
 			}else{
 				$json=https_request($url);
 			}
 			$arr=json_decode($json,true);
 			$dvcv=$arr['data'];
 			if($dvcv['status']==''||$dvcv['status']=='02'){
-				$dvcv['stts']='off';
+				$dvcv['stts']='off';$status='未充电';
 			}else{
-				$dvcv['stts']='on';
+				$dvcv['stts']='on';$status='充电中';
 			}
 			array_push($dvclsnw, $dvcv);
 		}
-		//p($dvclsnw);die;
-		$this->assign('dvcls',$dvclsnw);
-
 		
+		$this->assign('dvcls',$dvclsnw);
+		$this->assign('status',$status);
+
 		import('@.WX.JssdkAction');
 		$jssdk = new JssdkAction(C('appid'), C('appsecret'));
 		$signPackage = $jssdk->GetSignPackage();
@@ -169,24 +173,38 @@ class UsrAction extends Action {
 			$str=$str.'&everyday=1';
 		}
 
-		//这里设置一个函数来搞定预约 暂时先空着，假设是没有预约的，可以搞起
-		
-		$url=C('javaback').'/device/operate.action?deviceId='.$dvcid.'&wechatId='.$openid.'&operation='.$oprt.$str;
+		//先预约
+		$url=C('javaback').'/order/appoint.action?wechatId='.session('openid').'&deviceId='.$dvcid;
 		if(C('psnvs')==1){
-			$json='{"data":null,"code":"A00000","msg":"系统错误"}';
+			$json='{"data":4,"code":"A01408","msg":"用户余额不足"}';
 		}else{
 			$json=https_request($url);
 		}
-		//$json=https_request($url);
 		$arr=json_decode($json,true);
 		if($arr['code']=='A00000'){
-			$data['rslt']='ok';
+			$url=C('javaback').'/device/operate.action?deviceId='.$dvcid.'&wechatId='.$openid.'&operation='.$oprt.$str;
+			if(C('psnvs')==1){
+				$json='{"data":null,"code":"A00000","msg":"系统错误"}';
+			}else{
+				$json=https_request($url);
+			}
+			//$json=https_request($url);
+			$arr=json_decode($json,true);
+			if($arr['code']=='A00000'){
+				$data['rslt']='ok';
+			}else{
+				$data['rslt']='error';
+			}
+			//logger($dvcid.' '.$arr['msg'],'log/log.txt');
+			$data['msg']=$arr['msg'];
 		}else{
 			$data['rslt']='error';
+			$data['msg']=$arr['msg'];
 		}
+		
+		
 
-		logger($dvcid.' '.$arr['msg'],'log/log.txt');
-		$data['msg']=$arr['msg'];
+		
 		
 
 

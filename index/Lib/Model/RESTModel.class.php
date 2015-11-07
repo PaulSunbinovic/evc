@@ -30,16 +30,16 @@ class RESTModel {
   {
     $this->Batch = date("YmdHis");
     //$this->ServerIP = $ServerIP;
-    $this->ServerIP = 'sandboxapp.cloopen.com';
+    $this->ServerIP = 'https://app.cloopen.com:8883';
     //$this->ServerPort = $ServerPort;
     $this->ServerPort = '8883';
     // $this->SoftVersion = $SoftVersion;
     $this->SoftVersion = '2013-12-26';
     $this->Handle = fopen($this->Filename, 'a');
     //---------
-    $this->AccountSid = 'aaf98f89505b6c080150607163e60506';
-    $this->AccountToken = 'dea479f092ee49459bf0c36db0979f07'; 
-    $this->AppId ='8a48b551505b4af001506071d5421050'; 
+    $this->AccountSid = '8a48b55150b86ee80150bdff4f6b112c';
+    $this->AccountToken = 'ad753b07065342acbcdd6690712ce930'; 
+    $this->AppId ='8a48b55150dc87820150dd92ad0707f9'; 
   }
 
    /**
@@ -50,9 +50,9 @@ class RESTModel {
     */    
     function setAccount($AccountSid,$AccountToken){
       //$this->AccountSid = $AccountSid;
-      $this->AccountSid = 'aaf98f89505b6c080150607163e60506';
+      $this->AccountSid = '8a48b55150b86ee80150bdff4f6b112c';
       //$this->AccountToken = $AccountToken;   
-      $this->AccountToken = 'dea479f092ee49459bf0c36db0979f07';  
+      $this->AccountToken = 'ad753b07065342acbcdd6690712ce930';  
     }
     
     
@@ -63,7 +63,7 @@ class RESTModel {
     */
     function setAppId($AppId){
        //$this->AppId = $AppId; 
-       $this->AppId ='8a48b551505b4af001506071d5421050';
+       $this->AppId ='ad753b07065342acbcdd6690712ce930';
     }
     
    /**

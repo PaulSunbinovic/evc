@@ -48,88 +48,49 @@
 		<div class='col-md-12 col-xs-12' style='padding:10px;margin-bottom:0px;background-color: #fff'>
 			
 		  	<div class='col-md-12 col-xs-12'>
-				<div><img src="{$usrdto['user']['headImgUrl']}" style='width:30px;height:30px;margin-top:20px' class='img-circle pull-left'><h3 class='pull-left' style='margin-left: 20px'>{$usrdto['user']['nickName']}</h3></div>
+		  		<div class='col-md-4 col-xs-4 nopadding'><img src="{$usrdto['user']['headImgUrl']}" style='width:80px;height:80px;margin-top:20px' class='img-circle'></div>
+				<div class='col-md-8 col-xs-8 nopadding'>
+					<div><h3>{$usrdto['user']['nickName']}</h3></div>
+					<div>
+						当前状态：{$status}
+					</div>
+					<div>8人看过，2人预约，125人加入</div>
+				</div>
 				
-				<div class='clearfix'></div>
-				<table class='table table-responsive'>
-					<tr><td>等级：<td></td><td>环保大师<i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i></td></tr>
-					<tr><td>车型：<td></td><td>
-						<volist name='crls' id='crv'>
-							{$crv['brdmdl']['brand']}&nbsp;&nbsp;{$crv['brdmdl']['model']}<br>
-						</volist>
-					</td></tr>
-					<tr><td>当前状态：<td></td><td>充电中</td></tr>
-				</table>
-				<div class='clearfix'></div>
+				
 			</div>
-			<div class="clearfix"></div>
-		</div>
-		<div class='col-md-12 col-xs-12' style='margin-bottom: 20px'>
-			<a class='btn btn-info btn-lg btn-block' href='__URL__/zhxx'><i class='glyphicon glyphicon-user'></i> 账户信息</a>
 			
 		</div>
 		
 		
-		
-		<div class='col-md-12 col-xs-12'>
-		  	<div class='col-md-12 col-xs-12' style='text-align: center;padding-bottom: 5px;border-bottom: 1px solid #ccc;font-size: 18px'>我的电桩</div>
-		  
-		    
-			      <div style='padding-top:50px'>
-
-			      	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-					<script>
-					//设置微信js的参数 PS：在服务号中也需要设置
-					var appId="{$spkg['appId']}";
-					var timestamp="{$spkg['timestamp']}";
-					var nonceStr="{$spkg['nonceStr']}";
-					var signature="{$spkg['signature']}";
-					</script>
-					<script src='__PUBLIC__/pblc/WX/wxoprt.js'></script>
-	
-			     	<button class='btn btn-success btn-lg btn-block' id='opcmr' style="margin-bottom: 10px"><i class='glyphicon glyphicon-qrcode'></i> 添加设备</button>
-					<link href="__PUBLIC__/pblc/btstp3/switch/bootstrap-switch.css" rel="stylesheet">
-			        <table class='table table-responsive table-striped'>
-			        	<thead>
-			        		<tr><th>桩名</th><th>当前状态</th><th>定时情况</th></tr>
-			        	</thead>
-			        	<tbody>
-							<script>var dotakesample='__URL__/dotakesample'</script>
-				        	<volist name='dvcls' id='dvcv'>
-				        		<tr><td>{$dvcv['address']}</td>
-				        		<td>
-				        		<div>
-				        			
-				        			<?php if($dvcv['status']=='on'){ ?><!--?-->
-	      							<input class="form-control" type="checkbox" checked id="dvc_{$dvcv['dvcid']}" onchange="onoff({$dvcv['id']})">
-	      							<?php }else{ ?>
-	      							<input class="form-control" type="checkbox" id="dvc_{$dvcv['id']}" onchange="onoff({$dvcv['id']})">
-	      							<?php } ?>
-	      							
-	      								
-	      							
-	    						</div>
-	    						</td>
-								<td>
-									<a class='btn btn-success' onclick="clc({$dvcv['id']})" id='btn_{$dvcv['id']}'>
-										<i class='glyphicon glyphicon-time'></i> <tm id='tm_{$dvcv['id']}'>未设定</tm>									
-									</a>
-								</td>
-	    						</tr>
-				        	</volist>
-			        	</tbody>
-			        	
-			        </table>
-					<script src='__PUBLIC__/pblc/btstp3/switch/bootstrap-switch.js'></script>
-					<script>
-					$(function(argument) {
-				      $('[type="checkbox"]').bootstrapSwitch();
-				    })
-					</script>
-			      </div>
-		      
-		     
+		<div class='col-md-12 col-xs-12' style='padding-bottom:20px'>
+			<volist name='dvcls' id='dvcv'>
+				<div class='col-md-4 col-xs-4' id="dvc_{$dvcv['id']}" onclick="onoff({$dvcv['id']})"><a class='btn btn-default btn-lg btn-block blk' ><i class='glyphicon glyphicon-off'></i> 关</a></div>
+				<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#' onclick="clc({$dvcv['id']})" id="btn_{$dvcv['id']}"><i class='glyphicon glyphicon-flash'></i> 1.5KW</a></div>
+				<div class='col-md-4 col-xs-4' id="optm"><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-time'></i> </a></div>
+				<div class='col-md-4 col-xs-4 txtct'>开关</div>
+				<div class='col-md-4 col-xs-4 txtct'>可调功率</div>
+				<div class='col-md-4 col-xs-4 txtct'>半价电预约</div>
+        		
+        	</volist>
+			
+			
+			<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-adjust'></i> 半天</a></div>
+			<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-eye-open'></i> </a></div>
+			<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-leaf'></i> </a></div>
+			<div class='col-md-4 col-xs-4 txtct'>共享时段</div>
+			<div class='col-md-4 col-xs-4 txtct'> 防盗激活</div>
+			<div class='col-md-4 col-xs-4 txtct'> 柔性充电</div>
+			
+			<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-ok'></i> </a></div>
+			<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-list-alt'></i> </a></div>
+			<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-cog'></i> </a></div>
+			<div class='col-md-4 col-xs-4 txtct'>设备自检</div>
+			<div class='col-md-4 col-xs-4 txtct'>日报/月报</div>
+			<div class='col-md-4 col-xs-4 txtct'>设置</div>
 		</div>
+		
+		
 		  
 	</div>
 	
@@ -191,7 +152,7 @@
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal_loading" id='modal_loading' style='display: none'>
 	  loading<b class="caret"></b>	
 </button>
-
+<script>var dotakesample='__URL__/dotakesample'</script>
 <!-- Modal -->
 <div class="modal" id="myModal_loading" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document" style='margin-top:200px;' >

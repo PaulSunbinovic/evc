@@ -2762,3 +2762,850 @@ INFO: [ app_begin ] --START--
 INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000650s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000719s ]
 
+[ 2015-11-06T22:43:39+08:00 ] 0.0.0.0 /evc/index.php/Cmn/vrfusrstat?x=usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004011s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004527s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002605s ]
+
+[ 2015-11-06T22:43:40+08:00 ] 0.0.0.0 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002327s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002705s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001998s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002396s ]
+
+[ 2015-11-06T22:45:41+08:00 ] 0.0.0.0 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003942s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004301s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001576s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001875s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.083286s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.083968s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002906s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002510s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.004018s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.004216s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.014923s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003756s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004192s ]
+
+[ 2015-11-06T22:45:42+08:00 ] 0.0.0.0 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002005s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002326s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001672s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001925s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T22:45:42+08:00 ] 0.0.0.0 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003170s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003794s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001782s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002135s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:18:18+08:00 ] 0.0.0.0 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002355s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002626s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001822s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.060944s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061228s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001720s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001663s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001242s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003420s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008704s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001897s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002239s ]
+
+[ 2015-11-06T23:18:18+08:00 ] 0.0.0.0 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003537s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004002s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001931s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002375s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:18:19+08:00 ] 0.0.0.0 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.006827s ]
+INFO: [ route_check ] --END-- [ RunTime:0.007314s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002761s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:19:28+08:00 ] 0.0.0.0 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002587s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002933s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001769s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.041272s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041580s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001604s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001438s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000816s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001526s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006206s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001646s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001991s ]
+
+[ 2015-11-06T23:19:28+08:00 ] 0.0.0.0 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003713s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004327s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.005666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006135s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:19:28+08:00 ] 0.0.0.0 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002603s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003018s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002729s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:19:42+08:00 ] 0.0.0.0 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001946s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002282s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001648s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.048476s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048834s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001263s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.004014s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000997s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001379s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009202s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001422s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001645s ]
+
+[ 2015-11-06T23:19:42+08:00 ] 0.0.0.0 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003084s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003537s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002870s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:19:42+08:00 ] 0.0.0.0 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003360s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003941s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002844s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:20:10+08:00 ] 0.0.0.0 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003077s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003488s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002727s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.082012s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082433s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001920s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001734s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001139s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001708s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007324s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001686s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002157s ]
+
+[ 2015-11-06T23:20:10+08:00 ] 0.0.0.0 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003255s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003705s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002016s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:20:10+08:00 ] 0.0.0.0 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003929s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004465s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002807s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:22:50+08:00 ] 0.0.0.0 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003198s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003669s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002901s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.071876s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072371s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002148s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001933s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.005207s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002767s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013245s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003814s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004287s ]
+
+[ 2015-11-06T23:22:51+08:00 ] 0.0.0.0 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.007864s ]
+INFO: [ route_check ] --END-- [ RunTime:0.008327s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002772s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:22:51+08:00 ] 0.0.0.0 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002298s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002697s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001696s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:24:58+08:00 ] 0.0.0.0 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004654s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004955s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001972s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.050513s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050890s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001485s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001494s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001147s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001580s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006439s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002611s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002901s ]
+
+[ 2015-11-06T23:24:58+08:00 ] 0.0.0.0 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002851s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003333s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003088s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:24:59+08:00 ] 0.0.0.0 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002875s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003286s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001830s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002178s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:25:20+08:00 ] 0.0.0.0 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003811s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004284s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002209s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002661s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.047059s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047555s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001353s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001141s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001079s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002060s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006567s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001659s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001995s ]
+
+[ 2015-11-06T23:25:20+08:00 ] 0.0.0.0 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003916s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004442s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002747s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:25:20+08:00 ] 0.0.0.0 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001988s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002275s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002982s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:26:17+08:00 ] 0.0.0.0 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003063s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003420s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002189s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.045396s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045775s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.004875s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001729s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.003363s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002978s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.014159s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003906s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004302s ]
+
+[ 2015-11-06T23:26:18+08:00 ] 0.0.0.0 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003859s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004301s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.012535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012956s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:26:35+08:00 ] 192.168.1.109 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001971s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002250s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001715s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002021s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.088906s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.089278s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002067s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001544s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001129s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001726s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007192s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001736s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001960s ]
+
+[ 2015-11-06T23:26:36+08:00 ] 192.168.1.109 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003618s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004063s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002812s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:26:36+08:00 ] 192.168.1.109 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003025s ]
+INFO: [ route_check ] --END-- [ RunTime:0.006416s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002098s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002627s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:26:52+08:00 ] 192.168.1.100 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001768s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002307s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001588s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.042714s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043073s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001687s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001581s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001068s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001737s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007057s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003048s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003420s ]
+
+[ 2015-11-06T23:26:52+08:00 ] 192.168.1.100 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001941s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002245s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001749s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:26:53+08:00 ] 192.168.1.100 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002244s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002563s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001815s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:27:46+08:00 ] 192.168.1.100 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002647s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003139s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001880s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002241s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.068498s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068918s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002030s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002354s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001673s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002968s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010303s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002870s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003310s ]
+
+[ 2015-11-06T23:27:46+08:00 ] 192.168.1.100 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002929s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003747s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002859s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:27:46+08:00 ] 192.168.1.100 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.005515s ]
+INFO: [ route_check ] --END-- [ RunTime:0.006098s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003629s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004139s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:29:45+08:00 ] 192.168.1.100 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002343s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002666s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001880s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.037270s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037565s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001454s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001133s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000790s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001390s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005459s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001758s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002135s ]
+
+[ 2015-11-06T23:29:45+08:00 ] 192.168.1.100 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002860s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003303s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001782s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:30:02+08:00 ] 192.168.1.100 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002468s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002871s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002094s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002516s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.045559s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046216s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002015s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001856s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001524s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001680s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008053s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001596s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001852s ]
+
+[ 2015-11-06T23:30:02+08:00 ] 192.168.1.100 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002298s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002642s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002755s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:30:03+08:00 ] 192.168.1.100 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003059s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003381s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001919s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.052037s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052324s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001509s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001309s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000978s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001437s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005886s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001999s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002419s ]
+
+[ 2015-11-06T23:30:03+08:00 ] 192.168.1.100 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003571s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003948s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002775s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:30:15+08:00 ] 192.168.1.100 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002966s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003444s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002686s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.061964s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062357s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002153s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002029s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001373s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.005266s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011926s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002311s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002809s ]
+
+[ 2015-11-06T23:30:15+08:00 ] 192.168.1.100 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001907s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002210s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001707s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:30:37+08:00 ] 192.168.1.100 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002745s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003262s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001805s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.040221s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040652s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001291s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001676s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001098s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001861s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006794s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001850s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002115s ]
+
+[ 2015-11-06T23:30:38+08:00 ] 192.168.1.100 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001859s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002157s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001902s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:35:23+08:00 ] 192.168.1.109 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.005539s ]
+INFO: [ route_check ] --END-- [ RunTime:0.006032s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.004035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004533s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.053873s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054282s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.003387s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002967s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002183s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002622s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012337s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003167s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003586s ]
+
+[ 2015-11-06T23:35:23+08:00 ] 192.168.1.109 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003477s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003859s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001946s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:35:24+08:00 ] 192.168.1.109 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002807s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003226s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002763s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:36:49+08:00 ] 192.168.1.109 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004238s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004690s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001968s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002252s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.041076s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041783s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002330s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.003168s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.006020s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002137s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015660s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002358s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002835s ]
+
+[ 2015-11-06T23:36:49+08:00 ] 192.168.1.109 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003009s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003532s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002650s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003079s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:36:49+08:00 ] 192.168.1.109 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002379s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002865s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002191s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002617s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:37:25+08:00 ] 192.168.1.109 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003371s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003754s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001995s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002297s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.070081s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070739s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.003254s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.005091s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.009051s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002847s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.021710s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.006202s ]
+INFO: [ view_end ] --END-- [ RunTime:0.006738s ]
+
+[ 2015-11-06T23:37:25+08:00 ] 192.168.1.109 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004013s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004560s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002996s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:37:26+08:00 ] 192.168.1.109 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002903s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003379s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002227s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003927s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:38:20+08:00 ] 192.168.1.109 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001829s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002119s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005545s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.038035s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038422s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001826s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001674s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001146s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001961s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007724s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002300s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002711s ]
+
+[ 2015-11-06T23:38:20+08:00 ] 192.168.1.109 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003581s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004152s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002969s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003645s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:38:20+08:00 ] 192.168.1.109 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002107s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002493s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002241s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002627s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:38:27+08:00 ] 192.168.1.100 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002003s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002382s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002037s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.034584s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035196s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001703s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001333s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000826s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001694s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006341s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001762s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002074s ]
+
+[ 2015-11-06T23:38:27+08:00 ] 192.168.1.100 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003899s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004633s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002732s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:40:40+08:00 ] 192.168.1.100 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002388s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002702s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001812s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.030054s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030347s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001849s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001339s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000978s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001460s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006394s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001872s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002128s ]
+
+[ 2015-11-06T23:40:40+08:00 ] 192.168.1.100 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002965s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003243s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001846s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-06T23:42:13+08:00 ] 192.168.1.100 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002596s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003030s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001616s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.046724s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047100s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001685s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001306s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000918s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001894s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006591s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.004052s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004661s ]
+
+[ 2015-11-06T23:42:13+08:00 ] 192.168.1.100 /evc/index.php/Usr/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002514s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002840s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002417s ]
+ERR: 非法操作:baidu.com
+

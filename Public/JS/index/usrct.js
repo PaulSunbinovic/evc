@@ -1,10 +1,8 @@
 var dvcid=0;var fctswc=1;//功能性开关 1则为有实际触发功能 0为只是动画
 function onoff(id){
     dvcid=id;
-    var obj=$('#dvc_'+id);
-    var ckd=obj.attr('checked');
-
-    if(ckd=='checked'){
+   
+    if(dvcsttsls[dvcid]=='off'){
         //alert('开');
         doonff('on','','')
         
@@ -189,11 +187,12 @@ function check(dvcid){
     //就是如果checked  就应该是 on 如果没对上就 要fctswc0模式自动按一下，而不是以前那样和之前相反，对了一层校验，增加鲁棒性//前提条件是checked和开关是严格对应的
     //反正最后成功与否改的都是数组库，至于开关的状态完全是根据和数组库是否对应，对的上就酸了，不堵上就给我按一下，变成对上，最终的结果是，数据组可以和开关永远对的上
     var obj=$('#dvc_'+dvcid);//目前操纵的devc
-    var ckd=obj.attr('checked');
-    if((ckd=='checked'&&dvcsttsls[dvcid]=='off')||(ckd!='checked'&&dvcsttsls[dvcid]=='on')){
-        fctswc=0;//暂时不启用功能
-        $('#dvc_'+dvcid).trigger('click');
-        fctswc=1;//开启功能模式，下次点击再次有功能意义
+   
+    if(dvcsttsls[dvcid]=='off'){
+        obj.html("<a class='btn btn-default btn-lg btn-block blk' ><i class='glyphicon glyphicon-off'></i> 关</a>");
+    }else{
+        obj.html("<a class='btn btn-success btn-lg btn-block blk' ><i class='glyphicon glyphicon-off'></i> 开</a>");
     }
+    
 }
 
