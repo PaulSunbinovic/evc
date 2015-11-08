@@ -125,6 +125,27 @@ class UsrAction extends Action {
 			}else{
 				$dvcv['stts']='on';$status='充电中';
 			}
+			//同时查看这个桩的定时时间，如果是有设定的话，控件需要变绿，并且有时间显示
+			$url=C('javaback').'/device/timer.action?deviceId='.$dvcv['id'];
+			if(C('psnvs')==1){
+				$json='{"data":"2015-12-12 12:12:12","code":"A00000","msg":"获取定时时间成功"}';
+			}else{
+				$json=https_request($json);
+			}
+			$arr=json_decode($json,true);
+			$tm=$arr['data'];
+			if($tm){
+				$str=strtotime($tm);
+				$tm=date('h:i',$str);
+				$cls_tag='success';
+			}else{
+				$cls_tag='default';
+			}
+			$timer=array(
+				'cls_tag'=>$cls_tag,
+				'tm'=>$tm,
+				);
+			$dvcv['timer']=$timer;
 			array_push($dvclsnw, $dvcv);
 		}
 		
@@ -135,9 +156,6 @@ class UsrAction extends Action {
 		$jssdk = new JssdkAction(C('appid'), C('appsecret'));
 		$signPackage = $jssdk->GetSignPackage();
 		$this->assign('spkg',$signPackage);
-
-		$tm=date('Y-m-d H:i:s',time()+60);
-		$this->assign('tm',$tm);
 
 		$this->assign('ttl','个人中心');
 		$this->display('usrct');
@@ -165,7 +183,10 @@ class UsrAction extends Action {
 
 		$str='';
 		if($tm!=''){
-			$tm=$tm.':00';
+			$data['sttm']=$tm;
+			//现在不确定到底是闹铃模式还是啥，暂时先给个年吧
+			$yr_mth_day=date('Y:m:d',time());
+			$tm=$yr_mth_day.' '.$tm.':00';
 			$tm=str_replace(' ', '+', $tm);//curl无法解析url的，所以要手动把参数改变下
 			$str='&time='.$tm;
 		}
@@ -211,7 +232,9 @@ class UsrAction extends Action {
 		$this->ajaxReturn($data,'json');
 	}
 	
-	
+	public function testclc(){
+		$this->display('testclc');
+	}
 
 	public function fnddvcbydvcid(){
 		$dvcid=$_GET['dvcid'];
@@ -224,74 +247,99 @@ class UsrAction extends Action {
 		//$json=https_request($url);
 		$arr=json_decode($json,true);
 		$data['dvco']=$arr['data'];
-		$this->ajaxReturn($data,'json');
-	}
-
-	public function dosttm(){
-		$optm=$_GET['optm'];//补秒
-		$clstm=$_GET['clstm'];
-		$dvcid=$_GET['dvcid'];
-		$openid=session('openid');
 		
-		$flg=1;
-		$rslt='';
-		if($optm){
-			$optm=$optm.':00';
-			$optm=rplspc($optm);
-			$url=C('javaback').'/device/operate.action?deviceId='.$dvcid.'&wechatId='.$openid.'&operation=on&time='.$optm;
-			if(C('psnvs')==1){
-				$json='{"data":null,"code":"A00001","msg":"系统错误"}';
-			}else{
-				$json=https_request($url);
-			}
-			//$json=https_request($url);
-			$arr=json_decode($json,true);
-			if($arr['code']!='A00000'){
-				$flg=0;
-				$rlst=$rlst.' '.$arr['msg'];
-			}
-		}
-		if($clstm){
-			$clstm=$clstm.':00';
-			$clstm=rplspc($clstm);
-			$url=C('javaback').'/device/operate.action?deviceId='.$dvcid.'&wechatId='.$openid.'&operation=off&time='.$clstm;
-			if(C('psnvs')==1){
-				$json='{"data":null,"code":"A00001","msg":"系统错误"}';
-			}else{
-				$json=https_request($url);
-			}
-			//$json=https_request($url);
-			$arr=json_decode($json,true);
-			if($arr['code']!='A00000'){
-				$flg=0;
-				$rlst=$rlst.' '.$arr['msg'];
-			}
-		}
-		$data['flg']=$flg;
-		if($flg==0){
-			//失败就啥都别管了，照旧
-			
-			$data['rslt']=$rlst;
-		}else{
-			//成功就要考虑到很多
-			
-			$data['rslt']='设置成功';
-		}
-		//获取最终的桩的状态
-		$url=C('javaback').'/device/get.action?deviceId='.$dvcid;
+		$url=C('javaback').'/device/timer.action?deviceId='.$dvcid;
 		if(C('psnvs')==1){
-			$json='{"data": {"id":2,"owner":2,"sn":"002","model":1,"city":null,"longitude":"121.575215","latitude":"31.203762","address":" 龙沟新苑 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},"code":"A00000","msg":" 获取设备成功"}';
+			$json='{"data":"2015-12-12 12:12:12","code":"A00000","msg":"获取定时时间成功"}';
 		}else{
-			$json=https_request($url);
+			$json=https_request($json);
 		}
-		//$json=https_request($url);
-		
 		$arr=json_decode($json,true);
-		//假设最终状态是启用了----------//怎么看启用了
-		$data['fnlstat']=1;
-
+		$tm=$arr['data'];
+		if($tm){
+			$str=strtotime($tm);
+			$tm=date('h:i',$str);
+			$cls_tag='success';
+		}else{
+			$cls_tag='default';
+		}
+		$timer=array(
+			'cls_tag'=>$cls_tag,
+			'tm'=>$tm,
+			);
+		$data['timer']=$timer;
 		$this->ajaxReturn($data,'json');
 	}
+
+	public function cancelsttm(){
+		$this->ajaxReturn($data.'json');
+	}
+
+	// public function dosttm(){
+	// 	$optm=$_GET['optm'];//补秒
+	// 	$clstm=$_GET['clstm'];
+	// 	$dvcid=$_GET['dvcid'];
+	// 	$openid=session('openid');
+		
+	// 	$flg=1;
+	// 	$rslt='';
+	// 	if($optm){
+	// 		$optm=$optm.':00';
+	// 		$optm=rplspc($optm);
+	// 		$url=C('javaback').'/device/operate.action?deviceId='.$dvcid.'&wechatId='.$openid.'&operation=on&time='.$optm;
+	// 		if(C('psnvs')==1){
+	// 			$json='{"data":null,"code":"A00001","msg":"系统错误"}';
+	// 		}else{
+	// 			$json=https_request($url);
+	// 		}
+	// 		//$json=https_request($url);
+	// 		$arr=json_decode($json,true);
+	// 		if($arr['code']!='A00000'){
+	// 			$flg=0;
+	// 			$rlst=$rlst.' '.$arr['msg'];
+	// 		}
+	// 	}
+	// 	if($clstm){
+	// 		$clstm=$clstm.':00';
+	// 		$clstm=rplspc($clstm);
+	// 		$url=C('javaback').'/device/operate.action?deviceId='.$dvcid.'&wechatId='.$openid.'&operation=off&time='.$clstm;
+	// 		if(C('psnvs')==1){
+	// 			$json='{"data":null,"code":"A00001","msg":"系统错误"}';
+	// 		}else{
+	// 			$json=https_request($url);
+	// 		}
+	// 		//$json=https_request($url);
+	// 		$arr=json_decode($json,true);
+	// 		if($arr['code']!='A00000'){
+	// 			$flg=0;
+	// 			$rlst=$rlst.' '.$arr['msg'];
+	// 		}
+	// 	}
+	// 	$data['flg']=$flg;
+	// 	if($flg==0){
+	// 		//失败就啥都别管了，照旧
+			
+	// 		$data['rslt']=$rlst;
+	// 	}else{
+	// 		//成功就要考虑到很多
+			
+	// 		$data['rslt']='设置成功';
+	// 	}
+	// 	//获取最终的桩的状态
+	// 	$url=C('javaback').'/device/get.action?deviceId='.$dvcid;
+	// 	if(C('psnvs')==1){
+	// 		$json='{"data": {"id":2,"owner":2,"sn":"002","model":1,"city":null,"longitude":"121.575215","latitude":"31.203762","address":" 龙沟新苑 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},"code":"A00000","msg":" 获取设备成功"}';
+	// 	}else{
+	// 		$json=https_request($url);
+	// 	}
+	// 	//$json=https_request($url);
+		
+	// 	$arr=json_decode($json,true);
+	// 	//假设最终状态是启用了----------//怎么看启用了
+	// 	$data['fnlstat']=1;
+
+	// 	$this->ajaxReturn($data,'json');
+	// }
 
 
 	//------------------------odrlist

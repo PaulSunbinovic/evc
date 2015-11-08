@@ -12,11 +12,15 @@ function onoff(id){
     }
 }
 
-//由于某些冲突，所以，tmofst在作为比对，是在jquery-clockpicker.js里面进行判断的。。。
-var tmofst="";var stmod=1;//set mode 默认是提交设定
 function clc(id){//clock
     dvcid=id;
-    
+    var dttm=$('#demo_datetime');
+    if(dttm.val()==dvcls[dvcid]){
+        //说明没有改变，灰掉
+        $('#sttm').addClass('disabled');
+    }else{
+        $('#sttm').removeClass('disabled');
+    }
     $.ajax({
         'type': 'GET',
         'url': fnddvcbydvcid,
@@ -29,15 +33,8 @@ function clc(id){//clock
         'dataType': 'json',
         'success': function(data) {
                
-            $('#dvcnm').html(data['dvco']['address']);
-            $('#optm').val(data['timer']['tm']);
-            if(data['timer']['tm']){
-                tmofst=data['timer']['tm'];
-                stmod=0;
-                $('#sttm').attr('class','btn btn-default btn-lg btn-block');
-                $('#sttm').html('取消设定');
-            }
-           
+           $('#dvcnm').html(data['dvco']['address']);
+            
             console.log("success");
         },
         'error':function() {
@@ -46,10 +43,26 @@ function clc(id){//clock
     });
     $('#modal').trigger('click');
 }
-
+//只要mbiscroll他消逝，无论都是要给optm一个时间that时间的来源自然是来自demo_datetime that 真时间,然后要弹出来的
+function modalRecureWhenClapse(){
+    $('#optm').val($('#demo_datetime').val());
+    $('#tm_'+dvcid).parent().trigger('click');
+}
 
 $(function(){
 
+    $('#optm').click(function(){
+        //触发取消
+        $('#cancel').trigger('click');
+        //触发隐藏的mobiscroll
+        $('#demo_datetime').trigger('click');
+        
+    })
+    
+   
+    
+
+    
     $('#cnclstttm').click(function(){
         $('#stttm').val('');
     })
@@ -60,85 +73,13 @@ $(function(){
 
     $('#sttm').click(function(){
 
-        if(stmod==1){
-            doonff('on',$('#optm').val(),'');
-        }else{
-            $.ajax({
-                'type': 'GET',
-                'url': cancelsttm,
-                'async':false,  
-                'contentType': 'application/json',
-                'data': {
-                    'dvcid':dvcid,
-                    
-                },
-                'dataType': 'json',
-                'success': function(data) {
-                       
-                    alert('取消设定时间成功！');
-                    
-                    console.log("success");
-                },
-                'error':function() {
-                        console.log("error");
-                }
-            });
-        }
-        
+        doonff('on',$('#optm').val(),'');
        
-    })
-
-    $('.week').click(function(){
-        var als=$(this).children('a');
-        var a=als[0];
-        classofa=$(a).attr('class');
-        if(classofa.indexOf('default')==-1){
-            classofa=classofa.replace(/success/g,'default');
-        }else{
-            classofa=classofa.replace(/default/g,'success');
-        }
-        $(a).attr('class',classofa);
-        var id=$(this).attr('id');
-        if(id.indexOf('day')!=-1){
-            var als=$('#work').children('a');
-            var a=als[0];
-            classofa='btn btn-default btn-block';
-            $(a).attr('class',classofa);
-        }
-        
-    })
-
-    $('#work').click(function(){
-        var als=$(this).children('a');
-        var a=als[0];
-        classofa=$(a).attr('class');
-        if(classofa.indexOf('default')==-1){
-            var classofa5='btn btn-success btn-block padding-w-1-px';
-            var classofa2='btn btn-default btn-block padding-w-1-px';
-        }else{
-            var classofa5='btn btn-default btn-block padding-w-1-px';
-            var classofa2='btn btn-default btn-block padding-w-1-px';
-        }
-        
-        for(var i=1;i<=5;i++){
-            var als=$('#day'+i).children('a');
-            var a=als[0];
-            $(a).attr('class',classofa5);
-        }
-        for(var i=6;i<=7;i++){
-            var als=$('#day'+i).children('a');
-            var a=als[0];
-            $(a).attr('class',classofa2);
-        }
     })
 
     $('#cncloptm').click(function(){
         $('#optm').val('');
     })
-
-    // $('#optm').change(function(){
-    //     alert();
-    // })
     
 })
 
@@ -163,11 +104,12 @@ function doonff(oprt,tm,everyday){
                     $('#cls').trigger('click');
                     if(data['rslt']=='ok'){
                         //完成设定成功的话要给数组库添加值，以后只要和新成立的结论不正确的
-                        //dvcls[dvcid]=tm;
-                        $('#btn_'+dvcid).html("<a class='btn btn-success btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-time'></i> "+data['tm']+"</a>");
-                        
+                        dvcls[dvcid]=tm;
+                        $('#btn_'+dvcid).attr('class','btn btn-default');
+                        $('#tm_'+dvcid).html('已设定');
                     }else{
-                        
+                        $('#btn_'+dvcid).attr('class','btn btn-success');
+                        $('#tm_'+dvcid).html('未设定');
                     }
                     alert(data['msg']);
                     check(dvcid);

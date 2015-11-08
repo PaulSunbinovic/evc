@@ -31,10 +31,7 @@
 
 <script type="text/javascript" src='__PUBLIC__/JS/index/usrct.js'></script>
 <link href="__PUBLIC__/CSS/index/usrct.css" rel="stylesheet">
-<script>
-var fnddvcbydvcid='__URL__/fnddvcbydvcid';
-var cancelsttm='__URL__/cancelsttm';
-</script>
+<script>var fnddvcbydvcid='__URL__/fnddvcbydvcid';</script>
 </head>
 <body>
 
@@ -87,12 +84,9 @@ var cancelsttm='__URL__/cancelsttm';
 		
 		
 		<div class='col-md-12 col-xs-12' style='padding-bottom:20px'>
-			<?php if(is_array($dvcls)): $i = 0; $__LIST__ = $dvcls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dvcv): $mod = ($i % 2 );++$i;?><div class='col-md-4 col-xs-4' id="dvc_<?php echo ($dvcv['id']); ?>" onclick="onoff(<?php echo ($dvcv['id']); ?>)"><a class='btn btn-default btn-lg btn-block blk' ><i class='glyphicon glyphicon-off'></i> 关</a></div>
-				<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-flash'></i> 1.5KW</a></div>
-				<div class='col-md-4 col-xs-4'  onclick="clc(<?php echo ($dvcv['id']); ?>)" id="btn_<?php echo ($dvcv['id']); ?>"><a class="btn btn-<?php echo ($dvcv['timer']['cls_tag']); ?> btn-lg btn-block blk" href='#'><i class='glyphicon glyphicon-time'></i> <?php echo ($dvcv['timer']['tm']); ?></a></div>
-				<div class='col-md-4 col-xs-4 txtct'>开关</div>
-				<div class='col-md-4 col-xs-4 txtct'>可调功率</div>
-				<div class='col-md-4 col-xs-4 txtct'>半价电预约</div><?php endforeach; endif; else: echo "" ;endif; ?>
+			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id='modal' >
+	  需要定时吗<b class="caret"></b>	
+</button>
 			
 			
 			<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-adjust'></i> 半天</a></div>
@@ -124,9 +118,7 @@ var cancelsttm='__URL__/cancelsttm';
 	<!--foot-->
 
 	<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id='modal' style='display: none'>
-	  需要定时吗<b class="caret"></b>	
-</button>
+
 
 <!-- Modal -->
 <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -139,36 +131,25 @@ var cancelsttm='__URL__/cancelsttm';
       <div class="modal-body">
       	<div class='col-md-12 col-xs-12' style='text-align: center;font-size: 18px'><a id='dvcnm'></a></div>
 		
-		
-		<!--
-		经过反复实验可以确诊，在modal形式下clockpicker是有问题，你选的时候是无法在input里显示的
-		所以我再jquery-clockpicker.js里头进行重写函数，详见//--------------的部分
-		注意，为了逻辑优先，我不用min.js了
-		-->
 		<script type="text/javascript" src='__PUBLIC__/pblc/CLCK/bootstrap-clockpicker.min.js'></script>
 		<link rel="stylesheet" type="text/css" href="__PUBLIC__/pblc/CLCK/bootstrap-clockpicker.min.css">
 		<script type="text/javascript" src='__PUBLIC__/pblc/CLCK/jquery-clockpicker.js'></script>
 		<link rel="stylesheet" type="text/css" href="__PUBLIC__/pblc/CLCK/jquery-clockpicker.min.css">
-		<div class="input-group clockpicker" style="padding-top: 20px">
+		<div class="input-group clockpicker">
 		    <input type="text" class="form-control" placeholder='点击选择时间' id='optm'>
 		    <span class="input-group-addon">
 		        <span class="glyphicon glyphicon-time"></span>
 		    </span>
 		</div>
 		<script type="text/javascript" src='__PUBLIC__/pblc/CLCK/int.js'></script>
+		<script type="text/javascript">
+		$(function(){
+			$('.clockpicker-button').click(function(){
+				alert();
+			})
+		})
+		</script>
 		
-		<div class='col-md-12 col-xs-12 nopadding' style="margin-top: 20px">
-			<div class='col-md-1 col-xs-1 padding-1-px week' id='day1'><a class="btn btn-default btn-block padding-w-1-px">一</a></div>
-			<div class='col-md-1 col-xs-1 padding-1-px week' id='day2'><a class="btn btn-default btn-block padding-w-1-px">二</a></div>
-			<div class='col-md-1 col-xs-1 padding-1-px week' id='day3'><a class="btn btn-default btn-block padding-w-1-px">三</a></div>
-			<div class='col-md-1 col-xs-1 padding-1-px week' id='day4'><a class="btn btn-default btn-block padding-w-1-px">四</a></div>
-			<div class='col-md-1 col-xs-1 padding-1-px week' id='day5'><a class="btn btn-default btn-block padding-w-1-px">五</a></div>
-			<div class='col-md-1 col-xs-1 padding-1-px week' id='day6'><a class="btn btn-default btn-block padding-w-1-px">六</a></div>
-			<div class='col-md-1 col-xs-1 padding-1-px week' id='day7'><a class="btn btn-default btn-block padding-w-1-px">七</a></div>
-			<div class='col-md-3 col-xs-3 padding-1-px week' id='work'><a class='btn btn-default btn-block'>工作日</a></div>
-			<div class='col-md-2 col-xs-2 padding-1-px week' id='everyweek'><a class='btn btn-default btn-block'>每周</a></div>
-		</div>
-
 		
 		<div class='col-md-12 col-xs-12 nopadding' style='margin-top:20px'>
 			<script>var dosttm='__URL__/dosttm';</script>

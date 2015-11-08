@@ -1,7 +1,6 @@
+
 $('.clockpicker').clockpicker()
-	.find('input').change(function(){
-		console.log(this.value);
-	});
+	
 var input = $('#single-input').clockpicker({
 	placement: 'bottom',
 	align: 'left',
@@ -39,9 +38,7 @@ $('.clockpicker-with-callbacks').clockpicker({
 			console.log("after done");
 		}
 	})
-	.find('input').change(function(){
-		console.log(this.value);
-	});
+	
 
 // Manually toggle to the minutes view
 $('#check-minutes').click(function(e){

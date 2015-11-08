@@ -497,6 +497,24 @@
 
 	// Hide popover
 	ClockPicker.prototype.hide = function(){
+
+		//---------------
+		var hr=this.hours;
+		var mnt=this.minutes;
+		if(hr<10){
+			hr='0'+hr;
+		}
+		if(mnt<10){
+			mnt='0'+mnt;
+		}
+		var tm=hr+':'+mnt;
+		$('#optm').val(tm);
+		if(tmofst!=tm){
+			stmod=1;
+			$('#sttm').attr('class','btn btn-success btn-lg btn-block');
+            $('#sttm').html('提交设定');
+		}
+
 		raiseCallback(this.options.beforeHide);
 
 		this.isShown = false;
@@ -671,7 +689,7 @@
 	};
 
 	// Hours and minutes are selected
-	ClockPicker.prototype.done = function() {
+	ClockPicker.prototype.done = function() {alert('done');
 		raiseCallback(this.options.beforeDone);
 		this.hide();
 		var last = this.input.prop('value'),

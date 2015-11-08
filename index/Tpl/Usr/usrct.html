@@ -31,7 +31,10 @@
 
 <script type="text/javascript" src='__PUBLIC__/JS/index/usrct.js'></script>
 <link href="__PUBLIC__/CSS/index/usrct.css" rel="stylesheet">
-<script>var fnddvcbydvcid='__URL__/fnddvcbydvcid';</script>
+<script>
+var fnddvcbydvcid='__URL__/fnddvcbydvcid';
+var cancelsttm='__URL__/cancelsttm';
+</script>
 </head>
 <body>
 
@@ -66,8 +69,8 @@
 		<div class='col-md-12 col-xs-12' style='padding-bottom:20px'>
 			<volist name='dvcls' id='dvcv'>
 				<div class='col-md-4 col-xs-4' id="dvc_{$dvcv['id']}" onclick="onoff({$dvcv['id']})"><a class='btn btn-default btn-lg btn-block blk' ><i class='glyphicon glyphicon-off'></i> 关</a></div>
-				<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#' onclick="clc({$dvcv['id']})" id="btn_{$dvcv['id']}"><i class='glyphicon glyphicon-flash'></i> 1.5KW</a></div>
-				<div class='col-md-4 col-xs-4' id="optm"><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-time'></i> </a></div>
+				<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-flash'></i> 1.5KW</a></div>
+				<div class='col-md-4 col-xs-4'  onclick="clc({$dvcv['id']})" id="btn_{$dvcv['id']}"><a class="btn btn-{$dvcv['timer']['cls_tag']} btn-lg btn-block blk" href='#'><i class='glyphicon glyphicon-time'></i> {$dvcv['timer']['tm']}</a></div>
 				<div class='col-md-4 col-xs-4 txtct'>开关</div>
 				<div class='col-md-4 col-xs-4 txtct'>可调功率</div>
 				<div class='col-md-4 col-xs-4 txtct'>半价电预约</div>
@@ -119,23 +122,42 @@
       <div class="modal-body">
       	<div class='col-md-12 col-xs-12' style='text-align: center;font-size: 18px'><a id='dvcnm'></a></div>
 		
-		<script src="__PUBLIC__/pblc/MBSCRL/js/appframework.js"></script>
-		<link href="__PUBLIC__/pblc/MBSCRL/css/mobiscroll.custom-2.16.1.min.css" rel="stylesheet" type="text/css" />
-    	<script src="__PUBLIC__/pblc/MBSCRL/js/mobiscroll.custom-2.16.1.min.js" type="text/javascript"></script>
-		<script src="__PUBLIC__/pblc/MBSCRL/js/init.js" type="text/javascript"></script>
-		<div class='col-md-12 col-xs-12 nopadding' style='margin-top:20px'>
-			 <div data-role="fieldcontain" class="demo-cont" id="demo_cont_datetime">
-	            <input type="text" id="demo_datetime" class='form-control' placeholder='点击输入时间' style="display:none">  
-	            <input type="text" id="optm" class='form-control' placeholder='点击输入时间'>  
-	           
-	        </div>
-		     
+		
+		<!--
+		经过反复实验可以确诊，在modal形式下clockpicker是有问题，你选的时候是无法在input里显示的
+		所以我再jquery-clockpicker.js里头进行重写函数，详见//--------------的部分
+		注意，为了逻辑优先，我不用min.js了
+		-->
+		<script type="text/javascript" src='__PUBLIC__/pblc/CLCK/bootstrap-clockpicker.min.js'></script>
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/pblc/CLCK/bootstrap-clockpicker.min.css">
+		<script type="text/javascript" src='__PUBLIC__/pblc/CLCK/jquery-clockpicker.js'></script>
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/pblc/CLCK/jquery-clockpicker.min.css">
+		<div class="input-group clockpicker" style="padding-top: 20px">
+		    <input type="text" class="form-control" placeholder='点击选择时间' id='optm'>
+		    <span class="input-group-addon">
+		        <span class="glyphicon glyphicon-time"></span>
+		    </span>
 		</div>
+		<script type="text/javascript" src='__PUBLIC__/pblc/CLCK/int.js'></script>
+		
+		<div class='col-md-12 col-xs-12 nopadding' style="margin-top: 20px">
+			<div class='col-md-1 col-xs-1 padding-1-px week' id='day1'><a class="btn btn-default btn-block padding-w-1-px">一</a></div>
+			<div class='col-md-1 col-xs-1 padding-1-px week' id='day2'><a class="btn btn-default btn-block padding-w-1-px">二</a></div>
+			<div class='col-md-1 col-xs-1 padding-1-px week' id='day3'><a class="btn btn-default btn-block padding-w-1-px">三</a></div>
+			<div class='col-md-1 col-xs-1 padding-1-px week' id='day4'><a class="btn btn-default btn-block padding-w-1-px">四</a></div>
+			<div class='col-md-1 col-xs-1 padding-1-px week' id='day5'><a class="btn btn-default btn-block padding-w-1-px">五</a></div>
+			<div class='col-md-1 col-xs-1 padding-1-px week' id='day6'><a class="btn btn-default btn-block padding-w-1-px">六</a></div>
+			<div class='col-md-1 col-xs-1 padding-1-px week' id='day7'><a class="btn btn-default btn-block padding-w-1-px">七</a></div>
+			<div class='col-md-3 col-xs-3 padding-1-px week' id='work'><a class='btn btn-default btn-block'>工作日</a></div>
+			<div class='col-md-2 col-xs-2 padding-1-px week' id='everyweek'><a class='btn btn-default btn-block'>每周</a></div>
+		</div>
+
 		
 		<div class='col-md-12 col-xs-12 nopadding' style='margin-top:20px'>
-		<script>var dosttm='__URL__/dosttm';</script>
-		<buttom class='btn btn-success btn-lg btn-block' id='sttm'>完成设定</buttom>
+			<script>var dosttm='__URL__/dosttm';</script>
+			<button class='btn btn-success btn-lg btn-block' id='sttm'>完成设定</button>
 		</div>
+
 		<div class="clearfix"></div>
       </div>
       <div class="modal-footer">
