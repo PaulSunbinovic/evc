@@ -43,17 +43,25 @@
 	
 	<!--导航开始-->
 <div class='col-md-12 col-xs-12 nvgt'>
-	<div class='col-md-3 col-xs-3'>
+	<div class='col-md-3 col-xs-3' >
 		<a class='pull-left hd_a_left' href="javascript:history.go(-1);"><i class='glyphicon glyphicon-menu-left'></i></a>
 	</div>
 	<div class='col-md-6 col-xs-6' style="text-align: center">
 		<a style='color:#fff'><?php echo ($ttl); ?></a>
 	</div>
-	<div class='col-md-3 col-xs-3'>
+	<div class='col-md-3 col-xs-3' >
+		<a class='pull-right hd_a_right' id='flsh'><i class='glyphicon glyphicon-repeat'></i></a>
 	</div>
 	
 </div>
 <!--导航结束-->
+<script type="text/javascript">
+	$(function(){
+		$('#flsh').click(function(){
+			window.location.reload();
+		})
+	})
+</script>
 	<script>
 	//返回键CSS失效了，修改下
 	// var dvls=$('.nvgt').children('div');
@@ -118,7 +126,7 @@
 		var dodnfrsh='__URL__/dodnfrsh_odr';//do slidedown fresh
 		var doupld='__URL__/doupld_odr';//do slideup loading
 		//slideDown 和 slideUp函数写在hstr_odr.js里面//
-		var nwpg=0;//now page 当前页必然是第0页初始时候
+		var nwpg=1;//now page 当前页必然是第0页初始时候,王峰从1开始算的
 		</script>
 		
 	

@@ -689,7 +689,7 @@
 	};
 
 	// Hours and minutes are selected
-	ClockPicker.prototype.done = function() {alert('done');
+	ClockPicker.prototype.done = function() {
 		raiseCallback(this.options.beforeDone);
 		this.hide();
 		var last = this.input.prop('value'),

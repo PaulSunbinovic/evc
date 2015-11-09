@@ -6518,3 +6518,91 @@ INFO: [ app_begin ] --START--
 INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000718s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000843s ]
 
+[ 2015-11-08T20:30:27+08:00 ] 192.168.1.109 /evc/index.php/Usr/fnddvcbydvcid?dvcid=2
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001310s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001473s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000854s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000964s ]
+
+[ 2015-11-08T20:31:28+08:00 ] 192.168.1.109 /evc/index.php/Usr/doonoffdvc?dvcid=2&tm=&oprt=on&everyday=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000925s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001086s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000762s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000917s ]
+
+[ 2015-11-08T20:31:31+08:00 ] 192.168.1.109 /evc/index.php/Usr/doonoffdvc?dvcid=2&tm=&oprt=on&everyday=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000996s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001157s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000842s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000989s ]
+
+[ 2015-11-08T20:31:36+08:00 ] 192.168.1.109 /evc/index.php/Usr/doonoffdvc?dvcid=2&tm=&oprt=on&everyday=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000955s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001118s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001213s ]
+
+[ 2015-11-08T20:33:34+08:00 ] 192.168.1.109 /evc/index.php/Usr/doonoffdvc?dvcid=2&tm=&oprt=on&everyday=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002808s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002978s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001168s ]
+
+[ 2015-11-08T20:33:40+08:00 ] 192.168.1.109 /evc/index.php/Usr/fnddvcbydvcid?dvcid=2
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001160s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001322s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000819s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000939s ]
+
+[ 2015-11-08T20:33:45+08:00 ] 192.168.1.109 /evc/index.php/Usr/doonoffdvc?dvcid=2&tm=&oprt=on&everyday=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001147s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001423s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000934s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001054s ]
+
+[ 2015-11-08T20:33:50+08:00 ] 192.168.1.109 /evc/index.php/Usr/doonoffdvc?dvcid=2&tm=&oprt=on&everyday=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001266s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001471s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000776s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000898s ]
+
+[ 2015-11-08T20:33:52+08:00 ] 192.168.1.109 /evc/index.php/Usr/doonoffdvc?dvcid=2&tm=&oprt=on&everyday=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001530s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001781s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001334s ]
+
+[ 2015-11-08T20:34:15+08:00 ] 192.168.1.109 /evc/index.php/Usr/doonoffdvc?dvcid=2&tm=&oprt=on&everyday=
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001272s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001499s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001147s ]
+
+[ 2015-11-08T22:39:50+08:00 ] 192.168.1.109 /evc/index.php/Usr/fnddvcbydvcid?dvcid=2
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003230s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003615s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002709s ]
+

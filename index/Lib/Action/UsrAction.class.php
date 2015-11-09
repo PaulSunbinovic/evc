@@ -180,6 +180,25 @@ class UsrAction extends Action {
 		$everyday=$_GET['everyday'];
 		$openid=session('openid');
 
+		$url=C('javaback').'/user/get.action?wechatId='.$openid;
+		if(C('psnvs')==1){
+			$json=https_request($url);
+		}else{
+			$json='{"data":{"user":{"id":1,"token":1,"wechatId":"12345","nickName":"王 峰","mobile":"13162951502","macId":"dadadaaf","headImgUrl":"baidu.com","createTime":"2015-09-13 10:37:53","updateTime":"2015-09-13 10:37:53","customer":true,"deviceOwner":false,"installser":false,"admin":false},"userAccount":{"id":1,"userId":1,"balance":990,"point":0,"createTime":"2015-09-13 10:37:54","updateTime":"2015-09-19 23:26:50","version":1},"carList": [{"id":1,"userId":1,"carModelId":1,"carNo":"沪 A11111","isDefault":false,"createTime":"2015-09-19 22:19:36","updateTime":"2015-09-19 22:19:40"}]},"code":"A00000","msg":null}';
+		}
+		$arr=json_decode($json,true);
+		//现在就处理他默认的车或者default的车
+		//先存了第一个，然后循环过程中如果发现那个是default的话就break掉
+		$carls=$arr['data']['carList'];
+		for($i=0;$i<count($carls);$i++){
+			if($i==0){
+				$carid=$carls[$i]['id'];
+			}
+			if($carls[$i]['isDefault']==true){
+				$carid=$carls[$i]['id'];
+				break;
+			}
+		}
 
 		$str='';
 		if($tm!=''){
@@ -195,7 +214,7 @@ class UsrAction extends Action {
 		}
 
 		//先预约
-		$url=C('javaback').'/order/appoint.action?wechatId='.session('openid').'&deviceId='.$dvcid;
+		$url=C('javaback').'/order/appoint.action?wechatId='.session('openid').'&deviceId='.$dvcid.'&carId='.$carid;
 		if(C('psnvs')==1){
 			$json='{"data":4,"code":"A01408","msg":"用户余额不足"}';
 		}else{
