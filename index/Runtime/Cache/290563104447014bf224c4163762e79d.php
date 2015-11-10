@@ -74,21 +74,21 @@
 					<a class='btn btn-success btn-lg btn-block' href="__ROOT__/wxpay/example/jsapi.php?money=30">30元</a>
 				</div>
 				<div class="col-md-4 col-xs-4">
-					<a class='btn btn-success btn-lg btn-block' href="__ROOT__/wxpay/example/jsapi.php?money=30">50元</a>
+					<a class='btn btn-success btn-lg btn-block' href="__ROOT__/wxpay/example/jsapi.php?money=50">50元</a>
 				</div>
 				<div class="col-md-4 col-xs-4">
-					<a class='btn btn-success btn-lg btn-block' href="__ROOT__/wxpay/example/jsapi.php?money=30">100元</a>
+					<a class='btn btn-success btn-lg btn-block' href="__ROOT__/wxpay/example/jsapi.php?money=100">100元</a>
 				</div>
 			</div>
 			<div class='row' style='margin-top: 15px; margin-bottom: 15px;'>
 				<div class="col-md-4 col-xs-4">
-					<a class='btn btn-success btn-lg btn-block' href="__ROOT__/wxpay/example/jsapi.php?money=30">200元</a>
+					<a class='btn btn-success btn-lg btn-block' href="__ROOT__/wxpay/example/jsapi.php?money=200">200元</a>
 				</div>
 				<div class="col-md-4 col-xs-4">
-					<a class='btn btn-success btn-lg btn-block' href="__ROOT__/wxpay/example/jsapi.php?money=30">300元</a>
+					<a class='btn btn-success btn-lg btn-block' href="__ROOT__/wxpay/example/jsapi.php?money=300">300元</a>
 				</div>
 				<div class="col-md-4 col-xs-4">
-					<a class='btn btn-success btn-lg btn-block' href="__ROOT__/wxpay/example/jsapi.php?money=30">500元</a>
+					<a class='btn btn-success btn-lg btn-block' href="__ROOT__/wxpay/example/jsapi.php?money=500">500元</a>
 				</div>
 			</div>
 			<div class='row' style='margin-top: 15px; margin-bottom: 15px;'>

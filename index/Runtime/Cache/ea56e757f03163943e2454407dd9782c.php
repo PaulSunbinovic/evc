@@ -98,10 +98,10 @@ var cancelsttm='__URL__/cancelsttm';
 			
 			<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-adjust'></i> 半天</a></div>
 			<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-eye-open'></i> </a></div>
-			<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-leaf'></i> </a></div>
+			<div class='col-md-4 col-xs-4'><a class='btn btn-warning btn-lg btn-block blk' href='__URL__/chongzhi'><i class='glyphicon glyphicon-yen'></i> </a></div>
 			<div class='col-md-4 col-xs-4 txtct'>共享时段</div>
 			<div class='col-md-4 col-xs-4 txtct'> 防盗激活</div>
-			<div class='col-md-4 col-xs-4 txtct'> 柔性充电</div>
+			<div class='col-md-4 col-xs-4 txtct'> 充值</div>
 			
 			<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-ok'></i> </a></div>
 			<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-list-alt'></i> </a></div>
