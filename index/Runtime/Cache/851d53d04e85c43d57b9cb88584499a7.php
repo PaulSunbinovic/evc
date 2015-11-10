@@ -205,7 +205,7 @@ var __url__='__URL__';
       <div class="modal-body">
 
         <div class='col-md-12 col-xs-12'>
-        	<a class='btn btn-success btn-lg btn-block' id='opcmr'>到桩扫码</a>
+        	<a class='btn btn-success btn-lg btn-block' id='opcmr'>绑定桩扫码</a>
         </div>
         <div class='clearfix'></div>
       </div>

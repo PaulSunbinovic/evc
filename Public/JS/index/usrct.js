@@ -254,3 +254,53 @@ function check(dvcid){
     
 }
 
+function changeCapacity(id){
+    var objOfCapacity=$('#capacity_'+id);
+    //思路 先获取设备原来的capacity状态，然后取相反就行了
+    $.ajax({
+        'type': 'GET',
+        'url': fnddvcbydvcid,
+        'async':false,  
+        'contentType': 'application/json',
+        'data': {
+            'dvcid':id,
+            
+        },
+        'dataType': 'json',
+        'success': function(data) {
+            var capacity=data['dvco']['capacity'];
+            if(capacity==1){
+                capacity=2;
+            }else if(capacity=2){
+                capacity=1;
+            }else{
+                capacity=1;
+            }
+            $.ajax({
+                'type': 'GET',
+                'url': doChangeCapacity,
+                'async':false,  
+                'contentType': 'application/json',
+                'data': {
+                    'dvcid':id,
+                    'capacity':capacity,
+                },
+                'dataType': 'json',
+                'success': function(data) {
+                    $('valueOfCapacity').html(data['valueOfCapacity']);
+                    
+                   
+                    console.log("success");
+                },
+                'error':function() {
+                        console.log("error");
+                }
+            });
+           
+            console.log("success");
+        },
+        'error':function() {
+                console.log("error");
+        }
+    });
+}

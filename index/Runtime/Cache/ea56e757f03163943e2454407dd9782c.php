@@ -86,9 +86,10 @@ var cancelsttm='__URL__/cancelsttm';
 		</div>
 		
 		
-		<div class='col-md-12 col-xs-12' style='padding-bottom:20px'>
+		<div class='col-md-12 col-xs-12' style='padding-bottom:20px' id='nine'>
 			<?php if(is_array($dvcls)): $i = 0; $__LIST__ = $dvcls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dvcv): $mod = ($i % 2 );++$i;?><div class='col-md-4 col-xs-4' id="dvc_<?php echo ($dvcv['id']); ?>" onclick="onoff(<?php echo ($dvcv['id']); ?>)"><a class='btn btn-default btn-lg btn-block blk' ><i class='glyphicon glyphicon-off'></i> 关</a></div>
-				<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-flash'></i> 1.5KW</a></div>
+				<script>var doChangeCapacity="__URL__/doChangeCapacity";</script>
+				<div class='col-md-4 col-xs-4' id="capacity_<?php echo ($dvcv['id']); ?>" onclick="changeCapacity(<?php echo ($dvcv['id']); ?>)"><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-flash'></i> <valueOfCapacity><?php echo ($dvcv['fast_slow_charge']); ?></valueOfCapacity></a></div>
 				<div class='col-md-4 col-xs-4'  onclick="clc(<?php echo ($dvcv['id']); ?>)" id="btn_<?php echo ($dvcv['id']); ?>"><a class="btn btn-<?php echo ($dvcv['timer']['cls_tag']); ?> btn-lg btn-block blk" href='#'><i class='glyphicon glyphicon-time'></i> <?php echo ($dvcv['timer']['tm']); ?></a></div>
 				<div class='col-md-4 col-xs-4 txtct'>开关</div>
 				<div class='col-md-4 col-xs-4 txtct'>可调功率</div>

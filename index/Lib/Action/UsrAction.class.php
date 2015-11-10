@@ -114,7 +114,7 @@ class UsrAction extends Action {
 			//由于getByowner里面的状态是有问题的，所以，我们要通过device.getaction的方法来获取某个桩的值
 			$url=C('javaback').'/device/get.action?deviceId='.$dvcv['id'];
 			if(C('psnvs')==1){
-				$json='{"data": {"id":2,"owner":2,"sn":"002","model":1,"city":null,"longitude":"121.575215","latitude":"31.203762","address":" 龙沟新苑 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":"02"},"code":"A00000","msg":" 获取设备成功"}';
+				$json='{"data": {"id":2,"owner":2,"sn":"002","model":1,"city":null,"longitude":"121.575215","latitude":"31.203762","address":" 龙沟新苑 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":"02","capacity":1},"code":"A00000","msg":" 获取设备成功"}';
 			}else{
 				$json=https_request($url);
 			}
@@ -146,6 +146,14 @@ class UsrAction extends Action {
 				'tm'=>$tm,
 				);
 			$dvcv['timer']=$timer;
+
+			if($dvcv['capacity']==1){
+				$dvcv['fast_slow_charge']='1.5KW';
+			}else if($dvcv['capacity']==2){
+				$dvcv['fast_slow_charge']='3.5KW';
+			}else{
+				$dvcv{'fast_slow_charge'}='未设置';
+			}
 			array_push($dvclsnw, $dvcv);
 		}
 		
@@ -257,9 +265,9 @@ class UsrAction extends Action {
 
 	public function fnddvcbydvcid(){
 		$dvcid=$_GET['dvcid'];
-		$url='http://120.26.80.165/device/get.action?deviceId='.$dvcid;
+		$url=C('javaback').'/device/get.action?deviceId='.$dvcid;
 		if(C('psnvs')==1){
-			$json='{"data": {"id":2,"owner":2,"sn":"002","model":1,"city":null,"longitude":"121.575215","latitude":"31.203762","address":" 龙沟新苑 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},"code":"A00000","msg":" 获取设备成功"}';//------------时间呢
+			$json='{"data": {"id":2,"owner":2,"sn":"002","model":1,"city":null,"longitude":"121.575215","latitude":"31.203762","address":" 龙沟新苑 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":"","capacity":1},"code":"A00000","msg":" 获取设备成功"}';//------------时间呢
 		}else{
 			$json=https_request($url);
 		}
@@ -288,6 +296,35 @@ class UsrAction extends Action {
 			);
 		$data['timer']=$timer;
 		$this->ajaxReturn($data,'json');
+	}
+
+	public function doChangeCapacity(){
+		$dvcid=$_GET['dvcid'];
+		$capacity=$_GET['capacity'];
+		$openid=session('openid');
+		$url=C('javaback').'/device/capacity.action?wechatId='.$openid.'&deviceId='.$dvcid.'&capacity='.$capacity;
+		if(C('psnvs')==1){
+			$json='{"data":null,"code":"A00000","msg":"设备操作成功"}';
+		}else{
+			$json=https_request($json);
+		}
+		$arr=json_decode($json,true);
+		if($arr['code']='A00000'){
+			$data['rslt']='ok';
+			if($capacity==1){
+				$str='1.5KW';
+			}else if($capacity==2){
+				$str='3.5KW';
+			}else{
+				$str='未设置';
+			}
+			$data['valueOfCapacity']=$str;
+		}else{
+			$data['rslt']='error';
+		}
+		$data['msg']=$arr['msg'];
+		$this->ajaxReturn($data,'json');
+
 	}
 
 	public function cancelsttm(){
