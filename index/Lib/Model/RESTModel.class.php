@@ -30,7 +30,7 @@ class RESTModel {
   {
     $this->Batch = date("YmdHis");
     //$this->ServerIP = $ServerIP;
-    $this->ServerIP = 'https://app.cloopen.com:8883';
+    $this->ServerIP = 'app.cloopen.com';
     //$this->ServerPort = $ServerPort;
     $this->ServerPort = '8883';
     // $this->SoftVersion = $SoftVersion;

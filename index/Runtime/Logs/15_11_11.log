@@ -240,3 +240,23 @@ INFO: [ app_begin ] --END-- [ RunTime:0.000788s ]
 NOTIC: [2] Missing argument 2 for RESTModel::__construct(), called in C:\wamp\www\evc\ThinkPHP\Common\common.php on line 406 and defined C:\wamp\www\evc\index\Lib\Model\RESTModel.class.php 第 29 行.
 NOTIC: [2] Missing argument 3 for RESTModel::__construct(), called in C:\wamp\www\evc\ThinkPHP\Common\common.php on line 406 and defined C:\wamp\www\evc\index\Lib\Model\RESTModel.class.php 第 29 行.
 
+[ 2015-11-11T16:16:58+08:00 ] 0.0.0.0 /evc/index.php/Dvc/test
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002107s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002356s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001180s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001384s ]
+NOTIC: [2] Missing argument 2 for RESTModel::__construct(), called in C:\wamp\www\evc\ThinkPHP\Common\common.php on line 406 and defined C:\wamp\www\evc\index\Lib\Model\RESTModel.class.php 第 29 行.
+NOTIC: [2] Missing argument 3 for RESTModel::__construct(), called in C:\wamp\www\evc\ThinkPHP\Common\common.php on line 406 and defined C:\wamp\www\evc\index\Lib\Model\RESTModel.class.php 第 29 行.
+
+[ 2015-11-11T16:18:18+08:00 ] 0.0.0.0 /evc/index.php/Dvc/test
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000961s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001118s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000796s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000962s ]
+NOTIC: [2] Missing argument 2 for RESTModel::__construct(), called in C:\wamp\www\evc\ThinkPHP\Common\common.php on line 406 and defined C:\wamp\www\evc\index\Lib\Model\RESTModel.class.php 第 29 行.
+NOTIC: [2] Missing argument 3 for RESTModel::__construct(), called in C:\wamp\www\evc\ThinkPHP\Common\common.php on line 406 and defined C:\wamp\www\evc\index\Lib\Model\RESTModel.class.php 第 29 行.
+

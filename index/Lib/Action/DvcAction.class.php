@@ -75,7 +75,7 @@ class DvcAction extends Action {
             $vrf->data($dt)->add();
         }
         //发送短信有点问题，先跳过
-        $this->sendsms($usrcp,array($rdmnb,'5'),"1");//send过慢造成ajax得到error 不过没事不影响
+        $this->sendsms($usrcp,array($rdmnb,'5'),"48076");//send过慢造成ajax得到error 不过没事不影响
         //$data['vrfnb']=$rdmnb;
         $this->ajaxReturn($data,'json');//随便返回，其实没东西要返回的，意思一下而已
     }
@@ -118,7 +118,7 @@ class DvcAction extends Action {
 
 
     public function test(){
-        $this->sendsms("13567196593",'4444',"48076");
+        $this->sendsms("13567196593",array('8888','5'),"48076");
     }
     public function sendsms($to,$datas,$tempId){
     
