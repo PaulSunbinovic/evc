@@ -105,7 +105,7 @@ class DvcAction extends Action {
             }
             $data['vrf']=1;
             $data['arr']=$arr;
-            $data['url']=__APP__.'Usr/usrct';
+            $data['url']=__APP__.'/Usr/usrct';
             $this->ajaxReturn($data,'json');
         }else{
             //失败

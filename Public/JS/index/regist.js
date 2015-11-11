@@ -4,9 +4,9 @@ $(function () {
 	//------------------------接下来是通用部分
 	$("#addusr").click(function(){
 		var mobile=$('input[name=mobile]');
-		var carBrand=$('select[name=carBrand]');
-		var carModelId=$('select[name=carModelId]');
-		var carNo=$('input[name=carNo]');
+		// var carBrand=$('select[name=carBrand]');
+		// var carModelId=$('select[name=carModelId]');
+		// var carNo=$('input[name=carNo]');
 		
 		//防止输入空
 		if($.trim(mobile.val())==''){
@@ -22,40 +22,63 @@ $(function () {
 			return false;
 		}
 		
-		if(carBrand.val()=='0'){
-			alert('请选择车品牌！');
-			return false;
-		}
-		if(carModelId.val()=='0'){
-			alert('请选择车型号！');
-			return false;
-		}
-		if($.trim(carNo.val())==''){
-			alert('车牌号不能为空！');
-			carNo.focus();
-			return false;
-		}
+		// if(carBrand.val()=='0'){
+		// 	alert('请选择车品牌！');
+		// 	return false;
+		// }
+		// if(carModelId.val()=='0'){
+		// 	alert('请选择车型号！');
+		// 	return false;
+		// }
+		// if($.trim(carNo.val())==''){
+		// 	alert('车牌号不能为空！');
+		// 	carNo.focus();
+		// 	return false;
+		// }
+		// 
+		$.ajax({
+            'type': 'GET',
+            'url': url_doregist,
+            'async':false,  
+            'contentType': 'application/json',
+            'data': {
+                'wechatId':$('input[name=wechatId]').val(),
+                'headImgUrl':$('input[name=headImgUrl]').val(),
+                'nickName':$('input[name=nickName]').val(),
+                'mobile':$('input[name=mobile]').val(),
+            },
+            'dataType': 'json',
+            'success': function(data) {
+                   
+                alert(data.msg);
+				location.href=data.url;
+                console.log("success");
+            },
+            'error':function() {
+                    console.log("error");
+            }
+        });
 		
 		
-		var prmts=$("#addusr").parent().serialize();//parameters
-		//防止既输入空又输入了有效值
-		prmts=rmvblk(prmts);
+		// var prmts=$("#addusr").parent().serialize();//parameters
+		// //防止既输入空又输入了有效值
+		// prmts=rmvblk(prmts);
 		
 
-		$.post(
-			url_doregist,
-			//'http://wangfengtest.duapp.com/user/init.action',
-			prmts,
-			function(data){
+		// $.post(
+		// 	url_doregist,
+		// 	//'http://wangfengtest.duapp.com/user/init.action',
+		// 	prmts,
+		// 	function(data){
 				
-				alert(data.msg);
-				location.href=data.url;
+		// 		alert(data.msg);
+		// 		location.href=data.url;
 				
 				
 			
-			},
-			'json'
-		);
+		// 	},
+		// 	'json'
+		// );
 		
 
 		
