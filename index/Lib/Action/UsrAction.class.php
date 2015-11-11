@@ -185,7 +185,7 @@ class UsrAction extends Action {
 		$dvcid=$_GET['dvcid'];
 		$tm=$_GET['tm'];
 		$oprt=$_GET['oprt'];
-		$everyday=$_GET['everyday'];
+		$week=$_GET['week'];
 		$openid=session('openid');
 
 		$url=C('javaback').'/user/get.action?wechatId='.$openid;
@@ -215,10 +215,10 @@ class UsrAction extends Action {
 			$yr_mth_day=date('Y:m:d',time());
 			$tm=$yr_mth_day.' '.$tm.':00';
 			$tm=str_replace(' ', '+', $tm);//curl无法解析url的，所以要手动把参数改变下
-			$str='&time='.$tm;
+			$str='&timeExp='.$tm;
 		}
-		if($everyday){
-			$str=$str.'&everyday=1';
+		if($week){
+			$str=$str.'&dayExp='.$week;
 		}
 
 		//先预约
@@ -306,17 +306,17 @@ class UsrAction extends Action {
 		if(C('psnvs')==1){
 			$json='{"data":null,"code":"A00000","msg":"设备操作成功"}';
 		}else{
-			$json=https_request($json);
+			$json=https_request($url);
 		}
 		$arr=json_decode($json,true);
-		if($arr['code']='A00000'){
+		if($arr['code']=='A00000'){
 			$data['rslt']='ok';
 			if($capacity==1){
 				$str='1.5KW';
 			}else if($capacity==2){
 				$str='3.5KW';
 			}else{
-				$str='未设置';
+				$str='3.5KW';//默认3.5KW
 			}
 			$data['valueOfCapacity']=$str;
 		}else{
@@ -328,74 +328,24 @@ class UsrAction extends Action {
 	}
 
 	public function cancelsttm(){
+		$dvcid=$_GET['dvcid'];
+		$url=C('javaback').'/device/removeJob.action?wechatId'.session('openid').'&deviceId='.$dvcid;
+		if(C('psnvs')==1){
+			$json='{"code": “A00000”,"msg": "操作成功","data": null}';
+		}else{
+			$json=https_request($url);
+		}
+		$arr=json_decode($json,true);
+		if($arr['code']=='A00000'){
+			$data['rslt']='ok';
+		}else{
+			$data['rslt']='error';
+		}
+		$data['msg']=$arr['msg'];
 		$this->ajaxReturn($data.'json');
 	}
 
-	// public function dosttm(){
-	// 	$optm=$_GET['optm'];//补秒
-	// 	$clstm=$_GET['clstm'];
-	// 	$dvcid=$_GET['dvcid'];
-	// 	$openid=session('openid');
-		
-	// 	$flg=1;
-	// 	$rslt='';
-	// 	if($optm){
-	// 		$optm=$optm.':00';
-	// 		$optm=rplspc($optm);
-	// 		$url=C('javaback').'/device/operate.action?deviceId='.$dvcid.'&wechatId='.$openid.'&operation=on&time='.$optm;
-	// 		if(C('psnvs')==1){
-	// 			$json='{"data":null,"code":"A00001","msg":"系统错误"}';
-	// 		}else{
-	// 			$json=https_request($url);
-	// 		}
-	// 		//$json=https_request($url);
-	// 		$arr=json_decode($json,true);
-	// 		if($arr['code']!='A00000'){
-	// 			$flg=0;
-	// 			$rlst=$rlst.' '.$arr['msg'];
-	// 		}
-	// 	}
-	// 	if($clstm){
-	// 		$clstm=$clstm.':00';
-	// 		$clstm=rplspc($clstm);
-	// 		$url=C('javaback').'/device/operate.action?deviceId='.$dvcid.'&wechatId='.$openid.'&operation=off&time='.$clstm;
-	// 		if(C('psnvs')==1){
-	// 			$json='{"data":null,"code":"A00001","msg":"系统错误"}';
-	// 		}else{
-	// 			$json=https_request($url);
-	// 		}
-	// 		//$json=https_request($url);
-	// 		$arr=json_decode($json,true);
-	// 		if($arr['code']!='A00000'){
-	// 			$flg=0;
-	// 			$rlst=$rlst.' '.$arr['msg'];
-	// 		}
-	// 	}
-	// 	$data['flg']=$flg;
-	// 	if($flg==0){
-	// 		//失败就啥都别管了，照旧
-			
-	// 		$data['rslt']=$rlst;
-	// 	}else{
-	// 		//成功就要考虑到很多
-			
-	// 		$data['rslt']='设置成功';
-	// 	}
-	// 	//获取最终的桩的状态
-	// 	$url=C('javaback').'/device/get.action?deviceId='.$dvcid;
-	// 	if(C('psnvs')==1){
-	// 		$json='{"data": {"id":2,"owner":2,"sn":"002","model":1,"city":null,"longitude":"121.575215","latitude":"31.203762","address":" 龙沟新苑 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},"code":"A00000","msg":" 获取设备成功"}';
-	// 	}else{
-	// 		$json=https_request($url);
-	// 	}
-	// 	//$json=https_request($url);
-		
-	// 	$arr=json_decode($json,true);
-	// 	//假设最终状态是启用了----------//怎么看启用了
-	// 	$data['fnlstat']=1;
-
-	// 	$this->ajaxReturn($data,'json');
-	// }
+	
 
 
 	//------------------------odrlist

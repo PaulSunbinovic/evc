@@ -158,7 +158,7 @@ var cancelsttm='__URL__/cancelsttm';
 		</div>
 		<script type="text/javascript" src='__PUBLIC__/pblc/CLCK/int.js'></script>
 		
-		<div class='col-md-12 col-xs-12 nopadding' style="margin-top: 20px">
+		<div class='col-md-12 col-xs-12 nopadding' style="margin-top: 20px" id='weekSelect'>
 			<div class='col-md-1 col-xs-1 padding-1-px week' id='day1'><a class="btn btn-default btn-block padding-w-1-px">一</a></div>
 			<div class='col-md-1 col-xs-1 padding-1-px week' id='day2'><a class="btn btn-default btn-block padding-w-1-px">二</a></div>
 			<div class='col-md-1 col-xs-1 padding-1-px week' id='day3'><a class="btn btn-default btn-block padding-w-1-px">三</a></div>
@@ -169,11 +169,14 @@ var cancelsttm='__URL__/cancelsttm';
 			<div class='col-md-3 col-xs-3 padding-1-px week' id='work'><a class='btn btn-default btn-block'>工作日</a></div>
 			<div class='col-md-2 col-xs-2 padding-1-px week' id='everyweek'><a class='btn btn-default btn-block'>每周</a></div>
 		</div>
-
+		<script type="text/javascript">
+		//设置初始weekSelect状态
+		var weekSelectInit=$('#weekSelect').html();
+		</script>
 		
 		<div class='col-md-12 col-xs-12 nopadding' style='margin-top:20px'>
 			<script>var dosttm='__URL__/dosttm';</script>
-			<button class='btn btn-success btn-lg btn-block' id='sttm'>完成设定</button>
+			<button class='btn btn-success btn-lg btn-block' id='sttm'>提交设定</button>
 		</div>
 
 		<div class="clearfix"></div>
@@ -229,8 +232,8 @@ var cancelsttm='__URL__/cancelsttm';
 	var dvcls=new Array();
 	<?php if(is_array($dvcls)): $i = 0; $__LIST__ = $dvcls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dvcv): $mod = ($i % 2 );++$i;?>//暂时默认为空初始时间，等到马哥得到定时的接口搞定后，再赋值，从uct.php开始
 		dvcls[<?php echo ($dvcv['id']); ?>]='';<?php endforeach; endif; else: echo "" ;endif; ?>
-		var dvcsttsls=new Array();
-		<?php if(is_array($dvcls)): $i = 0; $__LIST__ = $dvcls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dvcv): $mod = ($i % 2 );++$i;?>//暂时默认为空初始时间，等到马哥得到定时的接口搞定后，再赋值，从uct.php开始
+	var dvcsttsls=new Array();
+	<?php if(is_array($dvcls)): $i = 0; $__LIST__ = $dvcls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dvcv): $mod = ($i % 2 );++$i;?>//暂时默认为空初始时间，等到马哥得到定时的接口搞定后，再赋值，从uct.php开始
 		dvcsttsls[<?php echo ($dvcv['id']); ?>]="<?php echo ($dvcv['stts']); ?>";
 		check(<?php echo ($dvcv['id']); ?>);<?php endforeach; endif; else: echo "" ;endif; ?>
 	

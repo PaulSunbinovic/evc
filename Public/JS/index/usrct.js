@@ -59,9 +59,26 @@ $(function(){
     })
 
     $('#sttm').click(function(){
-
+        //先获取每周参数
+        var week='';
+        for(var i=1;i<=7;i++){
+            var day=$('#day'+i);
+            var als=day.children('a');
+            var strOfClass=$(als[0]).attr('class');
+            if(strOfClass.indexOf('success')!=-1){//选中
+                //转换成 MON 这种形式
+                var d='';
+                if(i==1){d='MON';}else if(i==2){d='TUE';}else if(i==3){d='WED';}else if(i==4){d='THU';}else if(i==5){d='FRI';}else if(i==6){d='SAT';}else if(i==7){d='SUN';}
+                if(week==''){
+                    week=d;
+                }else{
+                    week=week+','+d;
+                }
+            }
+        }
+        
         if(stmod==1){
-            doonff('on',$('#optm').val(),'');
+            doonff('on',$('#optm').val(),week);
         }else{
             $.ajax({
                 'type': 'GET',
@@ -75,8 +92,8 @@ $(function(){
                 'dataType': 'json',
                 'success': function(data) {
                        
-                    alert('取消设定时间成功！');
-                    
+                    alert('取消设定成功！');
+                    $('#cancel').trigger('click');
                     console.log("success");
                 },
                 'error':function() {
@@ -105,7 +122,7 @@ $(function(){
             classofa='btn btn-default btn-block';
             $(a).attr('class',classofa);
         }
-        
+        checkWeekSelectChange();
     })
 
     $('#work').click(function(){
@@ -130,7 +147,10 @@ $(function(){
             var a=als[0];
             $(a).attr('class',classofa2);
         }
+        checkWeekSelectChange();
     })
+
+
 
     $('#cncloptm').click(function(){
         $('#optm').val('');
@@ -142,7 +162,22 @@ $(function(){
     
 })
 
-function doonff(oprt,tm,everyday){
+
+function checkWeekSelectChange(){
+    //当前状态下的数据和初始的对不上的话呢
+    if(weekSelectInit==$('#weekSelect').html()){
+        stmod=0;
+        $('#sttm').attr('class','btn btn-default btn-lg btn-block');
+        $('#sttm').html('取消设定'); 
+    }else{
+        stmod=1;
+        $('#sttm').attr('class','btn btn-success btn-lg btn-block');
+        $('#sttm').html('提交设定');
+    }
+    
+}
+
+function doonff(oprt,tm,week){
     if(fctswc==1){
         $.ajax({
             'type': 'GET',
@@ -153,7 +188,7 @@ function doonff(oprt,tm,everyday){
                 'dvcid':dvcid,
                 'tm':tm,
                 'oprt':oprt,
-                'everyday':everyday,
+                'week':week,
             },
             'dataType': 'json',
             'success': function(data) {
@@ -165,7 +200,8 @@ function doonff(oprt,tm,everyday){
                         //完成设定成功的话要给数组库添加值，以后只要和新成立的结论不正确的
                         //dvcls[dvcid]=tm;
                         $('#btn_'+dvcid).html("<a class='btn btn-success btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-time'></i> "+data['tm']+"</a>");
-                        
+                        //成功的话就以现在的状态为准，把当前的状态设置成初始状态
+                        weekSelectInit=$('weekSelect').html();
                     }else{
                         
                     }
@@ -255,6 +291,10 @@ function check(dvcid){
 }
 
 function changeCapacity(id){
+    if(dvcsttsls[id]=='on'){
+        alert('请先关闭充电，然后再调整充电功率，然后再开启充电！');
+        return;
+    }
     var objOfCapacity=$('#capacity_'+id);
     //思路 先获取设备原来的capacity状态，然后取相反就行了
     $.ajax({
@@ -274,7 +314,7 @@ function changeCapacity(id){
             }else if(capacity=2){
                 capacity=1;
             }else{
-                capacity=1;
+                capacity=2;
             }
             $.ajax({
                 'type': 'GET',
@@ -287,13 +327,18 @@ function changeCapacity(id){
                 },
                 'dataType': 'json',
                 'success': function(data) {
-                    $('valueOfCapacity').html(data['valueOfCapacity']);
+                    if(data['rslt']=='ok'){
+                        $('valueOfCapacity').html(data['valueOfCapacity']);
+                     }else{
+                        alert(data['msg']);
+                     }
+                   
                     
                    
                     console.log("success");
                 },
                 'error':function() {
-                        console.log("error");
+                    console.log("error");
                 }
             });
            
