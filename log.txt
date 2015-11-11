@@ -1,3 +1,19 @@
 ﻿2015-10-18 22:45:06 aaa
 2015-10-26 23:17:44 111
 2015-10-26 23:18:00 111
+request body = <TemplateSMS>
+                    <to>13567196593</to> 
+                    <appId>8a48b55150dc87820150dd92ad0707f9</appId>
+                    <templateId>48076</templateId>
+                    <datas><data>4</data></datas>
+                  </TemplateSMS>
+request url = https://https://app.cloopen.com:8883:8883/2013-12-26/Accounts/8a48b55150b86ee80150bdff4f6b112c/SMS/TemplateSMS?sig=709EB495C6E4154C5597183FE8E5B641
+response body = <?xml version="1.0" encoding="UTF-8" standalone="yes"?><Response><statusCode>172001</statusCode><statusMsg>网络错误</statusMsg></Response>
+request body = <TemplateSMS>
+                    <to>13567196593</to> 
+                    <appId>8a48b55150dc87820150dd92ad0707f9</appId>
+                    <templateId>48076</templateId>
+                    <datas><data>4</data></datas>
+                  </TemplateSMS>
+request url = https://https://app.cloopen.com:8883:8883/2013-12-26/Accounts/8a48b55150b86ee80150bdff4f6b112c/SMS/TemplateSMS?sig=E54D2D8E030F90ED8AD0CB68002D3B7F
+response body = <?xml version="1.0" encoding="UTF-8" standalone="yes"?><Response><statusCode>172001</statusCode><statusMsg>网络错误</statusMsg></Response>
