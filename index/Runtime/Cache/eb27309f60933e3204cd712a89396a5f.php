@@ -69,32 +69,21 @@
 			  	<input type='hidden' name='headImgUrl' value='<?php echo ($headImgUrl); ?>'>
 				<input type="text" class="form-control" name="nickName" placeholder="怩称" value='<?php echo ($nickname); ?>' readonly>
 			  </div>
-			  <div class="form-group">
-				<input type="tel" class="form-control" name="mobile" placeholder="手机号码">
+			  
+			  <script type="text/javascript">var dogetsmsvrf='__URL__/dogetsmsvrf';</script>
+				<div class="input-group">
+			      <input class="form-control" placeholder="请输入手机号码" id="usrcp" name='mobile' type="text" >
+			      <span class="input-group-btn">
+			        <button class="btn btn-primary" type="button" id="getsmsvrf">获取短信验证码</button>
+			      </span>
+			    </div>
+			  
+			  <div class="form-group" style='margin-top:20px'>
+				<input type="text" class="form-control" name="vrfnb" placeholder="请输入验证码" >
 			  </div>
-			  <div class="form-group">
-			    <select class="form-control" name='carBrand'>
-				  <option value="0">选择车品牌</option>
-				  <?php if(is_array($carBrandls)): $i = 0; $__LIST__ = $carBrandls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$carBrandv): $mod = ($i % 2 );++$i;?><option value='<?php echo ($carBrandv['carBrand']); ?>'><?php echo ($carBrandv['carBrand']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-				</select>
-			  </div>
-			  <div class="form-group">
-			    <select class="form-control" name='carModelId' disabled>
-				  <option value='0'>选择车型号</option>
-				</select>
-			  </div>
-			  <div class="form-group">
-				<input type="text" class="form-control" name="carNo" placeholder="车牌号">
-			  </div>
-			  <!--
-			  <div class="checkbox" style='text-align: center'>
-			    <label>
-			      注册代表同意<a>《用户协议》</a>
-			    </label>
-			  </div>
-			  -->
+			 
 
-			  <input type="button" class="btn btn-primary btn-lg btn-block" id='addusr' value='注册'>
+			  <input type="button" class="btn btn-primary btn-lg btn-block" id='addusr' value='注册' disabled="">
 		</div>
 
 		

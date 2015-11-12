@@ -67,31 +67,46 @@ class UsrAction extends Action {
 		$headImgUrl=$_GET['headImgUrl'];
 		$nickName=$_GET['nickName'];
 		$mobile=$_GET['mobile'];
-
-		$url=C('javaback').'/user/init.action';
 		
+
+		//先验证验证码是否对得上
+		$vrfnb=$_GET['vrfnb'];
+       
+        $vrf=M('vrf');
+        $vrfo=$vrf->where("openid='".session('openid')."'")->find();
+        if($vrfo['vrfnb']==$vrfnb){
+            $url=C('javaback').'/user/init.action';
+			$url=$url.'?wechatId='.$wechatId.'&headImgUrl='.$headImgUrl.'&nickName='.$nickName.'&mobile='.$mobile;
+			if(C('psnvs')==1){
+				$json='{"data":[],"code":"A00000","msg":"注册成功"}';
+			}else{
+				$json=https_request($url);
+			}
+
+			$arr=json_decode($json,true);
+
+			if($arr['code']=='A00000'){
+				session('openid',$wechatId);
+				$data['rslt']='ok';
+			}else{
+				$data['rslt']='error';
+			}
+
+			$msg=$arr['msg'];
+
+			
+			$data['msg']=$msg;
+			$data['url']=__URL__.'/'.$_GET['x'];
+
+			$this->ajaxReturn($data,'json');
+           
+        }else{
+           	$data['rslt']='error';
+        	$data['msg']='验证码输入错误';
+            $this->ajaxReturn($data,'json');
+        }
+
 		
-		
-		$url=$url.'?wechatId='.$wechatId.'&headImgUrl='.$headImgUrl.'&nickName='.$nickName.'&mobile='.$mobile;
-		if(C('psnvs')==1){
-			$json='{"data":[],"code":"A00000","msg":"注册成功"}';
-		}else{
-			$json=https_request($url);
-		}
-
-		$arr=json_decode($json,true);
-
-		if($arr['code']=='A00000'){
-			session('openid',$wechatId);
-		}
-
-		$msg=$arr['msg'];
-
-		
-		$data['msg']=$msg;
-		$data['url']=__URL__.'/'.$_GET['x'];
-
-		$this->ajaxReturn($data,'json');
 	}
 
 	public function usrct(){
@@ -723,4 +738,56 @@ class UsrAction extends Action {
 		}
 		$this->ajaxReturn($data,'json');
 	}
+
+
+	public function dogetsmsvrf(){
+        $usrcp=$_GET['usrcp'];
+        $rdmnb=rand(1000,9999);
+        $vrf=M('vrf');
+        $vrfo=$vrf->where("openid='".session('openid')."'")->find();
+        if($vrfo){//有则改之
+            $dt=array(
+                    'vrfnb'=>$rdmnb,
+                );
+            $vrf->where('vrfid='.$vrfo['vrfid'])->setField($dt);
+        }else{//无则加冕
+            $dt=array(
+                    'openid'=>session('openid'),
+                    'vrfnb'=>$rdmnb,
+                );
+            $vrf->data($dt)->add();
+        }
+        //发送短信有点问题，先跳过
+        $this->sendsms($usrcp,array($rdmnb,'5'),"48076");//send过慢造成ajax得到error 不过没事不影响
+        //$data['vrfnb']=$rdmnb;
+        $this->ajaxReturn($data,'json');//随便返回，其实没东西要返回的，意思一下而已
+    }
+    public function sendsms($to,$datas,$tempId){
+    
+         // 初始化REST SDK
+        $rest=D('REST');
+       
+        
+         // 发送模板短信
+         echo "Sending TemplateSMS to $to <br/>";
+         $result = $rest->sendTemplateSMS($to,$datas,$tempId);
+         if($result == NULL ) {
+             echo "result error!";
+             break;
+         }
+         if($result->statusCode!=0) {
+             echo "error code :" . $result->statusCode . "<br>";
+             echo "error msg :" . $result->statusMsg . "<br>";
+             //TODO 添加错误处理逻辑
+         }else{
+             echo "Sendind TemplateSMS success!<br/>";
+             // 获取返回信息
+             $smsmessage = $result->TemplateSMS;
+             echo "dateCreated:".$smsmessage->dateCreated."<br/>";
+             echo "smsMessageSid:".$smsmessage->smsMessageSid."<br/>";
+             //TODO 添加成功处理逻辑
+         }
+        
+    }
+
 }

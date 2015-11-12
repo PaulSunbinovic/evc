@@ -4,6 +4,7 @@ $(function () {
 	//------------------------接下来是通用部分
 	$("#addusr").click(function(){
 		var mobile=$('input[name=mobile]');
+		var vrfnb=$('input[name=vrfnb]');
 		// var carBrand=$('select[name=carBrand]');
 		// var carModelId=$('select[name=carModelId]');
 		// var carNo=$('input[name=carNo]');
@@ -20,6 +21,11 @@ $(function () {
 			mobile.focus();
 			
 			return false;
+		}
+
+		if($.trim(vrfnb.val())==''){
+			alert('验证码不能为空');
+			vrfnb.focus();
 		}
 		
 		// if(carBrand.val()=='0'){
@@ -46,12 +52,15 @@ $(function () {
                 'headImgUrl':$('input[name=headImgUrl]').val(),
                 'nickName':$('input[name=nickName]').val(),
                 'mobile':$('input[name=mobile]').val(),
+                'vrfnb':$('input[name=vrfnb]').val(),
             },
             'dataType': 'json',
             'success': function(data) {
-                   
-                alert(data.msg);
-				location.href=data.url;
+            	alert(data.msg);
+                if(data['rslt']=='ok'){
+                	location.href=data.url;
+                }               
+				
                 console.log("success");
             },
             'error':function() {
@@ -135,4 +144,63 @@ function   superTrim(str,ch) {
 		str   =   str.substring(0,str.length-1);  
 	}
 	return   str;  
+}
+
+
+//-------------------------------------短信验证部分---------
+$(function(){
+    $('#getsmsvrf').click(function(){
+                
+        var usrcp=$('#usrcp');
+        if($.trim(usrcp.val())==''){
+            alert('电话不能为空！');
+            usrcp.focus();
+            
+            return false;
+        }
+        var pttnmbl=/^1[34578][0-9]{9}$/;
+        if(!pttnmbl.test($.trim(usrcp.val()))){
+            alert('手机号码格式不正确！');
+            usrcp.focus();
+            
+            return false;
+        }
+        $(this).attr('disabled',true);
+        
+        var starttm=60;
+        //给数据库写个验证码
+        $.ajax({
+            'type': 'GET',
+            'url': dogetsmsvrf,
+            'async':false,  
+            'contentType': 'application/json',
+            'data': {
+                'usrcp':usrcp.val(),
+            },
+            'dataType': 'json',
+            'success': function(data) {
+                console.log("success");
+            },
+            'error':function() {
+                console.log("error");
+            }
+        });
+        $('#addusr').attr('disabled',false);
+        countdown(starttm);
+    })
+
+    
+})
+
+function countdown(starttm){
+    if(starttm>0){
+        $('#getsmsvrf').html('还剩下'+starttm+'秒...');
+        starttm=starttm-1;
+        setTimeout("countdown("+starttm+")",1000); 
+    }else{
+        $('#getsmsvrf').html('请再次获取验证码');
+        $('#getsmsvrf').attr('disabled',false);
+        $('#binddvc').attr('disabled',true);
+    }
+    
 }
