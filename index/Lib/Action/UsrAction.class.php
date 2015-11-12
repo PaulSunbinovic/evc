@@ -73,7 +73,7 @@ class UsrAction extends Action {
 		$vrfnb=$_GET['vrfnb'];
        
         $vrf=M('vrf');
-        $vrfo=$vrf->where("openid='".session('openid')."'")->find();
+        $vrfo=$vrf->where("openid='".$wechatId."'")->find();
         if($vrfo['vrfnb']==$vrfnb){
             $url=C('javaback').'/user/init.action';
 			$url=$url.'?wechatId='.$wechatId.'&headImgUrl='.$headImgUrl.'&nickName='.$nickName.'&mobile='.$mobile;
