@@ -58,7 +58,7 @@
 
 	<!--主体开始-->
 	<div class='col-md-12 col-xs-12 bd'>
-		<div class='col-md-12 col-xs-12 nopadding col-md-offset-6 col-xs-offset-6' style='top:10px'>
+		<div class='col-md-6 col-xs-6 nopadding col-md-offset-6 col-xs-offset-6' style='top:10px'>
 			<img class='img-circle headimg' src='<?php echo ($headImgUrl); ?>' />
 		</div>
 		
@@ -72,23 +72,50 @@
 			  
 			  <script type="text/javascript">var dogetsmsvrf='__URL__/dogetsmsvrf';</script>
 				<div class="input-group">
-			      <input class="form-control" placeholder="请输入手机号码" id="usrcp" name='mobile' type="text" >
+			      <input class="form-control" placeholder="请输入手机号码" id="usrcp" name='mobile' type="tel" >
 			      <span class="input-group-btn">
 			        <button class="btn btn-primary" type="button" id="getsmsvrf">获取短信验证码</button>
 			      </span>
 			    </div>
 			  
 			  <div class="form-group" style='margin-top:20px'>
-				<input type="text" class="form-control" name="vrfnb" placeholder="请输入验证码" >
+				<input type="tel" class="form-control" name="vrfnb" placeholder="请输入验证码" >
 			  </div>
 			 
+			<div class="form-group" style='margin-top:20px;text-align: center'>
+				 目前支持 比亚迪秦（14、15款），比亚迪唐，康迪
+			</div>
+			
 
 			  <input type="button" class="btn btn-primary btn-lg btn-block" id='addusr' value='注册' disabled="">
 		</div>
 
 		
 	</div>
-	
+
+
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id='modal' style='display:none'>
+	  获得券<b class="caret"></b><br>获得券<b class="caret"></b><br>获得券<b class="caret"></b><br>
+</button>
+
+<!-- Modal -->
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document" >
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <h4 class="modal-title" id="myModalLabel">获得充值券</h4>
+      </div>
+      <div class="modal-body" style='text-align: center;color:#449d44'>
+      <h1>50元</h1>	
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-success btn-lg btn-block" href='__URL__/usrct'>跳转进入个人中心</a>
+        
+      </div>
+    </div>
+  </div>
+</div>	
 
 	
 

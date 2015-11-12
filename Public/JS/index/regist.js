@@ -1,4 +1,4 @@
-
+var gotourl='';
 $(function () {
 
 	//------------------------接下来是通用部分
@@ -58,7 +58,8 @@ $(function () {
             'success': function(data) {
             	alert(data.msg);
                 if(data['rslt']=='ok'){
-                	location.href=data.url;
+                	gotourl=data.url;
+                	$('#modal').trigger('click');
                 }               
 				
                 console.log("success");
