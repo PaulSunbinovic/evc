@@ -744,7 +744,8 @@ class UsrAction extends Action {
         $usrcp=$_GET['usrcp'];
         $rdmnb=rand(1000,9999);
         $vrf=M('vrf');
-        $vrfo=$vrf->where("openid='".session('openid')."'")->find();
+        $openid=$_GET['wechatId'];
+        $vrfo=$vrf->where("openid='".$openid."'")->find();
         if($vrfo){//有则改之
             $dt=array(
                     'vrfnb'=>$rdmnb,
@@ -752,7 +753,7 @@ class UsrAction extends Action {
             $vrf->where('vrfid='.$vrfo['vrfid'])->setField($dt);
         }else{//无则加冕
             $dt=array(
-                    'openid'=>session('openid'),
+                    'openid'=>$openid,
                     'vrfnb'=>$rdmnb,
                 );
             $vrf->data($dt)->add();

@@ -152,6 +152,8 @@ $(function(){
     $('#getsmsvrf').click(function(){
                 
         var usrcp=$('#usrcp');
+        var wechatId=$('input[name=wechatId]');
+
         if($.trim(usrcp.val())==''){
             alert('电话不能为空！');
             usrcp.focus();
@@ -176,6 +178,8 @@ $(function(){
             'contentType': 'application/json',
             'data': {
                 'usrcp':usrcp.val(),
+                'wechatId':wechatId.val(),
+
             },
             'dataType': 'json',
             'success': function(data) {
