@@ -37,7 +37,10 @@ class IndexAction extends Action {
 		}else{
 			//就跟随微信页面设置的那个
 		}
-		
+		//-----------------直接调试模式，不用内啥
+		//session('openid','ojxMBuJe07gSZDUwp0ZHGHEMHOR8');
+
+
 		$openid=session('openid');
 		import('@.SS.SSAction');
 		$ss = new SSAction();

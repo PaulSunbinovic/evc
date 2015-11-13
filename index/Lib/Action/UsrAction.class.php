@@ -110,6 +110,10 @@ class UsrAction extends Action {
 	}
 
 	public function usrct(){
+
+		//-------------直接调试模式，不用内啥
+		//session('openid','ojxMBuJe07gSZDUwp0ZHGHEMHOR8');
+		
 		import('@.SS.SSAction');
 		$ss = new SSAction();
 		$usrdto=$ss->setss();
@@ -517,6 +521,14 @@ class UsrAction extends Action {
 		}
 		$data['dayset']=$str;
 		
+
+		$url=C('javaback').'/user/get.action?wechatId='.session('openid');
+		if(C('psnvs')==1){
+			$json='{"data":{"user":{"id":1,"token":1,"wechatId":"12345","nickName":"王 峰","mobile":"13162951502","macId":"dadadaaf","headImgUrl":"baidu.com","createTime":"2015-09-13 10:37:53","updateTime":"2015-09-13 10:37:53","customer":true,"deviceOwner":false,"installser":false,"admin":false},"userAccount":{"id":1,"userId":1,"balance":990,"point":0,"createTime":"2015-09-13 10:37:54","updateTime":"2015-09-19 23:26:50","version":1},"carList": [{"id":1,"userId":1,"carModelId":1,"carNo":"沪 A11111","isDefault":false,"createTime":"2015-09-19 22:19:36","updateTime":"2015-09-19 22:19:40"}]},"code":"A00000","msg":null}';
+		}else{
+			$json=https_request($url);
+		}
+		$arr=json_decode($json,true);
 		//添加查看共享时段
 		$url=C('javaback').'/shareTime/findShareTimeByUserIdAndDeviceId.action?userId='.session('openid').'&deviceId='.$dvcid;
 		if(C('psnvs')==1){
