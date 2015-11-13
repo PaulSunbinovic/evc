@@ -130,7 +130,12 @@ class UsrAction extends Action {
 		//如果是庄主的话，就不用体现这个按钮了，因为后面还会提到的
 		//判断订单是否正在启用
 		//假设正在约的状态
-		$isOnOdr=1;
+		if($arr['status']==1){
+			$isOnOdr=1;
+		}else{
+			$isOnOdr=0;
+		}
+		
 		$this->assign('isOnOdr',$isOnOdr);
 		if($isOnOdr==1){
 			//获取这个桩的信息，等下用
@@ -215,14 +220,7 @@ class UsrAction extends Action {
 				);
 			$dvcv['timer']=$timer;
 
-			//同时查看这个桩的闹铃每周
-			$url=C('javaback').'/device/getJobDay.action?deviceId='.$dvcv['id'].'&wechatId='.$openid;
-			if(C('psnvs')==1){
-				$json='{"data":"2015-12-12 12:12:12","code":"A00000","msg":"获取定时时间成功"}';
-			}else{
-				$json=https_request($json);
-			}
-			$arr=json_decode($json,true);
+
 
 			if($dvcv['capacity']==1){
 				$dvcv['fast_slow_charge']='1.5KW';
@@ -300,7 +298,7 @@ class UsrAction extends Action {
 		$oprt=$_GET['oprt'];
 		$week=$_GET['week'];
 		$openid=session('openid');
-
+		$openTime=$_GET['openTime'];
 
 
 		//为预约订单生成carId，现在取消预约订单，因此也取消了这快的判断
@@ -383,15 +381,47 @@ class UsrAction extends Action {
 			//不是庄主的，那就是预约的
 			//接下来就要判断是不是预约的人
 			//目前只能根据用户最近订单来判断，以后以后再改
-			//阿花已经在做了，我就假装知道，他不是预约的那个人
-			$apntOne=0;
+			//先根据桩判断谁约了他
+			$url=C('javaback').'/order/getLastOrderByDeviceId.action?deviceId='.$dvcid;
+			if(C('psnvs')==1){
+				$json='{"data":{"id":5,"userId":10,"macId":null,"deviceId":9,"price":200,"startDegree":null,"endDegree":null,"carId":1,"status":0,"totalPrice":null,"createTime":"2015-11-11 11:33:07","updateTime":"2015-11-11 11:33:07","endTime":null,"version":0,"freeFlag":0,"statusFinal":false},"code":"A00000","msg":null}';//
+			}else{
+				$json=https_request($url);
+			}
+			//$json=https_request($url);
+			$arr=json_decode($json,true);
+			//---------------假设肯定是他预约的了，因为后期阿花全程后台解决
+			$apntOne=1;
 			if($apntOne!=1){
 				$admitOnOff=0;
 				$data['rslt']='error';
 				$data['msg']='您非本庄预约的用户，不能充电';
 			}
+		}else{
+			//是桩主的话就要顺便先设定下开放时间,其中不存在就算了
+			if($openTime!='noneday'){
+				if($openTime=='allday'){$isallDay=true;}else if($openTime=='halfday'){$isallDay=false;}
+				//由于臧艺失误需要先选出userid
+				$url=C('javaback').'/user/get.action?wechatId='.$openid;
+				if(C('psnvs')==1){
+					$json='{"data":{"user":{"id":1,"token":1,"wechatId":"12345","nickName":"王 峰","mobile":"13162951502","macId":"dadadaaf","headImgUrl":"baidu.com","createTime":"2015-09-13 10:37:53","updateTime":"2015-09-13 10:37:53","customer":true,"deviceOwner":false,"installser":false,"admin":false},"userAccount":{"id":1,"userId":1,"balance":990,"point":0,"createTime":"2015-09-13 10:37:54","updateTime":"2015-09-19 23:26:50","version":1},"carList": [{"id":1,"userId":1,"carModelId":1,"carNo":"沪 A11111","isDefault":false,"createTime":"2015-09-19 22:19:36","updateTime":"2015-09-19 22:19:40"}]},"code":"A00000","msg":null}';
+				}else{
+					$json=https_request($url);
+				}
+				$arr=json_decode($json,true);
+				$usrid=$arr['data']['user']['id'];
+				$url=C('javaback').'/shareTime/saveShareTime.action?userId='.$usrid.'&deviceId=1&isallDay='.$isallDay;
+				if(C('psnvs')==1){
+					$json='{"data":null,"code":"A00000","msg":"保存成功！"}';
+				}else{
+					$json=https_request($url);
+				}
+				$arr=json_decode($json,true);
+				//还会有变化，先假设肯定可以设置没问题的
+			}
+
 		}
-		if(apntOne==1){
+		if($apntOne==1){
 
 			
 			$url=C('javaback').'/device/operate.action?deviceId='.$dvcid.'&wechatId='.$openid.'&operation='.$oprt.$str;
@@ -453,6 +483,66 @@ class UsrAction extends Action {
 			'tm'=>$tm,
 			);
 		$data['timer']=$timer;
+
+
+		//接下来是周一到周末
+		////同时查看这个桩的闹铃每周
+		$url=C('javaback').'/device/getJobDay.action?deviceId='.$dvcid.'&wechatId='.session('openid');
+		if(C('psnvs')==1){
+			$json='{"data":"MON,TUE,WED,THU,SAT","code":"A00000","msg":"操作成功"}';
+		}else{
+			$json=https_request($json);
+		}
+		$arr=json_decode($json,true);
+		if($arr['data']){
+			$dayls=explode(',',$arr['data']);
+			$str='-';
+			for($i=0;$i<count($dayls);$i++){
+				if($dayls[$i]=='MON'){
+					$str=$str.'1-';
+				}else if($dayls[$i]=='TUE'){
+					$str=$str.'2-';
+				}else if($dayls[$i]=='WED'){
+					$str=$str.'3-';
+				}else if($dayls[$i]=='THU'){
+					$str=$str.'4-';
+				}else if($dayls[$i]=='FRI'){
+					$str=$str.'5-';
+				}else if($dayls[$i]=='SAT'){
+					$str=$str.'6-';
+				}else if($dayls[$i]=='SUN'){
+					$str=$str.'7-';
+				}
+			}
+		}
+		$data['dayset']=$str;
+		
+		//添加查看共享时段
+		$url=C('javaback').'/shareTime/findShareTimeByUserIdAndDeviceId.action?userId='.session('openid').'&deviceId='.$dvcid;
+		if(C('psnvs')==1){
+			$json='{"data":{"sn":"80000001","isorder":0,"deviceId":1},"code":"A00000","msg":"查询成功！"}';
+		}else{
+			$json=https_request($url);
+		}
+		$arr=json_decode($json,true);
+		if($arr['data']['shareisall']==0){
+			$str='半天';
+			$status='halfday';
+			$color='warning';
+			$icon='glyphicon glyphicon-adjust';
+		}else if($arr['data']['shareisall']==1){
+			$str='全天';
+			$status='allday';
+			$color='success';
+			$icon='glyphicon glyphicon-certificate';
+		}else{
+			$str='未设置';
+			$status='noneday';
+			$color='default';
+			$icon='glyphicon glyphicon-remove-circle';
+		}
+		$data['status']=$status;
+
 		$this->ajaxReturn($data,'json');
 	}
 

@@ -6,7 +6,7 @@ $redirect_url= "http://israel.duapp.com/weixin/oauth2_openid.php";
 URL
 https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx682ad2cc417fe8b9&redirect_uri=http://www.evchar.cn/evc/oauth2_openid.php&response_type=code&scope=snsapi_base&state=wx682ad2cc417fe8b9WXWCc4c1b2004388a3a529f39fc42c0c60e9#wechat_redirect
 */
-$psnvs=1;
+$psnvs=0;
 $code = $_GET["code"];
 $state=$_GET['state'];
 $appid='wx682ad2cc417fe8b9';

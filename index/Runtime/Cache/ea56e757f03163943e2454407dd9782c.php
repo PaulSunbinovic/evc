@@ -120,7 +120,7 @@ var cancelsttm='__URL__/cancelsttm';
 			
 			<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-ok'></i> </a></div>
 			<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-list-alt'></i> </a></div>
-			<div class='col-md-4 col-xs-4'><a class='btn btn-warning btn-lg btn-block blk' href='__URL__/chongzhi'><i class='glyphicon glyphicon-yen'></i> </a></div>
+			<div class='col-md-4 col-xs-4'><a class='btn btn-success btn-lg btn-block blk' href='__URL__/chongzhi'><i class='glyphicon glyphicon-yen'></i> </a></div>
 			<div class='col-md-4 col-xs-4 txtct'>设备自检</div>
 			<div class='col-md-4 col-xs-4 txtct'>日报/月报</div>
 			<div class='col-md-4 col-xs-4 txtct'> 充值</div>
@@ -173,6 +173,15 @@ var cancelsttm='__URL__/cancelsttm';
 		</div>
 		<script type="text/javascript" src='__PUBLIC__/pblc/CLCK/int.js'></script>
 		
+
+		<!--这里是选择开放半天还是一天-->
+		<select class="form-control" id='openTime' style="margin-top:20px">
+		  <option value='noneday'>不开放</option>
+		  <option value='halfday'>半天9:00-14:00</option>
+		  <option value='allday'>全天0:00-24:00</option>
+		</select>
+
+		<!--这里是周一到周天-->
 		<div class='col-md-12 col-xs-12 nopadding' style="margin-top: 20px" id='weekSelect'>
 			<div class='col-md-1 col-xs-1 padding-1-px week' id='day1'><a class="btn btn-default btn-block padding-w-1-px">一</a></div>
 			<div class='col-md-1 col-xs-1 padding-1-px week' id='day2'><a class="btn btn-default btn-block padding-w-1-px">二</a></div>
@@ -181,13 +190,10 @@ var cancelsttm='__URL__/cancelsttm';
 			<div class='col-md-1 col-xs-1 padding-1-px week' id='day5'><a class="btn btn-default btn-block padding-w-1-px">五</a></div>
 			<div class='col-md-1 col-xs-1 padding-1-px week' id='day6'><a class="btn btn-default btn-block padding-w-1-px">六</a></div>
 			<div class='col-md-1 col-xs-1 padding-1-px week' id='day7'><a class="btn btn-default btn-block padding-w-1-px">七</a></div>
-			<div class='col-md-3 col-xs-3 padding-1-px week' id='work'><a class='btn btn-default btn-block'>工作日</a></div>
-			<div class='col-md-2 col-xs-2 padding-1-px week' id='everyweek'><a class='btn btn-default btn-block'>每周</a></div>
+			<div class='col-md-5 col-xs-5 padding-1-px week' id='work'><a class='btn btn-default btn-block'>工作日</a></div>
+			
 		</div>
-		<script type="text/javascript">
-		//设置初始weekSelect状态
-		var weekSelectInit=$('#weekSelect').html();
-		</script>
+		
 		
 		<div class='col-md-12 col-xs-12 nopadding' style='margin-top:20px'>
 			<script>var dosttm='__URL__/dosttm';</script>

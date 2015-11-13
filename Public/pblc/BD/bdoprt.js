@@ -56,8 +56,8 @@ function adjstrt(pnt){
 // ctlgtd=121.576464;
 // ctlttd=31.224494;
 //北京版
-ctlgtd=116.449877;
-ctlttd=39.967977;
+//ctlgtd=116.449877;
+//ctlttd=39.967977;
 
 mypoint=new BMap.Point(ctlgtd,ctlttd)
 var icon={path:icnpth,width:23,height:23,};

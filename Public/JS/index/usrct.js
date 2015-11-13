@@ -28,7 +28,39 @@ function clc(id){//clock
         },
         'dataType': 'json',
         'success': function(data) {
-               
+            //当他弹出来后
+            //
+            //开放是半天还是一天，还是全天
+            $('#openTime').val(data['status']);
+            
+            //初始化谁绿谁不绿
+            var dayset=data['dayset'];
+            var mon=dayset.indexOf('-1-');var tue=dayset.indexOf('-2-');var wed=dayset.indexOf('-3-');
+            var thu=dayset.indexOf('-4-');var fri=dayset.indexOf('-5-');var sat=dayset.indexOf('-6-');
+            var sun=dayset.indexOf('-7-');
+            if(mon!=-1){changeDayMod('mon');}
+            if(tue!=-1){changeDayMod('tue');}
+            if(wed!=-1){changeDayMod('wed');}
+            if(thu!=-1){changeDayMod('thu');}
+            if(fri!=-1){changeDayMod('fri');}
+            if(sat!=-1){changeDayMod('sat');}
+            if(sun!=-1){changeDayMod('sun');}
+            function changeDayMod(daytype){
+                if(daytype=='mon'){dayid='#day1';}else if(daytype=='tue'){dayid='#day2';}else if(daytype=='wed'){dayid='#day3';}else if(daytype=='thu'){dayid='#day4';}else if(daytype=='fri'){dayid='#day5';}else if(daytype=='sat'){dayid='#day6';}else if(daytype=='sun'){dayid='#day7';}
+                var als=$(dayid).children('a');
+                var a=als[0];
+                classofa=$(a).attr('class');
+                if(classofa.indexOf('default')==-1){
+                    classofa=classofa.replace(/success/g,'default');
+                }else{
+                    classofa=classofa.replace(/default/g,'success');
+                }
+                $(a).attr('class',classofa);
+            }
+            //设置初始weekSelect状态
+            var weekSelectInit=$('#weekSelect').html();
+
+
             $('#dvcnm').html(data['dvco']['address']);
             $('#optm').val(data['timer']['tm']);
             if(data['timer']['tm']){
@@ -77,8 +109,10 @@ $(function(){
             }
         }
         
+
+        var openTime=$('#openTime').val();
         if(stmod==1){
-            doonff('on',$('#optm').val(),week);
+            doonff('on',$('#optm').val(),week,openTime);
         }else{
             $.ajax({
                 'type': 'GET',
@@ -177,7 +211,7 @@ function checkWeekSelectChange(){
     
 }
 
-function doonff(oprt,tm,week){
+function doonff(oprt,tm,week,openTime){
     if(fctswc==1){
         $.ajax({
             'type': 'GET',
@@ -189,6 +223,7 @@ function doonff(oprt,tm,week){
                 'tm':tm,
                 'oprt':oprt,
                 'week':week,
+                'openTime':openTime,
             },
             'dataType': 'json',
             'success': function(data) {
