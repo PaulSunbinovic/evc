@@ -102,7 +102,7 @@ class IndexAction extends Action {
 		//反正不管是怎样都能拿到预约点
 
     	//先试着预约下
-    	$url=C('javaback').'/order/appoint.action?wechatId='.session('openid').'&carId='.$_GET['crid'].'&deviceId='.$apntpnt['id'];
+    	$url=C('javaback').'/order/appoint.action?wechatId='.session('openid').'&carId=1&deviceId='.$apntpnt['id'];
     	//force参数
     	$fc=$_GET['fc'];
     	if($fc==1){
@@ -111,57 +111,67 @@ class IndexAction extends Action {
     	}
 
     	if(C('psnvs')==1){
-    		$json='{"data":4,"code":"A01408","msg":"用户余额不足"}';
+    		//$json='{"data":4,"code":"A01408","msg":"用户余额不足"}';
     		$json='{"data":100,"code":"A00000","msg":"预约完成"}';
     	}else{
     		$json=https_request($url);
     	}
     	//$json=https_request($url);
     	$arr=json_decode($json,true);
-    	if($arr['code']=='A01406'){
-    		$rslt='hsodr';
-    	}else if($arr['code']=='A01407'){
-    		$rslt='hsbtm';
-    	}else if($arr['code']=='A01408'){
-    		$rslt='hsgp';
-    	}else if($arr['code']=='A00000'){
-    		$rslt='admt';
-    	}
+   //  	if($arr['code']=='A01406'){
+   //  		$rslt='hsodr';
+   //  	}else if($arr['code']=='A01407'){
+   //  		$rslt='hsbtm';
+   //  	}else if($arr['code']=='A01408'){
+   //  		$rslt='hsgp';
+   //  	}else if($arr['code']=='A00000'){
+   //  		$rslt='admt';
+   //  	}
 
-    	//hsodr  hsgp(区间) hsbtm(到底了) admt（允许预约） 
-    	//假设得到结果是有单子需要删除
-    	$data['rslt']=$rslt;
-    	if($rslt=='hsodr'){//获得什么订单 订单的里面设备的ID是哪个
-    		//甭管咋样，你既然要约，之前的东西必须清
-	    	$url='http://120.26.80.165/order/getLastOrder.action&wechatId=12345';
-	    	if(C('psnvs')==1){
-	    		$json='{"id":1,"userId":1,"macId":null,"deviceId":2,"price":200,"startDegree":null,"endDegree":null,"carId":1,"status":0,"totalPrice":null,"createTime":"2015-09-20 11:43:16","updateTime":"2015-09-20 11:43:16","endTime":null,"version":0,"statusFinal":false}';
-	    	}else{
-	    		$json=https_request($url);
-	    	}
-	    	//$json=https_request($url);
-	    	$odr=json_decode($json,true);
-    		$data['odr']=$odr;
-    		//根据订单里的dvcid获取桩信息？
-    		$json='{"id":4,"owner":2,"sn":"004","model":1,"city":null,"longitude":"121.570077","latitude":"31.219745","address":"上海浦东嘉里大酒店桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""}';//most near
-			$odrpnt=json_decode($json,true);
-			$data['odrpnt']=$odrpnt;
-    	}else if($rslt=='hsgp'){
-    		//这里需要计算还有多少时间可以充电?这里直接就是5小时//mny?dvcid?tm?
-    		$mny=8;
-    		$tm=5;
-    		$dvcid=$apntpnt['id'];
-    		$data['mny']=$mny;
-    		$data['tm']=$tm;
-    		$data['dvcid']=$dvcid;
-    	}else if($rslt=='hsbtm'){
+   //  	//hsodr  hsgp(区间) hsbtm(到底了) admt（允许预约） 
+   //  	//假设得到结果是有单子需要删除
+   //  	$data['rslt']=$rslt;
+   //  	if($rslt=='hsodr'){//获得什么订单 订单的里面设备的ID是哪个
+   //  		//甭管咋样，你既然要约，之前的东西必须清
+	  //   	$url='http://120.26.80.165/order/getLastOrder.action&wechatId=12345';
+	  //   	if(C('psnvs')==1){
+	  //   		$json='{"id":1,"userId":1,"macId":null,"deviceId":2,"price":200,"startDegree":null,"endDegree":null,"carId":1,"status":0,"totalPrice":null,"createTime":"2015-09-20 11:43:16","updateTime":"2015-09-20 11:43:16","endTime":null,"version":0,"statusFinal":false}';
+	  //   	}else{
+	  //   		$json=https_request($url);
+	  //   	}
+	  //   	//$json=https_request($url);
+	  //   	$odr=json_decode($json,true);
+   //  		$data['odr']=$odr;
+   //  		//根据订单里的dvcid获取桩信息？
+   //  		$json='{"id":4,"owner":2,"sn":"004","model":1,"city":null,"longitude":"121.570077","latitude":"31.219745","address":"上海浦东嘉里大酒店桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""}';//most near
+			// $odrpnt=json_decode($json,true);
+			// $data['odrpnt']=$odrpnt;
+   //  	}else if($rslt=='hsgp'){
+   //  		//这里需要计算还有多少时间可以充电?这里直接就是5小时//mny?dvcid?tm?
+   //  		$mny=8;
+   //  		$tm=5;
+   //  		$dvcid=$apntpnt['id'];
+   //  		$data['mny']=$mny;
+   //  		$data['tm']=$tm;
+   //  		$data['dvcid']=$dvcid;
+   //  	}else if($rslt=='hsbtm'){
 
-    	}else if($rslt=='admt'){
+   //  	}else if($rslt=='admt'){
     		
 			
-			$data['apntpnt']=$apntpnt;
+			// $data['apntpnt']=$apntpnt;
 			
-    	}
+   //  	}
+   //现在比较简单就是要么是可以冲的要么就是不可以冲的，不可以冲的原因千千万，反正就是不能冲了。。
+   		$data['apntpnt']=$apntpnt;
+   		if($arr['code']=='A00000'){
+   			$data['rslt']='ok';
+   		}else if($arr['code']=='A01408'){
+   			$data['rslt']='moneyNotEnough';
+   		}else{
+   			$data['rslt']='error';
+   		}
+   		$data['msg']=$arr['msg'];
 		
     	$this->ajaxReturn($data,'json');
 		
@@ -319,5 +329,43 @@ class IndexAction extends Action {
 		echo $rslt;
 	}
 
+
+	function getdvcsharedtl(){
+		$dvcid=$_GET['dvcid'];
+		$url=C('javaback').'/device/get.action?deviceId='.$dvcid;
+		if(C('psnvs')==1){
+			$json='{"data": {"id":2,"owner":2,"sn":"002","model":1,"city":null,"longitude":"121.575215","latitude":"31.203762","address":" 龙沟新苑 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},"code":"A00000","msg":" 获取设备成功"}';
+		}else{
+			$json=https_request($url);
+		}
+		$arr=json_decode($json,true);
+		$dvco=$arr['data'];
+		$data['dvco']=$dvco;
+
+		$url=C('javaback').'/shareTime/findShareTimeByUserIdAndDeviceId.action?deviceId='.$dvco['id'].'&userId='.$dvco['owner'];
+		if(C('psnvs')==1){
+			$json='{"data":{"sn":"80000001","isorder":1,"deviceId":1},"code":"A00000","msg":"查询成功！"}';
+		}else{
+			$json=https_request($url);
+		}
+		$arr=json_decode($json,true);
+		if($arr['code']=='A00000'){
+			$data['rslt']='ok';
+			if($arr['data']['shareisall']==0){
+				$str='9:00-14:00';
+			}else if($arr['data']['shareisall']==1){
+				$str='0:00-24:00';
+			}else{
+				$str='未设置共享';
+			}
+			$data['shareTime']=$str;
+		}else{
+			$data['rslt']='error';
+		}
+		$data['msg']=$arr['msg'];
+
+		$this->ajaxReturn($data,'json');
+
+	}
 
 }

@@ -109,71 +109,71 @@ $(function(){
         });
     })
 
-    //force appoint
-    $('#fcapnt').click(function(){
-        $.ajax({
-            'type': 'GET',
-            'url': doapnt,
-            // 'async':false,  
-            'contentType': 'application/json',
-            'data': {
-            	'tp':dvcid,
-                'crid':crid,
-                'fc':1,
-            },
-            'dataType': 'json',
-            'success': function(data) {
+    // //force appoint
+    // $('#fcapnt').click(function(){
+    //     $.ajax({
+    //         'type': 'GET',
+    //         'url': doapnt,
+    //         // 'async':false,  
+    //         'contentType': 'application/json',
+    //         'data': {
+    //         	'tp':dvcid,
+    //             'crid':crid,
+    //             'fc':1,
+    //         },
+    //         'dataType': 'json',
+    //         'success': function(data) {
                    
-                if(data['rslt']=='hsodr'){
-	        		//有订单的话就要弹是否取消XX订单的对话框
-	        		// alert(data['odr']['id']);
-	        		$('#ads').html(data['odrpnt']['address']);
-	        		$('#crno').html(crno);
-	        		cnclodrid=data['odr']['id'];//用于如果要取消，直接从这个广域变量里拿了，不去后台要了
-	        		$('#modal_cnclodr').trigger('click');
-	        	}else if(data['rslt']=='hsgp'){
-	        		$('#mny').html(data['mny']);
-	        		$('#tm').html(data['tm']);
-	        		$('#modal_hsgp').trigger('click');
-	        		dvcid=data['dvcid'];
-	        	}else{
-	        		lgtd=data['apntpnt']['longitude'];
-					lttd=data['apntpnt']['latitude'];
-					ads=data['apntpnt']['address'];
-			    	dvcid=data['apntpnt']['id'];
+    //             if(data['rslt']=='hsodr'){
+	   //      		//有订单的话就要弹是否取消XX订单的对话框
+	   //      		// alert(data['odr']['id']);
+	   //      		$('#ads').html(data['odrpnt']['address']);
+	   //      		$('#crno').html(crno);
+	   //      		cnclodrid=data['odr']['id'];//用于如果要取消，直接从这个广域变量里拿了，不去后台要了
+	   //      		$('#modal_cnclodr').trigger('click');
+	   //      	}else if(data['rslt']=='hsgp'){
+	   //      		$('#mny').html(data['mny']);
+	   //      		$('#tm').html(data['tm']);
+	   //      		$('#modal_hsgp').trigger('click');
+	   //      		dvcid=data['dvcid'];
+	   //      	}else{
+	   //      		lgtd=data['apntpnt']['longitude'];
+				// 	lttd=data['apntpnt']['latitude'];
+				// 	ads=data['apntpnt']['address'];
+			 //    	dvcid=data['apntpnt']['id'];
 			  
-					var apntpnt=new BMap.Point(lgtd,lttd);
-					$('#cls_hsgp').trigger('click');
-					driving.search(mypoint, apntpnt);
-	        	}
-            },
-            'error':function() {
-                    console.log("error");
-            }
-        });
-    })
+				// 	var apntpnt=new BMap.Point(lgtd,lttd);
+				// 	$('#cls_hsgp').trigger('click');
+				// 	driving.search(mypoint, apntpnt);
+	   //      	}
+    //         },
+    //         'error':function() {
+    //                 console.log("error");
+    //         }
+    //     });
+    // })
 
-    $('#cnclodr').click(function(){
-    	$.ajax({
-            'type': 'GET',
-            'url': docnclodr,
-            // 'async':false,  
-            'contentType': 'application/json',
-            'data': {
-                'odrid':cnclodrid,
-            },
-            'dataType': 'json',
-            'success': function(data) {
+    // $('#cnclodr').click(function(){
+    // 	$.ajax({
+    //         'type': 'GET',
+    //         'url': docnclodr,
+    //         // 'async':false,  
+    //         'contentType': 'application/json',
+    //         'data': {
+    //             'odrid':cnclodrid,
+    //         },
+    //         'dataType': 'json',
+    //         'success': function(data) {
                    
-                alert(data['msg']);
+    //             alert(data['msg']);
                     
-                console.log("success");
-            },
-            'error':function() {
-                console.log("error");
-            }
-        });
-    })
+    //             console.log("success");
+    //         },
+    //         'error':function() {
+    //             console.log("error");
+    //         }
+    //     });
+    // })
 
     
 });
@@ -186,6 +186,37 @@ function panto(pnt){
 	$('#example').popover('hide');    
 }
 
+
+function showapntdtl(id){
+    $.ajax({
+        'type': 'GET',
+        'url': getdvcsharedtl,
+         // 'async':false, //同步异步无所谓到情况下就默认异步好了
+        'contentType': 'application/json',
+        'data': {
+            'dvcid':id, 
+            
+        },
+        'dataType': 'json',
+        'success': function(data) {
+            if(data['rslt']=='ok'){
+                $('#myModalLabel_apntdtl').html(data['dvco']['address']);
+                $('#shareTime').html(data['shareTime']);
+                $('#confirm').attr('onclick','apnt('+id+')');
+                $('#apntdtl').trigger('click');
+            }else{
+                alert(data['msg']);
+            }
+            
+                
+            console.log("success");
+        },
+        'error':function() {
+            console.log("error");
+        }
+    });
+}
+
 function apnt(id){
 
 	$.ajax({
@@ -195,7 +226,7 @@ function apnt(id){
         'contentType': 'application/json',
         'data': {
             'tp':id, 
-            'crid':crid, 
+            //'crid':crid, 
             'lgtd':ctlgtd,
             'lttd':ctlttd,
         },
@@ -215,7 +246,7 @@ function apnt(id){
         		dvcid=data['dvcid'];
         	}else if(data['rslt']=='hsbtm'){
         		alert('余额不足，请充值后预约');
-        	}else{
+        	}else if(data['rslt']=='ok'){
         		lgtd=data['apntpnt']['longitude'];
 				lttd=data['apntpnt']['latitude'];
 				ads=data['apntpnt']['address'];
@@ -234,7 +265,13 @@ function apnt(id){
 				
 				// map.openInfoWindow(infoWindow,apntpnt); //开启信息窗口
 				driving.search(mypoint, apntpnt);
-        	}
+                $('#cls_apntdtl').trigger('click');
+        	}else if(data['rslt']=='moneyNotEnough'){
+                alert(data['msg']);
+                location.href=__app__+'/Usr/chongzhi';
+            }else{
+                alert(data['msg']);
+            }
             
         		
         		

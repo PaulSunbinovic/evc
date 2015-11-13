@@ -43,7 +43,7 @@ class CmnAction extends Action {
 			$json=https_request($url);
 		}
 		//$json=https_request($url);
-		$arr_jv=json_decode($json,true);
+		$arr=json_decode($json,true);
 		//百度LBS
 		// $url='http://api.map.baidu.com/geosearch/v3/nearby?location='.$_GET['ctlgtd'].','.$_GET['ctlttd'].'&geotable_id='.C('tbid').'&radius=20000&ak='.C('svak').'&filter=deviceId:[1,2,3]';
 		// $json=https_request($url);
@@ -51,8 +51,33 @@ class CmnAction extends Action {
 		// $arr_bd=$arr_bd['contents'];
 		// //然后根据java后台到数据从百度LBS中
 		
-		$dvcls=$arr_jv['data'];
-		$data['dvcls']=$dvcls;
+		//为了体现出那些桩已经被预约了
+		
+
+		$dvcls=$arr['data'];
+		$dvclsnw=array();
+
+		foreach($dvcls as $dvcv){
+			$url=C('javaback').'/shareTime/findShareTimeByUserIdAndDeviceId.action?deviceId='.$dvcv['id'].'&userId='.$dvcv['owner'];
+			if(C('psnvs')==1){
+				$json='{"data":{"sn":"80000001","isorder":1,"deviceId":1},"code":"A00000","msg":"查询成功！"}';
+			}else{
+				$json=https_request($url);
+			}
+			$arr=json_decode($json,true);
+			if($arr['isorder']==0){
+				$dvcv['hasodr']=0;
+			}else{
+				$dvcv['hasodr']=1;
+			}
+			if($dvcv['shareisall']){
+				array_push($dvclsnw, $dvcv);
+			}
+			
+
+		}
+
+		$data['dvcls']=$dvclsnw;
 		$this->ajaxReturn($data,'json');
 
 	}

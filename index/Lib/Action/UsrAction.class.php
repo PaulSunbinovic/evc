@@ -119,6 +119,44 @@ class UsrAction extends Action {
 		$signPackage = $jssdk->GetSignPackage();
 		$this->assign('spkg',$signPackage);
 
+		//判断是否是车主，查看是否具有预约
+		$url=C('javaback').'/order/getLastOrder.action?wechatId='.session('openid');
+		if(C('psnvs')==1){
+			$json='{"data":{"id":1,"userId":1,"macId":null,"deviceId":2,"price":200,"startDegree":null,"endDegree":null,"carId":1,"status":2,"totalPrice":null,"createTime":"2015-09-20 11:43:16","updateTime":"2015-09-20 11:43:16","endTime":null,"version":1,"statusFinal":true},"code":"A00000","msg":null}';
+		}else{
+			$json=https_request($url);
+		}
+		$arr=json_decode($json,true);
+		//如果是庄主的话，就不用体现这个按钮了，因为后面还会提到的
+		//判断订单是否正在启用
+		//假设正在约的状态
+		$isOnOdr=1;
+		$this->assign('isOnOdr',$isOnOdr);
+		if($isOnOdr==1){
+			//获取这个桩的信息，等下用
+			$url=C('javaback').'/device/get.action?deviceId='.$arr['data']['deviceId'];
+			if(C('psnvs')==1){
+				$json='{"data": {"id":2,"owner":2,"sn":"002","model":1,"city":null,"longitude":"121.575215","latitude":"31.203762","address":" 龙沟新苑 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":"02","capacity":1},"code":"A00000","msg":" 获取设备成功"}';
+			}else{
+				$json=https_request($url);
+			}
+			$arr=json_decode($json,true);
+		}
+		$apntdvco=$arr['data'];
+		if($usrdto['user']['id']!=$apntdvco['owner']){
+			if($apntdvco['status']==''||$apntdvco['status']=='02'){
+				$apntdvco['stts']='off';$status='未充电';
+			}else{
+				$apntdvco['stts']='on';$status='充电中';
+			}
+			$this->assign('apntdvco',$apntdvco);
+		}else{
+			//就看成没有预约
+			$isOnOdr=0;
+		}
+		
+
+		//获取庄主信息
 		$url=C('javaback').'/device/getByOwner.action?wechatId='.session('openid');
 		if(C('psnvs')==1){
 			$json='{"data": [{"id":1,"owner":1,"sn":"001","model":1,"city":null,"longitude":"121.572673","latitude":"31.212916","address":" 我的位 置","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""}, {"id":6,"owner":1,"sn":"006","model":1,"city":null,"longitude":"121.581845","latitude":"31.219382","address":" 汤臣湖庭花园 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""}, {"id":8,"owner":1,"sn":"008","model":1,"city":null,"longitude":"121.506252","latitude":"31.245374","address":" 上海东方明珠电视塔 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":"01"}],"code":"A00000","msg":" 获取设备成功"}';
@@ -128,6 +166,13 @@ class UsrAction extends Action {
 		//$json=https_request($url);
 		$arr=json_decode($json,true);
 		$dvcls=$arr['data'];
+		//判断是否是庄主
+		if($dvcls){
+			$isDvcOwner=1;
+		}else{
+			$isDvcOwner=0;
+		}
+
 		$dvclsnw=array();
 
 		//根据BOB的意思，我们这里只管第一个桩
@@ -170,6 +215,15 @@ class UsrAction extends Action {
 				);
 			$dvcv['timer']=$timer;
 
+			//同时查看这个桩的闹铃每周
+			$url=C('javaback').'/device/getJobDay.action?deviceId='.$dvcv['id'].'&wechatId='.$openid;
+			if(C('psnvs')==1){
+				$json='{"data":"2015-12-12 12:12:12","code":"A00000","msg":"获取定时时间成功"}';
+			}else{
+				$json=https_request($json);
+			}
+			$arr=json_decode($json,true);
+
 			if($dvcv['capacity']==1){
 				$dvcv['fast_slow_charge']='1.5KW';
 			}else if($dvcv['capacity']==2){
@@ -177,11 +231,47 @@ class UsrAction extends Action {
 			}else{
 				$dvcv{'fast_slow_charge'}='未设置';
 			}
+
+			//添加查看共享时段
+			$url=C('javaback').'/shareTime/findShareTimeByUserIdAndDeviceId.action?userId='.$dvcv['owner'].'&deviceId='.$dvcv['id'];
+			if(C('psnvs')==1){
+				$json='{"data":{"sn":"80000001","isorder":0,"deviceId":1},"code":"A00000","msg":"查询成功！"}';
+			}else{
+				$json=https_request($url);
+			}
+			$arr=json_decode($json,true);
+			if($arr['data']['shareisall']==0){
+				$str='半天';
+				$status='halfday';
+				$color='warning';
+				$icon='glyphicon glyphicon-adjust';
+			}else if($arr['data']['shareisall']==1){
+				$str='全天';
+				$status='allday';
+				$color='success';
+				$icon='glyphicon glyphicon-certificate';
+			}else{
+				$str='未设置';
+				$status='noneday';
+				$color='default';
+				$icon='glyphicon glyphicon-remove-circle';
+			}
+			$arr_share=array(
+					'str'=>$str,
+					'status'=>$status,
+					'color'=>$color,
+					'icon'=>$icon,
+					);
+			$dvcv['arr_share']=$arr_share;
+
 			array_push($dvclsnw, $dvcv);
 		}
 		
 		$this->assign('dvcls',$dvclsnw);
 		$this->assign('status',$status);
+
+		
+		
 
 		import('@.WX.JssdkAction');
 		$jssdk = new JssdkAction(C('appid'), C('appsecret'));
@@ -210,6 +300,8 @@ class UsrAction extends Action {
 		$oprt=$_GET['oprt'];
 		$week=$_GET['week'];
 		$openid=session('openid');
+
+
 
 		//为预约订单生成carId，现在取消预约订单，因此也取消了这快的判断
 		// $url=C('javaback').'/user/get.action?wechatId='.$openid;
@@ -274,22 +366,50 @@ class UsrAction extends Action {
 		// 	$data['msg']=$arr['msg'];
 		// }
 		//咱不搞预约订单了，直接开关
-		$url=C('javaback').'/device/operate.action?deviceId='.$dvcid.'&wechatId='.$openid.'&operation='.$oprt.$str;
+		//
+		//这里有个问题，就是如果操作的桩不是自己的，那么肯定是预约的桩，而预约的桩需要先判断是否是约者操作的，毕竟可能这个人几天没换网页，早就不是他约的了，还显示他约的，造成误会，所以要双保险
+		//给个状态，关于是否去开关到
+		$admitOnOff=1;
+		//先判断设备是谁的
+		$url=C('javaback').'/device/get.action?deviceId='.$dvcid;
 		if(C('psnvs')==1){
-			$json='{"data":null,"code":"A00000","msg":"系统错误"}';
+			$json='{"data": {"id":2,"owner":2,"sn":"002","model":1,"city":null,"longitude":"121.575215","latitude":"31.203762","address":" 龙沟新苑 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":"","capacity":1},"code":"A00000","msg":" 获取设备成功"}';//------------时间呢
 		}else{
 			$json=https_request($url);
 		}
 		//$json=https_request($url);
 		$arr=json_decode($json,true);
-		if($arr['code']=='A00000'){
-			$data['rslt']='ok';
-		}else{
-			$data['rslt']='error';
+		if($openid!=$arr['data']['owner']){
+			//不是庄主的，那就是预约的
+			//接下来就要判断是不是预约的人
+			//目前只能根据用户最近订单来判断，以后以后再改
+			//阿花已经在做了，我就假装知道，他不是预约的那个人
+			$apntOne=0;
+			if($apntOne!=1){
+				$admitOnOff=0;
+				$data['rslt']='error';
+				$data['msg']='您非本庄预约的用户，不能充电';
+			}
 		}
-		//logger($dvcid.' '.$arr['msg'],'log/log.txt');
-		$data['msg']=$arr['msg'];
+		if(apntOne==1){
 
+			
+			$url=C('javaback').'/device/operate.action?deviceId='.$dvcid.'&wechatId='.$openid.'&operation='.$oprt.$str;
+			if(C('psnvs')==1){
+				$json='{"data":null,"code":"A00000","msg":"系统错误"}';
+			}else{
+				$json=https_request($url);
+			}
+			//$json=https_request($url);
+			$arr=json_decode($json,true);
+			if($arr['code']=='A00000'){
+				$data['rslt']='ok';
+			}else{
+				$data['rslt']='error';
+			}
+			//logger($dvcid.' '.$arr['msg'],'log/log.txt');
+			$data['msg']=$arr['msg'];
+		}
 		
 		
 

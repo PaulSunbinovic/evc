@@ -7,7 +7,7 @@ C('tbid','121238');
 C('svak','7fb50a356af44df3a17eb6b59f81d3cb');
 C('appid','wx682ad2cc417fe8b9');
 C('appsecret','c4c1b2004388a3a529f39fc42c0c60e9');
-C('psnvs',0);//personal version 个人模式
+C('psnvs',1);//personal version 个人模式
 C('pgsz',10);//page size
 C('infodtl','http://www.evchar.cn/evc');//info detail//推送下面的detail直接进
 C('mdlid','yzAn22StihL6pj4mcWFRCeZCtIhjl2j9rrGv2A3_Ybk');//通知模板id

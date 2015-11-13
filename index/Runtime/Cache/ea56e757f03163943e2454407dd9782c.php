@@ -85,30 +85,45 @@ var cancelsttm='__URL__/cancelsttm';
 			
 		</div>
 		
+		<?php
+ if($isOnOdr==1){ ?>
+		<div class='col-md-12 col-xs-12'>
+		<div class='col-md-4 col-xs-4' id="dvc_<?php echo ($apntdvco['id']); ?>" onclick="onoff(<?php echo ($apntdvco['id']); ?>)" style='padding-left:5px;padding-right:2px;'><a class='btn btn-default btn-lg btn-block blk' ><i class='glyphicon glyphicon-off'></i> 关</a></div>
+		</div>
+		<div class='clearfix'></div>
+		<div class='col-md-4 col-xs-4 txtct'>【预约】<?php echo ($apntdvco['address']); ?>的开关</div>
+		<hr>
+		<?php
+ } ?>
+
+
 		
 		<div class='col-md-12 col-xs-12' style='padding-bottom:20px' id='nine'>
 			<?php if(is_array($dvcls)): $i = 0; $__LIST__ = $dvcls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dvcv): $mod = ($i % 2 );++$i;?><div class='col-md-4 col-xs-4' id="dvc_<?php echo ($dvcv['id']); ?>" onclick="onoff(<?php echo ($dvcv['id']); ?>)"><a class='btn btn-default btn-lg btn-block blk' ><i class='glyphicon glyphicon-off'></i> 关</a></div>
 				<script>var doChangeCapacity="__URL__/doChangeCapacity";</script>
 				<div class='col-md-4 col-xs-4' id="capacity_<?php echo ($dvcv['id']); ?>" onclick="changeCapacity(<?php echo ($dvcv['id']); ?>)"><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-flash'></i> <valueOfCapacity><?php echo ($dvcv['fast_slow_charge']); ?></valueOfCapacity></a></div>
 				<div class='col-md-4 col-xs-4'  onclick="clc(<?php echo ($dvcv['id']); ?>)" id="btn_<?php echo ($dvcv['id']); ?>"><a class="btn btn-<?php echo ($dvcv['timer']['cls_tag']); ?> btn-lg btn-block blk" href='#'><i class='glyphicon glyphicon-time'></i> <?php echo ($dvcv['timer']['tm']); ?></a></div>
-				<div class='col-md-4 col-xs-4 txtct'>开关</div>
+				<div class='col-md-4 col-xs-4 txtct'>桩主开关</div>
 				<div class='col-md-4 col-xs-4 txtct'>可调功率</div>
-				<div class='col-md-4 col-xs-4 txtct'>半价电预约</div><?php endforeach; endif; else: echo "" ;endif; ?>
+				<div class='col-md-4 col-xs-4 txtct'>半价电预约</div>
+
+	        	<div class='col-md-4 col-xs-4'><a class='btn btn-<?php echo ($dvcv['arr_share']['color']); ?> btn-lg btn-block blk' href='#'><i class="glyphicon <?php echo ($dvcv['arr_share']['icon']); ?>"></i> <?php echo ($dvcv['arr_share']['str']); ?></a></div>
+				<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-eye-open'></i> </a></div>
+				<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-cog'></i> </a></div>
+				<div class='col-md-4 col-xs-4 txtct'>共享时段</div>
+				<div class='col-md-4 col-xs-4 txtct'> 防盗激活</div>
+				<div class='col-md-4 col-xs-4 txtct'>设置</div><?php endforeach; endif; else: echo "" ;endif; ?>
 			
 			
-			<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-adjust'></i> 半天</a></div>
-			<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-eye-open'></i> </a></div>
-			<div class='col-md-4 col-xs-4'><a class='btn btn-warning btn-lg btn-block blk' href='__URL__/chongzhi'><i class='glyphicon glyphicon-yen'></i> </a></div>
-			<div class='col-md-4 col-xs-4 txtct'>共享时段</div>
-			<div class='col-md-4 col-xs-4 txtct'> 防盗激活</div>
-			<div class='col-md-4 col-xs-4 txtct'> 充值</div>
+			
+			
 			
 			<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-ok'></i> </a></div>
 			<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-list-alt'></i> </a></div>
-			<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-cog'></i> </a></div>
+			<div class='col-md-4 col-xs-4'><a class='btn btn-warning btn-lg btn-block blk' href='__URL__/chongzhi'><i class='glyphicon glyphicon-yen'></i> </a></div>
 			<div class='col-md-4 col-xs-4 txtct'>设备自检</div>
 			<div class='col-md-4 col-xs-4 txtct'>日报/月报</div>
-			<div class='col-md-4 col-xs-4 txtct'>设置</div>
+			<div class='col-md-4 col-xs-4 txtct'> 充值</div>
 		</div>
 		
 		
@@ -230,9 +245,17 @@ var cancelsttm='__URL__/cancelsttm';
 	//这里搞个设备数组库
 		
 	var dvcls=new Array();
+
 	<?php if(is_array($dvcls)): $i = 0; $__LIST__ = $dvcls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dvcv): $mod = ($i % 2 );++$i;?>//暂时默认为空初始时间，等到马哥得到定时的接口搞定后，再赋值，从uct.php开始
 		dvcls[<?php echo ($dvcv['id']); ?>]='';<?php endforeach; endif; else: echo "" ;endif; ?>
+
 	var dvcsttsls=new Array();
+	<?php
+ if($isOnOdr==1){ ?>
+	dvcsttsls[<?php echo ($apntdvco['id']); ?>]="<?php echo ($apntdvco['stts']); ?>";
+	check(<?php echo ($dvcv['id']); ?>);
+	<?php
+ } ?>
 	<?php if(is_array($dvcls)): $i = 0; $__LIST__ = $dvcls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dvcv): $mod = ($i % 2 );++$i;?>//暂时默认为空初始时间，等到马哥得到定时的接口搞定后，再赋值，从uct.php开始
 		dvcsttsls[<?php echo ($dvcv['id']); ?>]="<?php echo ($dvcv['stts']); ?>";
 		check(<?php echo ($dvcv['id']); ?>);<?php endforeach; endif; else: echo "" ;endif; ?>
