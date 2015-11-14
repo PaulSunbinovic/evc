@@ -53,11 +53,20 @@ class CmnAction extends Action {
 		
 		//为了体现出那些桩已经被预约了
 		
-
+		$dvclsnw=array();
 		$dvcls=$arr['data'];
-		
+		//添加一个功能
+		foreach($dvcls as $dvcv){
+			if($dvcv['listShareTime']){//以后有sharetime就是绿色好了
+				$opentm=$dvcv['listShareTime'][0]['startTime'].'-'.$dvcv['listShareTime'][0]['endTime'];
+			}else{
+				$opentm='';
+			}
+			$dvcv['opentm']=$opentm;
+			array_push($dvclsnw,$dvcv);
+		}
 
-		$data['dvcls']=$dvcls;
+		$data['dvcls']=$dvclsnw;
 		$this->ajaxReturn($data,'json');
 
 	}

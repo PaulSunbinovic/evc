@@ -92,9 +92,9 @@ function paintpnt(){
 	    			var dvcid=data['dvcls'][i]['id'];
 
 	    			// pnt={lgtd:lgtd,lttd:lttd,title:ads,deviceId:dvcid};
-	    			
+	    			str=data['dvcls'][i]['opentm'];
 	    			if(data['dvcls'][i]['isOrder']==1){
-	    				var str='（已预约）';
+	    				var str=str+'（已预约）';
 	    			}else{
 	    				var str='';
 	    			}
