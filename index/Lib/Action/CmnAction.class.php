@@ -32,7 +32,7 @@ class CmnAction extends Action {
 			$qry='&longitude='.$_GET['ctlgtd'].'&latitude='.$_GET['ctlttd'];
 		}
 		//java后台
-		$url=C('javaback').'/device/getAll.action'.$qry;
+		$url=C('javaback').'/device/getAll.action'.$qry;p($url);die;
 		if(C('psnvs')==1){
 
 			//上海版

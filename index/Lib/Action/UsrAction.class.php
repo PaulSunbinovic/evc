@@ -330,9 +330,9 @@ class UsrAction extends Action {
 		if($tm!=''){
 			$data['sttm']=$tm;
 			//现在不确定到底是闹铃模式还是啥，暂时先给个年吧
-			$yr_mth_day=date('Y:m:d',time());
-			$tm=$yr_mth_day.' '.$tm.':00';
-			$tm=str_replace(' ', '+', $tm);//curl无法解析url的，所以要手动把参数改变下
+			// $yr_mth_day=date('Y:m:d',time());
+			// $tm=$yr_mth_day.' '.$tm.':00';
+			// $tm=str_replace(' ', '+', $tm);//curl无法解析url的，所以要手动把参数改变下
 			$str='&timeExp='.$tm;
 		}
 		if($week){
