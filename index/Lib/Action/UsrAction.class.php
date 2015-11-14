@@ -530,7 +530,7 @@ class UsrAction extends Action {
 		}
 		$arr=json_decode($json,true);
 		//添加查看共享时段
-		$url=C('javaback').'/shareTime/findShareTimeByUserIdAndDeviceId.action?userId='.session('openid').'&deviceId='.$dvcid;
+		$url=C('javaback').'/shareTime/findShareTimeByUserIdAndDeviceId.action?userId='.$arr['data']['user']['id'].'&deviceId='.$dvcid;
 		if(C('psnvs')==1){
 			$json='{"data":{"sn":"80000001","isorder":0,"deviceId":1},"code":"A00000","msg":"查询成功！"}';
 		}else{

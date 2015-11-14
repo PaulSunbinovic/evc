@@ -32,7 +32,7 @@ class CmnAction extends Action {
 			$qry='&longitude='.$_GET['ctlgtd'].'&latitude='.$_GET['ctlttd'];
 		}
 		//java后台
-		$url=C('javaback').'/device/getAll.action'.$qry;p($url);die;
+		$url=C('javaback').'/device/getAll.action'.$qry;
 		if(C('psnvs')==1){
 
 			//上海版
@@ -55,27 +55,9 @@ class CmnAction extends Action {
 		
 
 		$dvcls=$arr['data'];
-		$dvclsnw=array();
+		
 
-		foreach($dvcls as $dvcv){
-			$url=C('javaback').'/shareTime/findShareTimeByUserIdAndDeviceId.action?deviceId='.$dvcv['id'].'&userId='.$dvcv['owner'];
-			if(C('psnvs')==1){
-				$json='{"data":{"sn":"80000001","isorder":1,"deviceId":1},"code":"A00000","msg":"查询成功！"}';
-			}else{
-				$json=https_request($url);
-			}
-			$arr=json_decode($json,true);
-			if($arr['isorder']==0){
-				$dvcv['hasodr']=0;
-			}else{
-				$dvcv['hasodr']=1;
-			}
-			
-			
-
-		}
-
-		$data['dvcls']=$dvclsnw;
+		$data['dvcls']=$dvcls;
 		$this->ajaxReturn($data,'json');
 
 	}

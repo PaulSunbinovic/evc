@@ -44,6 +44,10 @@ function lct(pnt,ifwd,lvl,ctr,clr,icn,ads){
 	marker.setLabel(label);
 }
 
+//开发模式
+//ctlgtd='120.207736';ctlttd='30.211754';
+//paintpnt();
+
 //adjust route
 function adjstrt(pnt){
 	driving.search(mypoint, pnt);
@@ -89,7 +93,7 @@ function paintpnt(){
 
 	    			// pnt={lgtd:lgtd,lttd:lttd,title:ads,deviceId:dvcid};
 	    			
-	    			if(data['dvcls'][i]['hasodr']==1){
+	    			if(data['dvcls'][i]['isOrder']==1){
 	    				var str='（已预约）';
 	    			}else{
 	    				var str='';

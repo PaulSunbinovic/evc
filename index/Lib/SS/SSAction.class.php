@@ -3,6 +3,8 @@ class SSAction extends Action{
 	function setss(){
 		
 		$openid=session('openid');
+		//开发模式
+		//$openid='ojxMBuJe07gSZDUwp0ZHGHEMHOR8';
 
 		$url=C('javaback').'/user/get.action?wechatId='.$openid;
 
