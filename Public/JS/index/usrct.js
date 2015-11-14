@@ -14,6 +14,7 @@ function onoff(id){
 
 //由于某些冲突，所以，tmofst在作为比对，是在jquery-clockpicker.js里面进行判断的。。。
 var tmofst="";var stmod=1;//set mode 默认是提交设定
+var weekSelectInit='';
 function clc(id){//clock
     dvcid=id;
     
@@ -32,6 +33,8 @@ function clc(id){//clock
             //
             //开放是半天还是一天，还是全天
             $('#openTime').val(data['status']);
+
+
             
             //初始化谁绿谁不绿
             var dayset=data['dayset'];
@@ -46,21 +49,10 @@ function clc(id){//clock
                 if(fri!=-1){changeDayMod('fri');}
                 if(sat!=-1){changeDayMod('sat');}
                 if(sun!=-1){changeDayMod('sun');}
-                function changeDayMod(daytype){
-                    if(daytype=='mon'){dayid='#day1';}else if(daytype=='tue'){dayid='#day2';}else if(daytype=='wed'){dayid='#day3';}else if(daytype=='thu'){dayid='#day4';}else if(daytype=='fri'){dayid='#day5';}else if(daytype=='sat'){dayid='#day6';}else if(daytype=='sun'){dayid='#day7';}
-                    var als=$(dayid).children('a');
-                    var a=als[0];
-                    classofa=$(a).attr('class');
-                    if(classofa.indexOf('default')==-1){
-                        classofa=classofa.replace(/success/g,'default');
-                    }else{
-                        classofa=classofa.replace(/default/g,'success');
-                    }
-                    $(a).attr('class',classofa);
-                }
+                
             }
             //设置初始weekSelect状态
-            var weekSelectInit=$('#weekSelect').html();
+            weekSelectInit=$('#weekSelect').html();
 
 
             $('#dvcnm').html(data['dvco']['address']);
@@ -80,7 +72,18 @@ function clc(id){//clock
     });
     $('#modal').trigger('click');
 }
-
+function changeDayMod(daytype){
+    if(daytype=='mon'){dayid='#day1';}else if(daytype=='tue'){dayid='#day2';}else if(daytype=='wed'){dayid='#day3';}else if(daytype=='thu'){dayid='#day4';}else if(daytype=='fri'){dayid='#day5';}else if(daytype=='sat'){dayid='#day6';}else if(daytype=='sun'){dayid='#day7';}
+    var als=$(dayid).children('a');
+    var a=als[0];
+    classofa=$(a).attr('class');
+    if(classofa.indexOf('default')==-1){
+        classofa=classofa.replace(/success/g,'default');
+    }else{
+        classofa=classofa.replace(/default/g,'success');
+    }
+    $(a).attr('class',classofa);
+}
 
 $(function(){
 
@@ -236,7 +239,7 @@ function doonff(oprt,tm,week,openTime){
                     if(data['rslt']=='ok'){
                         //完成设定成功的话要给数组库添加值，以后只要和新成立的结论不正确的
                         //dvcls[dvcid]=tm;
-                        $('#btn_'+dvcid).html("<a class='btn btn-success btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-time'></i> "+data['tm']+"</a>");
+                        $('#btn_'+dvcid).html("<a class='btn btn-success btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-time'></i> "+tm+"</a>");
                         //成功的话就以现在的状态为准，把当前的状态设置成初始状态
                         weekSelectInit=$('weekSelect').html();
                     }else{

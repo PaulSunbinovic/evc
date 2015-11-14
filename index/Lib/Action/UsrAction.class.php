@@ -134,7 +134,7 @@ class UsrAction extends Action {
 		//如果是庄主的话，就不用体现这个按钮了，因为后面还会提到的
 		//判断订单是否正在启用
 		//假设正在约的状态
-		if($arr['status']==1){
+		if($arr['status']==0){
 			$isOnOdr=1;
 		}else{
 			$isOnOdr=0;
@@ -150,19 +150,20 @@ class UsrAction extends Action {
 				$json=https_request($url);
 			}
 			$arr=json_decode($json,true);
-		}
-		$apntdvco=$arr['data'];
-		if($usrdto['user']['id']!=$apntdvco['owner']){
-			if($apntdvco['status']==''||$apntdvco['status']=='02'){
-				$apntdvco['stts']='off';$status='未充电';
+			$apntdvco=$arr['data'];
+			if($usrdto['user']['id']!=$apntdvco['owner']){
+				if($apntdvco['status']==''||$apntdvco['status']=='02'){
+					$apntdvco['stts']='off';$status='未充电';
+				}else{
+					$apntdvco['stts']='on';$status='充电中';
+				}
+				$this->assign('apntdvco',$apntdvco);
 			}else{
-				$apntdvco['stts']='on';$status='充电中';
+				//就看成没有预约
+				$isOnOdr=0;
 			}
-			$this->assign('apntdvco',$apntdvco);
-		}else{
-			//就看成没有预约
-			$isOnOdr=0;
 		}
+		
 		
 
 		//获取庄主信息
@@ -203,17 +204,15 @@ class UsrAction extends Action {
 				$dvcv['stts']='on';$status='充电中';
 			}
 			//同时查看这个桩的定时时间，如果是有设定的话，控件需要变绿，并且有时间显示
-			$url=C('javaback').'/device/timer.action?deviceId='.$dvcv['id'];
+			$url=C('javaback').'/device/getJobDay.action?wechatId='.session('openid').'&deviceId='.$dvcv['id'];
 			if(C('psnvs')==1){
-				$json='{"data":"2015-12-12 12:12:12","code":"A00000","msg":"获取定时时间成功"}';
+				$json='{"data":{"time":null,"week":null},"code":"A00000","msg":"操作成功"}';
 			}else{
-				$json=https_request($json);
+				$json=https_request($url);
 			}
 			$arr=json_decode($json,true);
-			$tm=$arr['data'];
+			$tm=$arr['data']['time'];
 			if($tm){
-				$str=strtotime($tm);
-				$tm=date('h:i',$str);
 				$cls_tag='success';
 			}else{
 				$cls_tag='default';
@@ -305,26 +304,7 @@ class UsrAction extends Action {
 		$openTime=$_GET['openTime'];
 
 
-		//为预约订单生成carId，现在取消预约订单，因此也取消了这快的判断
-		// $url=C('javaback').'/user/get.action?wechatId='.$openid;
-		// if(C('psnvs')==1){
-		// 	$json=https_request($url);
-		// }else{
-		// 	$json='{"data":{"user":{"id":1,"token":1,"wechatId":"12345","nickName":"王 峰","mobile":"13162951502","macId":"dadadaaf","headImgUrl":"baidu.com","createTime":"2015-09-13 10:37:53","updateTime":"2015-09-13 10:37:53","customer":true,"deviceOwner":false,"installser":false,"admin":false},"userAccount":{"id":1,"userId":1,"balance":990,"point":0,"createTime":"2015-09-13 10:37:54","updateTime":"2015-09-19 23:26:50","version":1},"carList": [{"id":1,"userId":1,"carModelId":1,"carNo":"沪 A11111","isDefault":false,"createTime":"2015-09-19 22:19:36","updateTime":"2015-09-19 22:19:40"}]},"code":"A00000","msg":null}';
-		// }
-		// $arr=json_decode($json,true);
-		// //现在就处理他默认的车或者default的车
-		// //先存了第一个，然后循环过程中如果发现那个是default的话就break掉
-		// $carls=$arr['data']['carList'];
-		// for($i=0;$i<count($carls);$i++){
-		// 	if($i==0){
-		// 		$carid=$carls[$i]['id'];
-		// 	}
-		// 	if($carls[$i]['isDefault']==true){
-		// 		$carid=$carls[$i]['id'];
-		// 		break;
-		// 	}
-		// }
+		
 
 		$str='';
 		if($tm!=''){
@@ -339,34 +319,7 @@ class UsrAction extends Action {
 			$str=$str.'&dayExp='.$week;
 		}
 
-		//先预约
-		// $url=C('javaback').'/order/appoint.action?wechatId='.session('openid').'&deviceId='.$dvcid.'&carId='.$carid;
-		// if(C('psnvs')==1){
-		// 	$json='{"data":4,"code":"A01408","msg":"用户余额不足"}';
-		// }else{
-		// 	$json=https_request($url);
-		// }
-		// $arr=json_decode($json,true);
-		// if($arr['code']=='A00000'){
-		// 	$url=C('javaback').'/device/operate.action?deviceId='.$dvcid.'&wechatId='.$openid.'&operation='.$oprt.$str;
-		// 	if(C('psnvs')==1){
-		// 		$json='{"data":null,"code":"A00000","msg":"系统错误"}';
-		// 	}else{
-		// 		$json=https_request($url);
-		// 	}
-		// 	//$json=https_request($url);
-		// 	$arr=json_decode($json,true);
-		// 	if($arr['code']=='A00000'){
-		// 		$data['rslt']='ok';
-		// 	}else{
-		// 		$data['rslt']='error';
-		// 	}
-		// 	//logger($dvcid.' '.$arr['msg'],'log/log.txt');
-		// 	$data['msg']=$arr['msg'];
-		// }else{
-		// 	$data['rslt']='error';
-		// 	$data['msg']=$arr['msg'];
-		// }
+		
 		//咱不搞预约订单了，直接开关
 		//
 		//这里有个问题，就是如果操作的桩不是自己的，那么肯定是预约的桩，而预约的桩需要先判断是否是约者操作的，毕竟可能这个人几天没换网页，早就不是他约的了，还显示他约的，造成误会，所以要双保险
@@ -467,39 +420,20 @@ class UsrAction extends Action {
 		$arr=json_decode($json,true);
 		$data['dvco']=$arr['data'];
 		
-		$url=C('javaback').'/device/timer.action?deviceId='.$dvcid;
-		if(C('psnvs')==1){
-			$json='{"data":"2015-12-12 12:12:12","code":"A00000","msg":"获取定时时间成功"}';
-		}else{
-			$json=https_request($json);
-		}
-		$arr=json_decode($json,true);
-		$tm=$arr['data'];
-		if($tm){
-			$str=strtotime($tm);
-			$tm=date('h:i',$str);
-			$cls_tag='success';
-		}else{
-			$cls_tag='default';
-		}
-		$timer=array(
-			'cls_tag'=>$cls_tag,
-			'tm'=>$tm,
-			);
-		$data['timer']=$timer;
+		
 
 
 		//接下来是周一到周末
-		////同时查看这个桩的闹铃每周
+		////同时查看这个桩的闹铃每周，只有week有用（我时间用timer的接口）
 		$url=C('javaback').'/device/getJobDay.action?deviceId='.$dvcid.'&wechatId='.session('openid');
 		if(C('psnvs')==1){
-			$json='{"data":"MON,TUE,WED,THU,SAT","code":"A00000","msg":"操作成功"}';
+			$json='{"data":{"time":null,"week":null},"code":"A00000","msg":"操作成功"}';
 		}else{
-			$json=https_request($json);
+			$json=https_request($url);
 		}
 		$arr=json_decode($json,true);
 		if($arr['data']){
-			$dayls=explode(',',$arr['data']);
+			$dayls=explode(',',$arr['data']['week']);
 			$str='-';
 			for($i=0;$i<count($dayls);$i++){
 				if($dayls[$i]=='MON'){
@@ -520,6 +454,19 @@ class UsrAction extends Action {
 			}
 		}
 		$data['dayset']=$str;
+
+		$tm=$arr['data']['time'];		
+		if($tm){
+			
+			$cls_tag='success';
+		}else{
+			$cls_tag='default';
+		}
+		$timer=array(
+			'cls_tag'=>$cls_tag,
+			'tm'=>$tm,
+			);
+		$data['timer']=$timer;
 		
 
 		$url=C('javaback').'/user/get.action?wechatId='.session('openid');
@@ -529,7 +476,7 @@ class UsrAction extends Action {
 			$json=https_request($url);
 		}
 		$arr=json_decode($json,true);
-		//添加查看共享时段
+		//添加查看共享时段//XXXXXXXXXXXXXXXXXXX楠哥在改
 		$url=C('javaback').'/shareTime/findShareTimeByUserIdAndDeviceId.action?userId='.$arr['data']['user']['id'].'&deviceId='.$dvcid;
 		if(C('psnvs')==1){
 			$json='{"data":{"sn":"80000001","isorder":0,"deviceId":1},"code":"A00000","msg":"查询成功！"}';
