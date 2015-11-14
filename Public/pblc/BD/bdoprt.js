@@ -45,8 +45,8 @@ function lct(pnt,ifwd,lvl,ctr,clr,icn,ads){
 }
 
 //开发模式
-//ctlgtd='120.207736';ctlttd='30.211754';
-//paintpnt();
+// ctlgtd='120.207736';ctlttd='30.211754';
+// paintpnt();
 
 //adjust route
 function adjstrt(pnt){

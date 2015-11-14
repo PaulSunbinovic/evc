@@ -73,7 +73,7 @@ var cancelsttm='__URL__/cancelsttm';
 		  	<div class='col-md-12 col-xs-12'>
 		  		<div class='col-md-4 col-xs-4 nopadding'><img src="<?php echo ($usrdto['user']['headImgUrl']); ?>" style='width:80px;height:80px;margin-top:20px' class='img-circle'></div>
 				<div class='col-md-8 col-xs-8 nopadding'>
-					<div><h3><?php echo ($usrdto['user']['nickName']); ?></h3></div>
+					<div><h3><?php echo ($usrdto['user']['nickName']); echo ($aaa); ?></h3></div>
 					<div>
 						当前状态：<?php echo ($status); ?>
 					</div>
@@ -99,7 +99,9 @@ var cancelsttm='__URL__/cancelsttm';
 
 		
 		<div class='col-md-12 col-xs-12' style='padding-bottom:20px' id='nine'>
-			<?php if(is_array($dvcls)): $i = 0; $__LIST__ = $dvcls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dvcv): $mod = ($i % 2 );++$i;?><div class='col-md-4 col-xs-4' id="dvc_<?php echo ($dvcv['id']); ?>" onclick="onoff(<?php echo ($dvcv['id']); ?>)"><a class='btn btn-default btn-lg btn-block blk' ><i class='glyphicon glyphicon-off'></i> 关</a></div>
+			<script type="text/javascript">var disabledls=new Array();</script>
+			<?php if(is_array($dvcls)): $i = 0; $__LIST__ = $dvcls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dvcv): $mod = ($i % 2 );++$i;?><script>disabledls[<?php echo ($dvcv['id']); ?>]="<?php echo ($dvcv['disabled']); ?>";</script>
+				<div class='col-md-4 col-xs-4' id="dvc_<?php echo ($dvcv['id']); ?>" onclick="onoff(<?php echo ($dvcv['id']); ?>)"><a class='btn btn-default btn-lg btn-block blk' ><i class='glyphicon glyphicon-off'></i> 关</a></div>
 				<script>var doChangeCapacity="__URL__/doChangeCapacity";</script>
 				<div class='col-md-4 col-xs-4' id="capacity_<?php echo ($dvcv['id']); ?>" onclick="changeCapacity(<?php echo ($dvcv['id']); ?>)"><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-flash'></i> <valueOfCapacity><?php echo ($dvcv['fast_slow_charge']); ?></valueOfCapacity></a></div>
 				<div class='col-md-4 col-xs-4'  onclick="clc(<?php echo ($dvcv['id']); ?>)" id="btn_<?php echo ($dvcv['id']); ?>"><a class="btn btn-<?php echo ($dvcv['timer']['cls_tag']); ?> btn-lg btn-block blk" href='#'><i class='glyphicon glyphicon-time'></i> <?php echo ($dvcv['timer']['tm']); ?></a></div>

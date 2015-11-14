@@ -217,6 +217,10 @@ function checkWeekSelectChange(){
 }
 
 function doonff(oprt,tm,week,openTime){
+    //如果不在线就算了
+    if(disabledls[dvcid]=='disabled'){
+        return;
+    }
     if(fctswc==1){
         $.ajax({
             'type': 'GET',
@@ -323,9 +327,9 @@ function check(dvcid){
     var obj=$('#dvc_'+dvcid);//目前操纵的devc
    
     if(dvcsttsls[dvcid]=='off'){
-        obj.html("<a class='btn btn-default btn-lg btn-block blk' ><i class='glyphicon glyphicon-off'></i> 关</a>");
+        obj.html("<a class='btn btn-default btn-lg btn-block blk "+disabledls[dvcid]+"' ><i class='glyphicon glyphicon-off'></i> 关</a>");
     }else{
-        obj.html("<a class='btn btn-success btn-lg btn-block blk' ><i class='glyphicon glyphicon-off'></i> 开</a>");
+        obj.html("<a class='btn btn-success btn-lg btn-block blk "+disabledls[dvcid]+"' ><i class='glyphicon glyphicon-off'></i> 开</a>");
     }
     
 }

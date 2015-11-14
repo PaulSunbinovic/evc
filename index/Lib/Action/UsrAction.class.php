@@ -134,7 +134,7 @@ class UsrAction extends Action {
 		//如果是庄主的话，就不用体现这个按钮了，因为后面还会提到的
 		//判断订单是否正在启用
 		//假设正在约的状态
-		if($arr['status']==0){
+		if($arr['data']['status']===0){
 			$isOnOdr=1;
 		}else{
 			$isOnOdr=0;
@@ -241,12 +241,12 @@ class UsrAction extends Action {
 				$json=https_request($url);
 			}
 			$arr=json_decode($json,true);
-			if($arr['data']['shareisall']==0){
+			if($arr['data']['shareisall']===0){
 				$str='半天';
 				$status='halfday';
 				$color='warning';
 				$icon='glyphicon glyphicon-adjust';
-			}else if($arr['data']['shareisall']==1){
+			}else if($arr['data']['shareisall']===1){
 				$str='全天';
 				$status='allday';
 				$color='success';
@@ -264,6 +264,19 @@ class UsrAction extends Action {
 					'icon'=>$icon,
 					);
 			$dvcv['arr_share']=$arr_share;
+
+			//接下来是需要在进入后查看每个桩的是否在线，不在线直接灰掉
+			$url=C('javaback').'/device/checkIsOnline.action?deviceId='.$dvcv['id'];
+			if(C('psnvs')==1){
+				$json='{"data":false,"code":"A00000","msg":"获取充电状态成功！"}';
+			}else{
+				$json=https_request($url);
+			}
+			$arr=json_decode($json,true);
+			if($arr['data']==false){
+				$disabled='disabled';
+			}
+			$dvcv['disabled']=$disabled;
 
 			array_push($dvclsnw, $dvcv);
 		}
