@@ -58,7 +58,13 @@ class CmnAction extends Action {
 		//添加一个功能
 		foreach($dvcls as $dvcv){
 			if($dvcv['listShareTime']){//以后有sharetime就是绿色好了
-				$opentm=$dvcv['listShareTime'][0]['startTime'].'-'.$dvcv['listShareTime'][0]['endTime'];
+				$starttm=$dvcv['listShareTime'][0]['startTime'];
+				$starttmuls=explode(":",$starttm);
+				$starttm=$starttmuls[0].':'.$starttmuls[1];
+				$endtm=$dvcv['listShareTime'][0]['endTime'];
+				$endtmuls=explode(":",$endtm);
+				$endtm=$endtmuls[0].':'.$endtmuls[1];
+				$opentm=$starttm.'-'.$endtm;
 			}else{
 				$opentm='';
 			}

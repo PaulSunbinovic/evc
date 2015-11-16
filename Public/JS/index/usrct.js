@@ -4,11 +4,18 @@ function onoff(id){
    
     if(dvcsttsls[dvcid]=='off'){
         //alert('开');
-        doonff('on','','')
+        var r=confirm("确定已经插枪？");
+        if(r==true){
+            doonff('on','','');
+        }
+        
         
     }else{
         //alert('关');
-        doonff('off','','');
+        var r=confirm("点击确定将完成订单!");
+        if(r==true){
+            doonff('off','','');
+        }
     }
 }
 
@@ -33,7 +40,7 @@ function clc(id){//clock
             //
             //开放是半天还是一天，还是全天
             $('#openTime').val(data['status']);
-
+            selectopentminit=$('#openTime').val();
 
             
             //初始化谁绿谁不绿
@@ -86,6 +93,20 @@ function changeDayMod(daytype){
 }
 
 $(function(){
+
+    $('#openTime').change(function(){
+
+        if($('#openTime').val()==selectopentminit){
+            stmod=0;
+            $('#sttm').attr('class','btn btn-default btn-lg btn-block');
+            $('#sttm').html('取消设定'); 
+        }else{
+            stmod=1;
+            $('#sttm').attr('class','btn btn-success btn-lg btn-block');
+            $('#sttm').html('提交设定');
+
+        }
+    })
 
     $('#cnclstttm').click(function(){
         $('#stttm').val('');
@@ -236,6 +257,8 @@ function doonff(oprt,tm,week,openTime){
             },
             'dataType': 'json',
             'success': function(data) {
+
+
                     
                 //带着时间过来的，肯定是sttm派来的;不带时间过来的，肯定是直接整的开关
                 if(tm){
@@ -246,18 +269,34 @@ function doonff(oprt,tm,week,openTime){
                         $('#btn_'+dvcid).html("<a class='btn btn-success btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-time'></i> "+tm+"</a>");
                         //成功的话就以现在的状态为准，把当前的状态设置成初始状态
                         weekSelectInit=$('weekSelect').html();
+                       
                     }else{
                         
                     }
+
+                    //这个是设定共享时间
+                    if(data['rslt_svsharetm']=='ok'){
+                        //初始参考量变化
+                        selectopentminit=$('#openTime').val(); 
+                        //左下角变化
+                        var shareobj=$('#share_'+dvcid);
+                       
+                        shareobj.html("<a class='btn btn-"+data['arr_share']['color']+" btn-lg btn-block blk' href='#'><i class='"+data['arr_share']['icon']+"''></i> "+data['arr_share']['str']+"</a>");
+                        
+                    }
+                    
                     alert(data['msg']);
                     check(dvcid);
                 }else{
 
                     if(data.rslt=='error'){
                         //错误就不用改变原来dvcsttsls中的状态
-                        alert(data.msg+' 操作失败！');
+                        alert(data.msg);
                         check(dvcid);
-                        
+                        //失败的话，如果检测到需要消失，那就消失
+                        if(data['clsapntswc']==1){
+                            $('#orderswc').hide();
+                        }
                             
                     }else{//成功的alert只为测试用的
                         //开启loading,知道失败和成功才结束
@@ -290,6 +329,10 @@ function doonff(oprt,tm,week,openTime){
                                                 dvcsttsls[dvcid]=oprt;
 
                                                 check(dvcid);
+                                                //之前一旦off是拟消失的，这里是成功，那么拟消失变成真消失（PS，去开的时候肯定是不会置1，去关的时候可能会拟置1，理论上不会有问题的把）
+                                                if(data['clsapntswc']==1){
+                                                    $('#orderswc').hide();
+                                                }
                                                 $('#cancel_loading').trigger('click');
                                                 int=window.clearInterval(int);
                                             }
@@ -394,3 +437,59 @@ function changeCapacity(id){
     });
 }
 
+//#####################share的变换
+function changesharemode(id){
+    $.ajax({
+        'type': 'GET',
+        'url': dochangesharemode,
+        'async':false,  
+        'contentType': 'application/json',
+        'data': {
+            'dvcid':id,
+        },
+        'dataType': 'json',
+        'success': function(data) {
+            if(data['rslt']=='ok'){
+                var shareobj=$('#share_'+id);
+                shareobj.html("<a class='btn btn-"+data['arr_share']['color']+" btn-lg btn-block blk' href='#'><i class='"+data['arr_share']['icon']+"''></i> "+data['arr_share']['str']+"</a>");
+            }else{
+                alert(data['msg']);
+            }
+           
+            
+           
+            console.log("success");
+        },
+        'error':function() {
+            console.log("error");
+        }
+    });
+}
+
+function changetimer(id){
+    $.ajax({
+        'type': 'GET',
+        'url': dochangetimer,
+        'async':false,  
+        'contentType': 'application/json',
+        'data': {
+            'dvcid':id,
+        },
+        'dataType': 'json',
+        'success': function(data) {
+            if(data['rslt']=='ok'){
+                var timerobj=$('#timer_'+id);
+                timerobj.html("<a class='btn btn-"+data['color']+" btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-time'></i> </a>");
+            }else{
+                alert(data['msg']);
+            }
+           
+            
+           
+            console.log("success");
+        },
+        'error':function() {
+            console.log("error");
+        }
+    });
+}

@@ -192,7 +192,7 @@ class UsrAction extends Action {
 			//由于getByowner里面的状态是有问题的，所以，我们要通过device.getaction的方法来获取某个桩的值
 			$url=C('javaback').'/device/get.action?deviceId='.$dvcv['id'];
 			if(C('psnvs')==1){
-				$json='{"data": {"id":2,"owner":2,"sn":"002","model":1,"city":null,"longitude":"121.575215","latitude":"31.203762","address":" 龙沟新苑 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":"02","capacity":1},"code":"A00000","msg":" 获取设备成功"}';
+				$json='{"data":{"id":9,"owner":9,"sn":"c45d7306","model":1,"city":null,"longitude":"120.208989","latitude":"30.213697","address":"钱龙大厦","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":null,"status":"02","capacity":2,"listShareTime":[{"id":null,"deviceId":9,"startTime":"00:00:00","endTime":"23:59:59","userId":null,"createTime":2015,"isEnable":null},{"id":null,"deviceId":9,"startTime":"00:00","endTime":"00:00","userId":null,"createTime":2015,"isEnable":null}],"isOrder":0,"version":null,"path":null,"time":null,"week":null},"code":"A00000","msg":"获取设备成功"}';
 			}else{
 				$json=https_request($url);
 			}
@@ -203,6 +203,7 @@ class UsrAction extends Action {
 			}else{
 				$dvcv['stts']='on';$status='充电中';
 			}
+			//#############################
 			//同时查看这个桩的定时时间，如果是有设定的话，控件需要变绿，并且有时间显示
 			$url=C('javaback').'/device/getJobDay.action?wechatId='.session('openid').'&deviceId='.$dvcv['id'];
 			if(C('psnvs')==1){
@@ -233,24 +234,25 @@ class UsrAction extends Action {
 				$dvcv{'fast_slow_charge'}='未设置';
 			}
 
-			//添加查看共享时段
-			$url=C('javaback').'/shareTime/findShareTimeByUserIdAndDeviceId.action?userId='.$dvcv['owner'].'&deviceId='.$dvcv['id'];
-			if(C('psnvs')==1){
-				$json='{"data":{"sn":"80000001","isorder":0,"deviceId":1},"code":"A00000","msg":"查询成功！"}';
-			}else{
-				$json=https_request($url);
-			}
-			$arr=json_decode($json,true);
-			if($arr['data']['shareisall']===0){
-				$str='半天';
-				$status='halfday';
-				$color='warning';
-				$icon='glyphicon glyphicon-adjust';
-			}else if($arr['data']['shareisall']===1){
-				$str='全天';
-				$status='allday';
-				$color='success';
-				$icon='glyphicon glyphicon-certificate';
+			//添加查看共享时段,臧兄的接口已经废了，需要get.action的接口来整
+			
+			if($dvcv['listShareTime']){
+				//用starttm来判断是否是半天还是全天
+				$starttm=$dvcv['listShareTime'][0]['startTime'];
+				$tmls=explode(':',$starttm);
+				
+				if($tmls[0]=='00'){
+					$str='全天';
+					$status='allday';
+					$color='success';
+					$icon='glyphicon glyphicon-certificate';
+				}else{
+					$str='半天';
+					$status='halfday';
+					$color='warning';
+					$icon='glyphicon glyphicon-adjust';
+				}
+			
 			}else{
 				$str='未设置';
 				$status='noneday';
@@ -282,7 +284,7 @@ class UsrAction extends Action {
 		}
 		
 		$this->assign('dvcls',$dvclsnw);
-		$this->assign('status',$status);
+		
 
 		
 		
@@ -315,17 +317,49 @@ class UsrAction extends Action {
 		$week=$_GET['week'];
 		$openid=session('openid');
 		$openTime=$_GET['openTime'];
-
-
+		//默认是关闭预约开关是0，也就不用去管预约的开关，然而1的话就是要管的，要不显示这个开关的
+		$data['clsapntswc']=0;
+		//##############################################################
+		//看看对应的wechatId
+		$url=C('javaback').'/user/get.action?wechatId='.$openid;
+		if(C('psnvs')==1){
+			$json='{"data":{"user":{"id":1,"token":1,"wechatId":"12345","nickName":"王 峰","mobile":"13162951502","macId":"dadadaaf","headImgUrl":"baidu.com","createTime":"2015-09-13 10:37:53","updateTime":"2015-09-13 10:37:53","customer":true,"deviceOwner":false,"installser":false,"admin":false},"userAccount":{"id":1,"userId":1,"balance":990,"point":0,"createTime":"2015-09-13 10:37:54","updateTime":"2015-09-19 23:26:50","version":1},"carList": [{"id":1,"userId":1,"carModelId":1,"carNo":"沪 A11111","isDefault":false,"createTime":"2015-09-19 22:19:36","updateTime":"2015-09-19 22:19:40"}]},"code":"A00000","msg":null}';
+		}else{
+			$json=https_request($url);
+		}
+		$arr=json_decode($json,true);
+		//当前用户ID
+		$usrid=$arr['data']['user']['id'];
+		//##############################################################
+		$url=C('javaback').'/order/getLastOrderByDeviceId.action?deviceId='.$dvcid;
+		if(C('psnvs')==1){
+			$json='{"data":{"id":65,"userId":27,"macId":null,"deviceId":9,"price":null,"startDegree":0,"endDegree":151,"carId":null,"status":6,"totalPrice":25066,"createTime":"2015-11-15 05:52:37","updateTime":"2015-11-15 05:52:41","endTime":"2015-11-15 05:52:41","version":1,"freeFlag":1,"statusFinal":true},"code":"A00000","msg":null}';//
+		}else{
+			$json=https_request($url);
+		}
+		//$json=https_request($url);
+		$arr=json_decode($json,true);
+		//设备预约用户ID
+		$apntuserid=$arr['data']['userId'];
+		//##############################################################
+		//先判断设备是谁的
+		$url=C('javaback').'/device/get.action?deviceId='.$dvcid;
+		if(C('psnvs')==1){
+			$json='{"data":{"id":9,"owner":14,"sn":"c45d7306","model":1,"city":null,"longitude":"120.208989","latitude":"30.213697","address":"钱龙大厦","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":"01","capacity":1,"listShareTime":[{"id":1,"deviceId":9,"startTime":"9:00:00","endTime":"14:00:00","userId":null,"createTime":null},{"id":2,"deviceId":9,"startTime":"10:00:00","endTime":"18:00:00","userId":null,"createTime":null}],"isOrder":null,"version":null,"path":null,"time":"17:10","week":"SAT"},"code":"A00000","msg":"获取设备成功"}';//------------时间呢
+		}else{
+			$json=https_request($url);
+		}
+		//$json=https_request($url);
+		$arr=json_decode($json,true);
+		//桩拥有着的id
+		$dvcownerid=$arr['data']['owner'];
+		//以及设备有没有被预约
+		$dvcisodr=$arr['data']['isOrder'];
+		//##############################################################
 		
-
 		$str='';
 		if($tm!=''){
 			$data['sttm']=$tm;
-			//现在不确定到底是闹铃模式还是啥，暂时先给个年吧
-			// $yr_mth_day=date('Y:m:d',time());
-			// $tm=$yr_mth_day.' '.$tm.':00';
-			// $tm=str_replace(' ', '+', $tm);//curl无法解析url的，所以要手动把参数改变下
 			$str='&timeExp='.$tm;
 		}
 		if($week){
@@ -338,60 +372,100 @@ class UsrAction extends Action {
 		//这里有个问题，就是如果操作的桩不是自己的，那么肯定是预约的桩，而预约的桩需要先判断是否是约者操作的，毕竟可能这个人几天没换网页，早就不是他约的了，还显示他约的，造成误会，所以要双保险
 		//给个状态，关于是否去开关到
 		$admitOnOff=1;
-		//先判断设备是谁的
-		$url=C('javaback').'/device/get.action?deviceId='.$dvcid;
-		if(C('psnvs')==1){
-			$json='{"data": {"id":2,"owner":2,"sn":"002","model":1,"city":null,"longitude":"121.575215","latitude":"31.203762","address":" 龙沟新苑 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":"","capacity":1},"code":"A00000","msg":" 获取设备成功"}';//------------时间呢
-		}else{
-			$json=https_request($url);
-		}
-		//$json=https_request($url);
-		$arr=json_decode($json,true);
-		if($openid!=$arr['data']['owner']){
-			//不是庄主的，那就是预约的
+		
+		if($usrid!=$dvcownerid){
+			//不是庄主的，那就是预约的按下来的
 			//接下来就要判断是不是预约的人
 			//目前只能根据用户最近订单来判断，以后以后再改
 			//先根据桩判断谁约了他
-			$url=C('javaback').'/order/getLastOrderByDeviceId.action?deviceId='.$dvcid;
-			if(C('psnvs')==1){
-				$json='{"data":{"id":5,"userId":10,"macId":null,"deviceId":9,"price":200,"startDegree":null,"endDegree":null,"carId":1,"status":0,"totalPrice":null,"createTime":"2015-11-11 11:33:07","updateTime":"2015-11-11 11:33:07","endTime":null,"version":0,"freeFlag":0,"statusFinal":false},"code":"A00000","msg":null}';//
+			
+			
+			if($userid==$apntuserid){
+				$apntOne=1;
 			}else{
-				$json=https_request($url);
+				$apntOne=0;
 			}
-			//$json=https_request($url);
-			$arr=json_decode($json,true);
-			//---------------假设肯定是他预约的了，因为后期阿花全程后台解决
-			$apntOne=1;
+
 			if($apntOne!=1){
 				$admitOnOff=0;
 				$data['rslt']='error';
 				$data['msg']='您非本庄预约的用户，不能充电';
+				//如果不是这个桩的预约用户，又不是桩主，那么这个桩消失算了
+				$data['clsapntswc']=1;
+			}else{
+				//如果真TM是预约的用户那么他要是要关闭的话，如果操作成功就消失算了，PS桩主的话就不用动这个了，不高跌
+				if($oprt=='off'){///js需要判断下，如果是关闭还成功了，哪就消失好了，否则还是不管他，让他留着
+					//拟消失，如果操作成功的话
+					$data['clsapntswc']=1;
+				}
 			}
+			
+			
 		}else{
-			//是桩主的话就要顺便先设定下开放时间,其中不存在就算了
-			if($openTime!='noneday'){
-				if($openTime=='allday'){$isallDay=true;}else if($openTime=='halfday'){$isallDay=false;}
-				//由于臧艺失误需要先选出userid
-				$url=C('javaback').'/user/get.action?wechatId='.$openid;
-				if(C('psnvs')==1){
-					$json='{"data":{"user":{"id":1,"token":1,"wechatId":"12345","nickName":"王 峰","mobile":"13162951502","macId":"dadadaaf","headImgUrl":"baidu.com","createTime":"2015-09-13 10:37:53","updateTime":"2015-09-13 10:37:53","customer":true,"deviceOwner":false,"installser":false,"admin":false},"userAccount":{"id":1,"userId":1,"balance":990,"point":0,"createTime":"2015-09-13 10:37:54","updateTime":"2015-09-19 23:26:50","version":1},"carList": [{"id":1,"userId":1,"carModelId":1,"carNo":"沪 A11111","isDefault":false,"createTime":"2015-09-19 22:19:36","updateTime":"2015-09-19 22:19:40"}]},"code":"A00000","msg":null}';
-				}else{
-					$json=https_request($url);
+
+			//如果是桩主的话需要判断这个设备是不是已经被约了。。。。
+			//说白了就是桩么被约了，约的人不是桩主。。。
+			if($dvcisodr==1&&$apntuserid!=$usrid){
+				$admitOnOff=0;
+				$data['rslt']='error';
+				$data['msg']='此桩已经被他人预约';
+			}else{
+				//是桩主的话如果设定定时的话呢就要顺便先设定下开放时间,其中不存在就算了
+				if($tm){
+					if($openTime!='noneday'){
+						if($openTime=='allday'){$isallDay='true';}else if($openTime=='halfday'){$isallDay='false';}
+						//由于臧艺失误需要先选出userid
+						
+						$url=C('javaback').'/shareTime/saveShareTime.action?userId='.$usrid.'&deviceId='.$dvcid.'&isallDay='.$isallDay;
+						if(C('psnvs')==1){
+							$json='{"data":null,"code":"A00000","msg":"保存成功！"}';
+						}else{
+							$json=https_request($url);
+						}
+						$arr=json_decode($json,true);
+						
+						if($arr['code']='A00000'){
+							//操作成功后查询下当前的状态
+							//添加查看共享时段
+							
+							if($openTime=='halfday'){
+								$str='半天';
+								$status='halfday';
+								$color='warning';
+								$icon='glyphicon glyphicon-adjust';
+							}else if($openTime=='allday'){
+								$str='全天';
+								$status='allday';
+								$color='success';
+								$icon='glyphicon glyphicon-certificate';
+							}else{
+								$str='未设置';
+								$status='noneday';
+								$color='default';
+								$icon='glyphicon glyphicon-remove-circle';
+							}
+							$arr_share=array(
+									'str'=>$str,
+									'status'=>$status,
+									'color'=>$color,
+									'icon'=>$icon,
+									);
+							$data['arr_share']=$arr_share;
+							$data['rslt_svsharetm']='ok';
+						}else{
+							$data['rslt_svsharetm']='error';
+						}
+					}else{
+
+					}
 				}
-				$arr=json_decode($json,true);
-				$usrid=$arr['data']['user']['id'];
-				$url=C('javaback').'/shareTime/saveShareTime.action?userId='.$usrid.'&deviceId=1&isallDay='.$isallDay;
-				if(C('psnvs')==1){
-					$json='{"data":null,"code":"A00000","msg":"保存成功！"}';
-				}else{
-					$json=https_request($url);
-				}
-				$arr=json_decode($json,true);
-				//还会有变化，先假设肯定可以设置没问题的
+				
 			}
 
+			
+
 		}
-		if($apntOne==1){
+		if($admitOnOff==1){
 
 			
 			$url=C('javaback').'/device/operate.action?deviceId='.$dvcid.'&wechatId='.$openid.'&operation='.$oprt.$str;
@@ -971,6 +1045,134 @@ class UsrAction extends Action {
              //TODO 添加成功处理逻辑
          }
         
+    }
+
+
+    public function dochangesharemode(){
+    	$dvcid=$_GET['dvcid'];
+    	//##############################
+    	//先读取现在的状态----桩
+    	$url=C('javaback').'/device/get.action?deviceId='.$dvcid;
+		if(C('psnvs')==1){
+			$json='{"data":{"id":9,"owner":9,"sn":"c45d7306","model":1,"city":null,"longitude":"120.208989","latitude":"30.213697","address":"钱龙大厦","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":null,"status":"02","capacity":2,"listShareTime":[{"id":null,"deviceId":9,"startTime":"00:00:00","endTime":"23:59:59","userId":null,"createTime":2015,"isEnable":null},{"id":null,"deviceId":9,"startTime":"00:00","endTime":"00:00","userId":null,"createTime":2015,"isEnable":null}],"isOrder":0,"version":null,"path":null,"time":null,"week":null},"code":"A00000","msg":"获取设备成功"}';
+		}else{
+			$json=https_request($url);
+		}
+		$arr=json_decode($json,true);
+		$dvco=$arr['data'];
+		//#######################
+		$openid=session('openid');
+		//看看对应的wechatId
+		$url=C('javaback').'/user/get.action?wechatId='.$openid;
+		if(C('psnvs')==1){
+			$json='{"data":{"user":{"id":1,"token":1,"wechatId":"12345","nickName":"王 峰","mobile":"13162951502","macId":"dadadaaf","headImgUrl":"baidu.com","createTime":"2015-09-13 10:37:53","updateTime":"2015-09-13 10:37:53","customer":true,"deviceOwner":false,"installser":false,"admin":false},"userAccount":{"id":1,"userId":1,"balance":990,"point":0,"createTime":"2015-09-13 10:37:54","updateTime":"2015-09-19 23:26:50","version":1},"carList": [{"id":1,"userId":1,"carModelId":1,"carNo":"沪 A11111","isDefault":false,"createTime":"2015-09-19 22:19:36","updateTime":"2015-09-19 22:19:40"}]},"code":"A00000","msg":null}';
+		}else{
+			$json=https_request($url);
+		}
+		$arr=json_decode($json,true);
+		//当前用户ID
+		$usrid=$arr['data']['user']['id'];
+		//#######################################
+		if($dvco['listShareTime']){
+			//用starttm来判断是否是半天还是全天
+			$starttm=$dvco['listShareTime'][0]['startTime'];
+			$tmls=explode(':',$starttm);
+			
+			if($tmls[0]=='00'){
+				//全天变不设置
+				$str='未设置';
+				$status='noneday';
+				$color='default';
+				$icon='glyphicon glyphicon-remove-circle';
+
+				$isallday='';
+				$url=C('javaback').'/shareTime/removeShareTime.action?userId='.$usrid.'&deviceId='.$dvcid;
+								
+			}else{
+				//半天变全天
+				$str='全天';
+				$status='allday';
+				$color='success';
+				$icon='glyphicon glyphicon-certificate';
+				
+				$isallday='&isallDay=true';
+				$url=C('javaback').'/shareTime/saveShareTime.action?userId='.$usrid.'&deviceId='.$dvcid.$isallday;
+			}
+		
+		}else{
+			//未设置变半天
+			$str='半天';
+			$status='halfday';
+			$color='warning';
+			$icon='glyphicon glyphicon-adjust';
+
+			$isallday='&isallDay=false';
+			$url=C('javaback').'/shareTime/saveShareTime.action?userId='.$usrid.'&deviceId='.$dvcid.$isallday;
+		}
+		$arr_share=array(
+				'str'=>$str,
+				'status'=>$status,
+				'color'=>$color,
+				'icon'=>$icon,
+				);
+		//###################################################
+		
+		if(C('psnvs')==1){
+			$json='{"data":null,"code":"A00000","msg":"保存成功！"}';
+		}else{
+			$json=https_request($url);
+		}
+		$arr=json_decode($json,true);
+		if($arr['code']=='A00000'){
+			$data['rslt']='ok';
+		}else{
+			$data['rslt']='error';
+		}
+		$data['msg']=$arr['msg'];
+		//########################
+		$data['arr_share']=$arr_share;
+		$this->ajaxReturn($data,'json');
+    }
+
+    public function dochangetimer(){
+    	$dvcid=$_GET['dvcid'];
+    	$openid=session('openid');
+    	//##############################
+    	//先读取定时状态
+    	$url=C('javaback').'/device/getJobDay.action?wechatId='.$openid.'&deviceId='.$dvcid;
+		if(C('psnvs')==1){
+			$json='{"data":{"time":null,"week":null},"code":"A00000","msg":"操作成功"}';
+		}else{
+			$json=https_request($url);
+		}
+		$arr=json_decode($json,true);
+		$jobo=$arr['data'];
+		//########################################################
+		//有定时，就要去取消
+		if($jobo['time']){
+			$url=C('javaback').'/device/removeJob.action?wechatId='.$openid.'&deviceId='.$dvcid;
+			$color='default';
+		}else{
+			//没定时，设置成有定时
+			$url=C('javaback').'/device/operate.action?deviceId='.$dvcid.'&wechatId='.$openid.'&operation=on&timeExp=22:00&dayExp=MON,TUE,WED,THU,FRI,SAT,SUN';
+			$color='success';
+		}
+		if(C('psnvs')==1){
+			$json='{"data":null,"code":"A00000","msg":"保存成功！"}';
+		}else{
+			$json=https_request($url);
+		}
+		$arr=json_decode($json,true);
+		if($arr['code']=='A00000'){
+			$data['rslt']='ok';
+		}else{
+			$data['rslt']='error';
+		}
+		$data['msg']=$arr['msg'];
+		//########################
+		
+		$data['color']=$color;
+		$this->ajaxReturn($data,'json');
     }
 
 }

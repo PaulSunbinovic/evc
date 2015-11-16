@@ -337,27 +337,29 @@ class IndexAction extends Action {
 		$dvcid=$_GET['dvcid'];
 		$url=C('javaback').'/device/get.action?deviceId='.$dvcid;
 		if(C('psnvs')==1){
-			$json='{"data": {"id":2,"owner":2,"sn":"002","model":1,"city":null,"longitude":"121.575215","latitude":"31.203762","address":" 龙沟新苑 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},"code":"A00000","msg":" 获取设备成功"}';
+			$json='{"data":{"id":9,"owner":9,"sn":"c45d7306","model":1,"city":null,"longitude":"120.208989","latitude":"30.213697","address":"钱龙大厦","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":null,"status":"02","capacity":2,"listShareTime":[{"id":null,"deviceId":9,"startTime":"00:00:00","endTime":"23:59:59","userId":null,"createTime":2015,"isEnable":null},{"id":null,"deviceId":9,"startTime":"00:00","endTime":"00:00","userId":null,"createTime":2015,"isEnable":null}],"isOrder":0,"version":null,"path":null,"time":null,"week":null},"code":"A00000","msg":"获取设备成功"}';
 		}else{
 			$json=https_request($url);
 		}
 		$arr=json_decode($json,true);
-		$dvco=$arr['data'];
-		$data['dvco']=$dvco;
+		$data['dvco']=$arr['data'];
 
-		$url=C('javaback').'/shareTime/findShareTimeByUserIdAndDeviceId.action?deviceId='.$dvco['id'].'&userId='.$dvco['owner'];
-		if(C('psnvs')==1){
-			$json='{"data":{"sn":"80000001","isorder":1,"deviceId":1},"code":"A00000","msg":"查询成功！"}';
-		}else{
-			$json=https_request($url);
-		}
-		$arr=json_decode($json,true);
+		$shareo=$arr['data']['listShareTime'][0];
+
+		
+
+		
 		if($arr['code']=='A00000'){
 			$data['rslt']='ok';
-			if($arr['data']['shareisall']==0){
-				$str='9:00-14:00';
-			}else if($arr['data']['shareisall']==1){
-				$str='0:00-24:00';
+			if($shareo){
+				$starttm=$shareo['startTime'];
+				$tmls=explode(':',$starttm);
+				$tm=$tmls[0];
+				if($tm=='00'){
+					$str='00:00-24:00';
+				}else{
+					$str='9:00-14:00';
+				}
 			}else{
 				$str='未设置共享';
 			}

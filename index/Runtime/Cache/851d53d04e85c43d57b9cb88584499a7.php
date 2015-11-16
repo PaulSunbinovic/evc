@@ -161,6 +161,8 @@ var __app__='__APP__';
 		//百度地图参数
 		var dspdvc='__APP__/Cmn/dspdvc';
 		var icnpth='__PUBLIC__/IMG/circle.png';
+    var iconpath_red='__PUBLIC__/IMG/circle_red.png';
+    var iconpath_green='__PUBLIC__/IMG/circle_green.png';
 		var lvl=<?php echo ($lvl); ?>;
 		var cdzpt='__PUBLIC__/IMG/chongdianzhuang.jpg';
 		var apntprx='__URL__/order/deviceId';

@@ -267,9 +267,11 @@ function apnt(id){
 				driving.search(mypoint, apntpnt);
                 $('#cls_apntdtl').trigger('click');
         	}else if(data['rslt']=='moneyNotEnough'){
+        		$('#cls_apntdtl').trigger('click');
                 alert(data['msg']);
                 location.href=__app__+'/Usr/chongzhi';
             }else{
+            	$('#cls_apntdtl').trigger('click');
                 alert(data['msg']);
             }
             

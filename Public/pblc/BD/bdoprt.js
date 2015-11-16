@@ -63,9 +63,11 @@ function adjstrt(pnt){
 //ctlgtd=116.449877;
 //ctlttd=39.967977;
 function paintpnt(){
+	var icon_green={path:iconpath_green,width:23,height:23};
+	var icon_red={path:iconpath_red,width:23,height:23};
+
 	mypoint=new BMap.Point(ctlgtd,ctlttd)
-	var icon={path:icnpth,width:23,height:23,};
-	lct(mypoint,'',lvl,'y','y',icon,'我的位置');
+	lct(mypoint,'',lvl,'y','y','','我的位置');
 
 
 
@@ -94,9 +96,13 @@ function paintpnt(){
 	    			// pnt={lgtd:lgtd,lttd:lttd,title:ads,deviceId:dvcid};
 	    			str=data['dvcls'][i]['opentm'];
 	    			if(data['dvcls'][i]['isOrder']==1){
-	    				var str=str+'（已预约）';
+	    				str=str+'（已预约）';
+	    				var icon=icon_red;
+	    				var apntswc='';
 	    			}else{
-	    				var str='';
+	    				
+	    				var icon=icon_green;
+	    				var apntswc="<a class='pull-left btn btn-success' onclick='showapntdtl("+dvcid+")'><i class='glyphicon glyphicon-time'></i> 预约</a>";
 	    			}
 	    			
 	    			p[dvcid]=new BMap.Point(lgtd,lttd);
@@ -104,11 +110,11 @@ function paintpnt(){
 					var sContent =
 					"<h4 style='margin:0 0 5px 0;padding:0.2em 0'>"+ads+"</h4>" + 
 					"<img style='float:right;margin:4px' id='imgDemo' src='"+cdzpt+"' width='139' height='104' title=''/>" + 
-					"<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>惠充电智能充电桩。惠充电智能充电桩。惠充电智能充电桩。惠充电智能充电桩。惠充电智能充电桩。</p>" + "<div class='infwdaptmt'><div><a class='pull-left btn btn-success' onclick='showapntdtl("+dvcid+")'><i class='glyphicon glyphicon-time'></i> 预约</a><a class='pull-left btn btn-warning' href='"+__url__+"/cmnt/dvcid/"+dvcid+"' style='margin-left:5px'><i class='glyphicon glyphicon-comment'></i> 评论</a></div></div>"
+					"<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>惠充电智能充电桩。惠充电智能充电桩。惠充电智能充电桩。惠充电智能充电桩。惠充电智能充电桩。</p>" + "<div class='infwdaptmt'><div>"+apntswc+"<a class='pull-left btn btn-warning' href='"+__url__+"/cmnt/dvcid/"+dvcid+"' style='margin-left:5px'><i class='glyphicon glyphicon-comment'></i> 评论</a></div></div>"
 					+
 					"</div>";
 					var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
-					lct(p[dvcid],infoWindow,'','','','',ads+str);
+					lct(p[dvcid],infoWindow,'','','',icon,ads+str);
 	    		}
 	           
 	    		//alert(data['dvcls'][0]['latitude']);

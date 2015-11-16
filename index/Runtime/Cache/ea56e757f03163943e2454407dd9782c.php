@@ -87,7 +87,7 @@ var cancelsttm='__URL__/cancelsttm';
 		
 		<?php
  if($isOnOdr==1){ ?>
-		<div class='col-md-12 col-xs-12'>
+		<div class='col-md-12 col-xs-12' id='orderswc'>
 		<div class='col-md-4 col-xs-4' id="dvc_<?php echo ($apntdvco['id']); ?>" onclick="onoff(<?php echo ($apntdvco['id']); ?>)" style='padding-left:5px;padding-right:2px;'><a class='btn btn-default btn-lg btn-block blk' ><i class='glyphicon glyphicon-off'></i> 关</a></div>
 		</div>
 		<div class='clearfix'></div>
@@ -104,12 +104,17 @@ var cancelsttm='__URL__/cancelsttm';
 				<div class='col-md-4 col-xs-4' id="dvc_<?php echo ($dvcv['id']); ?>" onclick="onoff(<?php echo ($dvcv['id']); ?>)"><a class='btn btn-default btn-lg btn-block blk' ><i class='glyphicon glyphicon-off'></i> 关</a></div>
 				<script>var doChangeCapacity="__URL__/doChangeCapacity";</script>
 				<div class='col-md-4 col-xs-4' id="capacity_<?php echo ($dvcv['id']); ?>" onclick="changeCapacity(<?php echo ($dvcv['id']); ?>)"><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-flash'></i> <valueOfCapacity><?php echo ($dvcv['fast_slow_charge']); ?></valueOfCapacity></a></div>
+				<!--之前的弹框的
 				<div class='col-md-4 col-xs-4'  onclick="clc(<?php echo ($dvcv['id']); ?>)" id="btn_<?php echo ($dvcv['id']); ?>"><a class="btn btn-<?php echo ($dvcv['timer']['cls_tag']); ?> btn-lg btn-block blk" href='#'><i class='glyphicon glyphicon-time'></i> <?php echo ($dvcv['timer']['tm']); ?></a></div>
+				-->
+				<script type="text/javascript">var dochangetimer='__URL__/dochangetimer';</script>
+				<div class='col-md-4 col-xs-4'  onclick="changetimer(<?php echo ($dvcv['id']); ?>)" id="timer_<?php echo ($dvcv['id']); ?>"><a class="btn btn-<?php echo ($dvcv['timer']['cls_tag']); ?> btn-lg btn-block blk" href='#'><i class='glyphicon glyphicon-time'></i> </a></div>
 				<div class='col-md-4 col-xs-4 txtct'>桩主开关</div>
 				<div class='col-md-4 col-xs-4 txtct'>可调功率</div>
 				<div class='col-md-4 col-xs-4 txtct'>半价电预约</div>
 
-	        	<div class='col-md-4 col-xs-4'><a class='btn btn-<?php echo ($dvcv['arr_share']['color']); ?> btn-lg btn-block blk' href='#'><i class="glyphicon <?php echo ($dvcv['arr_share']['icon']); ?>"></i> <?php echo ($dvcv['arr_share']['str']); ?></a></div>
+				<script type="text/javascript">var dochangesharemode='__URL__/dochangesharemode';</script>
+	        	<div class='col-md-4 col-xs-4' id="share_<?php echo ($dvcv['id']); ?>" onclick="changesharemode(<?php echo ($dvcv['id']); ?>)"><a class='btn btn-<?php echo ($dvcv['arr_share']['color']); ?> btn-lg btn-block blk' href='#'><i class="<?php echo ($dvcv['arr_share']['icon']); ?>"></i> <?php echo ($dvcv['arr_share']['str']); ?></a></div>
 				<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-eye-open'></i> </a></div>
 				<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-cog'></i> </a></div>
 				<div class='col-md-4 col-xs-4 txtct'>共享时段</div>
@@ -182,6 +187,9 @@ var cancelsttm='__URL__/cancelsttm';
 		  <option value='halfday'>半天9:00-14:00</option>
 		  <option value='allday'>全天0:00-24:00</option>
 		</select>
+		<script type="text/javascript">
+		var selectopentminit='';
+		</script>
 
 		<!--这里是周一到周天-->
 		<div class='col-md-12 col-xs-12 nopadding' style="margin-top: 20px" id='weekSelect'>
