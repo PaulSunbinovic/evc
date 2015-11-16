@@ -4,18 +4,18 @@ function onoff(id){
    
     if(dvcsttsls[dvcid]=='off'){
         //alert('开');
-        var r=confirm("确定已经插枪？");
-        if(r==true){
+        // var r=confirm("确定已经插枪？");
+        // if(r==true){
             doonff('on','','');
-        }
+        // }
         
         
     }else{
         //alert('关');
-        var r=confirm("点击确定将完成订单!");
-        if(r==true){
+        // var r=confirm("点击确定将完成订单!");
+        // if(r==true){
             doonff('off','','');
-        }
+        // }
     }
 }
 
