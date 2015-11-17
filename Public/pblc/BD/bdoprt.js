@@ -96,13 +96,13 @@ function paintpnt(){
 
 	    			// pnt={lgtd:lgtd,lttd:lttd,title:ads,deviceId:dvcid};
 	    			str=data['dvcls'][i]['opentm'];
-	    			if(data['dvcls'][i]['isOrder']==1){
-	    				str=str+'（已被预约）';
-	    				var icon=icon_red;
-	    				var apntswc='';
-	    			}else if(data['dvcls'][i]['chargestatus']=='on'){
+	    			if(data['dvcls'][i]['chargestatus']=='on'){
 	    				str=str+'（正在充电）';
 	    				var icon=icon_yellow;
+	    				var apntswc='';
+	    			}else if(data['dvcls'][i]['isOrder']==1){
+	    				str=str+'（已被预约）';
+	    				var icon=icon_red;
 	    				var apntswc='';
 	    			}else{
 	    				var icon=icon_green;
