@@ -65,6 +65,7 @@ function adjstrt(pnt){
 function paintpnt(){
 	var icon_green={path:iconpath_green,width:23,height:23};
 	var icon_red={path:iconpath_red,width:23,height:23};
+	var icon_yellow={path:iconpath_yellow,width:23,height:23};
 
 	mypoint=new BMap.Point(ctlgtd,ctlttd)
 	lct(mypoint,'',lvl,'y','y','','我的位置');
@@ -96,11 +97,14 @@ function paintpnt(){
 	    			// pnt={lgtd:lgtd,lttd:lttd,title:ads,deviceId:dvcid};
 	    			str=data['dvcls'][i]['opentm'];
 	    			if(data['dvcls'][i]['isOrder']==1){
-	    				str=str+'（已预约）';
+	    				str=str+'（已被预约）';
 	    				var icon=icon_red;
 	    				var apntswc='';
+	    			}else if(data['dvcls'][i]['chargestatus']=='on'){
+	    				str=str+'（正在充电）';
+	    				var icon=icon_yellow;
+	    				var apntswc='';
 	    			}else{
-	    				
 	    				var icon=icon_green;
 	    				var apntswc="<a class='pull-left btn btn-success' onclick='showapntdtl("+dvcid+")'><i class='glyphicon glyphicon-time'></i> 预约</a>";
 	    			}

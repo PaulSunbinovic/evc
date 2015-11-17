@@ -6,7 +6,8 @@ class SSAction extends Action{
 		//开发模式
 		//$openid='ojxMBuJe07gSZDUwp0ZHGHEMHOR8';
 		//$openid='ojxMBuCVyjkRAucWjPyA3xeDKsa0';
-		//session('openid',$openid);
+		// $openid='12345';
+		// session('openid',$openid);
 
 		$url=C('javaback').'/user/get.action?wechatId='.$openid;
 

@@ -234,8 +234,7 @@ class UsrAction extends Action {
 				$dvcv{'fast_slow_charge'}='未设置';
 			}
 
-			//添加查看共享时段,臧兄的接口已经废了，需要get.action的接口来整
-			
+			//添加查看共享时
 			if($dvcv['listShareTime']){
 				//用starttm来判断是否是半天还是全天
 				$starttm=$dvcv['listShareTime'][0]['startTime'];

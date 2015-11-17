@@ -87,12 +87,14 @@ var cancelsttm='__URL__/cancelsttm';
 		
 		<?php
  if($isOnOdr==1){ ?>
-		<div class='col-md-12 col-xs-12' id='orderswc'>
-		<div class='col-md-4 col-xs-4' id="dvc_<?php echo ($apntdvco['id']); ?>" onclick="onoff(<?php echo ($apntdvco['id']); ?>)" style='padding-left:5px;padding-right:2px;'><a class='btn btn-default btn-lg btn-block blk' ><i class='glyphicon glyphicon-off'></i> 关</a></div>
+		<div id='orderswc'>
+			<div class='col-md-12 col-xs-12'>
+			<div class='col-md-4 col-xs-4' id="dvc_<?php echo ($apntdvco['id']); ?>" onclick="onoff(<?php echo ($apntdvco['id']); ?>)" style='padding-left:5px;padding-right:2px;'><a class='btn btn-default btn-lg btn-block blk' ><i class='glyphicon glyphicon-off'></i> 关</a></div>
+			</div>
+			<div class='clearfix'></div>
+			<div class='col-md-4 col-xs-4 txtct'>【预约】<?php echo ($apntdvco['address']); ?>的开关</div>
+			<hr>
 		</div>
-		<div class='clearfix'></div>
-		<div class='col-md-4 col-xs-4 txtct'>【预约】<?php echo ($apntdvco['address']); ?>的开关</div>
-		<hr>
 		<?php
  } ?>
 

@@ -57,6 +57,8 @@ class CmnAction extends Action {
 		$dvcls=$arr['data'];
 		//添加一个功能
 		foreach($dvcls as $dvcv){
+			//###################################
+			//查看共享时间
 			if($dvcv['listShareTime']){//以后有sharetime就是绿色好了
 				$starttm=$dvcv['listShareTime'][0]['startTime'];
 				$starttmuls=explode(":",$starttm);
@@ -69,6 +71,21 @@ class CmnAction extends Action {
 				$opentm='';
 			}
 			$dvcv['opentm']=$opentm;
+			//##############################@
+			//查看是否被充电
+			$url=C('javaback').'/device/checkIsCharging.action?deviceId='.$dvcv['id'];
+			if(C('psnvs')==1){
+				$json='{"data":false,"code":"A00000","msg":"获取在线状态成功！"}';
+			}else{
+				$json=https_request($url);
+			}
+			$arr=json_decode($json,true);
+			if($arr['data']==true){
+				$dvcv['chargestatus']='on';
+			}else{
+				$dvcv['chargestatus']='off';
+			}
+
 			array_push($dvclsnw,$dvcv);
 		}
 

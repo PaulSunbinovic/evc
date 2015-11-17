@@ -96,6 +96,7 @@ var __app__='__APP__';
 		var icnpth='__PUBLIC__/IMG/circle.png';
     var iconpath_red='__PUBLIC__/IMG/circle_red.png';
     var iconpath_green='__PUBLIC__/IMG/circle_green.png';
+    var iconpath_yellow='__PUBLIC__/IMG/circle_yellow.png';
 		var lvl={$lvl};
 		var cdzpt='__PUBLIC__/IMG/chongdianzhuang.jpg';
 		var apntprx='__URL__/order/deviceId';
@@ -222,5 +223,15 @@ var __app__='__APP__';
 <script type="text/javascript">var vrfusrstat='__APP__/Cmn/vrfusrstat';</script>
 <script type="text/javascript" src='__PUBLIC__/JS/index/base.js'></script>
 
+<?php
+if(session('analog')===1){
+?>
+<script>
+ctlgtd='120.207736';ctlttd='30.211754';
+paintpnt();
+</script>
+<?php
+}
+?>
 </body>
 </html>
