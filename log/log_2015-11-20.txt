@@ -1,0 +1,147 @@
+###################################################
+2015-11-20 07:28:41 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-20 07:28:41 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-20 07:28:41 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-20 07:28:41 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-20 07:28:41 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-20 07:28:41 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-20 16:04:25 url: http://114.215.209.115/user/get.action?wechatId=
+2015-11-20 16:04:25 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-20 16:04:25 url: http://114.215.209.115/order/getLastOrder.action?wechatId=
+2015-11-20 16:04:25 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-20 16:04:25 url: http://114.215.209.115/device/getByOwner.action?wechatId=
+2015-11-20 16:04:25 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-20 17:43:12 url: http://114.215.209.115/carModel/get.action?carModelId=Car
+2015-11-20 17:43:12 json: 
+###################################################
+2015-11-20 17:43:13 url: http://114.215.209.115/user/get.action?wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0
+2015-11-20 17:43:13 json: 
+###################################################
+2015-11-20 17:43:14 url: http://114.215.209.115/order/getLastOrder.action?wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0
+2015-11-20 17:43:14 json: 
+###################################################
+2015-11-20 17:43:15 url: http://114.215.209.115/device/getByOwner.action?wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0
+2015-11-20 17:43:15 json: 
+###################################################
+2015-11-20 17:43:44 url: http://114.215.209.115/carModel/get.action?carModelId=Car
+2015-11-20 17:43:44 json: 
+###################################################
+2015-11-20 17:43:45 url: http://114.215.209.115/user/get.action?wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0
+2015-11-20 17:43:45 json: 
+###################################################
+2015-11-20 17:43:46 url: http://114.215.209.115/order/getLastOrder.action?wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0
+2015-11-20 17:43:46 json: 
+###################################################
+2015-11-20 17:43:47 url: http://114.215.209.115/device/getByOwner.action?wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0
+2015-11-20 17:43:47 json: 
+###################################################
+2015-11-20 17:44:00 url: http://114.215.209.115/carModel/get.action?carModelId=Car
+2015-11-20 17:44:00 json: 
+###################################################
+2015-11-20 17:44:01 url: http://114.215.209.115/user/get.action?wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0
+2015-11-20 17:44:01 json: 
+###################################################
+2015-11-20 17:44:02 url: http://114.215.209.115/order/getLastOrder.action?wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0
+2015-11-20 17:44:02 json: 
+###################################################
+2015-11-20 17:44:03 url: http://114.215.209.115/device/getByOwner.action?wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0
+2015-11-20 17:44:03 json: 
+###################################################
+2015-11-20 17:44:23 url: http://114.215.209.115/carModel/get.action?carModelId=Car
+2015-11-20 17:44:23 json: 
+###################################################
+2015-11-20 17:44:24 url: http://114.215.209.115/user/get.action?wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0
+2015-11-20 17:44:24 json: 
+###################################################
+2015-11-20 17:44:25 url: http://114.215.209.115/order/getLastOrder.action?wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0
+2015-11-20 17:44:25 json: 
+###################################################
+2015-11-20 17:44:26 url: http://114.215.209.115/device/getByOwner.action?wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0
+2015-11-20 17:44:26 json: 
+###################################################
+2015-11-20 17:47:58 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 17:47:58 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 17:48:12 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 17:48:12 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 17:48:16 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 17:48:16 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 17:51:38 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 17:51:38 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 17:53:36 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 17:53:37 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 17:53:38 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 17:53:38 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 17:55:28 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 17:55:28 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 17:58:36 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 17:58:36 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 18:01:15 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 18:01:15 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 18:01:53 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 18:01:53 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 18:01:54 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 18:01:54 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 18:01:56 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 18:01:56 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 18:03:15 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 18:03:15 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 18:07:11 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 18:07:11 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 18:07:20 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 18:07:20 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 18:09:13 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 18:09:13 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 18:09:45 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 18:09:45 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 18:09:47 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 18:09:47 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 20:03:49 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 20:03:49 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 20:50:19 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 20:50:19 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 20:55:25 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 20:55:25 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 20:55:25 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 20:55:25 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 20:58:46 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 20:58:46 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 21:04:16 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 21:04:16 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 21:04:41 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 21:04:41 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 21:14:47 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 21:14:47 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-20 21:17:48 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&operation=off
+2015-11-20 21:17:48 json: {"data":null,"code":"A00001","msg":"设备操作失败"}

@@ -104,6 +104,9 @@ function paintpnt(){
 	    				str=str+'（已被预约）';
 	    				var icon=icon_red;
 	    				var apntswc='';
+	    			}else if(data['dvcls'][i]['isOwner']==1){
+	    				var icon=icon_green;
+	    				var apntswc='';
 	    			}else{
 	    				var icon=icon_green;
 	    				var apntswc="<a class='pull-left btn btn-success' onclick='showapntdtl("+dvcid+")'><i class='glyphicon glyphicon-time'></i> 预约</a>";

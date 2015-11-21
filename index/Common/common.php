@@ -2,6 +2,9 @@
 function p($array){
 	dump($array,1,'<pre>',0);//1表示输出 0表示以print_r方式打印
 }
+function vd($array){
+	var_dump($array);
+}
 function https_request($url,$data=null){
 	$crl=curl_init();
 	curl_setopt($crl, CURLOPT_URL, $url);
@@ -28,7 +31,7 @@ function rplspc($str){
  */
 function logger($log_content,$log_filename){
 	//日志大小 10000
-	$max_size=10000;//默认字节Byte
+	$max_size=1024*1024*10;//默认字节Byte 10MB
 	if(!$log_filename){
 		$log_filename='log.txt';//默认根目录
 	}
@@ -37,9 +40,27 @@ function logger($log_content,$log_filename){
 		unlink($log_filename);
 	}
 	//date_default_timezone_set('PRC');
-	file_put_contents($log_filename, date('Y-m-d H:i:s',time()).' '.$log_content."\r\n",FILE_APPEND);//双引号才换行
+	if($log_content=='#'){
+		file_put_contents($log_filename, '###################################################'."\r\n",FILE_APPEND);//双引号才换行##
+	}else{
+		file_put_contents($log_filename, date('Y-m-d H:i:s',time()).' '.$log_content."\r\n",FILE_APPEND);//双引号才换行
+	}
+	
 }
 
+function url2arr($url,$json){
+	if(C('psnvs')!=1){
+		$json=https_request($url);
+	}
+	$arr=json_decode($json,true);
+	if($arr['code']!='A00000'){
+		logger('#','log/log_'.date('Y-m-d',time()).'.txt');
+		logger('url: '.$url,'log/log_'.date('Y-m-d',time()).'.txt');
+		logger('json: '.$json,'log/log_'.date('Y-m-d',time()).'.txt');
+	}
+	$arr['url']=$url;
+	return $arr;
 
+}
 
 ?>

@@ -729,15 +729,15 @@
       radioAllOff: false,
       onColor: "success",
       offColor: "default",
-      onText: "ON",
-      offText: "OFF",
+      onText: "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",
+      offText: "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",
       labelText: "&nbsp;",
       handleWidth: "auto",
       labelWidth: "auto",
       baseClass: "bootstrap-switch",
       wrapperClass: "wrapper",
       onInit: function() {},
-      onSwitchChange: function() {}
+      onSwitchChange: function() {swc(this);}
     };
   })(window.jQuery, window);
 

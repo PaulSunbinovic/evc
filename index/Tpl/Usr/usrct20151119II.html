@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit">
+<!-- 避免IE使用兼容模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>电车惠</title>
+<script src="__PUBLIC__/pblc/btstp3/js/jquery.js"></script>
+<script src="__PUBLIC__/pblc/btstp3/js/jquery-migrate-1.1.0.min.js"></script>
+
+<!-- 移动设备 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<!-- bootstrap -->
+<link href="__PUBLIC__/pblc/btstp3/css/bootstrap.css" rel="stylesheet">
+<link href="data:text/css;charset=utf-8," data-href="__PUBLIC__/pblc/btstp3/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="__PUBLIC__/pblc/btstp3/css/patch.css" rel="stylesheet">
+<script src="__PUBLIC__/pblc/btstp3/js/ie-emulation-modes-warning.js"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="__PUBLIC__/ICON/apple-touch-icon.png">
+<link rel="icon" href="ICON/favicon.ico">
+
+
+<link href="__PUBLIC__/CSS/index/base.css" rel="stylesheet">
+
+<script type="text/javascript" src='__PUBLIC__/JS/index/usrct.js'></script>
+<link href="__PUBLIC__/CSS/index/usrct.css" rel="stylesheet">
+<script>
+var fnddvcbydvcid='__URL__/fnddvcbydvcid';
+var cancelsttm='__URL__/cancelsttm';
+</script>
+</head>
+<body style='background-color: #ddd'>
+
+	
+	<!--
+	<iframe src="head.html"  frameborder="0" style="width:100%;height:100%;" scrolling="no"></iframe>
+	-->
+	
+
+	<include file='Cmn:hd_green' />
+
+	<!--主体开始-->
+	<div class='col-md-12 col-xs-12 bd_usrct'>
+		<!--##########################################-->
+		<div class='col-md-12 col-xs-12' style='padding:10px;margin-bottom:0px;background-color: #00af50'>
+			
+		  	<div class='col-md-12 col-xs-12'>
+		  		<div class='col-md-4 col-xs-4 nopadding'><img src="{$usrdto['user']['headImgUrl']}" style='width:80px;height:80px;' class='img-circle'></div>
+				<div class='col-md-7 col-xs-7 nopadding' style='color:#fff;'>
+					<div><h3>{$usrdto['user']['nickName']}</h3></div>
+					<div>
+						{$usrdto['user']['mobile']}
+					</div>
+					
+				</div>
+				<div class='col-md-1 col-xs-1 nopadding' style='color:#fff;'>
+					
+					<div>
+						<h3 class='pull-right'><i class='glyphicon glyphicon-menu-right'></i></h3>
+					</div>
+					
+				</div>
+				
+				
+			</div>
+			
+		</div>
+		<!--##########################################-->
+		<div class='col-md-12 col-xs-12 nopadding' style='height:90px;background-color: #fff'>
+			<div class='col-md-4 col-xs-4 nopadding' style='height:90px;text-align: center;border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;padding-top:25px;'>
+				<div><numb style='font-size: 25px;color:#00af50'>1000.00</numb> <unt style='font-size: 10px;color:#00af50'>元</unt></div>
+				<div>我的余额</div>
+			</div>
+			<div class='col-md-4 col-xs-4 nopadding' style='height:90px;text-align: center;border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;padding-top:25px;'>
+				<div><numb style='font-size: 25px;color:#00af50'>3</numb> <unt style='font-size: 10px;color:#00af50'>个</unt></div>
+				<div>我的优惠券</div>
+			</div>
+				<div class='col-md-4 col-xs-4 nopadding' style='height:90px;text-align: center;border-bottom: 1px solid #ccc;padding-top:25px;'>
+				<div><numb style='font-size: 25px;color:#00af50'><i class='glyphicon glyphicon-piggy-bank'></i></numb> <unt style='font-size: 10px;color:#00af50'></unt></div>
+				<div>充值</div>
+			</div>
+		</div>
+		<!--##########################################-->
+
+		<link href="__PUBLIC__/pblc/SWC/bootstrap-switch.css" rel="stylesheet">
+		
+		<div class='col-md-12 col-xs-12' style='padding-bottom:20px; margin-top:20px;background-color: #fff'>
+			<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;height:60px;line-height: 60px'>
+				<div class='col-md-7 col-xs-7 nopadding' style='font-size: 20px'>
+					<div class='pull-left'>
+					<i class='glyphicon glyphicon-off' style='color:#f65641'></i> 开关
+					</div>
+				</div>
+				<div class='col-md-5 col-xs-5 nopadding' style='font-size: 20px'>
+					<div class='pull-right'>
+					<lbl style='font-size: 20px;margin-right:5px'>ON</lbl><input id="switch-state" type="checkbox" checked>
+					</div>
+				</div>
+			</div>
+			<volist name='dvcls' id='dvcv'>
+				<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;height:60px;line-height: 60px'>
+					<div class='col-md-7 col-xs-7 nopadding' style='font-size: 20px'>
+						<div class='pull-left'>
+						<i class='glyphicon glyphicon-off' style='color:#f65641'></i> 开关
+						</div>
+					</div>
+					<div class='col-md-5 col-xs-5 nopadding' style='font-size: 20px'>
+						<div class='pull-right'>
+						<lbl style='font-size: 20px;margin-right:5px'>ON</lbl><input class="form-control swc" type="checkbox" id="dvc_{$dvcv['dvcid']}" >
+						</div>
+					</div>
+				</div>
+				<script>disabledls[{$dvcv['id']}]="{$dvcv['disabled']}";</script>
+				<div class='col-md-4 col-xs-4' id="dvc_{$dvcv['id']}" onclick="onoff({$dvcv['id']})"><a class='btn btn-default btn-lg btn-block blk' ><i class='glyphicon glyphicon-off'></i> 关</a></div>
+				<script>var doChangeCapacity="__URL__/doChangeCapacity";</script>
+				<div class='col-md-4 col-xs-4' id="capacity_{$dvcv['id']}" onclick="changeCapacity({$dvcv['id']})"><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-flash'></i> <valueOfCapacity>{$dvcv['fast_slow_charge']}</valueOfCapacity></a></div>
+				<!--之前的弹框的
+				<div class='col-md-4 col-xs-4'  onclick="clc({$dvcv['id']})" id="btn_{$dvcv['id']}"><a class="btn btn-{$dvcv['timer']['cls_tag']} btn-lg btn-block blk" href='#'><i class='glyphicon glyphicon-time'></i> {$dvcv['timer']['tm']}</a></div>
+				-->
+				<script type="text/javascript">var dochangetimer='__URL__/dochangetimer';</script>
+				<div class='col-md-4 col-xs-4'  onclick="changetimer({$dvcv['id']})" id="timer_{$dvcv['id']}"><a class="btn btn-{$dvcv['timer']['cls_tag']} btn-lg btn-block blk" href='#'><i class='glyphicon glyphicon-time'></i> </a></div>
+				<div class='col-md-4 col-xs-4 txtct'>桩主开关</div>
+				<div class='col-md-4 col-xs-4 txtct'>可调功率</div>
+				<div class='col-md-4 col-xs-4 txtct'>半价电预约</div>
+
+				<script type="text/javascript">var dochangesharemode='__URL__/dochangesharemode';</script>
+	        	<div class='col-md-4 col-xs-4' id="share_{$dvcv['id']}" onclick="changesharemode({$dvcv['id']})"><a class='btn btn-{$dvcv['arr_share']['color']} btn-lg btn-block blk' href='#'><i class="{$dvcv['arr_share']['icon']}"></i> {$dvcv['arr_share']['str']}</a></div>
+				<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-eye-open'></i> </a></div>
+				<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-cog'></i> </a></div>
+				<div class='col-md-4 col-xs-4 txtct'>共享时段</div>
+				<div class='col-md-4 col-xs-4 txtct'> 防盗激活</div>
+				<div class='col-md-4 col-xs-4 txtct'>设置</div>
+        	</volist>
+			
+			
+			
+			
+			
+			<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-ok'></i> </a></div>
+			<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-list-alt'></i> </a></div>
+			<div class='col-md-4 col-xs-4'><a class='btn btn-success btn-lg btn-block blk' href='__URL__/chongzhi'><i class='glyphicon glyphicon-yen'></i> </a></div>
+			<div class='col-md-4 col-xs-4 txtct'>设备自检</div>
+			<div class='col-md-4 col-xs-4 txtct'>日报/月报</div>
+			<div class='col-md-4 col-xs-4 txtct'> 充值</div>
+		</div>
+		
+		
+		  
+	</div>
+	
+	
+	
+
+
+
+	<!--主体结束-->
+
+	<!--foot-->
+
+	<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id='modal' style='display: none'>
+	  需要定时吗<b class="caret"></b>	
+</button>
+
+<!-- Modal -->
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" id='cls'><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">定时设置</h4>
+      </div>
+      <div class="modal-body">
+      	<div class='col-md-12 col-xs-12' style='text-align: center;font-size: 18px'><a id='dvcnm'></a></div>
+		
+		
+		<!--
+		经过反复实验可以确诊，在modal形式下clockpicker是有问题，你选的时候是无法在input里显示的
+		所以我再jquery-clockpicker.js里头进行重写函数，详见//--------------的部分
+		注意，为了逻辑优先，我不用min.js了
+		-->
+		<script type="text/javascript" src='__PUBLIC__/pblc/CLCK/bootstrap-clockpicker.min.js'></script>
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/pblc/CLCK/bootstrap-clockpicker.min.css">
+		<script type="text/javascript" src='__PUBLIC__/pblc/CLCK/jquery-clockpicker.js'></script>
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/pblc/CLCK/jquery-clockpicker.min.css">
+		<div class="input-group clockpicker" style="padding-top: 20px">
+		    <input type="text" class="form-control" placeholder='点击选择时间' id='optm'>
+		    <span class="input-group-addon">
+		        <span class="glyphicon glyphicon-time"></span>
+		    </span>
+		</div>
+		<script type="text/javascript" src='__PUBLIC__/pblc/CLCK/int.js'></script>
+		
+
+		<!--这里是选择开放半天还是一天-->
+		<select class="form-control" id='openTime' style="margin-top:20px">
+		  <option value='noneday'>不开放</option>
+		  <option value='halfday'>半天9:00-14:00</option>
+		  <option value='allday'>全天0:00-24:00</option>
+		</select>
+		<script type="text/javascript">
+		var selectopentminit='';
+		</script>
+
+		<!--这里是周一到周天-->
+		<div class='col-md-12 col-xs-12 nopadding' style="margin-top: 20px" id='weekSelect'>
+			<div class='col-md-1 col-xs-1 padding-1-px week' id='day1'><a class="btn btn-default btn-block padding-w-1-px">一</a></div>
+			<div class='col-md-1 col-xs-1 padding-1-px week' id='day2'><a class="btn btn-default btn-block padding-w-1-px">二</a></div>
+			<div class='col-md-1 col-xs-1 padding-1-px week' id='day3'><a class="btn btn-default btn-block padding-w-1-px">三</a></div>
+			<div class='col-md-1 col-xs-1 padding-1-px week' id='day4'><a class="btn btn-default btn-block padding-w-1-px">四</a></div>
+			<div class='col-md-1 col-xs-1 padding-1-px week' id='day5'><a class="btn btn-default btn-block padding-w-1-px">五</a></div>
+			<div class='col-md-1 col-xs-1 padding-1-px week' id='day6'><a class="btn btn-default btn-block padding-w-1-px">六</a></div>
+			<div class='col-md-1 col-xs-1 padding-1-px week' id='day7'><a class="btn btn-default btn-block padding-w-1-px">七</a></div>
+			<div class='col-md-5 col-xs-5 padding-1-px week' id='work'><a class='btn btn-default btn-block'>工作日</a></div>
+			
+		</div>
+		
+		
+		<div class='col-md-12 col-xs-12 nopadding' style='margin-top:20px'>
+			<script>var dosttm='__URL__/dosttm';</script>
+			<button class='btn btn-success btn-lg btn-block' id='sttm'>提交设定</button>
+		</div>
+
+		<div class="clearfix"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger btn-lg btn-block" data-dismiss="modal" id='cancel'>取消</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script>var doonoffdvc='__URL__/doonoffdvc';</script>
+
+
+
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal_loading" id='modal_loading' style='display: none'>
+	  loading<b class="caret"></b>	
+</button>
+<script>var dotakesample='__URL__/dotakesample'</script>
+<!-- Modal -->
+<div class="modal" id="myModal_loading" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document" style='margin-top:200px;' >
+    <div class="modal-content">
+      
+      <div class="modal-body">
+      	<div class='col-md-12 col-xs-12' style='text-align: center;font-size: 18px'>俺正在全力以赴...</div>
+      	<div class='clearfix'></div>
+      	<div class="progress">
+		  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;height:100px;">
+		    <span class="sr-only">loading...</span>
+		  </div>
+		</div>
+		<div class="modal-footer">
+	        <button type="button" class="btn btn-danger btn-lg btn-block" data-dismiss="modal" id='cancel_loading' style='display:none'>取消</button>
+	        
+	    </div>
+		
+		
+    </div>
+  </div>
+</div>
+
+
+<!-- bootstrap -->
+<script src="__PUBLIC__/pblc/btstp3/js/bootstrap.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="__PUBLIC__/pblc/btstp3/js/ie10-viewport-bug-workaround.js"></script>
+<script type="text/javascript">var vrfusrstat='__APP__/Cmn/vrfusrstat';</script>
+<script type="text/javascript" src='__PUBLIC__/JS/index/base.js'></script>
+<script src="__PUBLIC__/pblc/SWC/highlight.js"></script>
+<script src='__PUBLIC__/pblc/SWC/bootstrap-switch.js'></script>
+<script src='__PUBLIC__/pblc/SWC/main.js'></script>
+<script>
+	//这里搞个设备数组库
+		
+	var dvcls=new Array();
+
+	<volist name='dvcls' id='dvcv'>
+		//暂时默认为空初始时间，等到马哥得到定时的接口搞定后，再赋值，从uct.php开始
+		dvcls[{$dvcv['id']}]='';
+	</volist>
+
+	var dvcsttsls=new Array();
+	<?php
+	if($isOnOdr==1){
+	?>
+	dvcsttsls[{$apntdvco['id']}]="{$apntdvco['stts']}";
+	check({$dvcv['id']});
+	<?php
+	}
+	?>
+	<volist name='dvcls' id='dvcv'>
+		//暂时默认为空初始时间，等到马哥得到定时的接口搞定后，再赋值，从uct.php开始
+		dvcsttsls[{$dvcv['id']}]="{$dvcv['stts']}";
+		check({$dvcv['id']});
+	</volist>
+	
+</script>
+
+
+
+</body>
+</html>

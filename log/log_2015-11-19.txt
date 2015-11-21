@@ -1,0 +1,819 @@
+###################################################
+2015-11-19 00:18:20 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=10
+2015-11-19 00:18:20 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:20 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=1
+2015-11-19 00:18:20 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:20 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=13
+2015-11-19 00:18:20 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:20 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=17
+2015-11-19 00:18:20 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:20 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=2
+2015-11-19 00:18:20 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:20 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=3
+2015-11-19 00:18:20 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:20 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=4
+2015-11-19 00:18:20 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:20 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=5
+2015-11-19 00:18:20 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=6
+2015-11-19 00:18:21 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=7
+2015-11-19 00:18:21 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=8
+2015-11-19 00:18:21 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=11
+2015-11-19 00:18:21 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=12
+2015-11-19 00:18:21 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=14
+2015-11-19 00:18:21 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=15
+2015-11-19 00:18:21 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=18
+2015-11-19 00:18:21 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=19
+2015-11-19 00:18:21 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=20
+2015-11-19 00:18:21 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=21
+2015-11-19 00:18:21 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=22
+2015-11-19 00:18:21 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=23
+2015-11-19 00:18:21 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=24
+2015-11-19 00:18:21 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=25
+2015-11-19 00:18:21 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=28
+2015-11-19 00:18:21 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=30
+2015-11-19 00:18:21 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 00:18:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=32
+2015-11-19 00:18:21 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:16 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=10
+2015-11-19 06:59:16 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:16 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=1
+2015-11-19 06:59:16 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:16 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=13
+2015-11-19 06:59:16 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:16 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=17
+2015-11-19 06:59:16 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:16 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=2
+2015-11-19 06:59:16 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:16 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=3
+2015-11-19 06:59:16 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:16 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=4
+2015-11-19 06:59:16 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:16 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=5
+2015-11-19 06:59:16 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:16 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=6
+2015-11-19 06:59:16 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:16 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=7
+2015-11-19 06:59:16 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:16 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=8
+2015-11-19 06:59:16 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:16 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=11
+2015-11-19 06:59:16 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:16 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=12
+2015-11-19 06:59:16 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:16 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=14
+2015-11-19 06:59:16 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:16 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=15
+2015-11-19 06:59:16 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:16 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=18
+2015-11-19 06:59:16 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:16 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=19
+2015-11-19 06:59:16 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:16 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=20
+2015-11-19 06:59:16 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:17 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=21
+2015-11-19 06:59:17 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:17 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=22
+2015-11-19 06:59:17 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:17 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=23
+2015-11-19 06:59:17 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:17 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=24
+2015-11-19 06:59:17 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:17 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=25
+2015-11-19 06:59:17 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:17 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=30
+2015-11-19 06:59:17 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:17 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=31
+2015-11-19 06:59:17 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 06:59:17 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=33
+2015-11-19 06:59:17 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-19 10:02:26 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:02:26 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:02:26 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:02:26 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:02:26 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:02:26 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:02:44 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:02:44 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:02:44 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:02:44 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:02:44 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:02:44 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:22 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:22 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:22 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:22 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:22 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:22 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:23 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:23 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:23 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:23 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:24 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:24 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:25 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:25 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:25 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:25 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:35 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:35 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:36 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:36 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:36 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:36 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:36 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:36 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:36 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:36 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:36 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:36 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:36 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:36 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:36 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:36 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:36 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:36 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:36 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:36 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:36 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:36 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:36 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:36 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:36 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:36 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:37 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:37 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:37 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:37 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:37 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:37 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:37 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:37 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:37 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:37 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:37 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:37 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:37 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:37 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:37 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:37 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:37 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:37 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:38 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:38 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:39 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:39 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:39 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:39 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:39 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:39 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:39 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:39 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:39 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:39 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:41 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:41 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:41 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:41 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:41 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:41 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:41 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:41 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:41 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:41 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:41 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:41 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:41 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:41 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:41 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:41 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:41 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:41 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:41 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:41 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:41 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:41 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:41 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:41 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:41 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:41 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:41 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:41 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:41 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:41 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:42 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:42 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:42 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:42 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:42 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:42 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:42 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:42 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:42 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:42 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:42 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:42 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:42 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:42 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:42 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:42 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:42 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:42 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:42 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:42 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:42 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:42 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:42 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:42 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:42 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:42 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:43 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:43 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:48 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:48 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:49 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:49 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:49 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:49 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:49 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:49 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:50 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:50 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:50 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:50 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:50 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:50 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:50 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:50 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:50 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:50 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:50 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:50 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:50 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:50 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:50 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:50 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:50 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:50 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:51 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:51 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:51 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:51 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:51 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:51 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:57 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:57 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:58 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:58 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:58 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:58 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:12:58 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:12:58 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:12:58 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:12:58 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:12:58 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:12:58 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:13:01 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:13:01 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:13:01 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:13:01 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:13:01 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:13:01 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:13:03 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:13:03 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:13:03 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:13:03 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:13:03 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:13:03 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 10:13:07 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 10:13:07 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 10:13:07 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 10:13:07 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 10:13:07 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 10:13:07 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 11:18:33 url: http://120.26.80.165/device/getJobDay.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8&deviceId=15
+2015-11-19 11:18:33 json: 
+###################################################
+2015-11-19 13:58:40 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 13:58:40 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 13:58:40 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 13:58:40 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 13:58:40 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 13:58:40 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 15:01:47 url: http://120.26.80.165/user/get.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8
+2015-11-19 15:01:47 json: 
+###################################################
+2015-11-19 15:04:11 url: http://120.26.80.165/user/get.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8
+2015-11-19 15:04:11 json: 
+###################################################
+2015-11-19 15:04:17 url: http://120.26.80.165/order/getLastOrder.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8
+2015-11-19 15:04:17 json: 
+###################################################
+2015-11-19 15:04:39 url: http://120.26.80.165/device/getByOwner.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8
+2015-11-19 15:04:39 json: 
+###################################################
+2015-11-19 16:14:18 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 16:14:18 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 16:14:18 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 16:14:18 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 16:14:19 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 16:14:19 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 16:49:18 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 16:49:18 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 16:49:19 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 16:49:19 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 16:49:19 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 16:49:19 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 16:50:14 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 16:50:14 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 16:50:14 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 16:50:14 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 16:50:14 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 16:50:14 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 16:50:15 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 16:50:15 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 16:50:18 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 16:50:18 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 16:50:19 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 16:50:19 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 18:16:50 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 18:16:50 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 18:16:50 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 18:16:50 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 18:16:50 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 18:16:50 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 18:18:09 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 18:18:09 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 18:18:09 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 18:18:09 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 18:18:09 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 18:18:09 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 18:28:42 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 18:28:42 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 18:28:42 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 18:28:42 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 18:28:42 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 18:28:42 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 18:29:06 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 18:29:06 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 18:29:06 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 18:29:06 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 18:29:06 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 18:29:06 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 18:45:56 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 18:45:56 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 18:45:56 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 18:45:56 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 18:45:56 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 18:45:56 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 19:25:49 url: http://114.215.209.115/user/get.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8
+2015-11-19 19:25:49 json: {"data":null,"code":"A01404","msg":"用户未注册"}
+###################################################
+2015-11-19 19:25:49 url: http://114.215.209.115/order/getLastOrder.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8
+2015-11-19 19:25:49 json: {"data":null,"code":"A01404","msg":"用户未注册"}
+###################################################
+2015-11-19 19:25:49 url: http://114.215.209.115/device/getByOwner.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8
+2015-11-19 19:25:49 json: {"data":null,"code":"A01404","msg":"用户不存在"}
+###################################################
+2015-11-19 19:27:09 url: http://114.215.209.115/user/get.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8
+2015-11-19 19:27:09 json: {"data":null,"code":"A01404","msg":"用户未注册"}
+###################################################
+2015-11-19 19:27:09 url: http://114.215.209.115/order/getLastOrder.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8
+2015-11-19 19:27:09 json: {"data":null,"code":"A01404","msg":"用户未注册"}
+###################################################
+2015-11-19 19:27:09 url: http://114.215.209.115/device/getByOwner.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8
+2015-11-19 19:27:09 json: {"data":null,"code":"A01404","msg":"用户不存在"}
+###################################################
+2015-11-19 19:31:32 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 19:31:32 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 19:31:33 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 19:31:33 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 19:31:33 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 19:31:33 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 19:35:23 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 19:35:23 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 19:35:23 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 19:35:23 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 19:35:23 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 19:35:23 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 19:35:29 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 19:35:29 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 19:35:29 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 19:35:29 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 19:35:29 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 19:35:29 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 19:38:54 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 19:38:54 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 19:38:54 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 19:38:54 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 19:38:54 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 19:38:54 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 19:39:46 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 19:39:46 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 19:39:46 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 19:39:46 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 19:39:46 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 19:39:46 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 19:46:00 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 19:46:00 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 19:46:00 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 19:46:00 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 19:46:00 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 19:46:00 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 20:58:06 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 20:58:06 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 20:58:06 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 20:58:06 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 20:58:06 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 20:58:06 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 20:59:32 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 20:59:32 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 20:59:32 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 20:59:32 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 20:59:32 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 20:59:32 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 21:02:56 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 21:02:56 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 21:02:56 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 21:02:56 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 21:02:56 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 21:02:56 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 21:03:12 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 21:03:12 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 21:03:12 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 21:03:12 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 21:03:12 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 21:03:12 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 21:04:24 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 21:04:24 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 21:04:24 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 21:04:24 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 21:04:24 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 21:04:24 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 21:05:38 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 21:05:38 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 21:05:38 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 21:05:38 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 21:05:38 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 21:05:38 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 21:05:39 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 21:05:39 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 21:05:40 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 21:05:40 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 21:05:40 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 21:05:40 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 21:06:37 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 21:06:37 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 21:06:37 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 21:06:37 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 21:06:37 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 21:06:37 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 21:07:06 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 21:07:06 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 21:07:07 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 21:07:07 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 21:07:07 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 21:07:07 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 21:10:28 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 21:10:28 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 21:10:28 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 21:10:28 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 21:10:28 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 21:10:28 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 21:12:38 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 21:12:38 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 21:12:38 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 21:12:38 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 21:12:38 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 21:12:38 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 21:13:32 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 21:13:32 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 21:13:32 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 21:13:32 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 21:13:32 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 21:13:32 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 21:16:52 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 21:16:52 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 21:16:52 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 21:16:52 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 21:16:52 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 21:16:52 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 21:17:24 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 21:17:24 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 21:17:24 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 21:17:24 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 21:17:24 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 21:17:24 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 21:18:06 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 21:18:06 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 21:18:07 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 21:18:07 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 21:18:07 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 21:18:07 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 21:18:36 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 21:18:36 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 21:18:36 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 21:18:36 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 21:18:36 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 21:18:36 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 21:26:41 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 21:26:41 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 21:26:41 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 21:26:41 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 21:26:41 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 21:26:41 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 21:26:47 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 21:26:47 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 21:26:47 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 21:26:47 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 21:26:47 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 21:26:47 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 23:51:41 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 23:51:41 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 23:51:41 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 23:51:41 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 23:51:41 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 23:51:41 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-19 23:51:49 url: http://120.26.80.165/user/get.action?wechatId=
+2015-11-19 23:51:49 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-11-19 23:51:49 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-11-19 23:51:49 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-11-19 23:51:49 url: http://120.26.80.165/device/getByOwner.action?wechatId=
+2015-11-19 23:51:49 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}

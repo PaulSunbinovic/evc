@@ -31,12 +31,8 @@
 
 <script type="text/javascript" src='__PUBLIC__/JS/index/usrct.js'></script>
 <link href="__PUBLIC__/CSS/index/usrct.css" rel="stylesheet">
-<script>
-var fnddvcbydvcid='__URL__/fnddvcbydvcid';
-var cancelsttm='__URL__/cancelsttm';
-</script>
 </head>
-<body>
+<body style='background-color: #ddd'>
 
 	
 	<!--
@@ -45,97 +41,145 @@ var cancelsttm='__URL__/cancelsttm';
 	
 
 	<!--导航开始-->
-<div class='col-md-12 col-xs-12 nvgt'>
-	<div class='col-md-3 col-xs-3' >
-		<a class='pull-left hd_a_left' href="javascript:history.go(-1);"><i class='glyphicon glyphicon-menu-left'></i></a>
+<style type="text/css">
+	.nvgt_green{font-size: 20px;background-color: #00af50;height:50px;line-height: 50px;color:#fff;}
+	.nvgt_green a{color:#fff;}
+</style>
+<div class='col-md-12 col-xs-12 nvgt_green nopadding'>
+	<div class='col-md-3 col-xs-3' onclick="history.go(-1)" style="text-align: center">
+		<a class='pull-left'><i class='glyphicon glyphicon-menu-left'></i></a>
 	</div>
 	<div class='col-md-6 col-xs-6' style="text-align: center">
-		<a style='color:#fff'><?php echo ($ttl); ?></a>
+		<a style='color:#fff' onclick='test()'><?php echo ($ttl); ?></a>
 	</div>
-	<div class='col-md-3 col-xs-3' >
-		<a class='pull-right hd_a_right' id='flsh'><i class='glyphicon glyphicon-repeat'></i></a>
+	<div class='col-md-3 col-xs-3' onclick="window.location.reload()" style='text-align: center'>
+		<a class='pull-right'><i class='glyphicon glyphicon-repeat'></i> </a>
 	</div>
 	
 </div>
-<!--导航结束-->
-<script type="text/javascript">
-	$(function(){
-		$('#flsh').click(function(){
-			window.location.reload();
-		})
-	})
-</script>
+
 
 	<!--主体开始-->
-	<div class='col-md-12 col-xs-12 bd'>
-		<div class='col-md-12 col-xs-12' style='padding:10px;margin-bottom:0px;background-color: #fff'>
+	<div class='col-md-12 col-xs-12 bd_usrct'>
+		<!--##########################################-->
+		<div class='col-md-12 col-xs-12' style='padding:10px;margin-bottom:0px;background-color: #00af50'>
 			
 		  	<div class='col-md-12 col-xs-12'>
-		  		<div class='col-md-4 col-xs-4 nopadding'><img src="<?php echo ($usrdto['user']['headImgUrl']); ?>" style='width:80px;height:80px;margin-top:20px' class='img-circle'></div>
-				<div class='col-md-8 col-xs-8 nopadding'>
-					<div><h3><?php echo ($usrdto['user']['nickName']); echo ($aaa); ?></h3></div>
+		  		<div class='col-md-4 col-xs-4 nopadding'><img src="<?php echo ($usrdto['user']['headImgUrl']); ?>" style='width:80px;height:80px;' class='img-circle'></div>
+				<div class='col-md-7 col-xs-7 nopadding' style='color:#fff;'>
+					<div><h3><?php echo ($usrdto['user']['nickName']); ?></h3></div>
 					<div>
-						当前状态：<?php echo ($status); ?>
+						<?php echo ($usrdto['user']['mobile']); ?>
 					</div>
-					<div>8人看过，2人预约，125人加入</div>
+					
+				</div>
+				<div class='col-md-1 col-xs-1 nopadding' style='color:#fff;'>
+					
+					<div>
+						<h3 class='pull-right'><i class='glyphicon glyphicon-menu-right'></i></h3>
+					</div>
+					
 				</div>
 				
 				
 			</div>
 			
 		</div>
-		
-		<?php
- if($isOnOdr==1){ ?>
-		<div id='orderswc'>
-			<div class='col-md-12 col-xs-12'>
-			<div class='col-md-4 col-xs-4' id="dvc_<?php echo ($apntdvco['id']); ?>" onclick="onoff(<?php echo ($apntdvco['id']); ?>)" style='padding-left:5px;padding-right:2px;'><a class='btn btn-default btn-lg btn-block blk' ><i class='glyphicon glyphicon-off'></i> 关</a></div>
+		<!--##########################################-->
+		<div class='col-md-12 col-xs-12 nopadding' style='height:90px;background-color: #fff'>
+			<div class='col-md-4 col-xs-4 nopadding' style='height:90px;text-align: center;border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;padding-top:25px;'>
+				<div><numb style='font-size: 25px;color:#00af50'><?php echo ($balance); ?></numb> <unt style='font-size: 10px;color:#00af50'>元</unt></div>
+				<div>我的余额</div>
 			</div>
-			<div class='clearfix'></div>
-			<div class='col-md-4 col-xs-4 txtct'>【预约】<?php echo ($apntdvco['address']); ?>的开关</div>
-			<hr>
+			<div class='col-md-4 col-xs-4 nopadding' style='height:90px;text-align: center;border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;padding-top:25px;' onclick="window.location.href='__URL__/coupon'">
+				<div><numb style='font-size: 25px;color:#00af50'><?php echo ($couponnumber); ?></numb> <unt style='font-size: 10px;color:#00af50'>个</unt></div>
+				<div>我的优惠券</div>
+			</div>
+			<div class='col-md-4 col-xs-4 nopadding' style='height:90px;text-align: center;border-bottom: 1px solid #ccc;padding-top:25px;' onclick="window.location.href='__URL__/chongzhi'">
+				<div><numb style='font-size: 25px;color:#00af50'><i class='glyphicon glyphicon-yen'></i></numb> <unt style='font-size: 10px;color:#00af50'></unt></div>
+				<div>充值</div>
+			</div>
 		</div>
-		<?php
- } ?>
+		<!--##########################################-->
 
-
+		<link href="__PUBLIC__/pblc/SWC/bootstrap-switch.css" rel="stylesheet">
 		
-		<div class='col-md-12 col-xs-12' style='padding-bottom:20px' id='nine'>
-			<script type="text/javascript">var disabledls=new Array();</script>
-			<?php if(is_array($dvcls)): $i = 0; $__LIST__ = $dvcls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dvcv): $mod = ($i % 2 );++$i;?><script>disabledls[<?php echo ($dvcv['id']); ?>]="<?php echo ($dvcv['disabled']); ?>";</script>
-				<div class='col-md-4 col-xs-4' id="dvc_<?php echo ($dvcv['id']); ?>" onclick="onoff(<?php echo ($dvcv['id']); ?>)"><a class='btn btn-default btn-lg btn-block blk' ><i class='glyphicon glyphicon-off'></i> 关</a></div>
-				<script>var doChangeCapacity="__URL__/doChangeCapacity";</script>
-				<div class='col-md-4 col-xs-4' id="capacity_<?php echo ($dvcv['id']); ?>" onclick="changeCapacity(<?php echo ($dvcv['id']); ?>)"><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-flash'></i> <valueOfCapacity><?php echo ($dvcv['fast_slow_charge']); ?></valueOfCapacity></a></div>
-				<!--之前的弹框的
-				<div class='col-md-4 col-xs-4'  onclick="clc(<?php echo ($dvcv['id']); ?>)" id="btn_<?php echo ($dvcv['id']); ?>"><a class="btn btn-<?php echo ($dvcv['timer']['cls_tag']); ?> btn-lg btn-block blk" href='#'><i class='glyphicon glyphicon-time'></i> <?php echo ($dvcv['timer']['tm']); ?></a></div>
-				-->
+		<div class='col-md-12 col-xs-12 nopadding' style='padding-bottom:20px; margin-top:10px;'>
+			<?php if(is_array($dvcls)): $i = 0; $__LIST__ = $dvcls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dvcv): $mod = ($i % 2 );++$i;?><!--##########################-->
+				<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px'>
+					<div class='col-md-3 col-xs-3 nopadding' style='font-size: 16px'>
+						<div class='pull-left'>
+						<i class='glyphicon glyphicon-off' style='color:#f65641'></i> 开关
+						</div>
+					</div>
+					<div class='col-md-9 col-xs-9 nopadding' style='font-size: 16px'>
+						<div class='pull-right'>
+						<lbl id="lbl_swc_<?php echo ($dvcv['id']); ?>" style='margin-right:5px'>OFF</lbl><input type="checkbox" id="dvc_<?php echo ($dvcv['id']); ?>" >
+						</div>
+					</div>
+
+				</div>
+				<script type="text/javascript">
+				check_dvc("<?php echo ($dvcv['stts']); ?>","<?php echo ($dvcv['id']); ?>","<?php echo ($dvcv['online']); ?>","<?php echo ($dvcv['onodr']); ?>");
+				</script>
+				<script type="text/javascript">var doonoff='__URL__/doonoff';</script>
+				<!--##########################-->
+				<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px'>
+					<div class='col-md-3 col-xs-3 nopadding' style='font-size: 16px'>
+						<div class='pull-left'>
+						<i class='glyphicon glyphicon-stats' style='color:#6f7c88'></i> 可调功率
+						</div>
+					</div>
+					<div class='col-md-9 col-xs-9 nopadding' style='font-size: 16px'>
+						<div class='pull-right'>
+						<lbl id="lbl_capacity_<?php echo ($dvcv['id']); ?>" style='margin-right:5px'>1.5KW</lbl><input type="checkbox" id="capacity_<?php echo ($dvcv['id']); ?>" >
+						</div>
+					</div>
+
+				</div>
+				<script type="text/javascript">
+				check_capacity("<?php echo ($dvcv['capacity']); ?>","<?php echo ($dvcv['id']); ?>","<?php echo ($dvcv['online']); ?>","<?php echo ($dvcv['onodr']); ?>");
+				</script>
+				<script type="text/javascript">var dochangecapacity='__URL__/dochangecapacity';</script>
+				<!--##########################-->
+				<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px'>
+					<div class='col-md-3 col-xs-3 nopadding' style='font-size: 16px'>
+						<div class='pull-left'>
+						<i class='glyphicon glyphicon-flash' style='color:#f0ad4e'></i> 半价电
+						</div>
+					</div>
+					<div class='col-md-9 col-xs-9 nopadding' style='font-size: 16px'>
+						<div class='pull-right'>
+						<lbl id="lbl_timer_<?php echo ($dvcv['id']); ?>" style='margin-right:5px'>未启用</lbl><input type="checkbox" id="timer_<?php echo ($dvcv['id']); ?>" >
+						</div>
+					</div>
+
+				</div>
+				<script type="text/javascript">
+				check_timer("<?php echo ($dvcv['timer']); ?>","<?php echo ($dvcv['id']); ?>","<?php echo ($dvcv['online']); ?>");
+				</script>
 				<script type="text/javascript">var dochangetimer='__URL__/dochangetimer';</script>
-				<div class='col-md-4 col-xs-4'  onclick="changetimer(<?php echo ($dvcv['id']); ?>)" id="timer_<?php echo ($dvcv['id']); ?>"><a class="btn btn-<?php echo ($dvcv['timer']['cls_tag']); ?> btn-lg btn-block blk" href='#'><i class='glyphicon glyphicon-time'></i> </a></div>
-				<div class='col-md-4 col-xs-4 txtct'>桩主开关</div>
-				<div class='col-md-4 col-xs-4 txtct'>可调功率</div>
-				<div class='col-md-4 col-xs-4 txtct'>半价电预约</div>
+				<!--##########################-->
+				<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px;margin-top:10px'>
+					<div class='col-md-3 col-xs-3 nopadding' style='font-size: 16px'>
+						<div class='pull-left'>
+						<i class='glyphicon glyphicon-user' style='color:#6f7c88'></i> 共享时段
+						</div>
+					</div>
+					<div class='col-md-9 col-xs-9 nopadding' style='font-size: 16px'>
+						<div class='pull-right'>
+						<lbl id="lbl_share_<?php echo ($dvcv['id']); ?>" style='margin-right:5px'>不共享</lbl><input type="checkbox" id="share_<?php echo ($dvcv['id']); ?>" >
+						</div>
+					</div>
 
-				<script type="text/javascript">var dochangesharemode='__URL__/dochangesharemode';</script>
-	        	<div class='col-md-4 col-xs-4' id="share_<?php echo ($dvcv['id']); ?>" onclick="changesharemode(<?php echo ($dvcv['id']); ?>)"><a class='btn btn-<?php echo ($dvcv['arr_share']['color']); ?> btn-lg btn-block blk' href='#'><i class="<?php echo ($dvcv['arr_share']['icon']); ?>"></i> <?php echo ($dvcv['arr_share']['str']); ?></a></div>
-				<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-eye-open'></i> </a></div>
-				<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-cog'></i> </a></div>
-				<div class='col-md-4 col-xs-4 txtct'>共享时段</div>
-				<div class='col-md-4 col-xs-4 txtct'> 防盗激活</div>
-				<div class='col-md-4 col-xs-4 txtct'>设置</div><?php endforeach; endif; else: echo "" ;endif; ?>
-			
-			
-			
-			
-			
-			<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-ok'></i> </a></div>
-			<div class='col-md-4 col-xs-4'><a class='btn btn-default btn-lg btn-block blk' href='#'><i class='glyphicon glyphicon-list-alt'></i> </a></div>
-			<div class='col-md-4 col-xs-4'><a class='btn btn-success btn-lg btn-block blk' href='__URL__/chongzhi'><i class='glyphicon glyphicon-yen'></i> </a></div>
-			<div class='col-md-4 col-xs-4 txtct'>设备自检</div>
-			<div class='col-md-4 col-xs-4 txtct'>日报/月报</div>
-			<div class='col-md-4 col-xs-4 txtct'> 充值</div>
+				</div>
+				<script type="text/javascript">
+				check_share("<?php echo ($dvcv['share']); ?>","<?php echo ($dvcv['id']); ?>","<?php echo ($dvcv['online']); ?>","<?php echo ($dvcv['onodr']); ?>");
+				</script>
+				<script type="text/javascript">var dochangeshare='__URL__/dochangeshare';</script><?php endforeach; endif; else: echo "" ;endif; ?>
 		</div>
-		
-		
+
+
 		  
 	</div>
 	
@@ -148,80 +192,7 @@ var cancelsttm='__URL__/cancelsttm';
 
 	<!--foot-->
 
-	<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id='modal' style='display: none'>
-	  需要定时吗<b class="caret"></b>	
-</button>
 
-<!-- Modal -->
-<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document" >
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" id='cls'><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">定时设置</h4>
-      </div>
-      <div class="modal-body">
-      	<div class='col-md-12 col-xs-12' style='text-align: center;font-size: 18px'><a id='dvcnm'></a></div>
-		
-		
-		<!--
-		经过反复实验可以确诊，在modal形式下clockpicker是有问题，你选的时候是无法在input里显示的
-		所以我再jquery-clockpicker.js里头进行重写函数，详见//--------------的部分
-		注意，为了逻辑优先，我不用min.js了
-		-->
-		<script type="text/javascript" src='__PUBLIC__/pblc/CLCK/bootstrap-clockpicker.min.js'></script>
-		<link rel="stylesheet" type="text/css" href="__PUBLIC__/pblc/CLCK/bootstrap-clockpicker.min.css">
-		<script type="text/javascript" src='__PUBLIC__/pblc/CLCK/jquery-clockpicker.js'></script>
-		<link rel="stylesheet" type="text/css" href="__PUBLIC__/pblc/CLCK/jquery-clockpicker.min.css">
-		<div class="input-group clockpicker" style="padding-top: 20px">
-		    <input type="text" class="form-control" placeholder='点击选择时间' id='optm'>
-		    <span class="input-group-addon">
-		        <span class="glyphicon glyphicon-time"></span>
-		    </span>
-		</div>
-		<script type="text/javascript" src='__PUBLIC__/pblc/CLCK/int.js'></script>
-		
-
-		<!--这里是选择开放半天还是一天-->
-		<select class="form-control" id='openTime' style="margin-top:20px">
-		  <option value='noneday'>不开放</option>
-		  <option value='halfday'>半天9:00-14:00</option>
-		  <option value='allday'>全天0:00-24:00</option>
-		</select>
-		<script type="text/javascript">
-		var selectopentminit='';
-		</script>
-
-		<!--这里是周一到周天-->
-		<div class='col-md-12 col-xs-12 nopadding' style="margin-top: 20px" id='weekSelect'>
-			<div class='col-md-1 col-xs-1 padding-1-px week' id='day1'><a class="btn btn-default btn-block padding-w-1-px">一</a></div>
-			<div class='col-md-1 col-xs-1 padding-1-px week' id='day2'><a class="btn btn-default btn-block padding-w-1-px">二</a></div>
-			<div class='col-md-1 col-xs-1 padding-1-px week' id='day3'><a class="btn btn-default btn-block padding-w-1-px">三</a></div>
-			<div class='col-md-1 col-xs-1 padding-1-px week' id='day4'><a class="btn btn-default btn-block padding-w-1-px">四</a></div>
-			<div class='col-md-1 col-xs-1 padding-1-px week' id='day5'><a class="btn btn-default btn-block padding-w-1-px">五</a></div>
-			<div class='col-md-1 col-xs-1 padding-1-px week' id='day6'><a class="btn btn-default btn-block padding-w-1-px">六</a></div>
-			<div class='col-md-1 col-xs-1 padding-1-px week' id='day7'><a class="btn btn-default btn-block padding-w-1-px">七</a></div>
-			<div class='col-md-5 col-xs-5 padding-1-px week' id='work'><a class='btn btn-default btn-block'>工作日</a></div>
-			
-		</div>
-		
-		
-		<div class='col-md-12 col-xs-12 nopadding' style='margin-top:20px'>
-			<script>var dosttm='__URL__/dosttm';</script>
-			<button class='btn btn-success btn-lg btn-block' id='sttm'>提交设定</button>
-		</div>
-
-		<div class="clearfix"></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger btn-lg btn-block" data-dismiss="modal" id='cancel'>取消</button>
-        
-      </div>
-    </div>
-  </div>
-</div>
-<script>var doonoffdvc='__URL__/doonoffdvc';</script>
 
 
 
@@ -259,26 +230,10 @@ var cancelsttm='__URL__/cancelsttm';
 <script src="__PUBLIC__/pblc/btstp3/js/ie10-viewport-bug-workaround.js"></script>
 <script type="text/javascript">var vrfusrstat='__APP__/Cmn/vrfusrstat';</script>
 <script type="text/javascript" src='__PUBLIC__/JS/index/base.js'></script>
-<script>
-	//这里搞个设备数组库
-		
-	var dvcls=new Array();
+<script src="__PUBLIC__/pblc/SWC/highlight.js"></script>
+<script src='__PUBLIC__/pblc/SWC/bootstrap-switch.js'></script>
+<script src='__PUBLIC__/pblc/SWC/main.js'></script>
 
-	<?php if(is_array($dvcls)): $i = 0; $__LIST__ = $dvcls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dvcv): $mod = ($i % 2 );++$i;?>//暂时默认为空初始时间，等到马哥得到定时的接口搞定后，再赋值，从uct.php开始
-		dvcls[<?php echo ($dvcv['id']); ?>]='';<?php endforeach; endif; else: echo "" ;endif; ?>
-
-	var dvcsttsls=new Array();
-	<?php
- if($isOnOdr==1){ ?>
-	dvcsttsls[<?php echo ($apntdvco['id']); ?>]="<?php echo ($apntdvco['stts']); ?>";
-	check(<?php echo ($dvcv['id']); ?>);
-	<?php
- } ?>
-	<?php if(is_array($dvcls)): $i = 0; $__LIST__ = $dvcls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dvcv): $mod = ($i % 2 );++$i;?>//暂时默认为空初始时间，等到马哥得到定时的接口搞定后，再赋值，从uct.php开始
-		dvcsttsls[<?php echo ($dvcv['id']); ?>]="<?php echo ($dvcv['stts']); ?>";
-		check(<?php echo ($dvcv['id']); ?>);<?php endforeach; endif; else: echo "" ;endif; ?>
-	
-</script>
 
 
 

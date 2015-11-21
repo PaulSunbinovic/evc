@@ -3,6 +3,15 @@
 
 
 class TestAction extends Action {
+
+	public function test(){
+		$usr=D('Usr');
+		$dvc=D('Dvc');
+		$car=D('Car');
+
+		$arr=$dvc->getAll('111','222');
+		p($arr);
+	}
 	
     public function setpara(){
     	$personls=array();

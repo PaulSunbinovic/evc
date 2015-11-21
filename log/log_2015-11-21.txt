@@ -1,0 +1,69 @@
+###################################################
+2015-11-21 00:54:00 url: http://114.215.209.115/user/get.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8
+2015-11-21 00:54:00 json: {"data":null,"code":"A01404","msg":"用户未注册"}
+###################################################
+2015-11-21 00:54:00 url: http://114.215.209.115/order/getLastOrder.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8
+2015-11-21 00:54:00 json: {"data":null,"code":"A01404","msg":"用户未注册"}
+###################################################
+2015-11-21 00:54:00 url: http://114.215.209.115/device/getByOwner.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8
+2015-11-21 00:54:00 json: {"data":null,"code":"A01404","msg":"用户不存在"}
+###################################################
+2015-11-21 01:22:16 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8&operation=on
+2015-11-21 01:22:16 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-21 01:24:07 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8&operation=off
+2015-11-21 01:24:07 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-21 09:00:53 url: http://114.215.209.115/device/get.action?deviceId=
+2015-11-21 09:00:53 json: {"data":null,"code":"A02404","msg":"设备参数为空"}
+###################################################
+2015-11-21 09:00:53 url: http://114.215.209.115/device/checkIsOnline.action?deviceId=
+2015-11-21 09:00:53 json: {"data":null,"code":"A00001","msg":"设备参数为空！"}
+###################################################
+2015-11-21 09:00:53 url: http://114.215.209.115/device/checkIsCharging.action?deviceId=
+2015-11-21 09:00:53 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-11-21 09:00:53 url: http://114.215.209.115/order/getLastOrderByDeviceId.action?deviceId=
+2015-11-21 09:00:53 json: {"data":null,"code":"A00001","msg":"deviceId can not be empty"}
+###################################################
+2015-11-21 09:00:53 url: http://114.215.209.115/device/getJobDay.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8&deviceId=
+2015-11-21 09:00:53 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-11-21 09:02:32 url: http://114.215.209.115/device/get.action?deviceId=
+2015-11-21 09:02:32 json: {"data":null,"code":"A02404","msg":"设备参数为空"}
+###################################################
+2015-11-21 09:12:32 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8&operation=on
+2015-11-21 09:12:32 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-21 14:26:29 url: http://114.215.209.115/device/getAll.action?longitude=120.207736&latitude=30.211754
+2015-11-21 14:26:29 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-21 14:26:55 url: http://114.215.209.115/device/getAll.action?longitude=120.207736&latitude=30.211754
+2015-11-21 14:26:55 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-21 14:28:59 url: http://114.215.209.115/device/getAll.action?longitude=120.207736&latitude=30.211754
+2015-11-21 14:28:59 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-11-21 15:12:05 url: http://114.215.209.115/device/checkIsCharging.action?deviceId=9
+2015-11-21 15:12:05 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-21 15:18:59 url: http://114.215.209.115/device/checkIsCharging.action?deviceId=9
+2015-11-21 15:18:59 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-21 15:31:22 url: http://114.215.209.115/shareTime/saveShareTime.action?userId=6&deviceId=9&isallDay=
+2015-11-21 15:31:22 json: {"data":null,"code":"A00001","msg":"请检查参数！"}
+###################################################
+2015-11-21 15:38:08 url: http://114.215.209.115/shareTime/saveShareTime.action?userId=6&deviceId=9&isallDay=
+2015-11-21 15:38:08 json: {"data":null,"code":"A00001","msg":"请检查参数！"}
+###################################################
+2015-11-21 17:29:24 url: /userAccount/getUserAccount.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8
+2015-11-21 17:29:24 json: 
+###################################################
+2015-11-21 17:30:04 url: /userAccount/getUserAccount.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8
+2015-11-21 17:30:04 json: 
+###################################################
+2015-11-21 17:30:55 url: /userAccount/getUserAccount.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8
+2015-11-21 17:30:55 json: 
+###################################################
+2015-11-21 17:33:22 url: /userAccount/getUserAccount.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8
+2015-11-21 17:33:22 json: 
