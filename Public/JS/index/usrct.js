@@ -1,4 +1,4 @@
-
+var admit_double_swc=1;
 //########################开关相关
 //开关总协调
 function swc(obj){
@@ -48,7 +48,7 @@ function onoff(obj){
             if(data.rslt=='error'){
                 //错误就不用改变原来dvcsttsls中的状态
                 check_dvc(data['stts'],dvcid,online,onodr);
-                alert(data['msg']);
+                if(data['msg']){alert(data['msg']);}//有具体的错误才弹出来
             }else{//成功的alert只为测试用的
                 //开启loading,知道失败和成功才结束
                 $('#modal_loading').trigger('click');

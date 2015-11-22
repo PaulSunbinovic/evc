@@ -112,6 +112,26 @@ var __app__='__APP__';
 
 	<include file='Cmn:ft_std' />
 
+<script type="text/javascript">
+  
+  //有可能是异步画起来比较慢，之前百度地图，那么这个点自然就没法生成了，执行它的时候，百度都没没到呢
+  //这个时候搞个函数让他结束之后调一下不就好啦
+  function showpathifhasodr(){
+    <?php 
+    if($dvcid_odr!='n'){
+    ?>
+      driving.search(mypoint, p[{$dvcid_odr}]);
+      $('#apntok').html("<a type='button' class='btn btn-danger' style='border:0px' href='__APP__/Usr/carmstct'><i class='glyphicon glyphicon-user'></i><br>车主中心</a>");
+      $('#apntok').attr('id','apntX');//取消了原来的ID一面造成js上的冲突
+    <?php
+    }
+    ?>
+  }
+  
+ 
+
+</script>
+
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal_cnclodr" id='modal_cnclodr' >
 	  取消订单 <b class="caret"></b>	
@@ -200,12 +220,11 @@ var __app__='__APP__';
         <h4 class="modal-title" id="myModalLabel_apntdtl"></h4>
       </div>
       <div class="modal-body">
-      		<h3>开放时间</h3>
-        	<h4 style='text-align: center;' id='shareTime'>
-        		
-        	</h4>
+      		<h3 style="text-align: center">开放时间</h3>
+        	<h4 style='text-align: center;' id='shareTime'></h4>
+          <h6>友情提醒：预约15分钟后如果取消预约，将扣除违约金6元给桩主</h6>
         	<div>
-        		<button class='btn btn-primary btn-lg btn-block' id='confirm'>确认预约</button>
+        		<button class='btn btn-success btn-lg btn-block' id='confirm'>确认预约</button>
         	</div>
       </div>
       <div class="modal-footer">

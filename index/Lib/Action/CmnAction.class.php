@@ -65,6 +65,13 @@ class CmnAction extends Action {
 			}else{
 				$dvcv['chargestatus']='off';
 			}
+			//########查看是否在线
+			$arr_online=$dvc->checkIsOnline($dvcv['id']);
+			if($arr_online['data']==true){
+				$dvcv['online']='y';
+			}else{
+				$dvcv['online']='n';
+			}
 
 			array_push($dvclsnw,$dvcv);
 		}
@@ -146,32 +153,30 @@ class CmnAction extends Action {
 	
 	//通过微信给用户发送某些通知
 	public function wxinfo(){
+		$wx=D('WX');$usr=D('Usr');
+
 		$appid=C('appid');
 		$appsecret=C('appsecret');
+		//############获取access_token
 		//为了测试，我这里定了我测试号的appid etc
-		//$appid='wx08c69e5ad5cc1a5e';$appsecret='95c2d97c3557a65b5f6f7e962b363256';
-		//获取access_token
-		$url='https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.$appid.'&secret='.$appsecret;
-		$json=https_request($url);
-		$arr=json_decode($json,true);
-		$access_token=$arr['access_token'];
+		$arr_access_tokeno=$wx->getaccesstoken($appid,$appsecret);
+		$access_token=$arr_access_tokeno['access_token'];
+		//#############获取usr信息
 		//通过openid获取usrinfo
 		$openid=$_GET['wechatId'];
-		$url=C('javaback').'/user/get.action?wechatId='.$openid;
-
-		if(C('psnvs')==1){
-			$json_usr='{"data":{"user":{"id":1,"token":1,"wechatId":"12345","nickName":"王 峰","mobile":"13162951502","macId":"dadadaaf","headImgUrl":"baidu.com","createTime":"2015-09-13 10:37:53","updateTime":"2015-09-13 10:37:53","customer":true,"deviceOwner":false,"installser":false,"admin":false},"userAccount":{"id":1,"userId":1,"balance":990,"point":0,"createTime":"2015-09-13 10:37:54","updateTime":"2015-09-19 23:26:50","version":1},"carList": [{"id":1,"userId":1,"carModelId":1,"carNo":"沪 A11111","isDefault":false,"createTime":"2015-09-19 22:19:36","updateTime":"2015-09-19 22:19:40"}]},"code":"A00000","msg":null}';
-		}else{
-			$json_usr=https_request($url);
-		}
-		$arr_usr=json_decode($json_usr,TRUE);
-		$usrnm=$arr_usr['data']['user']['nickName'];
-		//#############
+		$arr_usro=$usr->get($openid);
+		$usrnm=$arr_usro['data']['user']['nickName'];
+		//#############得到订单号
 		$odrno=$_GET['orderNo'];
-		
-
-		
+		//##############设置事件
 		$evt=$_GET['event'].'\n'.date('Y-m-d H:i:s',time());
+		//############设置url
+		if($_GET['url']){
+			$url=$_GET['url'];
+		}else{
+			$url=C('infodtl');
+		}
+
 		//为了测试，临时+个上来，加我的把
 		//$openid='ojxMBuJe07gSZDUwp0ZHGHEMHOR8';
 		$json='{
@@ -179,7 +184,7 @@ class CmnAction extends Action {
 		    "touser":"'.$openid.'",
 
 		    "template_id":"'.C('mdlid').'",
-			"url":"'.C('infodtl').'",
+			"url":"'.$url.'",
 
 		    "topcolor":"#FF0000",
 
@@ -230,6 +235,17 @@ class CmnAction extends Action {
 		echo $json;
 	}
 
+	public function getHost(){
+		$host=$_SERVER['HTTP_HOST'];
+		// $tmp=explode('/',$_SERVER['PHP_SELF']);
+		// $prjct=$tmp[1];
+		// $urlprx='http://'.$host.'/'.$prjct;
+		$arr=array(
+			'host'=>$host,
+			);
+		$json=json_encode($arr);
+		echo $json;
+	}
 
 }
 

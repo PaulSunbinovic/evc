@@ -3,6 +3,7 @@ class OdrModel{
 	//#############interface#########
 	//http://120.26.80.165/order/getLastOrder.action?wechatId=12345
 	//http://120.26.80.165/order/getLastOrderByDeviceId.action?deviceId=1
+	//http://120.26.80.165/order/appoint.action?wechatId=12345&deviceId=1&carId=1
 
 	//
 	//#########MODEL########################
@@ -26,5 +27,18 @@ class OdrModel{
 		$arr=url2arr($url,$json);
 		return $arr;
 	}
+//http://120.26.80.165/order/appoint.action?wechatId=12345&deviceId=1&carId=1
+
+	//
+	//#########MODEL########################
+	public function appoint($openid,$dvcid,$carid){
+		$str='';
+		if($carid){$str=$str.'&carId='.$carid;}
+		$url=C('javaback').'/order/appoint.action?wechatId='.$openid.'&deviceId='.$dvcid.$str;
+		$json='{"data":4,"code":"A01407","msg":"用户余额不足"}';
+		$arr=url2arr($url,$json);
+		return $arr;
+	}
+
 }
 ?>

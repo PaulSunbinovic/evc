@@ -108,7 +108,63 @@ class UsrAction extends Action {
 
 		
 	}
+	//###########################################
+	public function carmstct(){
+		$ss=D('SS');$odr=D('Odr');$dvc=D('Dvc');$usr=D('Usr');$coupon=D('Coupon');
 
+		//############获得openid
+		$openid=session('openid');
+
+		//#####################查看余额
+		$arr_usraccnt=$usr->getUserAccount($openid);
+		$balance=floatval($arr_usraccnt['data']['balance']);
+		$balance=$balance/100;
+		$balance=round($balance,2);
+		$this->assign('balance',$balance);
+
+		//####################查看优惠券
+		$arr_coupon=$coupon->listCoupon($openid);
+		$couponls=$arr_coupon['data'];
+		$this->assign('couponnumber',count($couponls));
+		
+		//##########################
+		$usrdto=$ss->setss();
+
+		//###################获取预约的桩
+		$arr_odro=$odr->getLastOrder($openid);
+		$odro=$arr_odro['data'];
+		if($odro['status']==0){
+			$dvcid=$odro['deviceId'];
+			//获取桩的信息
+			$arr_dvco=$dvc->get($dvcid);
+			$dvco=$arr_dvco['data'];
+			//看看这个桩在不在线
+			$arr_online=$dvc->checkIsOnline($dvco['id']);
+			if($arr_online['data']==true){
+				$dvco['online']='y';
+			}else{
+				$dvco['online']='n';
+			}
+			//###########################
+			//查看充电情况
+			$arr_charge=$dvc->checkIsCharging($dvco['id']);
+			if($arr_charge['data']==true){
+				$dvco['stts']='on';
+			}else{
+				$dvco['stts']='off';
+			}
+			
+			//#####################################################
+			//看看这个桩是不是被约掉了 如果
+			//由于对于车主而言，这个桩肯定是被约的，而且是被自己约的，所以，对于车主而言，其实这车不算被别人约了 
+			$dvco['onodr']='n';
+
+			$this->assign('dvco',$dvco);
+		}
+		$this->assign('ttl','车主中心');
+		$this->display('carmstct');
+	}
+	//#########################################
 	public function usrct(){
 		$ss=D('SS');$odr=D('Odr');$dvc=D('Dvc');$usr=D('Usr');$coupon=D('Coupon');
 
@@ -232,13 +288,18 @@ class UsrAction extends Action {
 		}
 		//#####################
 		//查看设备是否被约
-		$arr_lastodr=$odr->getLastOrderByDeviceId($dvcid);
-		if($arr_lastodr['freeFlag']==0&&$arr_lastodr['data']['status']==0){
-			$data['onodr']='y';
-		}else{
+		//其中如果是车主来开关的话，肯定是他自己约的，所以约别人的桩的参数只能是约别人长n，忽视被约的
+		$ignoreapnt=$_GET['ignoreapnt'];
+		if($ignoreapnt=='y'){
 			$data['onodr']='n';
+		}else{
+			$arr_lastodr=$odr->getLastOrderByDeviceId($dvcid);
+			if($arr_lastodr['freeFlag']==0&&$arr_lastodr['data']['status']==0){
+				$data['onodr']='y';
+			}else{
+				$data['onodr']='n';
+			}
 		}
-
 		//只有在线和没有被约等情况才能被操作
 		if($data['online']=='n'||$data['onodr']=='y'){
 			$data['rslt']='error';
@@ -482,8 +543,11 @@ class UsrAction extends Action {
 
 		$openid=session('openid');
 		//##################
-		$couponls=$coupon->listCoupon($openid);
+		$arr_coupon=$coupon->listCoupon($openid);
+		$couponls=$arr_coupon['data'];
 		$this->assign('couponls',$couponls);
+
+		$this->assign('ttl','我的优惠券');
 		$this->display('coupon');
 
 	}

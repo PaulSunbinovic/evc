@@ -1,0 +1,60 @@
+###################################################
+2015-11-22 09:11:56 url: http://114.215.209.115/order/appoint.action?wechatId=ojxMBuPfL9ru7RCI1o2iSjw_8Ix0&deviceId=9
+2015-11-22 09:11:56 json: {"data":null,"code":"A01407","msg":"用户余额不足！"}
+###################################################
+2015-11-22 09:13:24 url: http://114.215.209.115/order/appoint.action?wechatId=ojxMBuPfL9ru7RCI1o2iSjw_8Ix0&deviceId=9
+2015-11-22 09:13:24 json: {"data":null,"code":"A01407","msg":"用户余额不足！"}
+###################################################
+2015-11-22 09:14:03 url: http://114.215.209.115/order/appoint.action?wechatId=ojxMBuPfL9ru7RCI1o2iSjw_8Ix0&deviceId=9
+2015-11-22 09:14:03 json: {"data":null,"code":"A01407","msg":"用户余额不足！"}
+###################################################
+2015-11-22 09:14:14 url: http://114.215.209.115/order/appoint.action?wechatId=ojxMBuPfL9ru7RCI1o2iSjw_8Ix0&deviceId=9
+2015-11-22 09:14:14 json: {"data":null,"code":"A01407","msg":"用户余额不足！"}
+###################################################
+2015-11-22 09:16:27 url: http://114.215.209.115/order/appoint.action?wechatId=ojxMBuPfL9ru7RCI1o2iSjw_8Ix0&deviceId=9
+2015-11-22 09:16:27 json: {"data":null,"code":"A01407","msg":"用户余额不足！"}
+###################################################
+2015-11-22 09:53:01 url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx682ad2cc417fe8b9&secret=c4c1b2004388a3a529f39fc42c0c60e9
+2015-11-22 09:53:01 json: {"access_token":"YUPlVkSI4WdCyCaRV11eyAVGKBe4aB8JhnG-4F9AnbmSxJQSW61_PNAwWcYeZqw5tRYepXrql9yt0wr3hj6hWv_glLYv3yUAZ9wK4wDi7swZWKdAFALIW","expires_in":7200}
+###################################################
+2015-11-22 09:53:25 url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx682ad2cc417fe8b9&secret=c4c1b2004388a3a529f39fc42c0c60e9
+2015-11-22 09:53:25 json: {"access_token":"Fk2AsG3t9-8hDj88QUxHGCME7eHFM967jy7rTcl0NiYELzw0TJm2cPwDOcfVoL6bk5VFDQGaAOaI2YouCvLHi8ZtBcX6ArYBAFu_fpjzVfERQEiAEACBP","expires_in":7200}
+###################################################
+2015-11-22 09:55:34 url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx682ad2cc417fe8b9&secret=c4c1b2004388a3a529f39fc42c0c60e9
+2015-11-22 09:55:34 json: {"access_token":"XiSh_ZfMh4Nyg16dArE3muk3ngvxGa4fj9UqvMSzPqgwFZbJRv5g3cRws5-HVdEeHG7g1Zhr1TH8O41MaexaiiZjgtpiipz1CUMY6kas4LsZKWjACAHSE","expires_in":7200}
+###################################################
+2015-11-22 09:56:05 url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx682ad2cc417fe8b9&secret=c4c1b2004388a3a529f39fc42c0c60e9
+2015-11-22 09:56:05 json: {"access_token":"K26ECA7DsJiGQ3v6P5DNnIfLqGk5P2MX8nxh0PJQcOi_79rPET96IARBxJDaI_tM-jPtwsLWKqE49eFuc3bagITMuq5wOkO_qWqC0DqVpwUNEXcAJAGXQ","expires_in":7200}
+###################################################
+2015-11-22 09:58:30 url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx682ad2cc417fe8b9&secret=c4c1b2004388a3a529f39fc42c0c60e9
+2015-11-22 09:58:30 json: {"access_token":"dwsmWN2TIaNqLrDbpmrmzMtAZ2wL6j9V_Z1BUkQ7ekzpehUevlPkjZiyFWGy6qgjyZY0fGF867lyGhL5iL-Jyfk7ecYn9lAnpnpUIWoSuyMMCKjABAWMU","expires_in":7200}
+###################################################
+2015-11-22 09:58:52 url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx682ad2cc417fe8b9&secret=c4c1b2004388a3a529f39fc42c0c60e9
+2015-11-22 09:58:52 json: {"access_token":"78ufgapRhlJoDUuc4iDDGYnIVNyAacybgWm77pthu88u7aqeuvPGztHZH6-3Xw3zy9dhbKymXAgqZi-zlzM8fUkH6DO748qiaUGKHRPJ6psUZQjAIAYDU","expires_in":7200}
+###################################################
+2015-11-22 09:59:05 url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx682ad2cc417fe8b9&secret=c4c1b2004388a3a529f39fc42c0c60e9
+2015-11-22 09:59:05 json: {"access_token":"78ufgapRhlJoDUuc4iDDGYnIVNyAacybgWm77pthu88VvpYg6adJYZTYH491COTONVdUMniyans2tDBBffKjrTcqBfNgu8v03g_1FGIRniACTYjAIALCH","expires_in":7200}
+###################################################
+2015-11-22 12:05:12 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuPfL9ru7RCI1o2iSjw_8Ix0&operation=off
+2015-11-22 12:05:12 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-22 12:17:36 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuPfL9ru7RCI1o2iSjw_8Ix0&operation=off
+2015-11-22 12:17:36 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-22 12:22:03 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuPfL9ru7RCI1o2iSjw_8Ix0&operation=off
+2015-11-22 12:22:03 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-22 12:40:37 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuPfL9ru7RCI1o2iSjw_8Ix0&operation=on
+2015-11-22 12:40:37 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-22 12:44:12 url: http://114.215.209.115/order/appoint.action?wechatId=ojxMBuPfL9ru7RCI1o2iSjw_8Ix0&deviceId=9
+2015-11-22 12:44:12 json: {"data":null,"code":"A01407","msg":"用户余额不足！"}
+###################################################
+2015-11-22 12:52:58 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuPfL9ru7RCI1o2iSjw_8Ix0&operation=off
+2015-11-22 12:52:58 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-22 12:55:19 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuPfL9ru7RCI1o2iSjw_8Ix0&operation=on
+2015-11-22 12:55:19 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-22 12:56:20 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuPfL9ru7RCI1o2iSjw_8Ix0&operation=off
+2015-11-22 12:56:20 json: {"data":null,"code":"A00001","msg":"设备操作失败"}

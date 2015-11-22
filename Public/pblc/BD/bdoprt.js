@@ -62,19 +62,17 @@ function adjstrt(pnt){
 //北京版
 //ctlgtd=116.449877;
 //ctlttd=39.967977;
+var icon_green={path:iconpath_green,width:23,height:23};
+var icon_red={path:iconpath_red,width:23,height:23};
+var icon_yellow={path:iconpath_yellow,width:23,height:23};
+var p=[];
 function paintpnt(){
-	var icon_green={path:iconpath_green,width:23,height:23};
-	var icon_red={path:iconpath_red,width:23,height:23};
-	var icon_yellow={path:iconpath_yellow,width:23,height:23};
+	
 
 	mypoint=new BMap.Point(ctlgtd,ctlttd)
 	lct(mypoint,'',lvl,'y','y','','我的位置');
-
-
-
-
 	 
-	var p=[];
+	
 	$.ajax({
 	    'type': 'GET',
 	    'url': dspdvc,
@@ -96,7 +94,11 @@ function paintpnt(){
 
 	    			// pnt={lgtd:lgtd,lttd:lttd,title:ads,deviceId:dvcid};
 	    			str=data['dvcls'][i]['opentm'];
-	    			if(data['dvcls'][i]['chargestatus']=='on'){
+	    			if(data['dvcls'][i]['online']=='n'){
+	    				str=str+'（不在线）';
+	    				var icon=icon_red;
+	    				var apntswc='';
+	    			}else if(data['dvcls'][i]['chargestatus']=='on'){
 	    				str=str+'（正在充电）';
 	    				var icon=icon_yellow;
 	    				var apntswc='';
@@ -109,7 +111,7 @@ function paintpnt(){
 	    				var apntswc='';
 	    			}else{
 	    				var icon=icon_green;
-	    				var apntswc="<a class='pull-left btn btn-success' onclick='showapntdtl("+dvcid+")'><i class='glyphicon glyphicon-time'></i> 预约</a>";
+	    				var apntswc="<a class='pull-left btn btn-success' id='apntbutton_"+dvcid+"' onclick='showapntdtl("+dvcid+")'><i class='glyphicon glyphicon-time'></i> 预约</a>";
 	    			}
 	    			
 	    			p[dvcid]=new BMap.Point(lgtd,lttd);
@@ -125,7 +127,7 @@ function paintpnt(){
 	    		}
 	           
 	    		//alert(data['dvcls'][0]['latitude']);
-	    		
+	    		showpathifhasodr();//这个函数在index.html里头，用来显示路径如果有ondoing订单的话
 	            console.log("success");
 	    },
 	    'error':function() {

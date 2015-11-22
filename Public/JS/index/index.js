@@ -109,71 +109,7 @@ $(function(){
         });
     })
 
-    // //force appoint
-    // $('#fcapnt').click(function(){
-    //     $.ajax({
-    //         'type': 'GET',
-    //         'url': doapnt,
-    //         // 'async':false,  
-    //         'contentType': 'application/json',
-    //         'data': {
-    //         	'tp':dvcid,
-    //             'crid':crid,
-    //             'fc':1,
-    //         },
-    //         'dataType': 'json',
-    //         'success': function(data) {
-                   
-    //             if(data['rslt']=='hsodr'){
-	   //      		//有订单的话就要弹是否取消XX订单的对话框
-	   //      		// alert(data['odr']['id']);
-	   //      		$('#ads').html(data['odrpnt']['address']);
-	   //      		$('#crno').html(crno);
-	   //      		cnclodrid=data['odr']['id'];//用于如果要取消，直接从这个广域变量里拿了，不去后台要了
-	   //      		$('#modal_cnclodr').trigger('click');
-	   //      	}else if(data['rslt']=='hsgp'){
-	   //      		$('#mny').html(data['mny']);
-	   //      		$('#tm').html(data['tm']);
-	   //      		$('#modal_hsgp').trigger('click');
-	   //      		dvcid=data['dvcid'];
-	   //      	}else{
-	   //      		lgtd=data['apntpnt']['longitude'];
-				// 	lttd=data['apntpnt']['latitude'];
-				// 	ads=data['apntpnt']['address'];
-			 //    	dvcid=data['apntpnt']['id'];
-			  
-				// 	var apntpnt=new BMap.Point(lgtd,lttd);
-				// 	$('#cls_hsgp').trigger('click');
-				// 	driving.search(mypoint, apntpnt);
-	   //      	}
-    //         },
-    //         'error':function() {
-    //                 console.log("error");
-    //         }
-    //     });
-    // })
-
-    // $('#cnclodr').click(function(){
-    // 	$.ajax({
-    //         'type': 'GET',
-    //         'url': docnclodr,
-    //         // 'async':false,  
-    //         'contentType': 'application/json',
-    //         'data': {
-    //             'odrid':cnclodrid,
-    //         },
-    //         'dataType': 'json',
-    //         'success': function(data) {
-                   
-    //             alert(data['msg']);
-                    
-    //             console.log("success");
-    //         },
-    //         'error':function() {
-    //             console.log("error");
-    //         }
-    //     });
-    // })
+    
 
     
 });
@@ -251,7 +187,7 @@ function apnt(id){
 				lttd=data['apntpnt']['latitude'];
 				ads=data['apntpnt']['address'];
 		    	dvcid=data['apntpnt']['id'];
-		  
+		        str=data['apntpnt']['opentm'];
 				var apntpnt=new BMap.Point(lgtd,lttd);
 				//技术储备，万一那天用得到	
 				// var sContent =
@@ -261,18 +197,32 @@ function apnt(id){
 				// 		+
 				// 		"</div>";
 				// var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
-
+                // map.openInfoWindow(infoWindow,apntpnt); //开启信息窗口
+                var icon=icon_red;
+                var apntswc="";
+                p[dvcid]=new BMap.Point(lgtd,lttd);
 				
-				// map.openInfoWindow(infoWindow,apntpnt); //开启信息窗口
-				driving.search(mypoint, apntpnt);
+                var sContent =
+                "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>"+ads+"</h4>" + 
+                "<img style='float:right;margin:4px' id='imgDemo' src='"+cdzpt+"' width='139' height='104' title=''/>" + 
+                "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>惠充电智能充电桩。惠充电智能充电桩。惠充电智能充电桩。惠充电智能充电桩。惠充电智能充电桩。</p>" + "<div class='infwdaptmt'><div>"+apntswc+"<a class='pull-left btn btn-warning' href='"+__url__+"/cmnt/dvcid/"+dvcid+"' style='margin-left:5px'><i class='glyphicon glyphicon-comment'></i> 评论</a></div></div>"
+                +
+                "</div>";
+                var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
+                lct(p[dvcid],infoWindow,'','','',icon,ads+str);
+                driving.search(mypoint, apntpnt);
                 $('#cls_apntdtl').trigger('click');
-        	}else if(data['rslt']=='moneyNotEnough'){
+                //###################################下面变化
+                $('#apntok').html("<a type='button' class='btn btn-danger' style='border:0px' href='"+__app__+"/Usr/carmstct'><i class='glyphicon glyphicon-user'></i><br>车主中心</a>");
+                $('#apntok').attr('id','apntX');//取消了原来的ID一面造成js上的冲突
+        	}else if(data['rslt']=='moneynotenough'){
         		$('#cls_apntdtl').trigger('click');
                 alert(data['msg']);
                 location.href=__app__+'/Usr/chongzhi';
             }else{
             	$('#cls_apntdtl').trigger('click');
                 alert(data['msg']);
+                //未来可能是进入那个订单列表里面
             }
             
         		

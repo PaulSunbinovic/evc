@@ -29,12 +29,8 @@
 
 <link href="__PUBLIC__/CSS/index/base.css" rel="stylesheet">
 
-<script type="text/javascript" src='__PUBLIC__/JS/index/usrct.js'></script>
-<link href="__PUBLIC__/CSS/index/usrct.css" rel="stylesheet">
-<script>
-var fnddvcbydvcid='__URL__/fnddvcbydvcid';
-var cancelsttm='__URL__/cancelsttm';
-</script>
+<script type="text/javascript" src='__PUBLIC__/JS/index/carmstct.js'></script>
+<link href="__PUBLIC__/CSS/index/carmstct.css" rel="stylesheet">
 </head>
 <body style='background-color: #ddd'>
 
@@ -44,12 +40,12 @@ var cancelsttm='__URL__/cancelsttm';
 	-->
 	
 
-	<include file='Cmn:hd_green' />
+	<include file='Cmn:hd_blue' />
 
 	<!--主体开始-->
-	<div class='col-md-12 col-xs-12 bd_usrct'>
+	<div class='col-md-12 col-xs-12 nopadding'>
 		<!--##########################################-->
-		<div class='col-md-12 col-xs-12' style='padding:10px;margin-bottom:0px;background-color: #00af50'>
+		<div class='col-md-12 col-xs-12' style='padding:10px;margin-bottom:0px;background-color: #5bc0de'>
 			
 		  	<div class='col-md-12 col-xs-12'>
 		  		<div class='col-md-4 col-xs-4 nopadding'><img src="{$usrdto['user']['headImgUrl']}" style='width:80px;height:80px;' class='img-circle'></div>
@@ -75,15 +71,15 @@ var cancelsttm='__URL__/cancelsttm';
 		<!--##########################################-->
 		<div class='col-md-12 col-xs-12 nopadding' style='height:90px;background-color: #fff'>
 			<div class='col-md-4 col-xs-4 nopadding' style='height:90px;text-align: center;border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;padding-top:25px;'>
-				<div><numb style='font-size: 25px;color:#00af50'>{$balance}</numb> <unt style='font-size: 10px;color:#00af50'>元</unt></div>
+				<div><numb style='font-size: 25px;color:#5bc0de'>{$balance}</numb> <unt style='font-size: 10px;color:#5bc0de'>元</unt></div>
 				<div>我的余额</div>
 			</div>
 			<div class='col-md-4 col-xs-4 nopadding' style='height:90px;text-align: center;border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;padding-top:25px;' onclick="window.location.href='__URL__/coupon'">
-				<div><numb style='font-size: 25px;color:#00af50'>{$couponnumber}</numb> <unt style='font-size: 10px;color:#00af50'>个</unt></div>
+				<div><numb style='font-size: 25px;color:#5bc0de'>{$couponnumber}</numb> <unt style='font-size: 10px;color:#5bc0de'>个</unt></div>
 				<div>我的优惠券</div>
 			</div>
 			<div class='col-md-4 col-xs-4 nopadding' style='height:90px;text-align: center;border-bottom: 1px solid #ccc;padding-top:25px;' onclick="window.location.href='__URL__/chongzhi'">
-				<div><numb style='font-size: 25px;color:#00af50'><i class='glyphicon glyphicon-piggy-bank'></i></numb> <unt style='font-size: 10px;color:#00af50'></unt></div>
+				<div><numb style='font-size: 25px;color:#5bc0de'><i class='glyphicon glyphicon-yen'></i></numb> <unt style='font-size: 10px;color:#5bc0de'></unt></div>
 				<div>充值</div>
 			</div>
 		</div>
@@ -92,81 +88,44 @@ var cancelsttm='__URL__/cancelsttm';
 		<link href="__PUBLIC__/pblc/SWC/bootstrap-switch.css" rel="stylesheet">
 		
 		<div class='col-md-12 col-xs-12 nopadding' style='padding-bottom:20px; margin-top:10px;'>
-			<volist name='dvcls' id='dvcv'>
-				<!--##########################-->
-				<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px'>
-					<div class='col-md-3 col-xs-3 nopadding' style='font-size: 16px'>
-						<div class='pull-left'>
-						<i class='glyphicon glyphicon-off' style='color:#f65641'></i> 开关
-						</div>
-					</div>
-					<div class='col-md-9 col-xs-9 nopadding' style='font-size: 16px'>
-						<div class='pull-right'>
-						<lbl id="lbl_swc_{$dvcv['id']}" style='margin-right:5px'>OFF</lbl><input type="checkbox" id="dvc_{$dvcv['id']}" >
-						</div>
-					</div>
+			<?php if($dvco){ ?>
+			<!--##########################off成功后他要消失-->
+			<div class='col-md-12 col-xs-12 hasodr' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px;text-align: left;font-size: 20px' >
+				预约：{$dvco['address']}
 
+			</div>
+			<div class='col-md-12 col-xs-12 hasodr' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px'>
+				<div class='col-md-3 col-xs-3 nopadding' style='font-size: 16px'>
+					<div class='pull-left'>
+					<i class='glyphicon glyphicon-off' style='color:#f65641'></i> 开关
+					</div>
 				</div>
-				<script type="text/javascript">
-				check_dvc("{$dvcv['stts']}","{$dvcv['id']}","{$dvcv['online']}","{$dvcv['onodr']}");
-				</script>
-				<script type="text/javascript">var doonoff='__URL__/doonoff';</script>
-				<!--##########################-->
-				<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px'>
-					<div class='col-md-3 col-xs-3 nopadding' style='font-size: 16px'>
-						<div class='pull-left'>
-						<i class='glyphicon glyphicon-stats' style='color:#6f7c88'></i> 可调功率
-						</div>
+				<div class='col-md-9 col-xs-9 nopadding' style='font-size: 16px'>
+					<div class='pull-right'>
+					<lbl id="lbl_swc_{$dvco['id']}" style='margin-right:5px'>OFF</lbl><input type="checkbox" id="dvc_{$dvco['id']}" >
 					</div>
-					<div class='col-md-9 col-xs-9 nopadding' style='font-size: 16px'>
-						<div class='pull-right'>
-						<lbl id="lbl_capacity_{$dvcv['id']}" style='margin-right:5px'>1.5KW</lbl><input type="checkbox" id="capacity_{$dvcv['id']}" >
-						</div>
-					</div>
+				</div>
 
-				</div>
-				<script type="text/javascript">
-				check_capacity("{$dvcv['capacity']}","{$dvcv['id']}","{$dvcv['online']}","{$dvcv['onodr']}");
-				</script>
-				<script type="text/javascript">var dochangecapacity='__URL__/dochangecapacity';</script>
-				<!--##########################-->
-				<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px'>
-					<div class='col-md-3 col-xs-3 nopadding' style='font-size: 16px'>
-						<div class='pull-left'>
-						<i class='glyphicon glyphicon-flash' style='color:#f0ad4e'></i> 半价电
-						</div>
-					</div>
-					<div class='col-md-9 col-xs-9 nopadding' style='font-size: 16px'>
-						<div class='pull-right'>
-						<lbl id="lbl_timer_{$dvcv['id']}" style='margin-right:5px'>未启用</lbl><input type="checkbox" id="timer_{$dvcv['id']}" >
-						</div>
-					</div>
+			</div>
+			<script type="text/javascript">
+			check_dvc("{$dvco['stts']}","{$dvco['id']}","{$dvco['online']}","{$dvco['onodr']}");
+			</script>
+			<script type="text/javascript">var doonoff='__URL__/doonoff';</script>
+			<!--#####这里这个一开始隐藏，当off成功后才显示-->
+			<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px;text-align: center;display: none' id='noodr'>
+				当前无订单
+			</div>
+			<!--################################-->
+			<?php }else{ ?>
+			<!--################################-->
+			<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px;text-align: center'>
+				当前无订单
 
-				</div>
-				<script type="text/javascript">
-				check_timer("{$dvcv['timer']}","{$dvcv['id']}","{$dvcv['online']}");
-				</script>
-				<script type="text/javascript">var dochangetimer='__URL__/dochangetimer';</script>
-				<!--##########################-->
-				<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px;margin-top:10px'>
-					<div class='col-md-3 col-xs-3 nopadding' style='font-size: 16px'>
-						<div class='pull-left'>
-						<i class='glyphicon glyphicon-user' style='color:#6f7c88'></i> 共享时段
-						</div>
-					</div>
-					<div class='col-md-9 col-xs-9 nopadding' style='font-size: 16px'>
-						<div class='pull-right'>
-						<lbl id="lbl_share_{$dvcv['id']}" style='margin-right:5px'>不共享</lbl><input type="checkbox" id="share_{$dvcv['id']}" >
-						</div>
-					</div>
-
-				</div>
-				<script type="text/javascript">
-				check_share("{$dvcv['share']}","{$dvcv['id']}","{$dvcv['online']}","{$dvcv['onodr']}");
-				</script>
-				<script type="text/javascript">var dochangeshare='__URL__/dochangeshare';</script>
+			</div>
+			<!--################################-->
+			<?php } ?>
 				
-	    	</volist>
+	    	
 		</div>
 
 
