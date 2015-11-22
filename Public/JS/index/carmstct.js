@@ -40,7 +40,7 @@ function onoff(obj){
         'data': {
             'dvcid':dvcid,
             'oprt':wantoprt,
-            'ignoreapnt':'y',
+            'iscarmst':'y',
         },
         'dataType': 'json',
         'success': function(data) {

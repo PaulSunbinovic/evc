@@ -278,6 +278,7 @@ class UsrAction extends Action {
 		$dvcid=$_GET['dvcid'];
 		$oprt=$_GET['oprt'];
 		$openid=session('openid');
+		$iscarmst=$_GET['iscarmst'];
 		//##################查看设备在不在线
 		//设备在不在线也要考虑
 		$arr_online=$dvc->checkIsOnline($dvcid);
@@ -289,8 +290,7 @@ class UsrAction extends Action {
 		//#####################
 		//查看设备是否被约
 		//其中如果是车主来开关的话，肯定是他自己约的，所以约别人的桩的参数只能是约别人长n，忽视被约的
-		$ignoreapnt=$_GET['ignoreapnt'];
-		if($ignoreapnt=='y'){
+		if($iscarmst=='y'){
 			$data['onodr']='n';
 		}else{
 			$arr_lastodr=$odr->getLastOrderByDeviceId($dvcid);
@@ -311,6 +311,15 @@ class UsrAction extends Action {
 			if($data['online']=='n'){$data['msg']='设备不在线！';}
 			if($data['onodr']=='y'){$data['msg']='设备被预约！';}
 		}else{
+			//##############根据楠哥要求需要在车主 在充电之前如果小电 要变成大电 
+			if($iscarmst=='y'){
+				$arr_dvco=$dvc->get($dvcid);
+				$dvco=$arr_dvco['data'];
+				if($dvco['capacity']==1){
+					$arr_capacity=$dvc->capacity($dvcid,$openid,'2');
+				}
+			}
+
 			//不如怎样都要告诉应该check的状态 1 应该呈现的stts 2 应该呈现的订单情况
 			$arr_oprt=$dvc->operate($dvcid,$openid,$oprt);
 			if($arr_oprt['code']=='A00000'){

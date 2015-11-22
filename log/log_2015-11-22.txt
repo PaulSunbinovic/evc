@@ -58,3 +58,6 @@
 ###################################################
 2015-11-22 12:56:20 url: http://114.215.209.115/device/operate.action?deviceId=9&wechatId=ojxMBuPfL9ru7RCI1o2iSjw_8Ix0&operation=off
 2015-11-22 12:56:20 json: {"data":null,"code":"A00001","msg":"设备操作失败"}
+###################################################
+2015-11-22 13:16:17 url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx682ad2cc417fe8b9&secret=c4c1b2004388a3a529f39fc42c0c60e9
+2015-11-22 13:16:17 json: {"access_token":"TMrVutunjURwC3iVdr7pNOk1fW-wk978Q_btbIn1LIeFQRqbNw-37FaDT_wyDL7GWwSQt85heW7jYg77m2lQ0K-p6rNxGya2HwyuasUUjMMBYVjABALIF","expires_in":7200}
