@@ -1,0 +1,6 @@
+###################################################
+2015-11-23 01:27:59 url: http://114.215.209.115/order/listOrders.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8&pageNum=1&pageSize=10&startDate=2015-11-01&endDate=2015-11-23&orderStatus=
+2015-11-23 01:27:59 json: {"data":null,"code":"A00001","msg":"参数错误:orderStatus may not be null"}
+###################################################
+2015-11-23 01:27:59 url: http://114.215.209.115/order/listOrders.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8&pageNum=2&pageSize=10&startDate=2015-11-01&endDate=2015-11-23&orderStatus=
+2015-11-23 01:27:59 json: {"data":null,"code":"A00001","msg":"参数错误:orderStatus may not be null"}

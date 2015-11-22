@@ -1,0 +1,1175 @@
+[ 2015-11-23T00:01:28+08:00 ] 192.168.1.109 /evc/index.php/Usr/doonoff?dvcid=9&oprt=off
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002754s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003088s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003748s ]
+NOTIC: [8] Undefined index: iscarmst C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 281 行.
+NOTIC: [8] Undefined index: freeFlag C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 297 行.
+NOTIC: [2] Missing argument 4 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 324 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [2] Missing argument 5 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 324 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [8] Undefined variable: timeExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 71 行.
+NOTIC: [8] Undefined variable: dayExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 72 行.
+NOTIC: [8] Undefined index: msg C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 339 行.
+
+[ 2015-11-23T00:01:30+08:00 ] 192.168.1.109 /evc/index.php/Usr/dotakesample?dvcid=9
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002894s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003363s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002690s ]
+
+[ 2015-11-23T00:01:59+08:00 ] 192.168.1.109 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003427s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003961s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004502s ]
+NOTIC: [8] Undefined index: freeFlag C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 228 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.047912s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048242s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002569s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002017s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001327s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001949s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008898s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.006114s ]
+INFO: [ view_end ] --END-- [ RunTime:0.006419s ]
+
+[ 2015-11-23T00:02:04+08:00 ] 192.168.1.109 /evc/index.php/Usr/doonoff?dvcid=9&oprt=on
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004237s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004834s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001840s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002427s ]
+NOTIC: [8] Undefined index: iscarmst C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 281 行.
+NOTIC: [8] Undefined index: freeFlag C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 297 行.
+NOTIC: [2] Missing argument 4 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 324 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [2] Missing argument 5 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 324 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [8] Undefined variable: timeExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 71 行.
+NOTIC: [8] Undefined variable: dayExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 72 行.
+NOTIC: [8] Undefined index: msg C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 339 行.
+
+[ 2015-11-23T00:02:07+08:00 ] 192.168.1.109 /evc/index.php/Usr/dotakesample?dvcid=9
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002207s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002653s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001856s ]
+
+[ 2015-11-23T00:02:21+08:00 ] 192.168.1.109 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001990s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002376s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001901s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002263s ]
+NOTIC: [8] Undefined index: freeFlag C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 228 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.045376s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045725s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001660s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001161s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000905s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001270s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005706s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002014s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002266s ]
+
+[ 2015-11-23T00:03:21+08:00 ] 192.168.1.109 /evc/index.php/Usr/doonoff?dvcid=9&oprt=off
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003108s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003526s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002758s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003161s ]
+NOTIC: [8] Undefined index: iscarmst C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 281 行.
+NOTIC: [8] Undefined index: freeFlag C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 297 行.
+NOTIC: [2] Missing argument 4 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 324 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [2] Missing argument 5 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 324 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [8] Undefined variable: timeExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 71 行.
+NOTIC: [8] Undefined variable: dayExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 72 行.
+NOTIC: [8] Undefined index: msg C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 339 行.
+
+[ 2015-11-23T00:03:23+08:00 ] 192.168.1.109 /evc/index.php/Usr/dotakesample?dvcid=9
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004840s ]
+INFO: [ route_check ] --END-- [ RunTime:0.005334s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002101s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002402s ]
+
+[ 2015-11-23T00:03:36+08:00 ] 192.168.1.109 /evc/index.php/Usr/doonoff?dvcid=9&oprt=on
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002729s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003181s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002954s ]
+NOTIC: [8] Undefined index: iscarmst C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 281 行.
+NOTIC: [8] Undefined index: freeFlag C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 297 行.
+NOTIC: [2] Missing argument 4 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 324 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [2] Missing argument 5 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 324 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [8] Undefined variable: timeExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 71 行.
+NOTIC: [8] Undefined variable: dayExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 72 行.
+NOTIC: [8] Undefined index: msg C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 339 行.
+
+[ 2015-11-23T00:03:38+08:00 ] 192.168.1.109 /evc/index.php/Usr/dotakesample?dvcid=9
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003560s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004088s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001912s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002303s ]
+
+[ 2015-11-23T00:05:22+08:00 ] 192.168.1.109 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002551s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003048s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002986s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003523s ]
+NOTIC: [8] Undefined index: freeFlag C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 228 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.044055s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044455s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002296s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.003694s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002947s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001703s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012506s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.005814s ]
+INFO: [ view_end ] --END-- [ RunTime:0.006508s ]
+
+[ 2015-11-23T00:05:25+08:00 ] 192.168.1.109 /evc/index.php/Usr/doonoff?dvcid=9&oprt=off
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003516s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004024s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002797s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003195s ]
+NOTIC: [8] Undefined index: iscarmst C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 281 行.
+NOTIC: [8] Undefined index: freeFlag C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 297 行.
+NOTIC: [2] Missing argument 4 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 324 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [2] Missing argument 5 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 324 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [8] Undefined variable: timeExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 71 行.
+NOTIC: [8] Undefined variable: dayExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 72 行.
+NOTIC: [8] Undefined index: msg C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 339 行.
+
+[ 2015-11-23T00:05:29+08:00 ] 192.168.1.109 /evc/index.php/Usr/dotakesample?dvcid=9
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004364s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004819s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002853s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003277s ]
+
+[ 2015-11-23T00:05:32+08:00 ] 192.168.1.109 /evc/index.php/Usr/doonoff?dvcid=9&oprt=on
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002863s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003247s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001854s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002494s ]
+NOTIC: [8] Undefined index: iscarmst C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 281 行.
+NOTIC: [8] Undefined index: freeFlag C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 297 行.
+NOTIC: [2] Missing argument 4 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 324 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [2] Missing argument 5 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 324 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [8] Undefined variable: timeExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 71 行.
+NOTIC: [8] Undefined variable: dayExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 72 行.
+NOTIC: [8] Undefined index: msg C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 339 行.
+
+[ 2015-11-23T00:05:35+08:00 ] 192.168.1.109 /evc/index.php/Usr/dotakesample?dvcid=9
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002597s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003020s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002961s ]
+
+[ 2015-11-23T00:05:38+08:00 ] 192.168.1.109 /evc/index.php/Usr/doonoff?dvcid=9&oprt=off
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003373s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003837s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002945s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003524s ]
+NOTIC: [8] Undefined index: iscarmst C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 281 行.
+NOTIC: [8] Undefined index: freeFlag C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 297 行.
+NOTIC: [2] Missing argument 4 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 324 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [2] Missing argument 5 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 324 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [8] Undefined variable: timeExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 71 行.
+NOTIC: [8] Undefined variable: dayExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 72 行.
+NOTIC: [8] Undefined index: msg C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 339 行.
+
+[ 2015-11-23T00:05:40+08:00 ] 192.168.1.109 /evc/index.php/Usr/dotakesample?dvcid=9
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002418s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002856s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001807s ]
+
+[ 2015-11-23T00:05:43+08:00 ] 192.168.1.109 /evc/index.php/Usr/doonoff?dvcid=9&oprt=on
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003625s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004457s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003141s ]
+NOTIC: [8] Undefined index: iscarmst C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 281 行.
+NOTIC: [8] Undefined index: freeFlag C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 297 行.
+NOTIC: [2] Missing argument 4 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 324 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [2] Missing argument 5 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 324 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [8] Undefined variable: timeExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 71 行.
+NOTIC: [8] Undefined variable: dayExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 72 行.
+NOTIC: [8] Undefined index: msg C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 339 行.
+
+[ 2015-11-23T00:05:46+08:00 ] 192.168.1.109 /evc/index.php/Usr/dotakesample?dvcid=9
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002670s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003086s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002006s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002319s ]
+
+[ 2015-11-23T00:24:30+08:00 ] 192.168.1.109 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003754s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004293s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003200s ]
+NOTIC: [8] Undefined index: freeFlag C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 228 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.048545s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048959s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001521s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001800s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001007s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002534s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007861s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002128s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002424s ]
+
+[ 2015-11-23T00:24:37+08:00 ] 192.168.1.109 /evc/index.php/Usr/doonoff?dvcid=9&oprt=off
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.005254s ]
+INFO: [ route_check ] --END-- [ RunTime:0.005631s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002148s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002454s ]
+NOTIC: [8] Undefined index: iscarmst C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 281 行.
+NOTIC: [8] Undefined index: freeFlag C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 297 行.
+NOTIC: [2] Missing argument 4 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 324 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [2] Missing argument 5 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 324 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [8] Undefined variable: timeExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 71 行.
+NOTIC: [8] Undefined variable: dayExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 72 行.
+NOTIC: [8] Undefined index: msg C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 339 行.
+
+[ 2015-11-23T00:24:40+08:00 ] 192.168.1.109 /evc/index.php/Usr/dotakesample?dvcid=9
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003232s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003614s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003066s ]
+
+[ 2015-11-23T00:24:44+08:00 ] 192.168.1.109 /evc/index.php/Usr/doonoff?dvcid=9&oprt=on
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002234s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002620s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001777s ]
+NOTIC: [8] Undefined index: iscarmst C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 281 行.
+NOTIC: [8] Undefined index: freeFlag C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 297 行.
+NOTIC: [2] Missing argument 4 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 324 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [2] Missing argument 5 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 324 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [8] Undefined variable: timeExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 71 行.
+NOTIC: [8] Undefined variable: dayExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 72 行.
+NOTIC: [8] Undefined index: msg C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 339 行.
+
+[ 2015-11-23T00:24:47+08:00 ] 192.168.1.109 /evc/index.php/Usr/dotakesample?dvcid=9
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004485s ]
+INFO: [ route_check ] --END-- [ RunTime:0.005386s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002225s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002717s ]
+
+[ 2015-11-23T00:24:50+08:00 ] 192.168.1.109 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002911s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003653s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003539s ]
+NOTIC: [8] Undefined index: freeFlag C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 228 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.041061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041376s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001773s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001598s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001046s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001627s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006805s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002037s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002291s ]
+
+[ 2015-11-23T00:24:58+08:00 ] 192.168.1.109 /evc/index.php/Usr/doonoff?dvcid=9&oprt=off
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003513s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003930s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003652s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004054s ]
+NOTIC: [8] Undefined index: iscarmst C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 281 行.
+NOTIC: [8] Undefined index: freeFlag C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 297 行.
+NOTIC: [2] Missing argument 4 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 324 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [2] Missing argument 5 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 324 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [8] Undefined variable: timeExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 71 行.
+NOTIC: [8] Undefined variable: dayExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 72 行.
+NOTIC: [8] Undefined index: msg C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 339 行.
+
+[ 2015-11-23T00:25:00+08:00 ] 192.168.1.109 /evc/index.php/Usr/dotakesample?dvcid=9
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002897s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003460s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002352s ]
+
+[ 2015-11-23T00:27:38+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002747s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003083s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002694s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003081s ]
+NOTIC: [8] Undefined index: odrstatus C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 588 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.037691s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038182s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001990s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001360s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000981s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001713s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006971s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001942s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002285s ]
+
+[ 2015-11-23T00:28:18+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002888s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003595s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002893s ]
+NOTIC: [8] Undefined index: odrstatus C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 588 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.046557s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047106s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002207s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001665s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001093s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001989s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007981s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002526s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002935s ]
+
+[ 2015-11-23T00:28:40+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004023s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004761s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.004728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005221s ]
+NOTIC: [8] Undefined index: odrstatus C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 588 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.051580s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052120s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.003449s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.003142s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001546s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002461s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012176s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002484s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003135s ]
+
+[ 2015-11-23T00:29:32+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002798s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003252s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002310s ]
+NOTIC: [8] Undefined index: odrstatus C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 588 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.041335s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041950s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002630s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002201s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001464s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002197s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009662s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002801s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004768s ]
+
+[ 2015-11-23T00:29:55+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003814s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004280s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003790s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004257s ]
+NOTIC: [8] Undefined index: odrstatus C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 588 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.041602s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042065s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002639s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002391s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001678s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002403s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010533s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002622s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003075s ]
+
+[ 2015-11-23T00:34:49+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003672s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004189s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001859s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002263s ]
+NOTIC: [8] Undefined index: odrstatus C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 588 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.040682s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041021s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001523s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001381s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000937s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001497s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006011s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001813s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002040s ]
+
+[ 2015-11-23T00:35:44+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001988s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002242s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001875s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002203s ]
+NOTIC: [8] Undefined index: odrstatus C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 588 行.
+INFO: [ view_parse ] --START--
+
+[ 2015-11-23T00:35:44+08:00 ] 192.168.1.109 /evc/index.php/Usr/__PUBLIC__/pblc/btstp3/js/jquery.js
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001344s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001601s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001018s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001249s ]
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-11-23T00:35:44+08:00 ] 192.168.1.109 /evc/index.php/Usr/__PUBLIC__/pblc/btstp3/js/jquery-migrate-1.1.0.min.js
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001621s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001838s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001163s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001389s ]
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-11-23T00:35:44+08:00 ] 192.168.1.109 /evc/index.php/Usr/__PUBLIC__/pblc/btstp3/css/bootstrap.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001613s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001830s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.012941s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013491s ]
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-11-23T00:35:44+08:00 ] 192.168.1.109 /evc/index.php/Usr/__PUBLIC__/pblc/btstp3/css/patch.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001744s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002012s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001483s ]
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-11-23T00:35:44+08:00 ] 192.168.1.109 /evc/index.php/Usr/__PUBLIC__/pblc/ISCRL/scrollbar.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001507s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002002s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001283s ]
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-11-23T00:35:44+08:00 ] 192.168.1.109 /evc/index.php/Usr/__PUBLIC__/JS/index/hstr_odr.js
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001884s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002165s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001307s ]
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-11-23T00:35:44+08:00 ] 192.168.1.109 /evc/index.php/Usr/__PUBLIC__/CSS/index/regist.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001385s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001652s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001129s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001368s ]
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-11-23T00:35:44+08:00 ] 192.168.1.109 /evc/index.php/Usr/__PUBLIC__/pblc/btstp3/js/ie-emulation-modes-warning.js
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001815s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002062s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001153s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001370s ]
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-11-23T00:35:44+08:00 ] 192.168.1.109 /evc/index.php/Usr/__PUBLIC__/pblc/ISCRL/iscroll.js
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001584s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001870s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001787s ]
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-11-23T00:35:44+08:00 ] 192.168.1.109 /evc/index.php/Usr/__PUBLIC__/pblc/ISCRL/int.js
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001448s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001723s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001150s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001422s ]
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-11-23T00:35:44+08:00 ] 192.168.1.109 /evc/index.php/Usr/__PUBLIC__/pblc/ISCRL/int.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001697s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001945s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001946s ]
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-11-23T00:35:44+08:00 ] 192.168.1.109 /evc/index.php/Usr/__PUBLIC__/CSS/index/base.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002358s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002656s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001536s ]
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-11-23T00:35:44+08:00 ] 192.168.1.109 /evc/index.php/Usr/__PUBLIC__/pblc/btstp3/css/bootstrap.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000978s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001188s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000839s ]
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-11-23T00:35:45+08:00 ] 192.168.1.109 /evc/index.php/Usr/__PUBLIC__/pblc/btstp3/css/patch.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001210s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001367s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001527s ]
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-11-23T00:35:45+08:00 ] 192.168.1.109 /evc/index.php/Usr/__PUBLIC__/CSS/index/base.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002667s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003064s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001590s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001869s ]
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-11-23T00:35:45+08:00 ] 192.168.1.109 /evc/index.php/Usr/__PUBLIC__/CSS/index/regist.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003403s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004140s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003112s ]
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-11-23T00:35:45+08:00 ] 192.168.1.109 /evc/index.php/Usr/__PUBLIC__/pblc/ISCRL/scrollbar.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002194s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002509s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003014s ]
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-11-23T00:35:45+08:00 ] 192.168.1.109 /evc/index.php/Usr/__PUBLIC__/pblc/ISCRL/int.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003581s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004021s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002219s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002674s ]
+ERR: 非法操作:__PUBLIC__
+
+[ 2015-11-23T00:36:16+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002743s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003107s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002111s ]
+NOTIC: [8] Undefined index: odrstatus C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 588 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.032771s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033524s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.003580s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002341s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001789s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002611s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011643s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002861s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003414s ]
+
+[ 2015-11-23T00:37:20+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003305s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003708s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002733s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003214s ]
+NOTIC: [8] Undefined index: odrstatus C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 588 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.038257s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039170s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.003765s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.004434s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001917s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.005173s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.017463s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002715s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003148s ]
+
+[ 2015-11-23T00:37:29+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003167s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004065s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003167s ]
+NOTIC: [8] Undefined index: odrstatus C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 588 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.041851s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042267s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001863s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001330s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000963s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001773s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006892s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002151s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002599s ]
+
+[ 2015-11-23T00:39:22+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001659s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001848s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001565s ]
+NOTIC: [8] Undefined index: odrstatus C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 588 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015330s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015562s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001199s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000651s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000469s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000764s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003433s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000843s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000967s ]
+
+[ 2015-11-23T00:39:31+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001629s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001928s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000832s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000993s ]
+NOTIC: [8] Undefined index: odrstatus C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 588 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018323s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018534s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000934s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000817s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000537s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000827s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003552s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000879s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001007s ]
+
+[ 2015-11-23T00:39:47+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002302s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002577s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001542s ]
+NOTIC: [8] Undefined index: odrstatus C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 588 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.020234s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020443s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001051s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000857s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000625s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004132s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001117s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001307s ]
+
+[ 2015-11-23T00:40:37+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001541s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001724s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000899s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001069s ]
+NOTIC: [8] Undefined index: odrstatus C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 588 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016148s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016343s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000893s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000615s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000550s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000908s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003358s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001293s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001459s ]
+
+[ 2015-11-23T00:43:43+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004551s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004896s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002964s ]
+NOTIC: [8] Undefined index: odrstatus C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 588 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.044921s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045421s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002773s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002113s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002598s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.004258s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012839s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003880s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004342s ]
+
+[ 2015-11-23T00:43:47+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr/odrstatus/0
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003121s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003506s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002674s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.031955s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032372s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002135s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001486s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001235s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001413s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007167s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002959s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003347s ]
+
+[ 2015-11-23T00:44:01+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr/odrstatus/0
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002167s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002533s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003021s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.040755s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041503s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002196s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001666s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001181s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002434s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008756s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002673s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003121s ]
+
+[ 2015-11-23T00:45:02+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr/odrstatus/0
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003078s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003693s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001921s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002370s ]
+
+[ 2015-11-23T00:45:46+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr/odrstatus/0
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004133s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004633s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003135s ]
+
+[ 2015-11-23T00:46:51+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr/odrstatus/0
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003530s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004152s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001991s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002439s ]
+
+[ 2015-11-23T00:47:04+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr/odrstatus/0
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003503s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004013s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002069s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.043733s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044232s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001831s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001602s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001894s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002916s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009474s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002469s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002737s ]
+
+[ 2015-11-23T00:47:25+08:00 ] 192.168.1.109 /evc/index.php/Test/dosetss?openid=ojxMBuJe07gSZDUwp0ZHGHEMHOR8
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002251s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002675s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002758s ]
+NOTIC: [2] Missing argument 1 for Action::ajaxReturn(), called in C:\wamp\www\evc\index\Lib\Action\TestAction.class.php on line 129 and defined C:\wamp\www\evc\ThinkPHP\Lib\Core\Action.class.php 第 306 行.
+NOTIC: [8] Undefined variable: data C:\wamp\www\evc\ThinkPHP\Lib\Core\Action.class.php 第 322 行.
+
+[ 2015-11-23T00:47:34+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr/odrstatus/0
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002271s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002680s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001963s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.031477s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031905s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002394s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001626s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001008s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001317s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007234s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001850s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002097s ]
+
+[ 2015-11-23T00:48:13+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr/odrstatus/0
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004163s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004631s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003070s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: cro C:\wamp\www\evc\index\Runtime\Cache\65ec3f5fb80736cbfb234ec0a0cc4377.php 第 119 行.
+NOTIC: [8] Undefined index: stat C:\wamp\www\evc\index\Runtime\Cache\65ec3f5fb80736cbfb234ec0a0cc4377.php 第 124 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.032836s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033143s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002425s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002066s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001275s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002125s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009661s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002264s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002613s ]
+
+[ 2015-11-23T00:50:01+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr/odrstatus/0
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003037s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003582s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002137s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002661s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: cro C:\wamp\www\evc\index\Runtime\Cache\65ec3f5fb80736cbfb234ec0a0cc4377.php 第 119 行.
+NOTIC: [8] Undefined index: stat C:\wamp\www\evc\index\Runtime\Cache\65ec3f5fb80736cbfb234ec0a0cc4377.php 第 124 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.043483s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043918s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002028s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001958s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001877s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002502s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009595s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001934s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002173s ]
+
+[ 2015-11-23T00:50:29+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr/odrstatus/0
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002457s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002820s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002799s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: cro C:\wamp\www\evc\index\Runtime\Cache\65ec3f5fb80736cbfb234ec0a0cc4377.php 第 119 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.038800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039269s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002369s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002072s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000883s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001974s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008312s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002275s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002588s ]
+
+[ 2015-11-23T01:27:59+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001838s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002117s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001681s ]
+NOTIC: [8] Undefined index: odrstatus C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 588 行.
+NOTIC: [8] Undefined index: odrstatus C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 588 行.
+NOTIC: [8] Undefined index: odrstatus C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 588 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 609 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018866s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019051s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001226s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001236s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000765s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000808s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004458s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000904s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001028s ]
+
+[ 2015-11-23T01:28:03+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr/odrstatus/0
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003377s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003902s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003321s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.046514s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047019s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002694s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001557s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001268s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002198s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008846s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002128s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002390s ]
+
+[ 2015-11-23T01:28:23+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr/odrstatus/0
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002457s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002864s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001854s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002251s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: cro C:\wamp\www\evc\index\Runtime\Cache\65ec3f5fb80736cbfb234ec0a0cc4377.php 第 122 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.046966s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047443s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002176s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002316s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001360s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001774s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008827s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001551s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001791s ]
+
+[ 2015-11-23T01:28:26+08:00 ] 192.168.1.109 /evc/index.php/Usr/dochecktimeout?odrid=460
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002420s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003019s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002154s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002583s ]
+
+[ 2015-11-23T01:28:28+08:00 ] 192.168.1.109 /evc/index.php/Usr/docancelapnt?odrid=460
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003847s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004575s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.004185s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004831s ]
+
+[ 2015-11-23T01:28:30+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr/odrstatus/0
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002808s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003300s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002152s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002617s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.045686s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046167s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002009s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001659s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001055s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002401s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008431s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002952s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003411s ]
+
+[ 2015-11-23T01:30:39+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr/odrstatus/5
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.006123s ]
+INFO: [ route_check ] --END-- [ RunTime:0.006691s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004018s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: cro C:\wamp\www\evc\index\Runtime\Cache\65ec3f5fb80736cbfb234ec0a0cc4377.php 第 122 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.037214s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037655s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002962s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.003104s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002739s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003252s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013323s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003424s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003830s ]
+
+[ 2015-11-23T01:37:54+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr/odrstatus/5
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003217s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003642s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003933s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: cro C:\wamp\www\evc\index\Runtime\Cache\65ec3f5fb80736cbfb234ec0a0cc4377.php 第 123 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.035826s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036277s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001833s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001269s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000997s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001546s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006396s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001801s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002053s ]
+
+[ 2015-11-23T01:37:58+08:00 ] 192.168.1.109 /evc/index.php/Usr/dojiesuan?odrid=460
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003547s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004090s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002709s ]
+NOTIC: [8] Undefined variable: arr_cancel C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 760 行.
+
+[ 2015-11-23T01:38:00+08:00 ] 192.168.1.109 /evc/index.php/Usr/hstr_odr/odrstatus/5
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004852s ]
+INFO: [ route_check ] --END-- [ RunTime:0.005356s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002408s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.050433s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051148s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002885s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001897s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002908s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012142s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002092s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002512s ]
+

@@ -38,29 +38,47 @@
 <script type="text/javascript" src='__PUBLIC__/pblc/ISCRL/int.js'></script>
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/pblc/ISCRL/int.css">
 
+
+<script type="text/javascript">var docancelapnt='__URL__/docancelapnt';</script>
+<script type="text/javascript">var dochecktimeout='__URL__/dochecktimeout';</script>
+<script type="text/javascript">var dojiesuan='__URL__/dojiesuan';</script>
 </head>
 <body>
 	
 	<include file='Cmn:hd_std' />
-	<script>
-	//返回键CSS失效了，修改下
-	// var dvls=$('.nvgt').children('div');
-	// $(dvls[0]).css('margin-top','10px');
-	</script>
+	<!--###############################这里加上个切换 查看已完成订单，正在预约的订单，未结算订单3种-->
+	<div class='col-md-12 col-xs-12 nopadding' style='position: fixed;top:40px;background-color: #eee'>
+		<?php if($odrstatus==6){ ?>
+		<div class='col-md-4 col-xs-4 nopadding' style='height:30px;line-height: 30px;text-align: center;background-color: #5bc0de;color:#fff' onclick="window.location.href='__URL__/hstr_odr/odrstatus/6'">
+		<?php }else{ ?>
+		<div class='col-md-4 col-xs-4 nopadding' style='height:30px;line-height: 30px;text-align: center;' onclick="window.location.href='__URL__/hstr_odr/odrstatus/6'">
+		<?php } ?>
+			已完成
+		</div>
+		<?php if($odrstatus==0){ ?>
+		<div class='col-md-4 col-xs-4 nopadding' style='height:30px;line-height: 30px;text-align: center;background-color: #5bc0de;color:#fff' onclick="window.location.href='__URL__/hstr_odr/odrstatus/0'">
+		<?php }else{ ?>
+		<div class='col-md-4 col-xs-4 nopadding' style='height:30px;line-height: 30px;text-align: center;' onclick="window.location.href='__URL__/hstr_odr/odrstatus/0'">
+		<?php } ?>
+			正在进行
+		</div>
+		<?php if($odrstatus==5){ ?>
+		<div class='col-md-4 col-xs-4 nopadding' style='height:30px;line-height: 30px;text-align: center;background-color: #5bc0de;color:#fff' onclick="window.location.href='__URL__/hstr_odr/odrstatus/5'">
+		<?php }else{ ?>
+		<div class='col-md-4 col-xs-4 nopadding' style='height:30px;line-height: 30px;text-align: center;' onclick="window.location.href='__URL__/hstr_odr/odrstatus/5'">
+		<?php } ?>
+			未结算
+		</div>
+		
+	</div>
 
-	<!--主体开始-->
-	<!--<div class='col-md-12 col-xs-12 bd' style='padding-top:10px'>
-		<div class='col-md-6 col-xs-6'><a class='btn btn-success btn-block' href='#'>预约记录</a></div>
-		<div class='col-md-6 col-xs-6'><a class='btn btn-default btn-block' href='__URL__/hstr_pay'>充值记录</a></div>
-	</div>-->
-
-	<div class='col-md-12 col-xs-12' style='position:fixed;top:40px;z-index: 1000;border-bottom: 1px solid #ccc;height:50px;text-align: center;line-height: 50px;'>
+	<div class='col-md-12 col-xs-12' style='position:fixed;top:70px;z-index: 1000;border-bottom: 1px solid #ccc;height:50px;text-align: center;line-height: 50px;'>
 		<!--<div class='col-md-1 col-xs-1 nopadding'>序号</div>-->
 		<!--<div class='col-md-3 col-xs-3 nopadding'>车牌</div>-->
 		<div class='col-md-4 col-xs-4 nopadding'>桩名</div>
-		<div class='col-md-4 col-xs-4 nopadding'>创建时间</div>
+		<div class='col-md-3 col-xs-3 nopadding'>创建时间</div>
 		<div class='col-md-2 col-xs-2 nopadding'>消费</div>
-		<div class='col-md-2 col-xs-2 nopadding'>状态</div>
+		<div class='col-md-3 col-xs-3 nopadding'>状态</div>
 	</div>
 	<div id="wrapper">
 		<div id="scroller">
@@ -72,6 +90,7 @@
 			<script type="text/javascript">
 			var srlnb=0;//serial number
 			var odrls=new Array();
+			var odrstatus={$odrstatus};
 			</script>
 				<volist name='odrls' id='odrv'>
 					<script type="text/javascript">
@@ -79,18 +98,20 @@
 					odrls[{$odrv['id']}]={$odrv['json']};
 					</script>
 
-					<li onclick="showdtl({$odrv['id']})" style="line-height: 80px;">
-						<div class='col-md-12 col-xs-12'>
+					<li style="line-height: 80px;">
+						<div class='col-md-12 col-xs-12 nopadding'>
 							<!--<div class='col-md-1 col-xs-1 nopadding'>{$i}</div>-->
 							<!--<div class='col-md-3 col-xs-3 nopadding'>{$odrv['cro']['carNo']}</div>-->
 							<div class='col-md-4 col-xs-4 nopadding'>{$odrv['dvcnm']}</div>
-							<div class='col-md-4 col-xs-4 nopadding'>{$odrv['createTime']}</div>
+							<div class='col-md-3 col-xs-3 nopadding'>{$odrv['createTime']}</div>
 							<div class='col-md-2 col-xs-2 nopadding'>{$odrv['totalPrice']}</div>
-							<div class='col-md-2 col-xs-2 nopadding' style='padding-left:20px;'>
-							<?php if($odrv['stat']=='1'){ ?>
-							<done style='color:#ccc'><i class='glyphicon glyphicon-time'></i></done>
-							<?php }else{ ?>
-							<doing style='color:#3CB371'><i class='glyphicon glyphicon-time'></i></doing>
+							<div class='col-md-3 col-xs-3 nopadding' style='padding-left:20px;'>
+							<?php if($odrv['status']=='0'){ ?>
+							<button class='btn btn-danger' onclick="cancelapnt({$odrv['id']})">取消预约</button>
+							<?php }else if($odrv['status']=='5'){ ?>
+							<button class='btn btn-info' onclick="jiesuan({$odrv['id']})">完成结算</button>
+							<?php }else if($odrv['status']=='6'){ ?>
+							<status style='color:#ccc'>已完成</status>
 							<?php } ?>
 							</div>
 						</div>
@@ -108,7 +129,7 @@
 		var dodnfrsh='__URL__/dodnfrsh_odr';//do slidedown fresh
 		var doupld='__URL__/doupld_odr';//do slideup loading
 		//slideDown 和 slideUp函数写在hstr_odr.js里面//
-		var nwpg=1;//now page 当前页必然是第0页初始时候,王峰从1开始算的
+		var pgnumber=1;//now page 当前页必然是第0页初始时候,王峰从1开始算的
 		</script>
 		
 	

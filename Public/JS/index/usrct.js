@@ -78,6 +78,14 @@ function onoff(obj){
                                     stts=data['stts'];//把当前状态登记下，万一到了5次了，可以告诉失败的接口
                                     if(data['stts']==wantoprt){
                                         check_dvc(wantoprt,dvcid,online,onodr);
+                                        //#########由于成功操作开关的变化会导致capacity的变化，失败了无非就是照旧不去管############
+                                        //########首先获取当前capacity的值
+                                        if($('#capacity_'+dvcid).attr('checked')=='checked'){
+                                            capacity=2;
+                                        }else{
+                                            capacity=1;
+                                        }
+                                        check_capacity(capacity,dvcid,online,onodr,stts);
                                         //之前一旦off是拟消失的，这里是成功，那么拟消失变成真消失（PS，去开的时候肯定是不会置1，去关的时候可能会拟置1，理论上不会有问题的把）
                                         $('#cancel_loading').trigger('click');
                                         int=window.clearInterval(int);
@@ -113,7 +121,7 @@ function changecapacity(obj){
     var id=$obj.attr('id');
     var dvcid=id.split('_')[1];
     var wantcapacity='';
-    var online='';var onodr='';//因为生成的data被二次利用，所以避免冲突，提取出来算了
+    var online='';var onodr='';var stts='';//因为生成的data被二次利用，所以避免冲突，提取出来算了
     if($obj.attr('checked')=='checked'){
         wantcapacity=2;
     }else{
@@ -132,8 +140,9 @@ function changecapacity(obj){
         'success': function(data) {
             online=data['online'];
             onodr=data['onodr'];
+            stts=data['stts'];
             //不论成功失败都会有应该的值在的，所以直接退
-            check_capacity(data['capacity'],dvcid,online,onodr);
+            check_capacity(data['capacity'],dvcid,online,onodr,stts);
             if(data.rslt=='error'){
                 //错误就不用改变原来dvcsttsls中的状态
                 alert(data['msg']);
@@ -235,12 +244,12 @@ function check_dvc(stts,dvcid,online,onodr){
     var $lbl=$('#lbl_swc_'+dvcid);
     var str='';
     var click='n';
-    
+    var dsb='n';
     if(online=='n'){
-        $obj.attr('disabled',true);
+        dsb=='y';
         $lbl.html('设备不在线');
     }else{
-        var dsb='n';
+        
         if(stts=='on'&&checkvalue!='checked'){
             click='y';
             str='ON';
@@ -261,18 +270,17 @@ function check_dvc(stts,dvcid,online,onodr){
         if(click=='y'){
             $obj.trigger('click');
         }
-        if(dsb=='y'){
-            $obj.attr('disabled',true);
-        }
-        
-        
-        
     } 
-
+     //################
+    if(dsb=='y'){
+        $obj.attr('disabled',true);
+    }
+    changeswcshell($obj,dvcid,dsb);
+    
     
 }
 //#########################
-function check_capacity(capacity,dvcid,online,onodr){
+function check_capacity(capacity,dvcid,online,onodr,stts){
     //第一次check的时候还没有 开关化，此时这些理论是OK的，但是一旦开关话了，obj周围多了很多东西。。。。
     //不去除disable属性的话会影响后面的操作，后面永远都是灰掉的
     var $obj=$('#capacity_'+dvcid);$obj.removeAttr("disabled"); 
@@ -281,12 +289,13 @@ function check_capacity(capacity,dvcid,online,onodr){
     var $lbl=$('#lbl_capacity_'+dvcid);
     var str='';
     var click='n';
-    
+    var dsb='n';
     if(online=='n'){
-        $obj.attr('disabled',true);
+        dsb='y';
         $lbl.html('设备不在线');
     }else{
-        var dsb='n';
+        //##########以下都是要正确显示状态的
+        
         if(capacity==2&&checkvalue!='checked'){
             click='y';
             str='3.5KW';
@@ -301,15 +310,21 @@ function check_capacity(capacity,dvcid,online,onodr){
         if(onodr=='y'){
             dsb='y';
             str='已被预约，'+str;
+        }else if(stts=='on'){
+            dsb='y';
+            str='关闭开关后调节'+str;
         }
         $lbl.html(str);
         if(click=='y'){
             $obj.trigger('click');
         }
+        
+         //################
         if(dsb=='y'){
             $obj.attr('disabled',true);
         }
-    } 
+        changeswcshell($obj,dvcid,dsb);
+        } 
 
     
 }
@@ -323,9 +338,9 @@ function check_timer(timer,dvcid,online){
     var $lbl=$('#lbl_timer_'+dvcid);
     var str='';
     var click='n';
-    
+    var dsb='n';
     if(online=='n'){
-        $obj.attr('disabled',true);
+        dsb='y';
         $lbl.html('设备不在线');
     }else{
         if(timer=='y'&&checkvalue!='checked'){
@@ -346,6 +361,11 @@ function check_timer(timer,dvcid,online){
         }
                
     } 
+     //################
+    if(dsb=='y'){
+        $obj.attr('disabled',true);
+    }
+    changeswcshell($obj,dvcid,dsb);
 }
 //#########################
 function check_share(share,dvcid,online,onodr){
@@ -357,12 +377,12 @@ function check_share(share,dvcid,online,onodr){
     var $lbl=$('#lbl_share_'+dvcid);
     var str='';
     var click='n';
-    
+    var dsb='n';
     if(online=='n'){
-        $obj.attr('disabled',true);
+        dsb='y';
         $lbl.html('设备不在线');
     }else{
-        var dsb='n';
+       
         if(share=='y'&&checkvalue!='checked'){
             click='y';
             str='已共享';
@@ -382,10 +402,24 @@ function check_share(share,dvcid,online,onodr){
         if(click=='y'){
             $obj.trigger('click');
         }
-        if(dsb=='y'){
-            $obj.attr('disabled',true);
-        }
+        
         
     } 
+    //################
+    if(dsb=='y'){
+        $obj.attr('disabled',true);
+    }
+    changeswcshell($obj,dvcid,dsb);
 }
-
+//###################################
+function changeswcshell($obj,dvcid,dsb){
+    //################
+    if(dsb=='y'){
+        shellclass='bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-on bootstrap-switch-small bootstrap-switch-disabled bootstrap-switch-id-capacity_'+dvcid+' bootstrap-switch-animate';
+    }else{
+        shellclass='bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-on bootstrap-switch-small  bootstrap-switch-id-capacity_'+dvcid+' bootstrap-switch-animate'
+    }
+    if(swcinited==1){
+        $obj.parent().parent().attr('class',shellclass);
+    }
+}

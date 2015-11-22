@@ -2,7 +2,7 @@
 class DvcModel{
 	//###################interface##############
 	//http://120.26.80.165/device/checkIsCharging.action?deviceId=26
-	//http://120.26.80.165/device/getAll.action?longitude=124.576464&latitude=31.224494
+	//http://120.26.80.165/device/getAll.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8&longitude=124.576464&latitude=31.224494
 	//http://120.26.80.165/device/get.action?deviceId=2
 	//http://120.26.80.165/device/checkIsOnline.action?deviceId=1
 	//http://120.26.80.165/device/getByOwner.action?wechatId=12345

@@ -225,7 +225,7 @@ class UsrAction extends Action {
 			//#####################################################
 			//看看这个桩是不是被约掉了 如果 freeflag是0（说明是外面的人约的）且正在被约中（staturs是0，其他都是已经搞定了订单过去了）
 			$arr_lastodr=$odr->getLastOrderByDeviceId($dvcv['id']);
-			if($arr_lastodr['freeFlag']==0&&$arr_lastodr['data']['status']==0){
+			if($arr_lastodr['freeFlag']===0&&$arr_lastodr['data']['status']===0){
 				$onodr='y';
 			}else{
 				$onodr='n';
@@ -294,7 +294,7 @@ class UsrAction extends Action {
 			$data['onodr']='n';
 		}else{
 			$arr_lastodr=$odr->getLastOrderByDeviceId($dvcid);
-			if($arr_lastodr['freeFlag']==0&&$arr_lastodr['data']['status']==0){
+			if($arr_lastodr['freeFlag']===0&&$arr_lastodr['data']['status']===0){
 				$data['onodr']='y';
 			}else{
 				$data['onodr']='n';
@@ -315,7 +315,7 @@ class UsrAction extends Action {
 			if($iscarmst=='y'){
 				$arr_dvco=$dvc->get($dvcid);
 				$dvco=$arr_dvco['data'];
-				if($dvco['capacity']==1){
+				if($dvco['capacity']===1){
 					$arr_capacity=$dvc->capacity($dvcid,$openid,'2');
 				}
 			}
@@ -373,14 +373,21 @@ class UsrAction extends Action {
 		//#####################
 		//查看设备是否被约
 		$arr_lastodr=$odr->getLastOrderByDeviceId($dvcid);
-		if($arr_lastodr['freeFlag']==0&&$arr_lastodr['data']['status']==0){
+		if($arr_lastodr['freeFlag']===0&&$arr_lastodr['data']['status']===0){
 			$data['onodr']='y';
 		}else{
 			$data['onodr']='n';
 		}
-
+		//#################查看设备当前的状况
+		//查看充电情况
+		$arr_charge=$dvc->checkIsCharging($dvcid);
+		if($arr_charge['data']==true){
+			$data['stts']='on';
+		}else{
+			$data['stts']='off';
+		}
 		//只有在线和没有被约等情况才能被操作
-		if($data['online']=='n'||$data['onodr']=='y'){
+		if($data['online']=='n'||$data['onodr']=='y'||$data['stts']=='on'){
 			$data['rslt']='error';
 			if($capacity==2){
 				$data['capacity']=1;
@@ -389,6 +396,7 @@ class UsrAction extends Action {
 			}
 			if($data['online']=='n'){$data['msg']='设备不在线！';}
 			if($data['onodr']=='y'){$data['msg']='设备被预约！';}
+			if($data['stts']=='on'){$data['msg']='设备充电中，请关闭开关后再切换！';}
 		}else{
 			//不如怎样都要告诉应该check的状态 
 			$arr_capacity=$dvc->capacity($dvcid,$openid,$capacity);
@@ -487,7 +495,7 @@ class UsrAction extends Action {
 		//#####################
 		//查看设备是否被约
 		$arr_lastodr=$odr->getLastOrderByDeviceId($dvcid);
-		if($arr_lastodr['freeFlag']==0&&$arr_lastodr['data']['status']==0){
+		if($arr_lastodr['freeFlag']===0&&$arr_lastodr['data']['status']===0){
 			$data['onodr']='y';
 		}else{
 			$data['onodr']='n';
@@ -564,72 +572,45 @@ class UsrAction extends Action {
 
 	
 
-	//------------------------odrlist
+	//###################订单历史列表
 	public function hstr_odr(){//history
-		import('@.SS.SSAction');
-		$ss = new SSAction();
+		$ss=D('SS');$odr=D('Odr');$dvc=D('Dvc');
+
+		$openid=session('openid');
+		//########################
 		$usrdto=$ss->setss();
-		$crls=$usrdto['carList'];
-
+		//##############获取订单列表
+		$pgnumber=1;
+		$pgsize=C('pgsz');
+		$startdate='2015-11-01';
+		$enddate=date('Y-m-d',time());
+		//------默认已完成6
+		if($_GET['odrstatus']||$_GET['odrstatus']==0){$odrstatus=$_GET['odrstatus'];}else{$odrstatus=6;}
+		//##########告诉页面现在看都是些啥订单
+		$this->assign('odrstatus',$odrstatus);
+		$arr_odrls=$odr->listOrders($openid,$pgnumber,$pgsize,$startdate,$enddate,$odrstatus);
+		$odrls=$arr_odrls['data'];
 		
-		
-		$crlsnw=array();
-
-		//给car设置些索引，避免接下来2重循环给服务器带来压力
-		foreach ($crls as $crv) {
-			$crlsnw[$crv['id']]=$crv;
-		}
-
-		//订单结果
-		$url=C('javaback').'/order/getOrderPage.action?wechatId='.session('openid');
-		if(C('psnvs')==1){
-			$json='{"data":{"pageNo":0,"currentPage":1,"pageSize":10,"totalCount":12,"pageCount":2,"results":[{"id":1,"userId":1,"macId":null,"deviceId":2,"price":200,"startDegree":null,"endDegree":null,"carId":1,"status":2,"totalPrice":"+3","createTime":"2015-09-20 11:43:16","updateTime":"2015-09-20 11:43:16","endTime":null,"version":1,"statusFinal":true},{"id":1,"userId":1,"macId":null,"deviceId":2,"price":200,"startDegree":null,"endDegree":null,"carId":1,"status":2,"totalPrice":"+3","createTime":"2015-09-20 11:43:16","updateTime":"2015-09-20 11:43:16","endTime":null,"version":1,"statusFinal":true},{"id":1,"userId":1,"macId":null,"deviceId":2,"price":200,"startDegree":null,"endDegree":null,"carId":1,"status":2,"totalPrice":"+3","createTime":"2015-09-20 11:43:16","updateTime":"2015-09-20 11:43:16","endTime":null,"version":1,"statusFinal":true},{"id":1,"userId":1,"macId":null,"deviceId":2,"price":200,"startDegree":null,"endDegree":null,"carId":1,"status":2,"totalPrice":"+3","createTime":"2015-09-20 11:43:16","updateTime":"2015-09-20 11:43:16","endTime":null,"version":1,"statusFinal":true},{"id":1,"userId":1,"macId":null,"deviceId":2,"price":200,"startDegree":null,"endDegree":null,"carId":1,"status":2,"totalPrice":"+3","createTime":"2015-09-20 11:43:16","updateTime":"2015-09-20 11:43:16","endTime":null,"version":1,"statusFinal":true},{"id":1,"userId":1,"macId":null,"deviceId":2,"price":200,"startDegree":null,"endDegree":null,"carId":1,"status":2,"totalPrice":"+3","createTime":"2015-09-20 11:43:16","updateTime":"2015-09-20 11:43:16","endTime":null,"version":1,"statusFinal":true},{"id":1,"userId":1,"macId":null,"deviceId":2,"price":200,"startDegree":null,"endDegree":null,"carId":1,"status":2,"totalPrice":"+3","createTime":"2015-09-20 11:43:16","updateTime":"2015-09-20 11:43:16","endTime":null,"version":1,"statusFinal":true},{"id":1,"userId":1,"macId":null,"deviceId":2,"price":200,"startDegree":null,"endDegree":null,"carId":1,"status":2,"totalPrice":"+3","createTime":"2015-09-20 11:43:16","updateTime":"2015-09-20 11:43:16","endTime":null,"version":1,"statusFinal":true},{"id":1,"userId":1,"macId":null,"deviceId":2,"price":200,"startDegree":null,"endDegree":null,"carId":1,"status":2,"totalPrice":"+3","createTime":"2015-09-20 11:43:16","updateTime":"2015-09-20 11:43:16","endTime":null,"version":1,"statusFinal":true},{"id":1,"userId":1,"macId":null,"deviceId":2,"price":200,"startDegree":null,"endDegree":null,"carId":1,"status":2,"totalPrice":"+3","createTime":"2015-09-20 11:43:16","updateTime":"2015-09-20 11:43:16","endTime":null,"version":1,"statusFinal":true}]},"code":"A00000","msg":" 获取成功"}';
-		}else{
-			$json=https_request($url);
-		}
-		//$json=https_request($url);
-		
-		$arr=json_decode($json,true);
-		$odrls=$arr['data']['results'];
-
-
-		$pgsz=C('pgsz');
-		if($arr['data']['totalCount']<=$pgsz){
+		$pgnumber=2;
+		$arr_odrls_next=$odr->listOrders($openid,$pgnumber,$pgsize,$startdate,$enddate,$odrstatus);
+		if($arr_odrls_next){
 			$upstr='已无更多内容';
 		}else{
 			$upstr='上拉加载更多...';
 		}
 		$this->assign('upstr',$upstr);
 
+
+		
+
 		$odrlsnw=array();
 		//today
-		$tdy=date('Y-m-d H:i:s',time());
-		$tmp=explode('-',$tdy);
-		$yr_tdy=$tmp[0];
+		$yr_tdy=date('Y',time());
 		foreach ($odrls as $odrv) {
 			//根据odr中的dvcid确定桩的信息
-			$url=C('javaback').'/device/get.action?deviceId='.$odrv['deviceId'];
-			if(C('psnvs')==1){
-				$json='{"data": {"id":2,"owner":2,"sn":"002","model":1,"city":null,"longitude":"121.575215","latitude":"31.203762","address":" 龙沟新苑 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},"code":"A00000","msg":" 获取设备成功"}';
-			}else{
-				$json=https_request($url);
-			}
-			//$json=https_request($url);
-			
-			$arr=json_decode($json,true);
-			$odrv['dvcnm']=$arr['data']['address'];
-			//根据odr中的crid来判断车的具体信息
-			$odrv['cro']=$crlsnw[$odrv['carId']];
-
-			$tmp=explode(' ',$odrv['createTime']);
-			$odrv['crttmprx']=$tmp[0];
-			$odrv['crttmtl']=$tmp[1];
-
-			if($odrv['statusFinal']==true){
-				$odrv['stat']=1;//做掉了
-			}else{
-				$odrv['stat']=0;//还没做,正在做
-			}
+			$arr_dvco=$dvc->get($odrv['deviceId']);
+			$odrv['dvcnm']=$arr_dvco['data']['address'];
+			//##################得到显示年月
 			//如果是今年的就不显示年 略去秒
 			$tm=strtotime($odrv['createTime']);
 			$tmp=explode('-',$odrv['createTime']);
@@ -640,21 +621,9 @@ class UsrAction extends Action {
 				$tm=date('Y-m-d H:i',$tm);
 			}
 			$odrv['createTime']=$tm;
+			//#########################消费结算
+			$odrv['totalPrice']=round(floatval($odrv['totalPrice'])/100,2);
 
-			//如果是今年的就不显示年 略去秒
-			if($odrv['endTime']){
-				$tm=strtotime($odrv['endTime']);
-				$tmp=explode('-',$odrv['endTime']);
-				$yr=$tmp[0];
-				if($yr_tdy==$yr){
-					$tm=date('m-d H:i',$tm);
-				}else{
-					$tm=date('Y-m-d H:i',$tm);
-				}
-				$odrv['endTime']=$tm;
-			}else{
-				$odrv['endTime']='未完成';
-			}
 
 
 
@@ -666,76 +635,57 @@ class UsrAction extends Action {
 
 
 
-		$this->assign('ttl','历史记录');
+		$this->assign('ttl','历史订单记录');
 		$this->display('hstr_odr');
 	}
 	public function dodnfrsh_odr(){
 		$nwpg=$_GET['nwpg'];
 		//需要根据当前最后一个订单id来查看后续还有啥更新的接口，这里我回一个没有的信息//一般情况下也用不到的
-		$data['rslt']=0;//代表没有更新
+		$data['rslt']='n';//代表没有更新
 		$this->ajaxReturn($data,'json');
 	}
 	public function doupld_odr(){
-		
-		//照道理是要根据最近的一个查下去后面的，可能设计到比较复杂的逻辑，这个以后再说
-		import('@.SS.SSAction');
-		$ss = new SSAction();
-		$usrdto=$ss->setss();
-		$crls=$usrdto['carList'];
-		$crlsnw=array();
-		//给car设置些索引，避免接下来2重循环给服务器带来压力
-		foreach ($crls as $crv) {
-			$crlsnw[$crv['id']]=$crv;
-		}
+		$ss=D('SS');$odr=D('Odr');$dvc=D('Dvc');
 
-		$nwpg=$_GET['nwpg']+1;
-		$url=C('javaback').'/order/getOrderPage.action?wechatId='.session('openid').'&pageNo='.$nwpg;
-		if(C('psnvs')==1){
-			$json='{"data":{"pageNo":1,"currentPage":2,"pageSize":10,"totalCount":12,"pageCount":2,"results":[{"id":1,"userId":1,"macId":null,"deviceId":2,"price":200,"startDegree":null,"endDegree":null,"carId":1,"status":2,"totalPrice":"+3","createTime":"2015-09-20 11:43:16","updateTime":"2015-09-20 11:43:16","endTime":null,"version":1,"statusFinal":true},{"id":1,"userId":1,"macId":null,"deviceId":2,"price":200,"startDegree":null,"endDegree":null,"carId":1,"status":2,"totalPrice":"+3","createTime":"2015-09-20 11:43:16","updateTime":"2015-09-20 11:43:16","endTime":null,"version":1,"statusFinal":true},{"id":1,"userId":1,"macId":null,"deviceId":2,"price":200,"startDegree":null,"endDegree":null,"carId":1,"status":2,"totalPrice":"+3","createTime":"2015-09-20 11:43:16","updateTime":"2015-09-20 11:43:16","endTime":null,"version":1,"statusFinal":true},{"id":1,"userId":1,"macId":null,"deviceId":2,"price":200,"startDegree":null,"endDegree":null,"carId":1,"status":2,"totalPrice":"+3","createTime":"2015-09-20 11:43:16","updateTime":"2015-09-20 11:43:16","endTime":null,"version":1,"statusFinal":true},{"id":1,"userId":1,"macId":null,"deviceId":2,"price":200,"startDegree":null,"endDegree":null,"carId":1,"status":2,"totalPrice":"+3","createTime":"2015-09-20 11:43:16","updateTime":"2015-09-20 11:43:16","endTime":null,"version":1,"statusFinal":true},{"id":1,"userId":1,"macId":null,"deviceId":2,"price":200,"startDegree":null,"endDegree":null,"carId":1,"status":2,"totalPrice":"+3","createTime":"2015-09-20 11:43:16","updateTime":"2015-09-20 11:43:16","endTime":null,"version":1,"statusFinal":true},{"id":1,"userId":1,"macId":null,"deviceId":2,"price":200,"startDegree":null,"endDegree":null,"carId":1,"status":2,"totalPrice":"+3","createTime":"2015-09-20 11:43:16","updateTime":"2015-09-20 11:43:16","endTime":null,"version":1,"statusFinal":true}]},"code":"A00000","msg":" 获取成功"}';
-		}else{
-			$json=https_request($url);
-		}
-		//$json=https_request($url);
-		$arr=json_decode($json,true);
-		$odrls=$arr['data']['results'];
+		$openid=session('openid');
+		//照道理是要根据最近的一个查下去后面的，可能设计到比较复杂的逻辑，这个以后再说
+		$usrdto=$ss->setss();
+		
+		//##############获取订单列表
+		$pgnumber=$_GET['pgnumber']+1;
+		$pgsize=C('pgsz');
+		$startdate='2015-11-01';
+		$enddate=date('Y-m-d',time());
+		//------默认已完成6
+		if($_GET['odrstatus']){$odrstatus=$_GET['odrstatus'];}else{$odrstatus='6';}
+		$arr_odrls=$odr->listOrders($openid,$pgnumber,$pgsize,$startdate,$enddate,$odrstatus);
+		$odrls=$arr_odrls['data'];
+		
+		//#############看看真的是否是有货（理论上有），还有看看下一页有没有货
 		if(count($odrls)==0){
-			$rslt=0;
-			$nwpg=$nwpg-1;//发现无法到那一页就要回去
+			$rslt='n';
+			$pgnumber=$pgnumber-1;//发现无法到那一页就要回去
+			$upstr='已无更多内容';
 		}else{
-			$rslt=1;
-			$pgsz=C('pgsz');
-			$upstr='上拉加载更多...';
+			$rslt='y';
+			
+			$arr_odrls_next=$odr->listOrders($openid,$pgnumber+1,$pgsize,$startdate,$enddate,$odrstatus);
+			if($arr_odrls_next){
+				$upstr='已无更多内容';
+			}else{
+				$upstr='上拉加载更多...';
+			}
 			$odrlsnw=array();
-			//today
-			$tdy=date('Y-m-d H:i:s',time());
-			$tmp=explode('-',$tdy);
-			$yr_tdy=$tmp[0];
+			//##############today
+			$yr_tdy=date('Y',time());
+			
 			foreach ($odrls as $odrv) {
 				//根据odr中的dvcid确定桩的信息
-				$url=C('javaback').'/device/get.action?deviceId='.$odrv['deviceId'];
-				if(C('psnvs')==1){
-					$json='{"data": {"id":2,"owner":2,"sn":"002","model":1,"city":null,"longitude":"121.575215","latitude":"31.203762","address":" 龙沟新苑 桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},"code":"A00000","msg":" 获取设备成功"}';
-				}else{
-					$json=https_request($url);
-				}
-				//$json=https_request($url);
+				$arr_dvco=$dvc->get($odrv['deviceId']);
+				$odrv['dvcnm']=$arr_dvco['data']['address'];
+
 				
-							
-
-				$arr=json_decode($json,true);
-				$odrv['dvcnm']=$arr['data']['address'];
-				//根据odr中的crid来判断车的具体信息
-				$odrv['cro']=$crlsnw[$odrv['carId']];
-
-				$tmp=explode(' ',$odrv['createTime']);
-				$odrv['crttmprx']=$tmp[0];
-				$odrv['crttmtl']=$tmp[1];
-
-				if($odrv['statusFinal']==true){
-					$odrv['stat']=1;//做掉了
-				}else{
-					$odrv['stat']=0;//还没做
-				}
+				//##################得到显示年月
 				//如果是今年的就不显示年 略去秒
 				$tm=strtotime($odrv['createTime']);
 				$tmp=explode('-',$odrv['createTime']);
@@ -746,37 +696,71 @@ class UsrAction extends Action {
 					$tm=date('Y-m-d H:i',$tm);
 				}
 				$odrv['createTime']=$tm;
+				//###########金额
+				$odrv['totalPrice']=round(floatval($odrv['totalPrice'])/100,2);
 
-				//如果是今年的就不显示年 略去秒
-				if($odrv['endTime']){
-					$tm=strtotime($odrv['endTime']);
-					$tmp=explode('-',$odrv['endTime']);
-					$yr=$tmp[0];
-					if($yr_tdy==$yr){
-						$tm=date('m-d H:i',$tm);
-					}else{
-						$tm=date('Y-m-d H:i',$tm);
-					}
-					$odrv['endTime']=$tm;
-				}else{
-					$odrv['endTime']='未完成';
-				}
-				
-				
+
 				array_push($odrlsnw, $odrv);
 
 			}
 
 		}
 		$data['odrls']=$odrlsnw;
-		$data['nwpg']=$nwpg;
+		$data['pgnumber']=$pgnumber;
 		$data['upstr']=$upstr;
 		$data['rslt']=$rslt;//代表没有更新
 
 		$this->ajaxReturn($data,'json');
 	}
+	//################检查是否超时订单
+	public function dochecktimeout(){
+		$odr=D('Odr');
 
+		$openid=session('openid');
+		//##############
+		$odrid=$_GET['odrid'];
+		$arr_timeout=$odr->checkOrderIsTimeOut($openid,$odrid);
+		if($arr_timeout['data']==true){
+			$data['timeout']='y';
+		}else{
+			$data['timeout']='n';
+		}
+		$this->ajaxReturn($data,'json');
+	}
+	//################取消订单
+	public function docancelapnt(){
+		$odr=D('Odr');
 
+		$openid=session('openid');
+		//####################
+		$odrid=$_GET['odrid'];
+		$arr_cancel=$odr->appointCancel($openid,$odrid);
+		if($arr_cancel['code']=='A00000'){
+			$data['rslt']='ok';
+		}else{
+			$data['rslt']='error';
+		}
+		$data['msg']=$arr_cancel['msg'];
+		$this->ajaxReturn($data,'json');
+		
+	}
+	//################完成结算
+	public function dojiesuan(){
+		$odr=D('Odr');
+
+		$openid=session('openid');
+		//####################
+		$odrid=$_GET['odrid'];
+		$arr_jiesuan=$odr->handleOrderById($openid,$odrid);
+		if($arr_jiesuan['code']=='A00000'){
+			$data['rslt']='ok';
+		}else{
+			$data['rslt']='error';
+		}
+		$data['msg']=$arr_cancel['msg'];
+		$this->ajaxReturn($data,'json');
+		
+	}
 	//------------------------paylist
 	public function hstr_pay(){//history
 		

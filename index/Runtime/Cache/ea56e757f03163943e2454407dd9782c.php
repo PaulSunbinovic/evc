@@ -31,6 +31,9 @@
 
 <script type="text/javascript" src='__PUBLIC__/JS/index/usrct.js'></script>
 <link href="__PUBLIC__/CSS/index/usrct.css" rel="stylesheet">
+
+<!--###########说明已经开关未被初始化过了########-->
+<script type="text/javascript">swcinited=0;</script>
 </head>
 <body style='background-color: #ddd'>
 
@@ -138,7 +141,7 @@
 
 				</div>
 				<script type="text/javascript">
-				check_capacity("<?php echo ($dvcv['capacity']); ?>","<?php echo ($dvcv['id']); ?>","<?php echo ($dvcv['online']); ?>","<?php echo ($dvcv['onodr']); ?>");
+				check_capacity("<?php echo ($dvcv['capacity']); ?>","<?php echo ($dvcv['id']); ?>","<?php echo ($dvcv['online']); ?>","<?php echo ($dvcv['onodr']); ?>","<?php echo ($dvcv['stts']); ?>");
 				</script>
 				<script type="text/javascript">var dochangecapacity='__URL__/dochangecapacity';</script>
 				<!--##########################-->
@@ -178,7 +181,19 @@
 				</script>
 				<script type="text/javascript">var dochangeshare='__URL__/dochangeshare';</script><?php endforeach; endif; else: echo "" ;endif; ?>
 		</div>
+		<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px;margin-top:10px'>
+			<div class='col-md-5 col-xs-5 nopadding' style='font-size: 16px'>
+				<div class='pull-left'>
+				<i class='glyphicon glyphicon-time' style='color:#6f7c88'></i> 历史订单记录
+				</div>
+			</div>
+			<div class='col-md-7 col-xs-7 nopadding' style='font-size: 16px;color:#888' onclick="window.location.href='__URL__/hstr_odr'">
+				<div class='pull-right'>
+				<i class='glyphicon glyphicon-menu-right'></i>
+				</div>
+			</div>
 
+		</div>
 
 		  
 	</div>
@@ -234,8 +249,8 @@
 <script src='__PUBLIC__/pblc/SWC/bootstrap-switch.js'></script>
 <script src='__PUBLIC__/pblc/SWC/main.js'></script>
 
-
-
+<!--###########说明已经开关被初始化过了########-->
+<script type="text/javascript">swcinited=1;</script>
 
 </body>
 </html>
