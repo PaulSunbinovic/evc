@@ -573,6 +573,8 @@ class UsrAction extends Action {
 		$couponlsnw=array();
 		foreach ($couponls as $couponv) {
 			$couponv['cValue']=round(floatval($couponv['cValue'])/100,2);
+			$shorttm=date('Y-m-d',strtotime($couponv['expireTime']));
+			$couponv['expireTime']=$shorttm;
 			array_push($couponlsnw,$couponv);
 		}
 
