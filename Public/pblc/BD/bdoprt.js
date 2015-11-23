@@ -109,9 +109,13 @@ function paintpnt(){
 	    			}else if(data['dvcls'][i]['isOwner']==1){
 	    				var icon=icon_green;
 	    				var apntswc='';
-	    			}else{
+	    			}else if(data['dvcls'][i]['opentm']){
 	    				var icon=icon_green;
 	    				var apntswc="<a class='pull-left btn btn-success' id='apntbutton_"+dvcid+"' onclick='showapntdtl("+dvcid+")'><i class='glyphicon glyphicon-time'></i> 预约</a>";
+	    			}else{
+	    				str=str+'（未开放共享）';
+	    				var icon=icon_red;
+	    				var apntswc='';
 	    			}
 	    			
 	    			p[dvcid]=new BMap.Point(lgtd,lttd);

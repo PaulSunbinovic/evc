@@ -108,7 +108,7 @@
 			<?php if($dvco){ ?>
 			<!--##########################off成功后他要消失-->
 			<div class='col-md-12 col-xs-12 hasodr' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px;text-align: left;font-size: 20px' >
-				预约：<?php echo ($dvco['address']); ?>。本次充电将以3.5KW的功率进行充电。
+				预约：<?php echo ($dvco['address']); ?>。充电功率3.5KW。
 
 			</div>
 			<div class='col-md-12 col-xs-12 hasodr' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px'>

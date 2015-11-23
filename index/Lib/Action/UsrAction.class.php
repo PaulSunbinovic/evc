@@ -225,7 +225,7 @@ class UsrAction extends Action {
 			//#####################################################
 			//看看这个桩是不是被约掉了 如果 freeflag是0（说明是外面的人约的）且正在被约中（staturs是0，其他都是已经搞定了订单过去了）
 			$arr_lastodr=$odr->getLastOrderByDeviceId($dvcv['id']);
-			if($arr_lastodr['freeFlag']===0&&$arr_lastodr['data']['status']===0){
+			if($arr_lastodr['data']['freeFlag']===0&&$arr_lastodr['data']['status']===0){
 				$onodr='y';
 			}else{
 				$onodr='n';
@@ -294,7 +294,7 @@ class UsrAction extends Action {
 			$data['onodr']='n';
 		}else{
 			$arr_lastodr=$odr->getLastOrderByDeviceId($dvcid);
-			if($arr_lastodr['freeFlag']===0&&$arr_lastodr['data']['status']===0){
+			if($arr_lastodr['data']['freeFlag']===0&&$arr_lastodr['data']['status']===0){
 				$data['onodr']='y';
 			}else{
 				$data['onodr']='n';
@@ -373,7 +373,7 @@ class UsrAction extends Action {
 		//#####################
 		//查看设备是否被约
 		$arr_lastodr=$odr->getLastOrderByDeviceId($dvcid);
-		if($arr_lastodr['freeFlag']===0&&$arr_lastodr['data']['status']===0){
+		if($arr_lastodr['data']['freeFlag']===0&&$arr_lastodr['data']['status']===0){
 			$data['onodr']='y';
 		}else{
 			$data['onodr']='n';
@@ -495,7 +495,7 @@ class UsrAction extends Action {
 		//#####################
 		//查看设备是否被约
 		$arr_lastodr=$odr->getLastOrderByDeviceId($dvcid);
-		if($arr_lastodr['freeFlag']===0&&$arr_lastodr['data']['status']===0){
+		if($arr_lastodr['data']['freeFlag']===0&&$arr_lastodr['data']['status']===0){
 			$data['onodr']='y';
 		}else{
 			$data['onodr']='n';
@@ -585,7 +585,7 @@ class UsrAction extends Action {
 		$startdate='2015-11-01';
 		$enddate=date('Y-m-d',time());
 		//------默认已完成6
-		if($_GET['odrstatus']||$_GET['odrstatus']==0){$odrstatus=$_GET['odrstatus'];}else{$odrstatus=6;}
+		if($_GET['odrstatus']||$_GET['odrstatus']=='0'){$odrstatus=$_GET['odrstatus'];}else{$odrstatus=6;}
 		//##########告诉页面现在看都是些啥订单
 		$this->assign('odrstatus',$odrstatus);
 		$arr_odrls=$odr->listOrders($openid,$pgnumber,$pgsize,$startdate,$enddate,$odrstatus);
