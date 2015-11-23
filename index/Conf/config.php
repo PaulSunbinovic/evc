@@ -2,8 +2,8 @@
 C('zidingyi','在此定义的C方法变量，全局都能用');
 C('PUBLIC','/evc/Public');
 C('HOST','http://www.evchar.cn/evc');
-//C('javaback','http://120.26.80.165');
-C('javaback','http://114.215.209.115');
+C('javaback','http://120.26.80.165');
+//C('javaback','http://114.215.209.115');
 C('tbid','121238');
 C('svak','7fb50a356af44df3a17eb6b59f81d3cb');
 C('appid','wx682ad2cc417fe8b9');
