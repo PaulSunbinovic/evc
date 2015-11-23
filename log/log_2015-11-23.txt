@@ -70,3 +70,45 @@
 ###################################################
 2015-11-23 12:51:12 url: http://114.215.209.115/device/checkIsCharging.action?deviceId=18
 2015-11-23 12:51:12 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-23 14:05:13 url: http://114.215.209.115/device/checkIsCharging.action?deviceId=18
+2015-11-23 14:05:13 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-23 14:05:13 url: http://114.215.209.115/device/checkIsCharging.action?deviceId=100
+2015-11-23 14:05:13 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-23 14:06:17 url: http://114.215.209.115/device/checkIsCharging.action?deviceId=18
+2015-11-23 14:06:17 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-23 14:06:18 url: http://114.215.209.115/device/checkIsCharging.action?deviceId=100
+2015-11-23 14:06:18 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-23 14:07:21 url: http://114.215.209.115/device/checkIsCharging.action?deviceId=18
+2015-11-23 14:07:21 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-23 14:07:22 url: http://114.215.209.115/device/checkIsCharging.action?deviceId=100
+2015-11-23 14:07:22 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-23 14:08:58 url: http://114.215.209.115/device/checkIsCharging.action?deviceId=18
+2015-11-23 14:08:58 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-23 14:08:58 url: http://114.215.209.115/device/checkIsCharging.action?deviceId=100
+2015-11-23 14:08:58 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-23 14:09:25 url: http://114.215.209.115/device/getAll.action?wechatId=ojxMBuCVyjkRAucWjPyA3xeDKsa0&longitude=120.207736&latitude=30.211754
+2015-11-23 14:09:25 json: 
+###################################################
+2015-11-23 14:09:37 url: http://114.215.209.115/device/checkIsCharging.action?deviceId=18
+2015-11-23 14:09:37 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-23 15:16:10 url: http://114.215.209.115/device/checkIsCharging.action?deviceId=18
+2015-11-23 15:16:10 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-23 15:16:45 url: http://114.215.209.115/device/checkIsCharging.action?deviceId=18
+2015-11-23 15:16:45 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-23 16:13:16 url: http://114.215.209.115/device/checkIsCharging.action?deviceId=18
+2015-11-23 16:13:16 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-11-23 16:13:37 url: http://114.215.209.115/device/checkIsCharging.action?deviceId=18
+2015-11-23 16:13:37 json: {"data":null,"code":"A02407","msg":"设备不在线！"}

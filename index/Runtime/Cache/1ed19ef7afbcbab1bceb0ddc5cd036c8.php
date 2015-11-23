@@ -125,7 +125,7 @@
 
 			</div>
 			<script type="text/javascript">
-			check_dvc("<?php echo ($dvco['stts']); ?>","<?php echo ($dvco['id']); ?>","<?php echo ($dvco['online']); ?>","<?php echo ($dvco['onodr']); ?>");
+			check_dvc("<?php echo ($dvco['stts']); ?>","<?php echo ($dvco['id']); ?>","<?php echo ($dvco['online']); ?>","<?php echo ($dvco['onodr']); ?>","<?php echo ($dvco['enable']); ?>");
 			</script>
 			<script type="text/javascript">var doonoff='__URL__/doonoff';</script>
 			<!--#####这里这个一开始隐藏，当off成功后才显示-->

@@ -107,7 +107,7 @@
 
 		<link href="__PUBLIC__/pblc/SWC/bootstrap-switch.css" rel="stylesheet">
 		
-		<div class='col-md-12 col-xs-12 nopadding' style='padding-bottom:20px; margin-top:10px;'>
+		<div class='col-md-12 col-xs-12 nopadding' style='margin-top:10px;'>
 			<?php if(is_array($dvcls)): $i = 0; $__LIST__ = $dvcls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dvcv): $mod = ($i % 2 );++$i;?><!--##########################-->
 				<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px'>
 					<div class='col-md-3 col-xs-3 nopadding' style='font-size: 16px'>

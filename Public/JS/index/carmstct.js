@@ -126,7 +126,7 @@ function onoff(obj){
 }
 
 //#########################
-function check_dvc(stts,dvcid,online,onodr){
+function check_dvc(stts,dvcid,online,onodr,enable){
     //第一次check的时候还没有 开关化，此时这些理论是OK的，但是一旦开关话了，obj周围多了很多东西。。。。
     //不去除disable属性的话会影响后面的操作，后面永远都是灰掉的
     var $obj=$('#dvc_'+dvcid);$obj.removeAttr("disabled"); 
@@ -156,6 +156,10 @@ function check_dvc(stts,dvcid,online,onodr){
         if(onodr=='y'){
             dsb='y';
             str='已被预约，'+str;
+        }else if(enable=='n'){
+            //说明9点没到还没开放
+            dsb='y';
+            str='请在9点以后开启,'+str;
         }
         $lbl.html(str);
         if(click=='y'){

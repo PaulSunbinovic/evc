@@ -66,7 +66,7 @@
 				</div>
 				<div class='col-md-9 col-xs-9'>
 					<div style='height50px;line-height: 50px;text-align: left;font-size: 20px'><?php echo ($couponv['cValue']); ?>元</div>
-					<div style='height50px;line-height: 50px;text-align: left;font-size: 14;color:#ccc'><?php echo ($couponv['createTime']); ?></div>
+					<div style='height50px;line-height: 50px;text-align: left;font-size: 14;color:#ccc'>到期时间：<?php echo ($couponv['expireTime']); ?></div>
 				</div>
 				
 			</div><?php endforeach; endif; else: echo "" ;endif; ?>

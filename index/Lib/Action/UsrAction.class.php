@@ -159,6 +159,14 @@ class UsrAction extends Action {
 			//由于对于车主而言，这个桩肯定是被约的，而且是被自己约的，所以，对于车主而言，其实这车不算被别人约了 
 			$dvco['onodr']='n';
 
+			//################查看是不是9点
+			$hour=date('H',time());
+			if($hour<'09'){
+				$dvco['enable']='n';
+			}else{
+				$dvco['enable']='y';
+			}
+
 			$this->assign('dvco',$dvco);
 		}
 		$this->assign('ttl','车主中心');
@@ -562,7 +570,13 @@ class UsrAction extends Action {
 		//##################
 		$arr_coupon=$coupon->listCoupon($openid);
 		$couponls=$arr_coupon['data'];
-		$this->assign('couponls',$couponls);
+		$couponlsnw=array();
+		foreach ($couponls as $couponv) {
+			$couponv['cValue']=round(floatval($couponv['cValue'])/100,2);
+			array_push($couponlsnw,$couponv);
+		}
+
+		$this->assign('couponls',$couponlsnw);
 
 		$this->assign('ttl','我的优惠券');
 		$this->display('coupon');
