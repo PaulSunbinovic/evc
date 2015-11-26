@@ -51,7 +51,7 @@ class IndexAction extends Action {
 		//#############查看是否有预约有预约的话可以直接导航，除非他删除预约
 		$arr_odro=$odr->getLastOrder($openid);
 		$odro=$arr_odro['data'];
-		if($odro['status']==0){
+		if($odro['status']===0){
 			$dvcid_odr=$odro['deviceId'];
 		}else{
 			$dvcid_odr='n';

@@ -164,6 +164,11 @@ var __app__='__APP__';
     var iconpath_red='__PUBLIC__/IMG/circle_red.png';
     var iconpath_green='__PUBLIC__/IMG/circle_green.png';
     var iconpath_yellow='__PUBLIC__/IMG/circle_yellow.png';
+    //##########################
+    var wenyuanpath_red='__PUBLIC__/IMG/wenyuan_red.png';
+    var wenyuanpath_green='__PUBLIC__/IMG/wenyuan_green.png';
+    var wenyuanpath_yellow='__PUBLIC__/IMG/wenyuan_yellow.png';
+
 		var lvl=<?php echo ($lvl); ?>;
 		var cdzpt='__PUBLIC__/IMG/chongdianzhuang.jpg';
 		var apntprx='__URL__/order/deviceId';
@@ -177,17 +182,17 @@ var __app__='__APP__';
 	
 
 
-	<!--foot开始-->
-
+	<!--foot开始为何迎合他们的要求绿色也选成#00-->
+<style type="text/css">.btn-success{background-color: #00AF50;}</style>
 <div class="btn-group btn-group-justified col-md-12 col-xs-12 ft" role="group" aria-label="...">
   <div class="btn-group" role="group" id='scanqr'>
-    <a type="button" class="btn btn-primary" style='border:0px'><i class='glyphicon glyphicon-qrcode'></i><br>扫码</a>
+    <a type="button" class="btn btn-success" style='border:0px'><i class='glyphicon glyphicon-qrcode'></i><br>扫码</a>
   </div>
   <div class="btn-group" role="group"  id='apntok'>
-    <a type="button" class="btn btn-primary" style='border:0px'><i class='glyphicon glyphicon-send'></i><br>一键预约</a>
+    <a type="button" class="btn btn-success" style='border:0px'><i class='glyphicon glyphicon-send'></i><br>一键预约</a>
   </div>
   <div class="btn-group" role="group"  id='usrct'>
-    <a type="button" class="btn btn-primary" style='border:0px' ><i class='glyphicon glyphicon-user'></i><br>个人中心</a>
+    <a type="button" class="btn btn-success" style='border:0px' ><i class='glyphicon glyphicon-user'></i><br>个人中心</a>
   </div>
 </div>
 <!--href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx682ad2cc417fe8b9&redirect_uri=http://www.evchar.cn/evc/oauth2_openid.php&response_type=code&scope=snsapi_base&state=usrct#wechat_redirect"-->
@@ -209,7 +214,7 @@ var __app__='__APP__';
       <div class="modal-body">
 
         <div class='col-md-12 col-xs-12'>
-        	<a class='btn btn-success btn-lg btn-block' id='opcmr'>绑定桩扫码</a>
+        	<a class='btn btn-success btn-lg btn-block' id='opcmr'>扫码...</a>
         </div>
         <div class='clearfix'></div>
       </div>

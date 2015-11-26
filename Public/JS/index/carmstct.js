@@ -176,3 +176,57 @@ function check_dvc(stts,dvcid,online,onodr,enable){
     
 }
 
+//############来源于hstr_odr.js
+////###########################取消预约
+function cancelapnt(odrid){
+    var execancelapnt='n';
+     $.ajax({
+        'type': 'GET',
+        'url': dochecktimeout,
+        'async':false,  
+        'contentType': 'application/json',
+        'data': {
+            'odrid':odrid,
+            
+        },
+        'dataType': 'json',
+        'success': function(data) {
+            if(data['timeout']=='y'){
+                var r=confirm("您已经超过15分钟，此时取消将扣除一定的服务费，你确定真的要取消么？");
+                if (r==true){
+                    execancelapnt='y';
+                }
+                  
+            }else{
+                execancelapnt='y';
+            }
+            if(execancelapnt=='y'){
+                $.ajax({
+                    'type': 'GET',
+                    'url': docancelapnt,
+                    'async':false,  
+                    'contentType': 'application/json',
+                    'data': {
+                        'odrid':odrid,
+                        
+                    },
+                    'dataType': 'json',
+                    'success': function(data) {
+                        alert(data['msg']);
+                        if(data['rslt']=='ok'){
+                            window.location.reload();
+                        }
+                        console.log("success");           
+                    },
+                    'error':function() {
+                        console.log("error");
+                    }
+                });
+            }
+            console.log("success");           
+        },
+        'error':function() {
+            console.log("error");
+        }
+    });
+}

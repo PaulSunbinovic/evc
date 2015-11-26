@@ -72,7 +72,12 @@
 			</div><?php endforeach; endif; else: echo "" ;endif; ?>
 	</div>
 	
-	
+	<?php if($hascoupon=='n'){ ?>
+	<div class='col-md-12 col-xs-12 nopadding' style='background-color: #fff;height:100px;line-height: 100px;margin-top:5px;text-align: center'>
+		您当前没有优惠券
+		
+	</div>
+	<?php } ?>
 	
 
 

@@ -30,16 +30,19 @@ function rplspc($str){
 用法 logger('BB','log/log1.txt');(推荐)     logger('BB','./log/log1.txt');  logger('BB','log.txt');
  */
 function logger($log_content,$log_filename){
-	//日志大小 10000
-	$max_size=1024*1024*10;//默认字节Byte 10MB
+		
 	if(!$log_filename){
 		$log_filename='log.txt';//默认根目录
 	}
+	//################注销掉就是不对大小做限制了
+	// $max_size=1024*1024*10;//默认字节Byte 10MB
+	// if(file_exists($log_filename)&&abs(filesize($log_filename))>$max_size){
+	// 	unlink($log_filename);
+	// }
+	//#######################
 	
-	if(file_exists($log_filename)&&abs(filesize($log_filename))>$max_size){
-		unlink($log_filename);
-	}
 	//date_default_timezone_set('PRC');
+	
 	if($log_content=='#'){
 		file_put_contents($log_filename, '###################################################'."\r\n",FILE_APPEND);//双引号才换行##
 	}else{

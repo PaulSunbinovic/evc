@@ -12,6 +12,7 @@ class DvcModel{
 	//http://120.26.80.165/shareTime/saveShareTime.action?userId=6&deviceId=1&isallDay=true
 	//http://120.26.80.165/shareTime/removeShareTime.action?userId=27&deviceId=9
 	//http://120.26.80.165/device/removeJob.action?wechatId=12345&deviceId=1
+	//http://114.215.209.115/device/getCapacity.action?wechatId=12345&deviceId=1
 
 	//#########MODEL########################
 	public function test($id){
@@ -100,6 +101,13 @@ class DvcModel{
 	public function removeJob($openid,$dvcid){
 		$url=C('javaback').'/device/removeJob.action?wechatId='.$openid.'&deviceId='.$dvcid;
 		$json='{"data":null,"code":"A00000","msg":"保存成功！"}';
+		$arr=url2arr($url,$json);
+		return $arr;
+	}
+	//#########MODEL########################
+	public function getCapacity($openid,$dvcid){
+		$url=C('javaback').'/device/getCapacity.action?wechatId='.$openid.'&deviceId='.$dvcid;
+		$json='{"data":1,"code":"A00000","msg":"OK"}';
 		$arr=url2arr($url,$json);
 		return $arr;
 	}

@@ -49,7 +49,7 @@
 	.nvgt_green a{color:#fff;}
 </style>
 <div class='col-md-12 col-xs-12 nvgt_green nopadding'>
-	<div class='col-md-3 col-xs-3' onclick="history.go(-1)" style="text-align: center">
+	<div class='col-md-3 col-xs-3' onclick="window.location.href='__APP__'" style="text-align: center">
 		<a class='pull-left'><i class='glyphicon glyphicon-menu-left'></i></a>
 	</div>
 	<div class='col-md-6 col-xs-6' style="text-align: center">
@@ -71,7 +71,8 @@
 		  		<div class='col-md-4 col-xs-4 nopadding'><img src="<?php echo ($usrdto['user']['headImgUrl']); ?>" style='width:80px;height:80px;' class='img-circle'></div>
 				<div class='col-md-7 col-xs-7 nopadding' style='color:#fff;'>
 					<div><h3><?php echo ($usrdto['user']['nickName']); ?></h3></div>
-					<div>
+					<!--因为IPhone上是蓝色的，这里再次强制转色-->
+					<div class="color:#fff">
 						<?php echo ($usrdto['user']['mobile']); ?>
 					</div>
 					
@@ -181,6 +182,8 @@
 				</script>
 				<script type="text/javascript">var dochangeshare='__URL__/dochangeshare';</script><?php endforeach; endif; else: echo "" ;endif; ?>
 		</div>
+
+		<!--#############历史订单-->
 		<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px;margin-top:10px'>
 			<div class='col-md-5 col-xs-5 nopadding' style='font-size: 16px'>
 				<div class='pull-left'>
@@ -188,6 +191,21 @@
 				</div>
 			</div>
 			<div class='col-md-7 col-xs-7 nopadding' style='font-size: 16px;color:#888' onclick="window.location.href='__URL__/hstr_odr'">
+				<div class='pull-right'>
+				<i class='glyphicon glyphicon-menu-right'></i>
+				</div>
+			</div>
+
+		</div>
+
+		<!--#############反馈-->
+		<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px;margin-top:10px'>
+			<div class='col-md-5 col-xs-5 nopadding' style='font-size: 16px'>
+				<div class='pull-left'>
+				<i class='glyphicon glyphicon-edit' style='color:#6f7c88'></i> 反馈
+				</div>
+			</div>
+			<div class='col-md-7 col-xs-7 nopadding' style='font-size: 16px;color:#888' onclick="window.location.href='http://www.evchar.cn'">
 				<div class='pull-right'>
 				<i class='glyphicon glyphicon-menu-right'></i>
 				</div>

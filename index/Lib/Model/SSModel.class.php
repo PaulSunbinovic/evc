@@ -20,8 +20,16 @@ class SSModel extends Action{
 			array_push($crlsnw,$crv);
 		}
 		$arr_usr['data']['carList']=$crlsnw;
-		
+
+		//################隐私设置电话号码转化成133****3333
+		$mobile=$arr_usr['data']['user']['mobile'];
+		$mobile_3_front=substr($mobile, 0,3);
+		$mobile_4_tail=substr($mobile,7,4);
+		$arr_usr['data']['user']['mobile']=$mobile_3_front.'****'.$mobile_4_tail;
+
 		$this->assign('usrdto',$arr_usr['data']);
+
+
 		$this->assign('crls',$arr_usr['data']['carList']);
 
 		

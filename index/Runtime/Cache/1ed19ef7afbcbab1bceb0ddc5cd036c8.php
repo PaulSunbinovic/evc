@@ -128,6 +128,14 @@
 			check_dvc("<?php echo ($dvco['stts']); ?>","<?php echo ($dvco['id']); ?>","<?php echo ($dvco['online']); ?>","<?php echo ($dvco['onodr']); ?>","<?php echo ($dvco['enable']); ?>");
 			</script>
 			<script type="text/javascript">var doonoff='__URL__/doonoff';</script>
+
+			<!--#####################这里主要是放一个取消订单的的按钮-->
+			<script type="text/javascript">var docancelapnt='__URL__/docancelapnt';</script>
+			<script type="text/javascript">var dochecktimeout='__URL__/dochecktimeout';</script>
+			<div class='col-md-12 col-xs-12' style="background-color: #fff;height: 60px;line-height: 60px;margin-top: 10px;padding-top: 8px">
+			<button class='btn btn-danger btn-lg btn-block' onclick='cancelapnt(<?php echo ($odrid); ?>)'>取消当前订单</button>
+			</div>
+
 			<!--#####这里这个一开始隐藏，当off成功后才显示-->
 			<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px;text-align: center;display: none' id='noodr'>
 				当前无订单

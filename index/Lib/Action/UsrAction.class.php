@@ -84,7 +84,11 @@ class UsrAction extends Action {
 			}
 
 			$arr=json_decode($json,true);
-
+			if($arr['code']!='A00000'){
+				logger('#','log/log_'.date('Y-m-d',time()).'.txt');
+				logger('url: '.$url,'log/log_'.date('Y-m-d',time()).'.txt');
+				logger('json: '.$json,'log/log_'.date('Y-m-d',time()).'.txt');
+			}
 			if($arr['code']=='A00000'){
 				session('openid',$wechatId);
 				$data['rslt']='ok';
@@ -134,6 +138,9 @@ class UsrAction extends Action {
 		$arr_odro=$odr->getLastOrder($openid);
 		$odro=$arr_odro['data'];
 		if($odro['status']==0){
+			//######################获取odrid
+			$this->assign('odrid',$odro['id']);
+
 			$dvcid=$odro['deviceId'];
 			//获取桩的信息
 			$arr_dvco=$dvc->get($dvcid);
@@ -243,9 +250,11 @@ class UsrAction extends Action {
 			
 			//##################################
 			//查看充电功率，默认就是1 (low) 否则1 是low 2 是high
-			if($dvcv['capacity']==1){
+			//这里在11月24日更新了接口需要搞上去
+			$arr_capacity=$dvc->getCapacity($openid,$dvcv['id']);
+			if($arr_capacity['data']===1){
 				$dvcv['capacity']=1;
-			}else if($dvcv['capacity']==2){
+			}else if($arr_capacity['data']===2){
 				$dvcv['capacity']=2;
 			}else{//默认
 				$dvcv{'capacity'}=1;
@@ -323,9 +332,9 @@ class UsrAction extends Action {
 			if($iscarmst=='y'){
 				$arr_dvco=$dvc->get($dvcid);
 				$dvco=$arr_dvco['data'];
-				if($dvco['capacity']===1){
-					$arr_capacity=$dvc->capacity($dvcid,$openid,'2');
-				}
+				//由于目前没有好的接口准确检测，现在都是直接触发再说，管他之前是1.5KW 还是3.5KW
+				$arr_capacity=$dvc->capacity($dvcid,$openid,'2');
+				
 			}
 
 			//不如怎样都要告诉应该check的状态 1 应该呈现的stts 2 应该呈现的订单情况
@@ -570,6 +579,14 @@ class UsrAction extends Action {
 		//##################
 		$arr_coupon=$coupon->listCoupon($openid);
 		$couponls=$arr_coupon['data'];
+		//#################################
+		if(count($couponls)==0){
+			$hascoupon='n';
+		}else{
+			$hascoupon='y';
+		}
+		$this->assign('hascoupon',$hascoupon);
+		//###########################
 		$couponlsnw=array();
 		foreach ($couponls as $couponv) {
 			$couponv['cValue']=round(floatval($couponv['cValue'])/100,2);
@@ -600,8 +617,17 @@ class UsrAction extends Action {
 		$pgsize=C('pgsz');
 		$startdate='2015-11-01';
 		$enddate=date('Y-m-d',time());
-		//------默认已完成6
-		if($_GET['odrstatus']||$_GET['odrstatus']=='0'){$odrstatus=$_GET['odrstatus'];}else{$odrstatus=6;}
+		//------如果有传值就算dan，否则就按默认酱紫来：如果有预约的订单就跳转到正在进行的上面去，否则就到已完成
+		if($_GET['odrstatus']||$_GET['odrstatus']=='0'){
+			$odrstatus=$_GET['odrstatus'];
+		}else{
+			$arr_odr=$odr->getLastOrder($openid);
+			if($arr_odr['data']['status']===0){
+				$odrstatus=0;
+			}else{
+				$odrstatus=6;
+			}
+		}
 		//##########告诉页面现在看都是些啥订单
 		$this->assign('odrstatus',$odrstatus);
 		$arr_odrls=$odr->listOrders($openid,$pgnumber,$pgsize,$startdate,$enddate,$odrstatus);
@@ -629,16 +655,10 @@ class UsrAction extends Action {
 			//##################得到显示年月
 			//如果是今年的就不显示年 略去秒
 			$tm=strtotime($odrv['createTime']);
-			$tmp=explode('-',$odrv['createTime']);
-			$yr=$tmp[0];
-			if($yr_tdy==$yr){
-				$tm=date('m-d H:i',$tm);
-			}else{
-				$tm=date('Y-m-d H:i',$tm);
-			}
+			$tm=date('Y-m-d',$tm);
 			$odrv['createTime']=$tm;
 			//#########################消费结算
-			$odrv['totalPrice']=round(floatval($odrv['totalPrice'])/100,2);
+			$odrv['totalPrice']=round(floatval($odrv['totalPrice'])/100,2).'元';
 
 
 

@@ -126,6 +126,16 @@ class TestAction extends Action {
 
 			);        
        	array_push($personls,$person);
+       	//#####################
+		$person=array(
+				'id'=>'38',
+				'wechat_id'=>'ojxMBuO8dbQ0vfCQqCx0_r87G33A',
+				'nick_name'=>'糖小白',
+				'head_img_url'=>'http://wx.qlogo.cn/mmopen/ajNVdqHZLLDtCaGyUYM1zHfNyhjIC1CvyqXh0dFQOFL8ZkGx4Tnnic1cPpuicQYkXYoWWc9eEJlolZq7e8eojia3w/0',
+				'mobile'=>'13817116106',
+
+			);        
+       	array_push($personls,$person);
 
         $this->assign('personls',$personls);
         $this->display('setpara');

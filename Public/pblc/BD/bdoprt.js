@@ -20,7 +20,9 @@ function lct(pnt,ifwd,lvl,ctr,clr,icn,ads){
 		marker = new BMap.Marker(pnt);  // 创建标注
 	}
 	if(ifwd){
-		marker.addEventListener("click", function(){          
+		marker.addEventListener("click", function(){
+			//######################根据商兄的建议，需要在点击的时候 先放大地图的尺寸
+			map.setZoom(20);      
 		   this.openInfoWindow(ifwd);
 		   //图片加载完毕重绘infowindow
 		   document.getElementById('imgDemo').onload = function (){
@@ -65,6 +67,11 @@ function adjstrt(pnt){
 var icon_green={path:iconpath_green,width:23,height:23};
 var icon_red={path:iconpath_red,width:23,height:23};
 var icon_yellow={path:iconpath_yellow,width:23,height:23};
+//########################
+var wenyuan_green={path:wenyuanpath_green,width:26,height:26};
+var wenyuan_red={path:wenyuanpath_red,width:26,height:26};
+var wenyuan_yellow={path:wenyuanpath_yellow,width:26,height:26};
+
 var p=[];
 function paintpnt(){
 	
@@ -96,25 +103,25 @@ function paintpnt(){
 	    			str=data['dvcls'][i]['opentm'];
 	    			if(data['dvcls'][i]['online']=='n'){
 	    				str=str+'（不在线）';
-	    				var icon=icon_red;
+	    				var icon=wenyuan_red;
 	    				var apntswc='';
 	    			}else if(data['dvcls'][i]['chargestatus']=='on'){
 	    				str=str+'（正在充电）';
-	    				var icon=icon_yellow;
+	    				var icon=wenyuan_yellow;
 	    				var apntswc='';
 	    			}else if(data['dvcls'][i]['isOrder']==1){
 	    				str=str+'（已被预约）';
-	    				var icon=icon_red;
+	    				var icon=wenyuan_yellow;
 	    				var apntswc='';
 	    			}else if(data['dvcls'][i]['isOwner']==1){
-	    				var icon=icon_green;
+	    				var icon=wenyuan_green;
 	    				var apntswc='';
 	    			}else if(data['dvcls'][i]['opentm']){
-	    				var icon=icon_green;
+	    				var icon=wenyuan_green;
 	    				var apntswc="<a class='pull-left btn btn-success' id='apntbutton_"+dvcid+"' onclick='showapntdtl("+dvcid+")'><i class='glyphicon glyphicon-time'></i> 预约</a>";
 	    			}else{
 	    				str=str+'（未开放共享）';
-	    				var icon=icon_red;
+	    				var icon=wenyuan_red;
 	    				var apntswc='';
 	    			}
 	    			

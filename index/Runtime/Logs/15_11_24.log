@@ -1,0 +1,1058 @@
+[ 2015-11-24T14:01:48+08:00 ] 192.168.1.109 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.006492s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006825s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.076291s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.076457s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000998s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001094s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000843s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000929s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004250s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001140s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001294s ]
+
+[ 2015-11-24T14:01:51+08:00 ] 192.168.1.109 /evc/index.php/Cmn/dspdvc?ctlgtd=120.207736&ctlttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001702s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001957s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001327s ]
+
+[ 2015-11-24T14:14:37+08:00 ] 192.168.1.109 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001664s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018863s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019119s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001426s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000962s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000777s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001248s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005146s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001337s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001480s ]
+
+[ 2015-11-24T14:14:48+08:00 ] 192.168.1.109 /evc/index.php/Cmn/dspdvc?ctlgtd=120.207736&ctlttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001819s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002090s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001343s ]
+
+[ 2015-11-24T14:16:01+08:00 ] 192.168.1.109 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001697s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017523s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017727s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001328s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000613s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000428s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000766s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003525s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000924s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001065s ]
+
+[ 2015-11-24T14:16:06+08:00 ] 192.168.1.109 /evc/index.php/Cmn/dspdvc?ctlgtd=120.207736&ctlttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001069s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001287s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000994s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001150s ]
+
+[ 2015-11-24T14:19:45+08:00 ] 192.168.1.109 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000925s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001079s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 114 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 115 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 117 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018513s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018696s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000986s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000799s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000585s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001013s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003824s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001509s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001778s ]
+
+[ 2015-11-24T14:19:47+08:00 ] 192.168.1.109 /evc/index.php/Cmn/dspdvc?ctlgtd=120.207736&ctlttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001598s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001852s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001155s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001368s ]
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Lib\Action\CmnAction.class.php 第 33 行.
+
+[ 2015-11-24T14:22:00+08:00 ] 192.168.1.109 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001235s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001398s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+
+[ 2015-11-24T14:25:38+08:00 ] 0.0.0.0 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001143s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001304s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+
+[ 2015-11-24T14:26:09+08:00 ] 0.0.0.0 /evc/index.php/Test/setpara
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001221s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001392s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000891s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.063473s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.063632s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000998s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000799s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000576s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004079s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000968s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001266s ]
+
+[ 2015-11-24T14:26:10+08:00 ] 0.0.0.0 /evc/index.php/Test/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001132s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001314s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000930s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-24T14:26:13+08:00 ] 0.0.0.0 /evc/index.php/Test/dosetss?openid=ojxMBuJe07gSZDUwp0ZHGHEMHOR8
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001937s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002236s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000763s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000873s ]
+NOTIC: [2] Missing argument 1 for Action::ajaxReturn(), called in C:\wamp\www\evc\index\Lib\Action\TestAction.class.php on line 138 and defined C:\wamp\www\evc\ThinkPHP\Lib\Core\Action.class.php 第 306 行.
+NOTIC: [8] Undefined variable: data C:\wamp\www\evc\ThinkPHP\Lib\Core\Action.class.php 第 322 行.
+
+[ 2015-11-24T14:26:39+08:00 ] 0.0.0.0 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001333s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+
+[ 2015-11-24T14:27:17+08:00 ] 192.168.1.109 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001353s ]
+NOTIC: [8] Undefined index: data C:\wamp\www\evc\index\Lib\Model\SSModel.class.php 第 14 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\evc\index\Lib\Model\SSModel.class.php 第 16 行.
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+
+[ 2015-11-24T14:27:17+08:00 ] 192.168.1.109 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000971s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001144s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+
+[ 2015-11-24T14:27:17+08:00 ] 192.168.1.109 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000951s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001100s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+
+[ 2015-11-24T14:27:19+08:00 ] 192.168.1.109 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000860s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001002s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+
+[ 2015-11-24T14:27:20+08:00 ] 192.168.1.109 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001184s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+
+[ 2015-11-24T14:28:14+08:00 ] 0.0.0.0 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003540s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017057s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017277s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001093s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000939s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000745s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001350s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004776s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000960s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001092s ]
+
+[ 2015-11-24T14:28:19+08:00 ] 0.0.0.0 /evc/index.php/Cmn/dspdvc?ctlgtd=120.207736&ctlttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001792s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002057s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001412s ]
+
+[ 2015-11-24T14:28:21+08:00 ] 0.0.0.0 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000948s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001120s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015107s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015318s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000857s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000578s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000414s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000707s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002931s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000705s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000828s ]
+
+[ 2015-11-24T14:28:30+08:00 ] 0.0.0.0 /evc/index.php/Cmn/dspdvc?ctlgtd=120.207736&ctlttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000967s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001128s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000849s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000979s ]
+
+[ 2015-11-24T15:24:10+08:00 ] 0.0.0.0 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001239s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001433s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018698s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018880s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001245s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000980s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001407s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005144s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001124s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001260s ]
+
+[ 2015-11-24T15:24:26+08:00 ] 0.0.0.0 /evc/index.php/Cmn/dspdvc?ctlgtd=120.207736&ctlttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001390s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001567s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000899s ]
+
+[ 2015-11-24T15:24:46+08:00 ] 0.0.0.0 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000909s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 114 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 115 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 117 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016564s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016731s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000822s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000602s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000409s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001306s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003619s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000882s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001038s ]
+
+[ 2015-11-24T15:24:48+08:00 ] 0.0.0.0 /evc/index.php/Cmn/dspdvc?ctlgtd=120.207736&ctlttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001502s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001739s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001131s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001310s ]
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Lib\Action\CmnAction.class.php 第 33 行.
+
+[ 2015-11-24T18:39:28+08:00 ] 0.0.0.0 /evc/index.php/Test/setpara
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002391s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002735s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002578s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015337s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001559s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001450s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000992s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001167s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006042s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001071s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001192s ]
+
+[ 2015-11-24T18:39:28+08:00 ] 0.0.0.0 /evc/index.php/Test/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001637s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001896s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000957s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-24T18:39:28+08:00 ] 0.0.0.0 /evc/index.php/Test/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001082s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001314s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000917s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001088s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-11-24T18:39:31+08:00 ] 0.0.0.0 /evc/index.php/Test/dosetss?openid=ojxMBuI-HahoIOMNZCfxQ3xLzncU
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001001s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001258s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000770s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000879s ]
+NOTIC: [2] Missing argument 1 for Action::ajaxReturn(), called in C:\wamp\www\evc\index\Lib\Action\TestAction.class.php on line 138 and defined C:\wamp\www\evc\ThinkPHP\Lib\Core\Action.class.php 第 306 行.
+NOTIC: [8] Undefined variable: data C:\wamp\www\evc\ThinkPHP\Lib\Core\Action.class.php 第 322 行.
+
+[ 2015-11-24T18:39:51+08:00 ] 0.0.0.0 /evc/index.php/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000909s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001060s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000767s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000888s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.032753s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033095s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000941s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000577s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000466s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000733s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003183s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000847s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-11-24T18:39:54+08:00 ] 0.0.0.0 /evc/index.php/Cmn/dspdvc?ctlgtd=120.207736&ctlttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001476s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001727s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001319s ]
+
+[ 2015-11-24T18:39:55+08:00 ] 0.0.0.0 /evc/index.php/Cmn/vrfusrstat?x=usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000932s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001092s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000851s ]
+
+[ 2015-11-24T18:39:55+08:00 ] 0.0.0.0 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001108s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001308s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001300s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.060484s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060660s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000828s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001361s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000621s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001253s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006939s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001140s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001321s ]
+
+[ 2015-11-24T18:40:04+08:00 ] 0.0.0.0 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002189s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002399s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001110s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001244s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.020688s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020871s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001090s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000852s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000608s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000920s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003856s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000970s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001105s ]
+
+[ 2015-11-24T18:47:30+08:00 ] 0.0.0.0 /evc/index.php/Test/dosetss?openid=ojxMBuIXRwrB1cKzFfuxCEHqboVU
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001459s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001664s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000907s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001018s ]
+NOTIC: [2] Missing argument 1 for Action::ajaxReturn(), called in C:\wamp\www\evc\index\Lib\Action\TestAction.class.php on line 138 and defined C:\wamp\www\evc\ThinkPHP\Lib\Core\Action.class.php 第 306 行.
+NOTIC: [8] Undefined variable: data C:\wamp\www\evc\ThinkPHP\Lib\Core\Action.class.php 第 322 行.
+
+[ 2015-11-24T18:47:34+08:00 ] 0.0.0.0 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001709s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001888s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001180s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.022941s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023133s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000872s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000793s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000574s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000944s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003548s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000989s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001124s ]
+
+[ 2015-11-24T18:47:37+08:00 ] 0.0.0.0 /evc/index.php/Cmn/dspdvc?ctlgtd=120.207736&ctlttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001915s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002328s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001628s ]
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Lib\Action\CmnAction.class.php 第 33 行.
+
+[ 2015-11-24T18:47:42+08:00 ] 0.0.0.0 /evc/index.php/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001482s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001728s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001676s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 114 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 115 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 117 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018268s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018508s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001578s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001773s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001499s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003248s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009292s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001383s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001590s ]
+
+[ 2015-11-24T18:47:43+08:00 ] 0.0.0.0 /evc/index.php/Cmn/dspdvc?ctlgtd=120.207736&ctlttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001488s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001742s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001197s ]
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Lib\Action\CmnAction.class.php 第 33 行.
+
+[ 2015-11-24T18:55:38+08:00 ] 0.0.0.0 /evc/index.php/Index/getdvcsharedtl?dvcid=9
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002021s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002269s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000965s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001133s ]
+
+[ 2015-11-24T18:55:41+08:00 ] 0.0.0.0 /evc/index.php/Index/doapnt?tp=9&lgtd=120.207736&lttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001038s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001199s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000862s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000973s ]
+NOTIC: [8] Undefined index: startTime C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 85 行.
+NOTIC: [8] Undefined index: endTime C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 88 行.
+NOTIC: [8] Undefined offset: 1 C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 90 行.
+NOTIC: [2] Missing argument 3 for OdrModel::appoint(), called in C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php on line 99 and defined C:\wamp\www\evc\index\Lib\Model\OdrModel.class.php 第 33 行.
+NOTIC: [8] Undefined variable: carid C:\wamp\www\evc\index\Lib\Model\OdrModel.class.php 第 35 行.
+
+[ 2015-11-24T18:55:44+08:00 ] 0.0.0.0 /evc/index.php/Cmn/vrfusrstat?x=apnt
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001318s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001518s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000918s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001042s ]
+NOTIC: [8] Undefined variable: url C:\wamp\www\evc\index\Lib\Action\CmnAction.class.php 第 110 行.
+
+[ 2015-11-24T18:55:46+08:00 ] 0.0.0.0 /evc/index.php/Usr/carmstct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001038s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001196s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000890s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001022s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.047164s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047437s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001204s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001220s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000868s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001282s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005159s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001460s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001670s ]
+
+[ 2015-11-24T18:57:11+08:00 ] 0.0.0.0 /evc/index.php/Usr/doonoff?dvcid=9&oprt=on&iscarmst=y
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001220s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001382s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001526s ]
+NOTIC: [2] Missing argument 4 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 332 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [2] Missing argument 5 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 332 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [8] Undefined variable: timeExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 71 行.
+NOTIC: [8] Undefined variable: dayExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 72 行.
+NOTIC: [8] Undefined index: msg C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 347 行.
+
+[ 2015-11-24T18:57:13+08:00 ] 0.0.0.0 /evc/index.php/Usr/dotakesample?dvcid=9
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000966s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001126s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000819s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000937s ]
+
+[ 2015-11-24T19:06:43+08:00 ] 0.0.0.0 /evc/index.php/Usr/doonoff?dvcid=9&oprt=off&iscarmst=y
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001630s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001816s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000827s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000939s ]
+NOTIC: [2] Missing argument 4 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 332 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [2] Missing argument 5 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 332 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [8] Undefined variable: timeExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 71 行.
+NOTIC: [8] Undefined variable: dayExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 72 行.
+NOTIC: [8] Undefined index: msg C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 347 行.
+
+[ 2015-11-24T19:06:45+08:00 ] 0.0.0.0 /evc/index.php/Usr/dotakesample?dvcid=9
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001404s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001647s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001745s ]
+
+[ 2015-11-24T19:06:49+08:00 ] 0.0.0.0 /evc/index.php/Cmn/dspdvc?ctlgtd=120.207736&ctlttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001356s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002406s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000931s ]
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Lib\Action\CmnAction.class.php 第 33 行.
+
+[ 2015-11-24T19:06:51+08:00 ] 0.0.0.0 /evc/index.php/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001367s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001581s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001254s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 114 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 115 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 117 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.026340s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026510s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001077s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000849s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000819s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001192s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004533s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001431s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001660s ]
+
+[ 2015-11-24T19:06:53+08:00 ] 0.0.0.0 /evc/index.php/Cmn/dspdvc?ctlgtd=120.207736&ctlttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001381s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001840s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001546s ]
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Lib\Action\CmnAction.class.php 第 33 行.
+
+[ 2015-11-24T19:06:58+08:00 ] 0.0.0.0 /evc/index.php/Index/getdvcsharedtl?dvcid=9
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002253s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002707s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001905s ]
+
+[ 2015-11-24T19:07:00+08:00 ] 0.0.0.0 /evc/index.php/Index/doapnt?tp=9&lgtd=120.207736&lttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003452s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004004s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002997s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003388s ]
+NOTIC: [8] Undefined index: startTime C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 85 行.
+NOTIC: [8] Undefined index: endTime C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 88 行.
+NOTIC: [8] Undefined offset: 1 C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 90 行.
+NOTIC: [2] Missing argument 3 for OdrModel::appoint(), called in C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php on line 99 and defined C:\wamp\www\evc\index\Lib\Model\OdrModel.class.php 第 33 行.
+NOTIC: [8] Undefined variable: carid C:\wamp\www\evc\index\Lib\Model\OdrModel.class.php 第 35 行.
+
+[ 2015-11-24T19:07:40+08:00 ] 0.0.0.0 /evc/index.php/Index/getdvcsharedtl?dvcid=9
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.009265s ]
+INFO: [ route_check ] --END-- [ RunTime:0.009457s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000797s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000935s ]
+
+[ 2015-11-24T19:07:42+08:00 ] 0.0.0.0 /evc/index.php/Index/doapnt?tp=9&lgtd=120.207736&lttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000997s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001166s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000870s ]
+NOTIC: [8] Undefined index: startTime C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 85 行.
+NOTIC: [8] Undefined index: endTime C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 88 行.
+NOTIC: [8] Undefined offset: 1 C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 90 行.
+NOTIC: [2] Missing argument 3 for OdrModel::appoint(), called in C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php on line 99 and defined C:\wamp\www\evc\index\Lib\Model\OdrModel.class.php 第 33 行.
+NOTIC: [8] Undefined variable: carid C:\wamp\www\evc\index\Lib\Model\OdrModel.class.php 第 35 行.
+
+[ 2015-11-24T19:07:46+08:00 ] 0.0.0.0 /evc/index.php/Cmn/vrfusrstat?x=apnt
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000967s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001132s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000947s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001110s ]
+NOTIC: [8] Undefined variable: url C:\wamp\www\evc\index\Lib\Action\CmnAction.class.php 第 110 行.
+
+[ 2015-11-24T19:07:46+08:00 ] 0.0.0.0 /evc/index.php/Usr/carmstct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000931s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001090s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001141s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001378s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.021162s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021346s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000812s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000674s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000514s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000947s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003379s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001365s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001690s ]
+
+[ 2015-11-24T19:07:50+08:00 ] 0.0.0.0 /evc/index.php/Usr/doonoff?dvcid=9&oprt=on&iscarmst=y
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000941s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001097s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000729s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000853s ]
+NOTIC: [2] Missing argument 4 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 332 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [2] Missing argument 5 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 332 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [8] Undefined variable: timeExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 71 行.
+NOTIC: [8] Undefined variable: dayExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 72 行.
+NOTIC: [8] Undefined index: msg C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 347 行.
+
+[ 2015-11-24T19:07:52+08:00 ] 0.0.0.0 /evc/index.php/Usr/dotakesample?dvcid=9
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001170s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001379s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000766s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000882s ]
+
+[ 2015-11-24T19:13:52+08:00 ] 0.0.0.0 /evc/index.php/Usr/doonoff?dvcid=9&oprt=off&iscarmst=y
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002044s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002298s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001239s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001468s ]
+NOTIC: [2] Missing argument 4 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 332 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [2] Missing argument 5 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 332 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [8] Undefined variable: timeExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 71 行.
+NOTIC: [8] Undefined variable: dayExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 72 行.
+NOTIC: [8] Undefined index: msg C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 347 行.
+
+[ 2015-11-24T19:13:53+08:00 ] 0.0.0.0 /evc/index.php/Usr/doonoff?dvcid=9&oprt=on&iscarmst=y
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001764s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002013s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000944s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001070s ]
+NOTIC: [2] Missing argument 4 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 332 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [2] Missing argument 5 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 332 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [8] Undefined variable: timeExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 71 行.
+NOTIC: [8] Undefined variable: dayExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 72 行.
+NOTIC: [8] Undefined index: msg C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 347 行.
+
+[ 2015-11-24T19:13:53+08:00 ] 0.0.0.0 /evc/index.php/Usr/doonoff?dvcid=9&oprt=off&iscarmst=y
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002005s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002285s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001634s ]
+NOTIC: [2] Missing argument 4 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 332 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [2] Missing argument 5 for DvcModel::operate(), called in C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php on line 332 and defined C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 69 行.
+NOTIC: [8] Undefined variable: timeExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 71 行.
+NOTIC: [8] Undefined variable: dayExp C:\wamp\www\evc\index\Lib\Model\DvcModel.class.php 第 72 行.
+NOTIC: [8] Undefined index: msg C:\wamp\www\evc\index\Lib\Action\UsrAction.class.php 第 347 行.
+
+[ 2015-11-24T19:13:56+08:00 ] 0.0.0.0 /evc/index.php/Usr/dotakesample?dvcid=9
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001080s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001237s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000804s ]
+
+[ 2015-11-24T19:14:10+08:00 ] 0.0.0.0 /evc/index.php/Cmn/dspdvc?ctlgtd=120.207736&ctlttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001020s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001244s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000796s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000916s ]
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Lib\Action\CmnAction.class.php 第 33 行.
+
+[ 2015-11-24T19:14:10+08:00 ] 0.0.0.0 /evc/index.php/Cmn/vrfusrstat?x=usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000954s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001121s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000760s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000875s ]
+
+[ 2015-11-24T19:14:10+08:00 ] 0.0.0.0 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000981s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001148s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000975s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001123s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.024869s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025140s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001101s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000889s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000551s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000785s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003811s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000910s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001041s ]
+
+[ 2015-11-24T19:14:47+08:00 ] 0.0.0.0 /evc/index.php/Test/dosetss?openid=ojxMBuPfL9ru7RCI1o2iSjw_8Ix0
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001231s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001445s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000862s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000982s ]
+NOTIC: [2] Missing argument 1 for Action::ajaxReturn(), called in C:\wamp\www\evc\index\Lib\Action\TestAction.class.php on line 138 and defined C:\wamp\www\evc\ThinkPHP\Lib\Core\Action.class.php 第 306 行.
+NOTIC: [8] Undefined variable: data C:\wamp\www\evc\ThinkPHP\Lib\Core\Action.class.php 第 322 行.
+
+[ 2015-11-24T19:14:52+08:00 ] 0.0.0.0 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000974s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001137s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000700s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000822s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.021298s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021484s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000754s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001193s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000521s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000767s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003678s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001678s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001825s ]
+
+[ 2015-11-24T21:27:31+08:00 ] 0.0.0.0 /evc/index.php/Cmn/vrfusrstat?x=usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.005273s ]
+INFO: [ route_check ] --END-- [ RunTime:0.005622s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002640s ]
+
+[ 2015-11-24T21:27:32+08:00 ] 0.0.0.0 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002160s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002662s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002142s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002524s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.042043s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042966s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002219s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001817s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002018s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002604s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009854s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.004755s ]
+INFO: [ view_end ] --END-- [ RunTime:0.005029s ]
+
+[ 2015-11-24T21:27:38+08:00 ] 0.0.0.0 /evc/index.php/Cmn/dspdvc?ctlgtd=120.207736&ctlttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001874s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002194s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001965s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002255s ]
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Lib\Action\CmnAction.class.php 第 33 行.
+
+[ 2015-11-24T21:28:07+08:00 ] 0.0.0.0 /evc/index.php/Cmn/vrfusrstat?x=usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.005519s ]
+INFO: [ route_check ] --END-- [ RunTime:0.006666s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002972s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003367s ]
+
+[ 2015-11-24T21:28:07+08:00 ] 0.0.0.0 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003698s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004254s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.004049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006880s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.037086s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037430s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001371s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001245s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000822s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001475s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005695s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001462s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002455s ]
+
+[ 2015-11-24T21:28:15+08:00 ] 0.0.0.0 /evc/index.php/Cmn/dspdvc?ctlgtd=120.207736&ctlttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004490s ]
+INFO: [ route_check ] --END-- [ RunTime:0.005071s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003120s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003897s ]
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Lib\Action\CmnAction.class.php 第 33 行.
+
+[ 2015-11-24T23:44:24+08:00 ] 0.0.0.0 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.006778s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007444s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 114 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 115 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 117 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.047809s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048213s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002960s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002227s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002761s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.004253s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.014211s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.005872s ]
+INFO: [ view_end ] --END-- [ RunTime:0.006361s ]
+
+[ 2015-11-24T23:44:27+08:00 ] 0.0.0.0 /evc/index.php/Cmn/dspdvc?ctlgtd=120.207736&ctlttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004192s ]
+INFO: [ route_check ] --END-- [ RunTime:0.005195s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002150s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002561s ]
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Lib\Action\CmnAction.class.php 第 33 行.
+
+[ 2015-11-24T23:44:34+08:00 ] 0.0.0.0 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001980s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002294s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 114 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 115 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 117 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.047391s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047949s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002303s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002385s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002534s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002507s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011403s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002682s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003141s ]
+
+[ 2015-11-24T23:44:40+08:00 ] 0.0.0.0 /evc/index.php/Cmn/dspdvc?ctlgtd=120.207736&ctlttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003622s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004290s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003207s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003631s ]
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Lib\Action\CmnAction.class.php 第 33 行.
+
+[ 2015-11-24T23:46:31+08:00 ] 0.0.0.0 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001990s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002284s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 114 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 115 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 117 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.047788s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048346s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002729s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002101s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001035s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001680s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008778s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002451s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002813s ]
+
+[ 2015-11-24T23:46:34+08:00 ] 0.0.0.0 /evc/index.php/Cmn/dspdvc?ctlgtd=120.207736&ctlttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004675s ]
+INFO: [ route_check ] --END-- [ RunTime:0.005904s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003039s ]
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Lib\Action\CmnAction.class.php 第 33 行.
+
+[ 2015-11-24T23:49:09+08:00 ] 0.0.0.0 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002902s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 114 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 115 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 117 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.054622s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055094s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002423s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001799s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002002s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003850s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011319s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.004370s ]
+INFO: [ view_end ] --END-- [ RunTime:0.004941s ]
+
+[ 2015-11-24T23:49:12+08:00 ] 0.0.0.0 /evc/index.php/Cmn/dspdvc?ctlgtd=120.207736&ctlttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002467s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002882s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001680s ]
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Lib\Action\CmnAction.class.php 第 33 行.
+

@@ -45,40 +45,41 @@
 </head>
 <body>
 	
-	<include file='Cmn:hd_std' />
+	<include file='Cmn:hd_green_odr' />
 	<!--###############################这里加上个切换 查看已完成订单，正在预约的订单，未结算订单3种-->
-	<div class='col-md-12 col-xs-12 nopadding' style='position: fixed;top:40px;background-color: #eee'>
-		<?php if($odrstatus==6){ ?>
-		<div class='col-md-4 col-xs-4 nopadding' style='height:30px;line-height: 30px;text-align: center;background-color: #5bc0de;color:#fff' onclick="window.location.href='__URL__/hstr_odr/odrstatus/6'">
-		<?php }else{ ?>
-		<div class='col-md-4 col-xs-4 nopadding' style='height:30px;line-height: 30px;text-align: center;' onclick="window.location.href='__URL__/hstr_odr/odrstatus/6'">
-		<?php } ?>
-			已完成
-		</div>
+	<div class='col-md-12 col-xs-12 nopadding' style='position: fixed;top:50px;height:40px;line-height: 40px;background-color: #00af50;color:#fff;'>
+		
 		<?php if($odrstatus==0){ ?>
-		<div class='col-md-4 col-xs-4 nopadding' style='height:30px;line-height: 30px;text-align: center;background-color: #5bc0de;color:#fff' onclick="window.location.href='__URL__/hstr_odr/odrstatus/0'">
+		<div class='col-md-4 col-xs-4 nopadding' style='text-align: center;background-color: #25ba69;color:#fff' onclick="window.location.href='__URL__/hstr_odr/odrstatus/0'">
 		<?php }else{ ?>
-		<div class='col-md-4 col-xs-4 nopadding' style='height:30px;line-height: 30px;text-align: center;' onclick="window.location.href='__URL__/hstr_odr/odrstatus/0'">
+		<div class='col-md-4 col-xs-4 nopadding' style='text-align: center;' onclick="window.location.href='__URL__/hstr_odr/odrstatus/0'">
 		<?php } ?>
 			正在进行
 		</div>
-		<?php if($odrstatus==5){ ?>
-		<div class='col-md-4 col-xs-4 nopadding' style='height:30px;line-height: 30px;text-align: center;background-color: #5bc0de;color:#fff' onclick="window.location.href='__URL__/hstr_odr/odrstatus/5'">
+		<?php if($odrstatus==6){ ?>
+		<div class='col-md-4 col-xs-4 nopadding' style='text-align: center;background-color: #25ba69;color:#fff' onclick="window.location.href='__URL__/hstr_odr/odrstatus/6'">
 		<?php }else{ ?>
-		<div class='col-md-4 col-xs-4 nopadding' style='height:30px;line-height: 30px;text-align: center;' onclick="window.location.href='__URL__/hstr_odr/odrstatus/5'">
+		<div class='col-md-4 col-xs-4 nopadding' style='text-align: center;' onclick="window.location.href='__URL__/hstr_odr/odrstatus/6'">
+		<?php } ?>
+			已完成
+		</div>
+		<?php if($odrstatus==5){ ?>
+		<div class='col-md-4 col-xs-4 nopadding' style='text-align: center;background-color: #25ba69;color:#fff' onclick="window.location.href='__URL__/hstr_odr/odrstatus/5'">
+		<?php }else{ ?>
+		<div class='col-md-4 col-xs-4 nopadding' style='text-align: center;' onclick="window.location.href='__URL__/hstr_odr/odrstatus/5'">
 		<?php } ?>
 			未结算
 		</div>
 		
 	</div>
 
-	<div class='col-md-12 col-xs-12' style='position:fixed;top:70px;z-index: 1000;border-bottom: 1px solid #ccc;height:50px;text-align: center;line-height: 50px;'>
+	<div class='col-md-12 col-xs-12' style='position:fixed;top:90px;z-index: 1000;border-bottom: 1px solid #ccc;height:50px;text-align: center;line-height: 50px;'>
 		<!--<div class='col-md-1 col-xs-1 nopadding'>序号</div>-->
 		<!--<div class='col-md-3 col-xs-3 nopadding'>车牌</div>-->
 		<div class='col-md-4 col-xs-4 nopadding'>桩名</div>
 		<div class='col-md-3 col-xs-3 nopadding'>创建时间</div>
-		<div class='col-md-2 col-xs-2 nopadding'>消费</div>
-		<div class='col-md-3 col-xs-3 nopadding'>状态</div>
+		<div class='col-md-3 col-xs-3 nopadding'>消费</div>
+		<div class='col-md-2 col-xs-2 nopadding'>状态</div>
 	</div>
 	<div id="wrapper">
 		<div id="scroller">
@@ -99,19 +100,19 @@
 					</script>
 
 					<li style="line-height: 80px;">
-						<div class='col-md-12 col-xs-12 nopadding'>
+						<div class='col-md-12 col-xs-12 '>
 							<!--<div class='col-md-1 col-xs-1 nopadding'>{$i}</div>-->
 							<!--<div class='col-md-3 col-xs-3 nopadding'>{$odrv['cro']['carNo']}</div>-->
 							<div class='col-md-4 col-xs-4 nopadding'>{$odrv['dvcnm']}</div>
 							<div class='col-md-3 col-xs-3 nopadding'>{$odrv['createTime']}</div>
-							<div class='col-md-2 col-xs-2 nopadding'>{$odrv['totalPrice']}</div>
-							<div class='col-md-3 col-xs-3 nopadding' style='padding-left:20px;'>
+							<div class='col-md-3 col-xs-3 nopadding'>{$odrv['totalPrice']}</div>
+							<div class='col-md-2 col-xs-2 nopadding'>
 							<?php if($odrv['status']=='0'){ ?>
-							<button class='btn btn-danger' onclick="cancelapnt({$odrv['id']})">取消预约</button>
+							<button class='btn btn-danger btn-sm' onclick="cancelapnt({$odrv['id']})">取消预约</button>
 							<?php }else if($odrv['status']=='5'){ ?>
-							<button class='btn btn-info' onclick="jiesuan({$odrv['id']})">完成结算</button>
+							<button class='btn btn-info btn-sm' onclick="jiesuan({$odrv['id']})">完成结算</button>
 							<?php }else if($odrv['status']=='6'){ ?>
-							<status style='color:#ccc'>已完成</status>
+							<status style='color:#00af50'>已完成</status>
 							<?php } ?>
 							</div>
 						</div>

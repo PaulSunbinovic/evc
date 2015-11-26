@@ -41,13 +41,13 @@ function slideUp(){
             }else{
                 for(var i=0;i<data['odrls'].length;i++){
                     srlnb++;
-                    var str="<li style='line-height: 80px;'><div class='col-md-12 col-xs-12 nopadding'><div class='col-md-4 col-xs-4 nopadding'>"+data['odrls'][i]['dvcnm']+"</div><div class='col-md-3 col-xs-3 nopadding'>"+data['odrls'][i]['createTime']+"</div><div class='col-md-2 col-xs-2 nopadding'>"+data['odrls'][i]['totalPrice']+"</div><div class='col-md-3 col-xs-3 nopadding' style='padding-left:20px;'>";
+                    var str="<li style='line-height: 80px;'><div class='col-md-12 col-xs-12'><div class='col-md-4 col-xs-4 nopadding'>"+data['odrls'][i]['dvcnm']+"</div><div class='col-md-3 col-xs-3 nopadding'>"+data['odrls'][i]['createTime']+"</div><div class='col-md-3 col-xs-3 nopadding'>"+data['odrls'][i]['totalPrice']+"</div><div class='col-md-2 col-xs-2 nopadding'>";
                     if(data['odrls'][i]['status']=='0'){
-                        str=str+"<button class='btn btn-danger' onclick='cancelapnt("+data['odrls'][i]['id']+")'>取消预约</button>";
+                        str=str+"<button class='btn btn-danger btn-sm' onclick='cancelapnt("+data['odrls'][i]['id']+")'>取消预约</button>";
                     }else if(data['odrls'][i]['status']=='5'){
-                         str=str+"<button class='btn btn-danger' onclick='jiesuan("+data['odrls'][i]['id']+")'>完成结算</button>";
+                         str=str+"<button class='btn btn-danger btn-sm' onclick='jiesuan("+data['odrls'][i]['id']+")'>完成结算</button>";
                     }else if(data['odrls'][i]['status']=='6'){
-                        str=str+"<status style='color:#ccc'>已完成</status>";
+                        str=str+"<status style='color:#00af50'>已完成</status>";
                     }
                     str=str+'</div></div></li>';
                     
