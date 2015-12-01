@@ -43,14 +43,20 @@
 	<include file='Cmn:hd_green' />
 	<div class='col-md-12 col-xs-12 nopadding'>
 		<volist name='couponls' id='couponv'>
-			<div class='col-md-12 col-xs-12 nopadding' style='background-color: #fff;height:100px;margin-top:5px'>
-				<div class='col-md-3 col-xs-3' style='background-color: #5cb85c;font-size: 20px;color:#fff;line-height: 100px;text-align: center' >
-					{$couponv['cDescribe']}
-					
+			<div class='col-md-12 col-xs-12 nopadding' style='height:100px;margin-top:5px;background-image: url(__PUBLIC__/IMG/coupon/coupon_III.png);height: 100px'>
+				
+				<div class='col-md-10 col-xs-10 nopadding' >
+					<div class="pull-left" style="background-image: url(__PUBLIC__/IMG/coupon/coupon_I.png);width:34px;height:100px;background-color: #ddd"></div>
+					<div class="pull-left" style="background-color: #00af50;font-size: 35px;color:#fff;line-height: 100px;text-align: center" >{$couponv['cValue']}</div>
+					<div class="pull-left" style="background-image: url(__PUBLIC__/IMG/coupon/coupon_II.png);width:56px;height:100px;background-color: #ddd"></div>
+					<div class="pull-left" style="background-image: url(__PUBLIC__/IMG/coupon/coupon_III.png);height:100px;line-height: 27px;padding-top:10px;padding-bottom: 10px;background-color: #ddd">
+						<lbl style='color:#ccc;padding-right: 10px'>券&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</lbl>{$couponv['cDescribe']}<br>
+						<lbl style='color:#ccc;padding-right: 10px'>使用条件</lbl>无条件<br>
+						<lbl style='color:#ccc;padding-right: 10px'>有效期至</lbl>{$couponv['expireTime']}
+					</div>
 				</div>
-				<div class='col-md-9 col-xs-9'>
-					<div style='height50px;line-height: 50px;text-align: left;font-size: 20px'>{$couponv['cValue']}元</div>
-					<div style='height50px;line-height: 50px;text-align: left;font-size: 14;color:#ccc'>到期时间：{$couponv['expireTime']}</div>
+				<div class='col-md-2 col-xs-2 nopadding'>
+					<div class="pull-right" style="background-image: url(__PUBLIC__/IMG/coupon/coupon_IIII.png);width:70px;height:100px; background-color: #ddd"></div>			
 				</div>
 				
 			</div>

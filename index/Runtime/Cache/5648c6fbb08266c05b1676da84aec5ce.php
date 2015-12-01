@@ -46,7 +46,7 @@
 	.nvgt_green a{color:#fff;}
 </style>
 <div class='col-md-12 col-xs-12 nvgt_green nopadding'>
-	<div class='col-md-3 col-xs-3' onclick="history.go(-1)" style="text-align: center">
+	<div class='col-md-3 col-xs-3' onclick="window.location.href='__APP__'" style="text-align: center">
 		<a class='pull-left'><i class='glyphicon glyphicon-menu-left'></i></a>
 	</div>
 	<div class='col-md-6 col-xs-6' style="text-align: center">
@@ -59,14 +59,20 @@
 </div>
 
 	<div class='col-md-12 col-xs-12 nopadding'>
-		<?php if(is_array($couponls)): $i = 0; $__LIST__ = $couponls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$couponv): $mod = ($i % 2 );++$i;?><div class='col-md-12 col-xs-12 nopadding' style='background-color: #fff;height:100px;margin-top:5px'>
-				<div class='col-md-3 col-xs-3' style='background-color: #5cb85c;font-size: 20px;color:#fff;line-height: 100px;text-align: center' >
-					<?php echo ($couponv['cDescribe']); ?>
-					
+		<?php if(is_array($couponls)): $i = 0; $__LIST__ = $couponls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$couponv): $mod = ($i % 2 );++$i;?><div class='col-md-12 col-xs-12 nopadding' style='height:100px;margin-top:5px;background-image: url(__PUBLIC__/IMG/coupon/coupon_III.png);height: 100px'>
+				
+				<div class='col-md-10 col-xs-10 nopadding' >
+					<div class="pull-left" style="background-image: url(__PUBLIC__/IMG/coupon/coupon_I.png);width:34px;height:100px;background-color: #ddd"></div>
+					<div class="pull-left" style="background-color: #00af50;font-size: 35px;color:#fff;line-height: 100px;text-align: center" ><?php echo ($couponv['cValue']); ?></div>
+					<div class="pull-left" style="background-image: url(__PUBLIC__/IMG/coupon/coupon_II.png);width:56px;height:100px;background-color: #ddd"></div>
+					<div class="pull-left" style="background-image: url(__PUBLIC__/IMG/coupon/coupon_III.png);height:100px;line-height: 27px;padding-top:10px;padding-bottom: 10px;background-color: #ddd">
+						<lbl style='color:#ccc;padding-right: 10px'>券&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</lbl><?php echo ($couponv['cDescribe']); ?><br>
+						<lbl style='color:#ccc;padding-right: 10px'>使用条件</lbl>无条件<br>
+						<lbl style='color:#ccc;padding-right: 10px'>有效期至</lbl><?php echo ($couponv['expireTime']); ?>
+					</div>
 				</div>
-				<div class='col-md-9 col-xs-9'>
-					<div style='height50px;line-height: 50px;text-align: left;font-size: 20px'><?php echo ($couponv['cValue']); ?>元</div>
-					<div style='height50px;line-height: 50px;text-align: left;font-size: 14;color:#ccc'>到期时间：<?php echo ($couponv['expireTime']); ?></div>
+				<div class='col-md-2 col-xs-2 nopadding'>
+					<div class="pull-right" style="background-image: url(__PUBLIC__/IMG/coupon/coupon_IIII.png);width:70px;height:100px; background-color: #ddd"></div>			
 				</div>
 				
 			</div><?php endforeach; endif; else: echo "" ;endif; ?>

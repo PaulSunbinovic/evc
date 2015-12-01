@@ -137,7 +137,7 @@ class UsrAction extends Action {
 		//###################获取预约的桩
 		$arr_odro=$odr->getLastOrder($openid);
 		$odro=$arr_odro['data'];
-		if($odro['status']==0){
+		if($odro['status']===0||$odro['status']===4){
 			//######################获取odrid
 			$this->assign('odrid',$odro['id']);
 
@@ -240,7 +240,7 @@ class UsrAction extends Action {
 			//#####################################################
 			//看看这个桩是不是被约掉了 如果 freeflag是0（说明是外面的人约的）且正在被约中（staturs是0，其他都是已经搞定了订单过去了）
 			$arr_lastodr=$odr->getLastOrderByDeviceId($dvcv['id']);
-			if($arr_lastodr['data']['freeFlag']===0&&$arr_lastodr['data']['status']===0){
+			if($arr_lastodr['data']['freeFlag']===0&&($arr_lastodr['data']['status']===0||$arr_lastodr['data']['status']===4)){
 				$onodr='y';
 			}else{
 				$onodr='n';
@@ -311,7 +311,7 @@ class UsrAction extends Action {
 			$data['onodr']='n';
 		}else{
 			$arr_lastodr=$odr->getLastOrderByDeviceId($dvcid);
-			if($arr_lastodr['data']['freeFlag']===0&&$arr_lastodr['data']['status']===0){
+			if($arr_lastodr['data']['freeFlag']===0&&($arr_lastodr['data']['status']===0||$arr_lastodr['data']['status']===4)){
 				$data['onodr']='y';
 			}else{
 				$data['onodr']='n';
@@ -390,7 +390,7 @@ class UsrAction extends Action {
 		//#####################
 		//查看设备是否被约
 		$arr_lastodr=$odr->getLastOrderByDeviceId($dvcid);
-		if($arr_lastodr['data']['freeFlag']===0&&$arr_lastodr['data']['status']===0){
+		if($arr_lastodr['data']['freeFlag']===0&&($arr_lastodr['data']['status']===0||$arr_lastodr['data']['status']===4)){
 			$data['onodr']='y';
 		}else{
 			$data['onodr']='n';
@@ -512,7 +512,7 @@ class UsrAction extends Action {
 		//#####################
 		//查看设备是否被约
 		$arr_lastodr=$odr->getLastOrderByDeviceId($dvcid);
-		if($arr_lastodr['data']['freeFlag']===0&&$arr_lastodr['data']['status']===0){
+		if($arr_lastodr['data']['freeFlag']===0&&($arr_lastodr['data']['status']===0||$arr_lastodr['data']['status']===4)){
 			$data['onodr']='y';
 		}else{
 			$data['onodr']='n';
@@ -622,7 +622,7 @@ class UsrAction extends Action {
 			$odrstatus=$_GET['odrstatus'];
 		}else{
 			$arr_odr=$odr->getLastOrder($openid);
-			if($arr_odr['data']['status']===0){
+			if($arr_odr['data']['status']===0||$arr_odr['data']['status']===4){
 				$odrstatus=0;
 			}else{
 				$odrstatus=6;
@@ -653,9 +653,15 @@ class UsrAction extends Action {
 			$arr_dvco=$dvc->get($odrv['deviceId']);
 			$odrv['dvcnm']=$arr_dvco['data']['address'];
 			//##################得到显示年月
-			//如果是今年的就不显示年 略去秒
+			//如果年份和今年一致
 			$tm=strtotime($odrv['createTime']);
-			$tm=date('Y-m-d',$tm);
+			$yr_odr=date('Y',$tm);
+			if($yr_odr==$yr_tdy){
+				$tm=date('m-d',$tm);
+			}else{
+				$tm=date('Y-m-d',$tm);	
+			}
+			
 			$odrv['createTime']=$tm;
 			//#########################消费结算
 			$odrv['totalPrice']=round(floatval($odrv['totalPrice'])/100,2).'元';

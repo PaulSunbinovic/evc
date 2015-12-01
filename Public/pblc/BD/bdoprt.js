@@ -71,13 +71,14 @@ var icon_yellow={path:iconpath_yellow,width:23,height:23};
 var wenyuan_green={path:wenyuanpath_green,width:26,height:26};
 var wenyuan_red={path:wenyuanpath_red,width:26,height:26};
 var wenyuan_yellow={path:wenyuanpath_yellow,width:26,height:26};
+var wenyuan_my_location={path:wenyuanpath_my_location,width:23,height:23};
 
 var p=[];
 function paintpnt(){
 	
 
 	mypoint=new BMap.Point(ctlgtd,ctlttd)
-	lct(mypoint,'',lvl,'y','y','','我的位置');
+	lct(mypoint,'',lvl,'y','y',wenyuan_my_location,'我的位置');
 	 
 	
 	$.ajax({

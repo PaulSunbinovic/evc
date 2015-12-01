@@ -5,7 +5,7 @@
 <meta name="renderer" content="webkit">
 <!-- 避免IE使用兼容模式 -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>电车惠</title>
+<title>模拟用户-设置参数</title>
 <script src="__PUBLIC__/pblc/btstp3/js/jquery.js"></script>
 <script src="__PUBLIC__/pblc/btstp3/js/jquery-migrate-1.1.0.min.js"></script>
 

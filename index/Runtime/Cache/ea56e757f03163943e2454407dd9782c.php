@@ -111,12 +111,12 @@
 		<div class='col-md-12 col-xs-12 nopadding' style='margin-top:10px;'>
 			<?php if(is_array($dvcls)): $i = 0; $__LIST__ = $dvcls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dvcv): $mod = ($i % 2 );++$i;?><!--##########################-->
 				<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px'>
-					<div class='col-md-3 col-xs-3 nopadding' style='font-size: 16px'>
+					<div class='col-md-3 col-xs-3 nopadding' style='font-size: 14px'>
 						<div class='pull-left'>
 						<i class='glyphicon glyphicon-off' style='color:#f65641'></i> 开关
 						</div>
 					</div>
-					<div class='col-md-9 col-xs-9 nopadding' style='font-size: 16px'>
+					<div class='col-md-9 col-xs-9 nopadding' style='font-size: 14px'>
 						<div class='pull-right'>
 						<lbl id="lbl_swc_<?php echo ($dvcv['id']); ?>" style='margin-right:5px'>OFF</lbl><input type="checkbox" id="dvc_<?php echo ($dvcv['id']); ?>" >
 						</div>
@@ -129,12 +129,12 @@
 				<script type="text/javascript">var doonoff='__URL__/doonoff';</script>
 				<!--##########################-->
 				<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px'>
-					<div class='col-md-3 col-xs-3 nopadding' style='font-size: 16px'>
+					<div class='col-md-3 col-xs-3 nopadding' style='font-size: 14px'>
 						<div class='pull-left'>
 						<i class='glyphicon glyphicon-stats' style='color:#6f7c88'></i> 可调功率
 						</div>
 					</div>
-					<div class='col-md-9 col-xs-9 nopadding' style='font-size: 16px'>
+					<div class='col-md-9 col-xs-9 nopadding' style='font-size: 14px'>
 						<div class='pull-right'>
 						<lbl id="lbl_capacity_<?php echo ($dvcv['id']); ?>" style='margin-right:5px'>1.5KW</lbl><input type="checkbox" id="capacity_<?php echo ($dvcv['id']); ?>" >
 						</div>
@@ -147,12 +147,12 @@
 				<script type="text/javascript">var dochangecapacity='__URL__/dochangecapacity';</script>
 				<!--##########################-->
 				<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px'>
-					<div class='col-md-3 col-xs-3 nopadding' style='font-size: 16px'>
+					<div class='col-md-3 col-xs-3 nopadding' style='font-size: 14px'>
 						<div class='pull-left'>
 						<i class='glyphicon glyphicon-flash' style='color:#f0ad4e'></i> 半价电
 						</div>
 					</div>
-					<div class='col-md-9 col-xs-9 nopadding' style='font-size: 16px'>
+					<div class='col-md-9 col-xs-9 nopadding' style='font-size: 14px'>
 						<div class='pull-right'>
 						<lbl id="lbl_timer_<?php echo ($dvcv['id']); ?>" style='margin-right:5px'>未启用</lbl><input type="checkbox" id="timer_<?php echo ($dvcv['id']); ?>" >
 						</div>
@@ -165,12 +165,12 @@
 				<script type="text/javascript">var dochangetimer='__URL__/dochangetimer';</script>
 				<!--##########################-->
 				<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px;margin-top:10px'>
-					<div class='col-md-3 col-xs-3 nopadding' style='font-size: 16px'>
+					<div class='col-md-3 col-xs-3 nopadding' style='font-size: 14px'>
 						<div class='pull-left'>
 						<i class='glyphicon glyphicon-user' style='color:#6f7c88'></i> 共享时段
 						</div>
 					</div>
-					<div class='col-md-9 col-xs-9 nopadding' style='font-size: 16px'>
+					<div class='col-md-9 col-xs-9 nopadding' style='font-size: 14px'>
 						<div class='pull-right'>
 						<lbl id="lbl_share_<?php echo ($dvcv['id']); ?>" style='margin-right:5px'>不共享</lbl><input type="checkbox" id="share_<?php echo ($dvcv['id']); ?>" >
 						</div>
@@ -185,12 +185,12 @@
 
 		<!--#############历史订单-->
 		<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px;margin-top:10px'>
-			<div class='col-md-5 col-xs-5 nopadding' style='font-size: 16px'>
+			<div class='col-md-5 col-xs-5 nopadding' style='font-size: 14px'>
 				<div class='pull-left'>
 				<i class='glyphicon glyphicon-time' style='color:#6f7c88'></i> 历史订单记录
 				</div>
 			</div>
-			<div class='col-md-7 col-xs-7 nopadding' style='font-size: 16px;color:#888' onclick="window.location.href='__URL__/hstr_odr'">
+			<div class='col-md-7 col-xs-7 nopadding' style='font-size: 14px;color:#888' onclick="window.location.href='__URL__/hstr_odr'">
 				<div class='pull-right'>
 				<i class='glyphicon glyphicon-menu-right'></i>
 				</div>
@@ -200,12 +200,12 @@
 
 		<!--#############反馈-->
 		<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px;margin-top:10px'>
-			<div class='col-md-5 col-xs-5 nopadding' style='font-size: 16px'>
+			<div class='col-md-5 col-xs-5 nopadding' style='font-size: 14px'>
 				<div class='pull-left'>
 				<i class='glyphicon glyphicon-edit' style='color:#6f7c88'></i> 反馈
 				</div>
 			</div>
-			<div class='col-md-7 col-xs-7 nopadding' style='font-size: 16px;color:#888' onclick="window.location.href='http://www.evchar.cn'">
+			<div class='col-md-7 col-xs-7 nopadding' style='font-size: 14px;color:#888' onclick="window.location.href='http://www.evchar.cn'">
 				<div class='pull-right'>
 				<i class='glyphicon glyphicon-menu-right'></i>
 				</div>
