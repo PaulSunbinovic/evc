@@ -1,7 +1,17 @@
 <?php
 C('zidingyi','在此定义的C方法变量，全局都能用');
-C('PUBLIC','/evc/Public');
-C('HOST','http://www.evchar.cn/evc');
+//#######################配置PUBLIC路径和项目路径
+$host=$_SERVER['HTTP_HOST'];//e.g.:localhost
+$php_self=$_SERVER['PHP_SELF'];//e.g.: /evc/index.php/
+$tmp=explode('/',$php_self);
+$prjct=$tmp[1];//e.g.:evc
+$urlprx='http://'.$host.'/'.$prjct;
+//####
+C('PUBLIC','/'.$prjct.'/Public');
+C('HOST',$urlprx);
+
+
+//######################################
 C('javaback','http://120.26.80.165');
 // C('javaback','http://114.215.209.115');
 C('tbid','121238');

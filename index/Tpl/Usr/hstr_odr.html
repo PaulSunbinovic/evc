@@ -50,23 +50,30 @@
 	<div class='col-md-12 col-xs-12 nopadding' style='position: fixed;top:50px;height:40px;line-height: 40px;background-color: #00af50;color:#fff;'>
 		
 		<?php if($odrstatus==0){ ?>
-		<div class='col-md-4 col-xs-4 nopadding' style='text-align: center;background-color: #25ba69;color:#fff' onclick="window.location.href='__URL__/hstr_odr/odrstatus/0'">
+		<div class='col-md-3 col-xs-3 nopadding' style='text-align: center;background-color: #25ba69;color:#fff' onclick="window.location.href='__URL__/hstr_odr/odrstatus/0'">
 		<?php }else{ ?>
-		<div class='col-md-4 col-xs-4 nopadding' style='text-align: center;' onclick="window.location.href='__URL__/hstr_odr/odrstatus/0'">
+		<div class='col-md-3 col-xs-3 nopadding' style='text-align: center;' onclick="window.location.href='__URL__/hstr_odr/odrstatus/0'">
 		<?php } ?>
-			正在进行
+			已预约
+		</div>
+		<?php if($odrstatus==4){ ?>
+		<div class='col-md-3 col-xs-3 nopadding' style='text-align: center;background-color: #25ba69;color:#fff' onclick="window.location.href='__URL__/hstr_odr/odrstatus/4'">
+		<?php }else{ ?>
+		<div class='col-md-3 col-xs-3 nopadding' style='text-align: center;' onclick="window.location.href='__URL__/hstr_odr/odrstatus/4'">
+		<?php } ?>
+			正充电
 		</div>
 		<?php if($odrstatus==6){ ?>
-		<div class='col-md-4 col-xs-4 nopadding' style='text-align: center;background-color: #25ba69;color:#fff' onclick="window.location.href='__URL__/hstr_odr/odrstatus/6'">
+		<div class='col-md-3 col-xs-3 nopadding' style='text-align: center;background-color: #25ba69;color:#fff' onclick="window.location.href='__URL__/hstr_odr/odrstatus/6'">
 		<?php }else{ ?>
-		<div class='col-md-4 col-xs-4 nopadding' style='text-align: center;' onclick="window.location.href='__URL__/hstr_odr/odrstatus/6'">
+		<div class='col-md-3 col-xs-3 nopadding' style='text-align: center;' onclick="window.location.href='__URL__/hstr_odr/odrstatus/6'">
 		<?php } ?>
 			已完成
 		</div>
 		<?php if($odrstatus==5){ ?>
-		<div class='col-md-4 col-xs-4 nopadding' style='text-align: center;background-color: #25ba69;color:#fff' onclick="window.location.href='__URL__/hstr_odr/odrstatus/5'">
+		<div class='col-md-3 col-xs-3 nopadding' style='text-align: center;background-color: #25ba69;color:#fff' onclick="window.location.href='__URL__/hstr_odr/odrstatus/5'">
 		<?php }else{ ?>
-		<div class='col-md-4 col-xs-4 nopadding' style='text-align: center;' onclick="window.location.href='__URL__/hstr_odr/odrstatus/5'">
+		<div class='col-md-3 col-xs-3 nopadding' style='text-align: center;' onclick="window.location.href='__URL__/hstr_odr/odrstatus/5'">
 		<?php } ?>
 			未结算
 		</div>

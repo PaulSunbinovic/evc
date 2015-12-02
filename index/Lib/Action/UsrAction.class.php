@@ -622,7 +622,9 @@ class UsrAction extends Action {
 			$odrstatus=$_GET['odrstatus'];
 		}else{
 			$arr_odr=$odr->getLastOrder($openid);
-			if($arr_odr['data']['status']===0||$arr_odr['data']['status']===4){
+			if($arr_odr['data']['status']===4){
+				$odrstatus=4;
+			}else if($arr_odr['data']['status']===0){
 				$odrstatus=0;
 			}else{
 				$odrstatus=6;

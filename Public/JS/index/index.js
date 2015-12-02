@@ -109,7 +109,28 @@ $(function(){
         });
     })
 
-    
+    //##########################重新定位自己，目前偷懒只是定位到原来自己的坐标，以后想办法做到定位到新的地方
+    $('#relocate').click(function(){
+        panto(mypoint);
+    })  
+
+    //####################
+    $('#expand').click(function(){
+        //###以免用户手动缩放造成lvl改变，因此lvl必须要实时
+        lvl=map.getZoom();
+        //###最大是19最小1
+        if(lvl<19){lvl=lvl+1;}//否则照旧
+        map.setZoom(lvl);
+    })
+
+    //####################
+    $('#shrink').click(function(){
+        //###以免用户手动缩放造成lvl改变，因此lvl必须要实时
+        lvl=map.getZoom();
+        //###最大是19最小1
+        if(lvl>1){lvl=lvl-1;}//否则照旧
+        map.setZoom(lvl);
+    })
 
     
 });
