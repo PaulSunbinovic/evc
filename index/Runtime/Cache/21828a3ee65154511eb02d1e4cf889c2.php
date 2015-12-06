@@ -52,7 +52,7 @@
 		</thead>
 		<tbody>
 			
-			<?php if(is_array($personls)): $i = 0; $__LIST__ = $personls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$personv): $mod = ($i % 2 );++$i; if($personv['wechat_id']==session('openid')){ $cls='info'; }else{ $cls=''; } ?>
+			<?php if(is_array($personls)): $i = 0; $__LIST__ = $personls;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$personv): $mod = ($i % 2 );++$i; if($personv['wechat_id']==session('openid')){ $cls='info'; }else if($personv['wechat_id']=='10086'&&session('analog')===1){ $cls='info'; }else{ $cls=''; } ?>
 		  	<tr onclick="setss('<?php echo ($personv[wechat_id]); ?>')" class="<?php echo ($cls); ?>" id="tr_<?php echo ($personv['wechat_id']); ?>">
 			  <td><?php echo ($personv['id']); ?></td><td><?php echo ($personv['wechat_id']); ?></td><td><?php echo ($personv['nick_name']); ?></td>
 			  <td><img src="<?php echo ($personv['head_img_url']); ?>" class="img-responsive img-circle" style='height:50px;width:50px'></td><td><?php echo ($personv['mobile']); ?></td>

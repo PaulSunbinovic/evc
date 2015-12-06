@@ -66,48 +66,58 @@ class IndexAction extends Action {
 	public function doapnt(){
 		$dvc=D('Dvc');$odr=D('Odr');
 		$openid=session('openid');
-		//#################获取预约的设备
-		if($_GET['tp']=='ok'){//type onekey//一键获取点的话，需要算出最近点，然后产生订单
-			
-			$arr_dvcls=$dvc->getAll($openid,$_GET['lgtd'],$_GET['lttd']);
+		//########说明：如果注册的，过来的时候肯定自动session注入了，否则是session空空如也，不注入的
+		if($openid){
+			//###针对注册的童鞋
+			//#################获取预约的设备
+			if($_GET['tp']=='ok'){//type onekey//一键获取点的话，需要算出最近点，然后产生订单
+				
+				$arr_dvcls=$dvc->getAll($openid,$_GET['lgtd'],$_GET['lttd']);
 
-			$apntpnt=$arr_dvcls['data'][0];
-		}else{//普通的话就需要直接获得装ID根据桩id 来进行
-			//...一个GET桩ID的过程我就暂时省去了，反正最终也是获得预约桩的代码
-			
-			$dvcid=$_GET['tp'];
-			$arr_dvco=$dvc->get($dvcid);
-			
-			$apntpnt=$arr_dvco['data'];
-		}
-		//设置下点的opentm，之后对于约好后重绘点有用
-		if($apntpnt['listShareTime']){
-			$starttm=$apntpnt['listShareTime']['startTime'];
-			$starttmu=explode(':', $starttm);
-			$starttm=$starttmu[0].':'.$starttm[1];
-			$endtm=$apntpnt['listShareTime']['endTime'];
-			$endtm=explode(':',$endtm);
-			$endtm=$endtm[0].':'.$endtm[1];
+				$apntpnt=$arr_dvcls['data'][0];
+			}else{//普通的话就需要直接获得装ID根据桩id 来进行
+				//...一个GET桩ID的过程我就暂时省去了，反正最终也是获得预约桩的代码
+				
+				$dvcid=$_GET['tp'];
+				$arr_dvco=$dvc->get($dvcid);
+				
+				$apntpnt=$arr_dvco['data'];
+			}
+			//设置下点的opentm，之后对于约好后重绘点有用
+			if($apntpnt['listShareTime']){
+				$starttm=$apntpnt['listShareTime']['startTime'];
+				$starttmu=explode(':', $starttm);
+				$starttm=$starttmu[0].':'.$starttm[1];
+				$endtm=$apntpnt['listShareTime']['endTime'];
+				$endtm=explode(':',$endtm);
+				$endtm=$endtm[0].':'.$endtm[1];
 
-			$apntpnt['opentm']=$starttm.'-'.$endtm;
+				$apntpnt['opentm']=$starttm.'-'.$endtm;
+			}else{
+				$apntpnt['opentm']='';
+			}
+			$data['apntpnt']=$apntpnt;
+			//反正不管是怎样都能拿到预约点
+			//#######################进行预约
+	    	$arr_odr=$odr->appoint($openid,$apntpnt['id']);
+	    	
+	   
+	   		//###############结果反馈
+	   		if($arr_odr['code']=='A00000'){
+	   			$data['rslt']='ok';
+	   		}else if($arr_odr['code']=='A01407'){
+	   			$data['rslt']='moneynotenough';
+	   		}else{//其他莫名其妙的错误，可能有这货自己其他地方有约会，还TM来约
+	   			$data['rslt']='error';
+	   		}
+	   		$data['msg']=$arr_odr['msg'];
 		}else{
-			$apntpnt['opentm']='';
+			$url='https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx682ad2cc417fe8b9&redirect_uri='.C('HOST').'/oauth2_openid.php&response_type=code&scope=snsapi_base&state=regist#wechat_redirect';
+			$data['url']=$url;
+			$data['rslt']='norgst';
 		}
-		$data['apntpnt']=$apntpnt;
-		//反正不管是怎样都能拿到预约点
-		//#######################进行预约
-    	$arr_odr=$odr->appoint($openid,$apntpnt['id']);
-    	
-   
-   		//###############结果反馈
-   		if($arr_odr['code']=='A00000'){
-   			$data['rslt']='ok';
-   		}else if($arr_odr['code']=='A01407'){
-   			$data['rslt']='moneynotenough';
-   		}else{//其他莫名其妙的错误，可能有这货自己其他地方有约会，还TM来约
-   			$data['rslt']='error';
-   		}
-   		$data['msg']=$arr_odr['msg'];
+
+		
 		
     	$this->ajaxReturn($data,'json');
 		

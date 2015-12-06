@@ -1,0 +1,24 @@
+###################################################
+2015-12-03 19:19:27 url: http://120.26.80.165/user/get.action?wechatId=
+2015-12-03 19:19:27 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-12-03 19:19:27 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-12-03 19:19:27 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-12-03 19:19:31 url: http://120.26.80.165/user/get.action?wechatId=
+2015-12-03 19:19:31 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-12-03 19:19:32 url: http://120.26.80.165/device/getAll.action?wechatId=&longitude=120.207736&latitude=30.211754
+2015-12-03 19:19:32 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}
+###################################################
+2015-12-03 20:28:58 url: http://120.26.80.165/user/get.action?wechatId=
+2015-12-03 20:28:58 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-12-03 20:28:58 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-12-03 20:28:58 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-12-03 20:29:03 url: http://120.26.80.165/user/get.action?wechatId=
+2015-12-03 20:29:03 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-12-03 20:29:03 url: http://120.26.80.165/device/getAll.action?wechatId=&longitude=120.207736&latitude=30.211754
+2015-12-03 20:29:03 json: {"data":null,"code":"A00001","msg":"参数错误:wechatId may not be empty"}

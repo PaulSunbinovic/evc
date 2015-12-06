@@ -16,6 +16,17 @@ class TestAction extends Action {
     public function setpara(){
     	$personls=array();
 
+
+    	//#####################
+		$person=array(
+				'id'=>'0',
+				'wechat_id'=>'10086',
+				'nick_name'=>'未注册的同学',
+				'head_img_url'=>'',
+				'mobile'=>'',
+
+			);        
+       	array_push($personls,$person);
     	//#####################
 		$person=array(
 				'id'=>'1',
@@ -143,9 +154,14 @@ class TestAction extends Action {
 
     public function dosetss(){
     	$openid=$_GET['openid'];
-    	session('openid',$openid);
-    	session('analog',1);
+    	if($openid!='10086'){
+    		session('openid',$openid);
+	    	session('analog',1);
+	  	}else{
+    		session('analog',1);
+	   	}
     	$this->ajaxReturn();
+    	
     }
 
     public function cancelset(){

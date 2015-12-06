@@ -756,6 +756,81 @@ class UsrAction extends Action {
 
 		$this->ajaxReturn($data,'json');
 	}
+	//##########################
+	function payment(){
+		$payment=D('Payment');$usr=D('Usr');
+
+		$openid=session('openid');
+
+		//#####################查看余额
+		$arr_usraccnt=$usr->getUserAccount($openid);
+		$balance=floatval($arr_usraccnt['data']['balance']);
+		$balance=$balance/100;
+		$balance=round($balance,2);
+		$balance=(string)$balance;
+		$pos=strpos($balance,'.');
+		if($pos==false){
+			$balance=$balance.'.00';
+		}
+		$this->assign('balance',$balance);
+
+
+		$arr_payment=$payment->findUserPaymentOrder($openid,10,1);
+		$paymentls=$arr_payment['data'];
+
+		//#########查看下一页有没有货
+		$arr_payment_next=$payment->findUserPaymentOrder($openid,10,2);
+		if($arr_payment_next['data']){
+			$this->assign('hasnext',1);
+		}
+
+		
+		$this->assign('paymentls',$paymentls);
+
+		
+
+		$this->assign('ttl','我的余额');
+		$this->display('payment');
+	}
+
+	//################
+	public function doupld_payment(){
+		$payment=D('Payment');		
+		//####参数获取
+		$openid=session('openid');
+		$nwpg=$_GET['nwpg'];
+		
+		$pg_want=(int)$nwpg+1;
+
+
+		$arr_payment=$payment->findUserPaymentOrder($openid,10,$pg_want+1);
+		$paymentls=$arr_payment['data'];
+
+		if(count($paymentls)!==0){
+			$rslt=1;
+			$nwpg=$pg_want;
+			$arr_payment_next=$payment->findUserPaymentOrder($openid,10,$pg_want+2);
+			if($arr_payment_next['data']){
+				$hasnext=1;
+			}else{
+				$hasnext=0;
+			}
+
+		}else{
+			$rslt=0;
+			//$nwpg照旧
+			$hasnext=0;//这次都没有，还指望下次?。。。
+		}
+
+		//###分配参数
+		$data['rslt']=$rslt;
+		$data['nwpg']=$nwpg;
+		$data['hasnext']=$hasnext;
+		$data['paymentls']=$paymentls;
+
+		$this->ajaxReturn($data,'json');
+	}
+
 	//################检查是否超时订单
 	public function dochecktimeout(){
 		$odr=D('Odr');

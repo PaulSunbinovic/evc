@@ -29,15 +29,14 @@
 
 <link href="__PUBLIC__/CSS/index/base.css" rel="stylesheet">
 
-<script type="text/javascript" src='__PUBLIC__/JS/index/cmnt.js'></script>
-<link href="__PUBLIC__/CSS/index/regist.css" rel="stylesheet">
-<script>var fnddvcbydvcid='__URL__/fnddvcbydvcid';</script>
+<script type="text/javascript" src='__PUBLIC__/JS/index/payment.js'></script>
+<link href="__PUBLIC__/CSS/index/payment.css" rel="stylesheet">
 
 
 </head>
 <body>
 	
-	<include file='Cmn:hd_std' />
+	<include file='Cmn:hd_green_back' />
 	<script>
 	//返回键CSS失效了，修改下
 	// var dvls=$('.nvgt').children('div');
@@ -48,13 +47,15 @@
 	
 	<div class='col-md-12 col-xs-12 bd' style='top:200px'>
 		<div  class="col-md-12 col-xs-12 nopadding" style="height:150px;background-color: #fff;position:fixed;top:50px;z-index: 1000;border-bottom: solid 1px #ccc">
-			
-			
-			<div class='col-md-12 col-xs-12' style='padding-top:15px'>
-				<textarea class="form-control" rows="3" placeholder='在此写入评论'></textarea>
+			<div class='col-md-12 col-xs-12' style='height: 40px;line-height: 40px'>
+				<ft style='color:#aaa;font-size: 12px'>当前余额：</ft>
 			</div>
-			<div class='col-md-12 col-xs-12' style='margin-top:5px;margin-bottom:5px'>
-			<button class='btn btn-success btn-block'>提交评论</button>
+			<div class='col-md-12 col-xs-12' style='height: 60px;line-height: 60px'>
+				<ft style='color:#dfaa55;font-size: 50px'>{$balance}</ft><ft style='color:#dfaa55;font-size: 18px;margin-left: 10px'>元</ft>
+			</div>
+			<div class='col-md-12 col-xs-12 nopadding'>
+				<div class='col-md-6 col-xs-6'><a class='btn btn-default btn-block disabled' style='background-color: #ddd' >提现（暂未开通）</a></div>
+				<div class='col-md-6 col-xs-6'><a class='btn btn-success btn-block' href='__URL__/chongzhi'>充值</a></div>
 			</div>
 			<div class='clearfix'></div>
 		</div>
@@ -63,34 +64,30 @@
 			
 			<script type="text/javascript">var srlnb=0;//serial number</script>
 			
-        	<volist name='cmntls' id='cmntv'>
+        	<volist name='paymentls' id='paymentv'>
         		<script type="text/javascript">srlnb++;</script>
-        		<div class="col-md-12 col-xs-12 nopadding cmnt" id="cmnt{$cmntv['commId']}">
-        			<div style='height:20px;font-weight: bold'>{$cmntv['usrnn']}</div>
-        			<div class="overflowhidden">{$cmntv['content']}</div>
-        			<div class='col-md-12 col-xs-12'>
-        				<div class='pull-left extend'><i class='glyphicon glyphicon-triangle-bottom'></i> 展开</div>
-        				<div class='pull-right cmnttm'>{$cmntv['commDate']}</div>
-        				<div class='pull-right approve'><i class='glyphicon glyphicon-thumbs-up'></i> ({$cmntv['approves']})</div>
-        			</div>
-        			
+        		<div class="col-md-12 col-xs-12 nopadding wrp">
+        			<div class='col-md-6 col-xs-6'><mingmu class='pull-left mingmu'>{$paymentv['desc']}</mingmu></div>
+        			<div class='col-md-6 col-xs-6'><tm class='pull-right tm'>{$paymentv['tm']}</tm></div>
+        		
+        			<div class='col-md-12 col-xs-12' style="color:{$paymentv['color']}"><tm class='pull-right'>{$paymentv['mark']}{$paymentv['mny']}</tm></div>
         		</div>
-				
         	</volist>
-				
+					
 		</div>
-		
-		<script src='__PUBLIC__/pblc/PLDN/init.js'></script>     	
+			
 		<script type="text/javascript">
-		
-		var dodnfrsh='__URL__/dodnfrsh';//do slidedown fresh
-		var doupld='__URL__/doupld';//do slideup loading
-		//slideDown 和 slideUp函数写在hstr_odr.js里面//
+		//########初始化参数
+		var dodnfrsh='__URL__/dodnfrsh_payment';//do slidedown fresh
+		var doupld='__URL__/doupld_payment';//do slideup loading
 		var nwpg=0;//now page 当前页必然是第0页初始时候
 		var exe=1;//一上来就可以执行
 		</script>
 		<div id='loading' class='col-md-12 col-xs-12' style="text-align: center">加载中...</div>
-		<script src="__PUBLIC__/pblc/PLDN/pldnld.js"></script>
+		<script>
+		<?php if($hasnext===1){ ?>$('#loading').html('下拉加载更多...');<?php }else{ ?>$('#loading').html('已无更多信息');<?php } ?>
+		</script>
+		<script src="__PUBLIC__/JS/index/payment.js"></script>
 	</div>
 	
 

@@ -189,7 +189,9 @@ function apnt(id){
         },
         'dataType': 'json',
         'success': function(data) {
-        	if(data['rslt']=='hsodr'){
+            if(data['rslt']=='norgst'){
+                window.location.href=data['url'];  
+            }else if(data['rslt']=='hsodr'){
         		//有订单的话就要弹是否取消XX订单的对话框
         		// alert(data['odr']['id']);
         		$('#ads').html(data['odrpnt']['address']);
