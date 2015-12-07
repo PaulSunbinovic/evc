@@ -202,6 +202,7 @@ class UsrAction extends Action {
 		$usrdto=$ss->setss();
 
 		//###########################
+		//微信setsignpackage设定
 		import('@.WX.JssdkAction');
 		$jssdk = new JssdkAction(C('appid'), C('appsecret'));
 		$signPackage = $jssdk->GetSignPackage();

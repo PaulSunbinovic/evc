@@ -55,7 +55,7 @@ $(document).ready(function(){
                     'dataType': 'json',
                     'success': function(data) {
                         if(data['rslt']==0){
-                            alert('无更新内容');
+                            //alert('无更新内容');
                             $('#loading').html('已无更多信息');
                         }else{
                             for(var i=0;i<data['paymentls'].length;i++){

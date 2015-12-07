@@ -45,7 +45,7 @@
 
 	<!--导航开始-->
 <style type="text/css">
-	.nvgt_green{font-size: 20px;background-color: #00af50;height:50px;line-height: 50px;color:#fff;}
+	.nvgt_green{font-size: 20px;background-color: #00af50;height:50px;line-height: 50px;color:#fff;position: fixed;z-index: 6000}
 	.nvgt_green a{color:#fff;}
 </style>
 <div class='col-md-12 col-xs-12 nvgt_green nopadding'>

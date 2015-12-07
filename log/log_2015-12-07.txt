@@ -1,0 +1,33 @@
+###################################################
+2015-12-07 12:24:16 url: http://114.215.209.115/user/get.action?wechatId=
+2015-12-07 12:24:16 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-12-07 12:24:16 url: http://114.215.209.115/order/getLastOrder.action?wechatId=
+2015-12-07 12:24:16 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-12-07 12:35:52 url: http://114.215.209.115/user/get.action?wechatId=
+2015-12-07 12:35:52 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-12-07 12:35:52 url: http://114.215.209.115/order/getLastOrder.action?wechatId=
+2015-12-07 12:35:52 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-12-07 12:35:53 url: http://114.215.209.115/user/get.action?wechatId=
+2015-12-07 12:35:53 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-12-07 12:35:54 url: http://114.215.209.115/device/checkIsCharging.action?deviceId=100
+2015-12-07 12:35:54 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-12-07 12:35:54 url: http://114.215.209.115/device/checkIsCharging.action?deviceId=101
+2015-12-07 12:35:54 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-12-07 12:40:30 url: http://114.215.209.115/user/get.action?wechatId=
+2015-12-07 12:40:30 json: {"data":null,"code":"A00002","msg":"wechatId 不能为空"}
+###################################################
+2015-12-07 12:40:30 url: http://114.215.209.115/order/getLastOrder.action?wechatId=
+2015-12-07 12:40:30 json: {"data":null,"code":"A00001","msg":"wechatId can not be empty"}
+###################################################
+2015-12-07 12:40:39 url: http://114.215.209.115/device/checkIsCharging.action?deviceId=100
+2015-12-07 12:40:39 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-12-07 12:40:39 url: http://114.215.209.115/device/checkIsCharging.action?deviceId=101
+2015-12-07 12:40:39 json: {"data":null,"code":"A02407","msg":"设备不在线！"}

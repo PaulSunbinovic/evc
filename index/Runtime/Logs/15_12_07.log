@@ -1,0 +1,468 @@
+[ 2015-12-07T08:28:34+08:00 ] 0.0.0.0 /evc/index.php/Usr/doupld_payment?nwpg=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001226s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001419s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000992s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001143s ]
+
+[ 2015-12-07T08:42:58+08:00 ] 0.0.0.0 /evc/index.php/Usr/doupld_payment?nwpg=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001593s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001770s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001727s ]
+
+[ 2015-12-07T08:43:03+08:00 ] 0.0.0.0 /evc/index.php/Usr/doupld_payment?nwpg=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001010s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001185s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000930s ]
+
+[ 2015-12-07T08:43:06+08:00 ] 0.0.0.0 /evc/index.php/Usr/doupld_payment?nwpg=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001323s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001573s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000811s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000974s ]
+
+[ 2015-12-07T12:24:16+08:00 ] 0.0.0.0 /evc/index.php/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002264s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002505s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001931s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002152s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\evc\index\Lib\Model\SSModel.class.php 第 16 行.
+NOTIC: [8] Undefined index: user C:\wamp\www\evc\index\Lib\Model\SSModel.class.php 第 25 行.
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 114 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 115 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 117 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.027136s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027379s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001585s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001457s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001207s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001555s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006392s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001733s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001947s ]
+
+[ 2015-12-07T12:24:28+08:00 ] 0.0.0.0 /evc/index.php/Test/setpar
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001071s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001260s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000847s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000966s ]
+ERR: 非法操作:setpar
+
+[ 2015-12-07T12:24:31+08:00 ] 0.0.0.0 /evc/index.php/Test/setpara
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001274s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001477s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001226s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.055338s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055594s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000823s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000550s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000396s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000653s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002759s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000692s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000800s ]
+
+[ 2015-12-07T12:24:31+08:00 ] 0.0.0.0 /evc/index.php/Test/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001375s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001599s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002590s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002960s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-12-07T12:35:35+08:00 ] 0.0.0.0 /evc/index.php/Test/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.020813s ]
+INFO: [ route_check ] --END-- [ RunTime:0.034299s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.022709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.023072s ]
+ERR: 非法操作:index
+
+[ 2015-12-07T12:35:43+08:00 ] 0.0.0.0 /evc/index.php/Test/setpara
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001444s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001641s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000936s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001080s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.124680s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.124934s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.017413s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.003666s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002282s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002627s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.026715s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002861s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003092s ]
+
+[ 2015-12-07T12:35:43+08:00 ] 0.0.0.0 /evc/index.php/Test/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001693s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001915s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001974s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-12-07T12:35:45+08:00 ] 0.0.0.0 /evc/index.php/Test/dosetss?openid=10086
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001942s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002197s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001765s ]
+NOTIC: [2] Missing argument 1 for Action::ajaxReturn(), called in C:\wamp\www\evc\index\Lib\Action\TestAction.class.php on line 163 and defined C:\wamp\www\evc\ThinkPHP\Lib\Core\Action.class.php 第 306 行.
+NOTIC: [8] Undefined variable: data C:\wamp\www\evc\ThinkPHP\Lib\Core\Action.class.php 第 322 行.
+
+[ 2015-12-07T12:35:53+08:00 ] 0.0.0.0 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001186s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\evc\index\Lib\Model\SSModel.class.php 第 16 行.
+NOTIC: [8] Undefined index: user C:\wamp\www\evc\index\Lib\Model\SSModel.class.php 第 25 行.
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 114 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 115 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 117 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.067370s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067635s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001650s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001485s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001238s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001758s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006991s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001907s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002342s ]
+
+[ 2015-12-07T12:35:54+08:00 ] 0.0.0.0 /evc/index.php/Cmn/dspdvc?ctlgtd=120.207736&ctlttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001284s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001427s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000899s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001016s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\evc\index\Lib\Model\SSModel.class.php 第 16 行.
+NOTIC: [8] Undefined index: user C:\wamp\www\evc\index\Lib\Model\SSModel.class.php 第 25 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Lib\Action\CmnAction.class.php 第 33 行.
+
+[ 2015-12-07T12:40:05+08:00 ] 192.168.1.109 /evc/index.php/Test/setpara
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002147s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002375s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001574s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.019186s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019344s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001476s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001200s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001007s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001600s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006309s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001499s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001651s ]
+
+[ 2015-12-07T12:40:05+08:00 ] 192.168.1.109 /evc/index.php/Test/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001567s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001811s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001204s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001423s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-12-07T12:40:11+08:00 ] 192.168.1.100 /evc/index.php/Test/setpara
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002405s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002667s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002065s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+NOTIC: [8] Use of undefined constant wechat_id - assumed 'wechat_id' C:\wamp\www\evc\index\Runtime\Cache\21828a3ee65154511eb02d1e4cf889c2.php 第 56 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.025876s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026117s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001679s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001368s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001072s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001540s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006299s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001653s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001879s ]
+
+[ 2015-12-07T12:40:12+08:00 ] 192.168.1.100 /evc/index.php/Test/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001259s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001432s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001159s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-12-07T12:40:12+08:00 ] 192.168.1.100 /evc/index.php/Test/baidu.com
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002029s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002300s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001770s ]
+ERR: 非法操作:baidu.com
+
+[ 2015-12-07T12:40:18+08:00 ] 192.168.1.100 /evc/index.php/Test/dosetss?openid=ojxMBuPfL9ru7RCI1o2iSjw_8Ix0
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002382s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002641s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001860s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002064s ]
+NOTIC: [2] Missing argument 1 for Action::ajaxReturn(), called in C:\wamp\www\evc\index\Lib\Action\TestAction.class.php on line 163 and defined C:\wamp\www\evc\ThinkPHP\Lib\Core\Action.class.php 第 306 行.
+NOTIC: [8] Undefined variable: data C:\wamp\www\evc\ThinkPHP\Lib\Core\Action.class.php 第 322 行.
+
+[ 2015-12-07T12:40:30+08:00 ] 192.168.1.109 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000961s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\evc\index\Lib\Model\SSModel.class.php 第 16 行.
+NOTIC: [8] Undefined index: user C:\wamp\www\evc\index\Lib\Model\SSModel.class.php 第 25 行.
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 114 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 115 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 117 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.030135s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030400s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001807s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001558s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001276s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001667s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007037s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001767s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002010s ]
+
+[ 2015-12-07T12:40:37+08:00 ] 192.168.1.100 /evc/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001880s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002143s ]
+NOTIC: [8] Undefined index: lth C:\wamp\www\evc\index\Lib\Action\IndexAction.class.php 第 34 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 114 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 115 行.
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Runtime\Cache\851d53d04e85c43d57b9cb88584499a7.php 第 117 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.030572s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030854s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001815s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001400s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001072s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001886s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006845s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001781s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002017s ]
+
+[ 2015-12-07T12:40:39+08:00 ] 192.168.1.100 /evc/index.php/Cmn/dspdvc?ctlgtd=120.207736&ctlttd=30.211754
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000974s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001110s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000791s ]
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\evc\index\Lib\Action\CmnAction.class.php 第 33 行.
+
+[ 2015-12-07T12:40:44+08:00 ] 192.168.1.100 /evc/index.php/Cmn/vrfusrstat?x=usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001323s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001501s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001190s ]
+
+[ 2015-12-07T12:40:45+08:00 ] 192.168.1.100 /evc/index.php/Usr/usrct
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001919s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002186s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001744s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.065965s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066300s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001365s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001405s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001024s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001521s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005950s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001637s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001863s ]
+
+[ 2015-12-07T12:40:47+08:00 ] 192.168.1.100 /evc/index.php/Usr/payment
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001933s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002196s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001739s ]
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 32 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 33 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 32 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 33 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 32 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 33 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 32 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 33 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 32 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 33 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 32 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 33 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 32 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 33 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 32 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 33 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 32 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 33 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 32 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 33 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 32 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 33 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 32 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 33 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 32 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 33 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 32 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 33 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.023719s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023990s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001381s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001187s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001048s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001524s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005796s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001711s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001942s ]
+
+[ 2015-12-07T12:40:51+08:00 ] 192.168.1.100 /evc/index.php/Usr/doupld_payment?nwpg=0
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001330s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001539s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000970s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001095s ]
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 32 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 33 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 32 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 33 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 32 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 33 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 32 行.
+NOTIC: [8] Undefined index: stauts C:\wamp\www\evc\index\Lib\Model\PaymentModel.class.php 第 33 行.
+
+[ 2015-12-07T12:40:53+08:00 ] 192.168.1.100 /evc/index.php/Usr/doupld_payment?nwpg=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002364s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002624s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001931s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002140s ]
+
+[ 2015-12-07T12:41:01+08:00 ] 192.168.1.100 /evc/index.php/Usr/doupld_payment?nwpg=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001934s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002198s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001931s ]
+
