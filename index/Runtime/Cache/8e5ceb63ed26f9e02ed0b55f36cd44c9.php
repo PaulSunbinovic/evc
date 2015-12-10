@@ -54,12 +54,7 @@
 	
 </div>
 
-	<script>
-	//返回键CSS失效了，修改下
-	// var dvls=$('.nvgt').children('div');
-	// $(dvls[0]).css('margin-top','10px');
-	</script>
-
+	
 	<!--主体开始-->
 	
 	<div class='col-md-12 col-xs-12 bd' style='top:200px'>

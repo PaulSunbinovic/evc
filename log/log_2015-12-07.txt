@@ -31,3 +31,30 @@
 ###################################################
 2015-12-07 12:40:39 url: http://114.215.209.115/device/checkIsCharging.action?deviceId=101
 2015-12-07 12:40:39 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-12-07 15:03:13 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=13
+2015-12-07 15:03:13 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-12-07 15:03:13 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=9
+2015-12-07 15:03:13 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-12-07 15:03:13 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=29
+2015-12-07 15:03:13 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-12-07 15:03:14 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=10
+2015-12-07 15:03:14 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-12-07 15:03:14 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=15
+2015-12-07 15:03:14 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-12-07 15:03:14 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=18
+2015-12-07 15:03:14 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-12-07 15:03:14 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=25
+2015-12-07 15:03:14 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-12-07 15:03:14 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=34
+2015-12-07 15:03:14 json: {"data":null,"code":"A02407","msg":"设备不在线！"}
+###################################################
+2015-12-07 15:03:14 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=42
+2015-12-07 15:03:14 json: {"data":null,"code":"A02407","msg":"设备不在线！"}

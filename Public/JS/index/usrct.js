@@ -57,7 +57,7 @@ function onoff(obj){
                 var int=self.setInterval(
                         function(){
                             var stts='';//设定菊部变量，这样，data出来的值可以有地方寄存，万一到了5后，可以把当前的检测出来的状态写出来
-                            if(i==5){
+                            if(i==7){
                                 check_dvc(stts,dvcid,online,onodr);
                                 $('#cancel_loading').trigger('click');
                                 alert('操作失败！');

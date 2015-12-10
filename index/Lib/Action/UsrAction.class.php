@@ -202,7 +202,7 @@ class UsrAction extends Action {
 		$usrdto=$ss->setss();
 
 		//###########################
-		//微信setsignpackage设定
+		//由于这里的签名涉及到很多数据包括一些json等很多目录，比较复杂，不止一个文件这种比较复杂的东西我宁可使用impport模式
 		import('@.WX.JssdkAction');
 		$jssdk = new JssdkAction(C('appid'), C('appsecret'));
 		$signPackage = $jssdk->GetSignPackage();
@@ -1003,7 +1003,24 @@ class UsrAction extends Action {
 		$this->display('shouzhi');
 	}
 
-	
+	//###########绑定桩
+	public function binddvc(){
+		$ss=D('SS');
+		//##处理ss
+		$usrdto=$ss->setss();
+
+		//###处理微信
+		import('@.WX.JssdkAction');
+		$jssdk = new JssdkAction(C('appid'), C('appsecret'));
+		$signPackage = $jssdk->GetSignPackage();
+		$this->assign('spkg',$signPackage);
+
+		//###跳转
+		$this->assign('ttl','绑定设备');
+		$this->display('binddvc');
+	}
+
+	//###########移交桩
 
 	//####################短信
 	public function dogetsmsvrf(){
