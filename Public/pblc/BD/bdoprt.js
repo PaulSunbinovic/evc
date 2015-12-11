@@ -72,6 +72,10 @@ var wenyuan_green={path:wenyuanpath_green,width:26,height:26};
 var wenyuan_red={path:wenyuanpath_red,width:26,height:26};
 var wenyuan_yellow={path:wenyuanpath_yellow,width:26,height:26};
 var wenyuan_my_location={path:wenyuanpath_my_location,width:23,height:23};
+//#############
+var qinfeng_green={path:qinfengpath_green,width:26,height:26};
+var qinfeng_red={path:qinfengpath_red,width:26,height:26};
+var qinfeng_yellow={path:qinfengpath_yellow,width:26,height:26};
 
 var p=[];
 function paintpnt(){
@@ -100,31 +104,62 @@ function paintpnt(){
 	    			var ads=data['dvcls'][i]['address'];
 	    			var dvcid=data['dvcls'][i]['id'];
 
-	    			// pnt={lgtd:lgtd,lttd:lttd,title:ads,deviceId:dvcid};
-	    			str=data['dvcls'][i]['opentm'];
-	    			if(data['dvcls'][i]['online']=='n'){
-	    				str=str+'（不在线）';
-	    				var icon=wenyuan_red;
-	    				var apntswc='';
-	    			}else if(data['dvcls'][i]['chargestatus']=='on'){
-	    				str=str+'（正在充电）';
-	    				var icon=wenyuan_yellow;
-	    				var apntswc='';
-	    			}else if(data['dvcls'][i]['isOrder']==1){
-	    				str=str+'（已被预约）';
-	    				var icon=wenyuan_yellow;
-	    				var apntswc='';
-	    			}else if(data['dvcls'][i]['isOwner']==1){
-	    				var icon=wenyuan_green;
-	    				var apntswc='';
-	    			}else if(data['dvcls'][i]['opentm']){
-	    				var icon=wenyuan_green;
-	    				var apntswc="<a class='pull-left btn btn-success' id='apntbutton_"+dvcid+"' onclick='showapntdtl("+dvcid+")'><i class='glyphicon glyphicon-time'></i> 预约</a>";
+	    			//############判断是否是某个团体的
+	    			
+	    			if(data['dvcls'][i]['deviceAscription']===2){
+	    				str=data['dvcls'][i]['opentm'];
+		    			if(data['dvcls'][i]['online']=='n'){
+		    				str=str+'（不在线）';
+		    				var icon=qinfeng_red;
+		    				var apntswc='';
+		    			}else if(data['dvcls'][i]['chargestatus']=='on'){
+		    				str=str+'（正在充电）';
+		    				var icon=qinfeng_yellow;
+		    				var apntswc='';
+		    			}else if(data['dvcls'][i]['isOrder']==1){
+		    				str=str+'（已被预约）';
+		    				var icon=qinfeng_yellow;
+		    				var apntswc='';
+		    			}else if(data['dvcls'][i]['isOwner']==1){
+		    				var icon=qinfeng_green;
+		    				var apntswc='';
+		    			}else if(data['dvcls'][i]['opentm']){
+		    				var icon=qinfeng_green;
+		    				var apntswc="<a class='pull-left btn btn-success' id='apntbutton_"+dvcid+"' onclick='showapntdtl("+dvcid+")'><i class='glyphicon glyphicon-time'></i> 预约</a>";
+		    			}else{
+		    				str=str+'（未开放共享）';
+		    				var icon=qinfeng_red;
+		    				var apntswc='';
+		    			}
 	    			}else{
-	    				str=str+'（未开放共享）';
-	    				var icon=wenyuan_red;
-	    				var apntswc='';
+	    				str=data['dvcls'][i]['opentm'];
+		    			if(data['dvcls'][i]['online']=='n'){
+		    				str=str+'（不在线）';
+		    				var icon=wenyuan_red;
+		    				var apntswc='';
+		    			}else if(data['dvcls'][i]['chargestatus']=='on'){
+		    				str=str+'（正在充电）';
+		    				var icon=wenyuan_yellow;
+		    				var apntswc='';
+		    			}else if(data['dvcls'][i]['isOrder']==1){
+		    				str=str+'（已被预约）';
+		    				var icon=wenyuan_yellow;
+		    				var apntswc='';
+		    			}else if(data['dvcls'][i]['isOwner']==1){
+		    				var icon=wenyuan_green;
+		    				var apntswc='';
+		    			}else if(data['dvcls'][i]['opentm']){
+		    				var icon=wenyuan_green;
+		    				var apntswc="<a class='pull-left btn btn-success' id='apntbutton_"+dvcid+"' onclick='showapntdtl("+dvcid+")'><i class='glyphicon glyphicon-time'></i> 预约</a>";
+		    			}else{
+		    				str=str+'（未开放共享）';
+		    				var icon=wenyuan_red;
+		    				var apntswc='';
+		    			}
 	    			}
+
+	    			
+	    			
 	    			
 	    			p[dvcid]=new BMap.Point(lgtd,lttd);
 

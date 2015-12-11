@@ -90,10 +90,10 @@
 			<?php if($usrdto['user']['token']===4){ ?>
 			<div class='col-md-12 col-xs-12 nopadding' style='padding-top:20px'>
 				<div class='col-md-6 col-xs-6'>
-					<a class='btn btn-warning btn-block' href='__URL__/binddvc'>绑定桩</a>
+					<a class='btn btn-warning btn-block' href='__URL__/binddvc'>绑定设备</a>
 				</div>
 				<div class='col-md-6 col-xs-6'>
-					<a class='btn btn-info btn-block' href='__URL__/transdvc'>移交桩</a>
+					<a class='btn btn-info btn-block' href='__URL__/transdvc'>移交设备</a>
 				</div>
 			</div>
 			<?php } ?>

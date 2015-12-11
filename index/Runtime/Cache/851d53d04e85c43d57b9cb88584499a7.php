@@ -169,6 +169,10 @@ var __app__='__APP__';
     var wenyuanpath_green='__PUBLIC__/IMG/wenyuan_green.png';
     var wenyuanpath_yellow='__PUBLIC__/IMG/wenyuan_yellow.png';
     var wenyuanpath_my_location='__PUBLIC__/IMG/wenyuan_my_location.png';
+    //###############
+    var qinfengpath_red='__PUBLIC__/IMG/qinfeng_red.png';
+    var qinfengpath_green='__PUBLIC__/IMG/qinfeng_green.png';
+    var qinfengpath_yellow='__PUBLIC__/IMG/qinfeng_yellow.png';
 
 		var lvl=<?php echo ($lvl); ?>;
 		var cdzpt='__PUBLIC__/IMG/chongdianzhuang.jpg';
