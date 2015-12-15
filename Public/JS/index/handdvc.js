@@ -54,12 +54,17 @@ $(function(){
             'async':false,  
             'contentType': 'application/json',
             'data': {
-                'mobile':mobile.val(),
+                'wechatid':wechatid.val(),
                 
             },
             'dataType': 'json',
             'success': function(data) {
                 alert(data['msg']);
+                if(data['rslt']==1){
+                    var cls=$(this).attr('class');
+                    cls=cls+' disabled';
+                    $(this).attr('class',cls);
+                }
                 
                 console.log("success");
             },

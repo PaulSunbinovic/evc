@@ -18,7 +18,7 @@ $(function(){
             'data': {
                 'sn':sn.val(),
                 'lgtd':lgtd.val(),
-                'lttd':lttd.val();
+                'lttd':lttd.val(),
             },
             'dataType': 'json',
             'success': function(data) {

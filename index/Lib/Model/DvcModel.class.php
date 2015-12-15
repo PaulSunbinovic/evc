@@ -15,7 +15,7 @@ class DvcModel{
 	//http://114.215.209.115/device/getCapacity.action?wechatId=12345&deviceId=1
 	//http://114.215.209.115/addDevice.action?wechatId=12345&sn=11111111&longitude&latitude&model=1&address
 	//http://120.26.80.165/device/get.action?sn=4265bb79
-	//http://120.26.80.165/deivce/handOverDevice.action?wechatId=12345&deviceId=100 
+	//http://120.26.80.165/device/handOverDevice.action?wechatId=12345&deviceId=100 
 
 	//#########MODEL########################
 	public function test($id){
@@ -132,7 +132,7 @@ class DvcModel{
 	}
 	//#########MODEL########################
 	public function handOverDevice($wechatid,$dvcid){
-		$url=C('javaback').'/deivce/handOverDevice.action?wechatId='.$wechatid.'&deviceId='.$dvcid;
+		$url=C('javaback').'/device/handOverDevice.action?wechatId='.$wechatid.'&deviceId='.$dvcid;
 		$json='';
 		$arr=url2arr($url,$json);
 		return $arr;

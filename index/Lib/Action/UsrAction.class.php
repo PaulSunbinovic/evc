@@ -231,6 +231,7 @@ class UsrAction extends Action {
 			//由于getByowner里面的状态是有问题的，所以，我们要通过device.getaction的方法来获取某个桩的值
 			$arr_dvc=$dvc->get($dvcv['id']);
 			$dvcv=$arr_dvc['data'];
+			$this->assign('dvcnm',$dvcv['address']);
 			//看看这个桩在不在线
 			$arr_online=$dvc->checkIsOnline($dvcv['id']);
 			if($arr_online['data']==true){
@@ -1112,6 +1113,17 @@ class UsrAction extends Action {
     }
     //########
     public function handdvc(){
+    	//########
+    	$dvc=D('Dvc');
+    	//#######
+    	$dvcid=session('dvcid');
+    	if($dvcid){
+    		$arr_dvco=$dvc->get($dvcid);
+    		$str='当前准备移交的设备是'.$arr_dvco['data']['address'];
+    	}else{
+    		$str='当前无移交的设备';
+    	}
+    	$this->assign('str',$str);
     	$this->assign('ttl','移交设备');
 		$this->display('handdvc');
     }

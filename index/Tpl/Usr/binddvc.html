@@ -38,7 +38,7 @@
 <body>
 	
 	<include file='Cmn:hd_green_back' />
-	
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=S0VAW4LjQirp9FUmXF08Zvdy"></script>
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 	<script>
 	//设置微信js的参数 PS：在服务号中也需要设置
@@ -122,6 +122,12 @@
 			经度：<input class='form-control' readonly id='lgtd'>
 			纬度：<input class='form-control' readonly id='lttd'>
 			SN码：<input class='form-control' placeholder='请在此处设置SN码' id='sn'>
+		</div>
+		<div class='col-md-12 col-xs-12'>
+			<button class='btn btn-info btn-lg btn-block' style='margin-top:20px' onclick='window.location.reload()'>若无经纬度，请点击此处刷新重新获取</button>
+		</div>
+		<div class='col-md-12 col-xs-12'>
+			<a class='btn btn-warning btn-lg btn-block' style='margin-top:20px' href='__URL__/usrct'>进入个人中心进行调试</a>
 		</div>
 		<div class='col-md-12 col-xs-12'>
 			<script type="text/javascript">var dobinddvc='__URL__/dobinddvc';</script>
