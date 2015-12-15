@@ -213,90 +213,102 @@ class UsrAction extends Action {
 		//获取桩
 		$arr_dvc_owner=$dvc->getByOwner(session('openid'));
 		$dvcls=$arr_dvc_owner['data'];
-		//处理每个桩的信息
-		$dvclsnw=array();
-		//根据BOB的意思，我们这里只管第一个桩
-		//但是现在有了新情况，由于可能是王商在测试，绑了其他的桩，此时不一定是第一个
-		$i=0;
-		foreach($dvcls as $dvcv){
-			if(session('dvcid')){
-				if($dvcv['id']!=session('dvcid')){
-					continue;
+		//#######获取桩id
+		$dvcid=$_GET['dvcid'];
+		
+		//####判断
+		//如果是0-1个桩直接进去相应的界面，如果超过2个需要进入到设备选择界面
+		if(!$dvcid&&count($dvcls)>1){
+			//半路走开
+			$this->assign('dvcls',$dvcls);
+			$this->assign('ttl','选择操作的设备');
+			$this->display('selectdvc');
+		}else{
+			//处理每个桩的信息
+			$dvclsnw=array();
+			//根据BOB的意思，我们这里只管第一个桩
+			//但是现在有了新情况，由于可能是王商在测试，绑了其他的桩，此时不一定是第一个
+			$i=0;
+			foreach($dvcls as $dvcv){
+				if($dvcid){
+					if($dvcv['id']!=$dvcid){
+						continue;
+					}
+				}else{
+					if($i<1){$i=$i+1;}else{break;}
 				}
-			}else{
-				if($i<1){$i=$i+1;}else{break;}
-			}
-			
-			//###############################################
-			//由于getByowner里面的状态是有问题的，所以，我们要通过device.getaction的方法来获取某个桩的值
-			$arr_dvc=$dvc->get($dvcv['id']);
-			$dvcv=$arr_dvc['data'];
-			$this->assign('dvcnm',$dvcv['address']);
-			//看看这个桩在不在线
-			$arr_online=$dvc->checkIsOnline($dvcv['id']);
-			if($arr_online['data']==true){
-				$dvcv['online']='y';
-			}else{
-				$dvcv['online']='n';
-			}
-			//###########################
-			//查看充电情况
-			$arr_charge=$dvc->checkIsCharging($dvcv['id']);
-			if($arr_charge['data']==true){
-				$dvcv['stts']='on';
-			}else{
-				$dvcv['stts']='off';
-			}
-			//#####################################################
-			//看看这个桩是不是被约掉了 如果 freeflag是0（说明是外面的人约的）且正在被约中（staturs是0，其他都是已经搞定了订单过去了）
-			$arr_lastodr=$odr->getLastOrderByDeviceId($dvcv['id']);
-			if($arr_lastodr['data']['freeFlag']===0&&($arr_lastodr['data']['status']===0||$arr_lastodr['data']['status']===4)){
-				$onodr='y';
-			}else{
-				$onodr='n';
-			}
-			$dvcv['onodr']=$onodr;
+				
+				//###############################################
+				//由于getByowner里面的状态是有问题的，所以，我们要通过device.getaction的方法来获取某个桩的值
+				$arr_dvc=$dvc->get($dvcv['id']);
+				$dvcv=$arr_dvc['data'];
+				$this->assign('dvco',$dvcv);
+				//看看这个桩在不在线
+				$arr_online=$dvc->checkIsOnline($dvcv['id']);
+				if($arr_online['data']==true){
+					$dvcv['online']='y';
+				}else{
+					$dvcv['online']='n';
+				}
+				//###########################
+				//查看充电情况
+				$arr_charge=$dvc->checkIsCharging($dvcv['id']);
+				if($arr_charge['data']==true){
+					$dvcv['stts']='on';
+				}else{
+					$dvcv['stts']='off';
+				}
+				//#####################################################
+				//看看这个桩是不是被约掉了 如果 freeflag是0（说明是外面的人约的）且正在被约中（staturs是0，其他都是已经搞定了订单过去了）
+				$arr_lastodr=$odr->getLastOrderByDeviceId($dvcv['id']);
+				if($arr_lastodr['data']['freeFlag']===0&&($arr_lastodr['data']['status']===0||$arr_lastodr['data']['status']===4)){
+					$onodr='y';
+				}else{
+					$onodr='n';
+				}
+				$dvcv['onodr']=$onodr;
 
-			
-			//##################################
-			//查看充电功率，默认就是1 (low) 否则1 是low 2 是high
-			//这里在11月24日更新了接口需要搞上去
-			$arr_capacity=$dvc->getCapacity($openid,$dvcv['id']);
-			if($arr_capacity['data']===1){
-				$dvcv['capacity']=1;
-			}else if($arr_capacity['data']===2){
-				$dvcv['capacity']=2;
-			}else{//默认
-				$dvcv{'capacity'}=1;
-			}
-			
-			//#############################
-			//同时查看这个桩的定时时间，如果是有设定的话，控件需要变绿
-			$arr_jobday=$dvc->getJobDay(session('openid'),$dvcv['id']);
-			$tm=$arr_jobday['data']['time'];
-			if($tm){
-				$dvcv['timer']='y';
-			}else{
-				$dvcv['timer']='n';
-			}
+				
+				//##################################
+				//查看充电功率，默认就是1 (low) 否则1 是low 2 是high
+				//这里在11月24日更新了接口需要搞上去
+				$arr_capacity=$dvc->getCapacity($openid,$dvcv['id']);
+				if($arr_capacity['data']===1){
+					$dvcv['capacity']=1;
+				}else if($arr_capacity['data']===2){
+					$dvcv['capacity']=2;
+				}else{//默认
+					$dvcv{'capacity'}=1;
+				}
+				
+				//#############################
+				//同时查看这个桩的定时时间，如果是有设定的话，控件需要变绿
+				$arr_jobday=$dvc->getJobDay(session('openid'),$dvcv['id']);
+				$tm=$arr_jobday['data']['time'];
+				if($tm){
+					$dvcv['timer']='y';
+				}else{
+					$dvcv['timer']='n';
+				}
 
-			
-			//##################################
-			//添加查看共享时
-			if($dvcv['listShareTime']){
-				//用starttm来判断是否是半天还是全天
-				$dvcv['share']='y';
-			}else{
-				$dvcv['share']='n';
+				
+				//##################################
+				//添加查看共享时
+				if($dvcv['listShareTime']){
+					//用starttm来判断是否是半天还是全天
+					$dvcv['share']='y';
+				}else{
+					$dvcv['share']='n';
+				}
+				array_push($dvclsnw, $dvcv);
 			}
-			array_push($dvclsnw, $dvcv);
+			
+			$this->assign('dvcls',$dvclsnw);
+			
+
+			$this->assign('ttl','个人中心');
+			$this->display('usrct');
 		}
-		
-		$this->assign('dvcls',$dvclsnw);
-		
-
-		$this->assign('ttl','个人中心');
-		$this->display('usrct');
 	}
 	//#################开关
 	public function doonoff(){
@@ -1099,7 +1111,7 @@ class UsrAction extends Action {
     		//绑定成功就获取他的dvcid，并存到session里头
     		$arr_dvco=$dvc->getbysn($sn);
     		$dvcid=$arr_dvco['data']['id'];
-    		session('dvcid',$dvcid);
+    		$data['dvcid']=$dvcid;
     		
     		$rslt='1';
     	}else{
@@ -1116,10 +1128,10 @@ class UsrAction extends Action {
     	//########
     	$dvc=D('Dvc');
     	//#######
-    	$dvcid=session('dvcid');
+    	$dvcid=$_GET['dvcid'];
     	if($dvcid){
     		$arr_dvco=$dvc->get($dvcid);
-    		$str='当前准备移交的设备是'.$arr_dvco['data']['address'];
+    		$str='当前准备移交的设备是:'.$arr_dvco['data']['sn'].'-'.$arr_dvco['data']['address'];
     	}else{
     		$str='当前无移交的设备';
     	}

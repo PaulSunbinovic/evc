@@ -24,6 +24,7 @@ $(function(){
             'success': function(data) {
             	if(data['rslt']==1){
             		alert('绑定成功！');
+            		window.location.href=__url__+'/usrct/dvcid/'+data['dvcid'];
             	}else{
             		alert(data['msg']);
             	}
