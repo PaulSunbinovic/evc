@@ -56,11 +56,11 @@ function url2arr($url,$json){
 		$json=https_request($url);
 	}
 	$arr=json_decode($json,true);
-	if($arr['code']!='A00000'){
+	//if($arr['code']!='A00000'){
 		logger('#','log/log_'.date('Y-m-d',time()).'.txt');
 		logger('url: '.$url,'log/log_'.date('Y-m-d',time()).'.txt');
 		logger('json: '.$json,'log/log_'.date('Y-m-d',time()).'.txt');
-	}
+	//}
 	$arr['url']=$url;
 	return $arr;
 
