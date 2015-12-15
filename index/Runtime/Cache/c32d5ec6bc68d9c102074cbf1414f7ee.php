@@ -55,12 +55,92 @@
 </div>
 
 	
-
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script>
+	//设置微信js的参数 PS：在服务号中也需要设置
+	var appId="<?php echo ($spkg['appId']); ?>";
+	var timestamp="<?php echo ($spkg['timestamp']); ?>";
+	var nonceStr="<?php echo ($spkg['nonceStr']); ?>";
+	var signature="<?php echo ($spkg['signature']); ?>";
+	</script>
 	<!--主体开始-->
-	
+	<script>
+	//-------------------为方便电脑端测试，不再依靠微信定位虚拟一个点为自己
+	wx.config({
+	//debug: true,
+	appId: appId,
+	timestamp: timestamp,
+	nonceStr: nonceStr,
+	signature: signature,
+	jsApiList: [
+	  // 所有要调用的 API 都要加到这个列表中
+	  // "openLocation",
+	  "getLocation",
+	  "scanQRCode",
+	]
+	});
+	wx.ready(function () {
+	// 在这里调用 API
+
+	    wx.getLocation({
+	      type: 'gcj02', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+	      async: false,  //----------加入等你呀，因为，wx产生坐标到时候由，异步的原因，百度先去了搞了，此时是没有坐标到，然后...
+	      success: function (res) {
+
+	          //#################如果获取不到纬度就刷新一次
+	          
+              var latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
+              var longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
+              var speed = res.speed; // 速度，以米/每秒计
+              var accuracy = res.accuracy; // 位置精度
+              
+
+
+              mypnt={lgtd:longitude,lttd:latitude,name:'我的位置'};
+              
+               //百度地图部分，从微信上的google坐标 换算成 百度坐标
+              var ggPoint = new BMap.Point(mypnt.lgtd,mypnt.lttd);
+              var convertor = new BMap.Convertor();
+              var pointArr = [];
+              pointArr.push(ggPoint);
+              convertor.translate(pointArr, 3, 5, translateCallback);
+         
+	          
+	      }
+	   	});
+		
+	});
+
+	//坐标转换完之后的回调函数
+	translateCallback = function (data){
+	  if(data.status === 0) {
+
+	  	mypoint = data.points[0];
+	  	//这段代码可以查看某个对象有哪些元素的
+	  	// for(i in mypoint){
+	  	// 	alert(i);//属性名称
+	  	// 	alert(mypoint[i]);//属性值
+	  	// }
+	  	ctlgtd=mypoint['lng'];
+	  	ctlttd=mypoint['lat'];
+	    //调用百度的js里面到函数
+	    $('#lgtd').val(ctlgtd);
+	  	$('#lttd').val(ctlttd);
+	    
+	  }
+	}
+	</script>
 	<div class='col-md-12 col-xs-12 bd'>
 		<div style='height:50px;line-height: 50px;padding-left: 50px;border-bottom: 1px solid #ccc'>
 			<nm style='font-size: 16px;font-weight: bold'><?php echo ($usrdto['user']['nickName']); ?></nm>
+		</div>
+		<div class='col-md-12 col-xs-12'>
+			经度：<input class='form-control' readonly id='lgtd'>
+			纬度：<input class='form-control' readonly id='lttd'>
+			SN码：<input class='form-control' placeholder='请在此处设置SN码' id='sn'>
+		</div>
+		<div class='col-md-12 col-xs-12'>
+			<button class='btn btn-success btn-lg btn-block' style='margin-top:20px' id='dobinddvc'>点击绑定</button>
 		</div>
 	</div>
 	

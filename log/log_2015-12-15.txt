@@ -1,0 +1,33 @@
+###################################################
+2015-12-15 08:47:20 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=10
+2015-12-15 08:47:20 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-15 08:47:20 url: http://120.26.80.165/order/getLastOrderByDeviceId.action?deviceId=10
+2015-12-15 08:47:20 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-15 08:47:20 url: http://120.26.80.165/device/getCapacity.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8&deviceId=10
+2015-12-15 08:47:20 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-15 08:49:16 url: http://120.26.80.165/user/findUserByMoblie.action?mobile=13333333333
+2015-12-15 08:49:16 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-15 08:49:37 url: http://120.26.80.165/user/findUserByMoblie.action?mobile=13333333333
+2015-12-15 08:49:37 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-15 09:36:52 url: http://120.26.80.165/user/findUserByMoblie.action?mobile=13333333333
+2015-12-15 09:36:52 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-15 09:45:39 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=10
+2015-12-15 09:45:39 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-15 09:45:39 url: http://120.26.80.165/order/getLastOrderByDeviceId.action?deviceId=10
+2015-12-15 09:45:39 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-15 09:45:39 url: http://120.26.80.165/device/getCapacity.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8&deviceId=10
+2015-12-15 09:45:39 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-15 09:59:42 url: http://120.26.80.165/user/getByMoblie.action?mobile=13333333333
+2015-12-15 09:59:42 json: <html><head><title>Apache Tomcat/7.0.64 - Error report</title><style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 404 - </h1><HR size="1" noshade="noshade"><p><b>type</b> Status report</p><p><b>message</b> <u></u></p><p><b>description</b> <u>The requested resource is not available.</u></p><HR size="1" noshade="noshade"><h3>Apache Tomcat/7.0.64</h3></body></html>
+###################################################
+2015-12-15 10:44:07 url: http://120.26.80.165/user/getByMoblie.action?mobile=13333333333
+2015-12-15 10:44:07 json: <html><head><title>Apache Tomcat/7.0.64 - Error report</title><style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 404 - </h1><HR size="1" noshade="noshade"><p><b>type</b> Status report</p><p><b>message</b> <u></u></p><p><b>description</b> <u>The requested resource is not available.</u></p><HR size="1" noshade="noshade"><h3>Apache Tomcat/7.0.64</h3></body></html>

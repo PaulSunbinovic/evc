@@ -3,7 +3,8 @@ class UsrModel{
 	//#############interface#####################
 	//http://120.26.80.165/user/get.action?wechatId=12345
 	//http://114.215.209.115/userAccount/getUserAccount.action?wechatId=ojxMBuPfL9ru7RCI1o2iSjw_8Ix0
-	//
+	//http://120.26.80.165/user/getByMoblie.action?mobile=15888836739
+
 	//#########MODEL########################
 	public function test($id){
 		$url='';
@@ -22,6 +23,15 @@ class UsrModel{
 	public function getUserAccount($openid){
 		$url=C('javaback').'/userAccount/getUserAccount.action?wechatId='.$openid;
 		$json='{"data":{"id":36,"userId":28,"balance":3000,"point":14940,"totalPoint":14940,"createTime":"2015-11-19 19:39:52","updateTime":"2015-11-19 19:39:54","version":45},"code":"A00000","msg":""}';
+		$arr=url2arr($url,$json);
+		return $arr;
+	}
+	//http://120.26.80.165/user/findUserByMoblie.action?mobile=15888836739
+
+	//#########MODEL########################
+	public function getByMoblie($mobile){
+		$url=C('javaback').'/user/getByMobile.action?mobile='.$mobile;
+		$json='';
 		$arr=url2arr($url,$json);
 		return $arr;
 	}

@@ -105,8 +105,12 @@ function paintpnt(){
 	    			var dvcid=data['dvcls'][i]['id'];
 
 	    			//############判断是否是某个团体的
-	    			
+	    			var desc="惠充电智能充电桩。惠充电智能充电桩。惠充电智能充电桩。惠充电智能充电桩。惠充电智能充电桩。";
+	    			var image=__pblc__+"/IMG/chongdianzhuang.jpg";
+
 	    			if(data['dvcls'][i]['deviceAscription']===2){
+
+	    				//################
 	    				str=data['dvcls'][i]['opentm'];
 		    			if(data['dvcls'][i]['online']=='n'){
 		    				str=str+'（不在线）';
@@ -131,6 +135,9 @@ function paintpnt(){
 		    				var icon=qinfeng_red;
 		    				var apntswc='';
 		    			}
+		    			//#############
+		    			desc="惠充电祝秦风会2015年年会圆满成功！&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+		    			image=__pblc__+"/IMG/qinfenghui.jpg";
 	    			}else{
 	    				str=data['dvcls'][i]['opentm'];
 		    			if(data['dvcls'][i]['online']=='n'){
@@ -165,8 +172,8 @@ function paintpnt(){
 
 					var sContent =
 					"<h4 style='margin:0 0 5px 0;padding:0.2em 0'>"+ads+"</h4>" + 
-					"<img style='float:right;margin:4px' id='imgDemo' src='"+cdzpt+"' width='139' height='104' title=''/>" + 
-					"<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>惠充电智能充电桩。惠充电智能充电桩。惠充电智能充电桩。惠充电智能充电桩。惠充电智能充电桩。</p>" + "<div class='infwdaptmt'><div>"+apntswc+"<a class='pull-left btn btn-warning' href='"+__url__+"/cmnt/dvcid/"+dvcid+"' style='margin-left:5px'><i class='glyphicon glyphicon-comment'></i> 评论</a></div></div>"
+					"<img style='float:right;margin:4px' id='imgDemo' src='"+image+"' width='139' height='104' title=''/>" + 
+					"<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>"+desc+"</p>" + "<div class='infwdaptmt'><div>"+apntswc+"<a class='pull-left btn btn-warning' href='"+__url__+"/cmnt/dvcid/"+dvcid+"' style='margin-left:5px'><i class='glyphicon glyphicon-comment'></i> 评论</a></div></div>"
 					+
 					"</div>";
 					var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象

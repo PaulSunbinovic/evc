@@ -93,7 +93,7 @@
 					<a class='btn btn-warning btn-block' href='__URL__/binddvc'>绑定设备</a>
 				</div>
 				<div class='col-md-6 col-xs-6'>
-					<a class='btn btn-info btn-block' href='__URL__/transdvc'>移交设备</a>
+					<a class='btn btn-info btn-block' href='__URL__/handdvc'>移交设备</a>
 				</div>
 			</div>
 			<?php } ?>

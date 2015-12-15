@@ -1,0 +1,54 @@
+###################################################
+2015-12-14 22:00:52 url: http://120.26.80.165/user/get.action?wechatId=
+2015-12-14 22:00:52 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-14 22:00:53 url: http://120.26.80.165/order/getLastOrder.action?wechatId=
+2015-12-14 22:00:53 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-14 22:01:19 url: http://120.26.80.165/order/getLastOrder.action?wechatId=ojxMBuPfL9ru7RCI1o2iSjw_8Ix0
+2015-12-14 22:01:19 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-14 22:01:20 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=13
+2015-12-14 22:01:20 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-14 22:01:20 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=9
+2015-12-14 22:01:20 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-14 22:01:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=43
+2015-12-14 22:01:21 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-14 22:01:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=42
+2015-12-14 22:01:21 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-14 22:01:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=10
+2015-12-14 22:01:21 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-14 22:01:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=15
+2015-12-14 22:01:21 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-14 22:01:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=18
+2015-12-14 22:01:21 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-14 22:01:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=25
+2015-12-14 22:01:21 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-14 22:01:21 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=34
+2015-12-14 22:01:21 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-14 22:03:34 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=10
+2015-12-14 22:03:34 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-14 22:03:34 url: http://120.26.80.165/order/getLastOrderByDeviceId.action?deviceId=10
+2015-12-14 22:03:34 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-14 22:03:34 url: http://120.26.80.165/device/getCapacity.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8&deviceId=10
+2015-12-14 22:03:34 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-14 22:08:32 url: http://120.26.80.165/device/checkIsCharging.action?deviceId=10
+2015-12-14 22:08:32 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-14 22:08:32 url: http://120.26.80.165/order/getLastOrderByDeviceId.action?deviceId=10
+2015-12-14 22:08:32 json: {"data":null,"code":"A00001","msg":"系统错误"}
+###################################################
+2015-12-14 22:08:32 url: http://120.26.80.165/device/getCapacity.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8&deviceId=10
+2015-12-14 22:08:32 json: {"data":null,"code":"A00001","msg":"系统错误"}

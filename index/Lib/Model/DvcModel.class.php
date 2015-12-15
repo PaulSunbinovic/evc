@@ -13,6 +13,9 @@ class DvcModel{
 	//http://120.26.80.165/shareTime/removeShareTime.action?userId=27&deviceId=9
 	//http://120.26.80.165/device/removeJob.action?wechatId=12345&deviceId=1
 	//http://114.215.209.115/device/getCapacity.action?wechatId=12345&deviceId=1
+	//http://114.215.209.115/addDevice.action?wechatId=12345&sn=11111111&longitude&latitude&model=1&address
+	//http://120.26.80.165/device/get.action?sn=4265bb79
+	//http://120.26.80.165/deivce/handOverDevice.action?wechatId=12345&deviceId=100 
 
 	//#########MODEL########################
 	public function test($id){
@@ -108,6 +111,29 @@ class DvcModel{
 	public function getCapacity($openid,$dvcid){
 		$url=C('javaback').'/device/getCapacity.action?wechatId='.$openid.'&deviceId='.$dvcid;
 		$json='{"data":1,"code":"A00000","msg":"OK"}';
+		$arr=url2arr($url,$json);
+		return $arr;
+	}
+	//http://114.215.209.115/addDevice.action?wechatId=12345&sn=11111111&longitude&latitude
+
+	//#########MODEL########################
+	public function addDevice($openid,$sn,$lgtd,$lttd,$address){
+		$url=C('javaback').'/device/addDevice.action?wechatId='.$openid.'&sn='.$sn.'&longitude='.$lgtd.'&latitude='.$lttd.'&model=1&address='.$address;
+		$json='';
+		$arr=url2arr($url,$json);
+		return $arr;
+	}
+	//#########MODEL########################
+	public function getbysn($sn){
+		$url=C('javaback').'/device/get.action?sn='.$sn;
+		$json='{"data":{"id":48,"owner":134,"sn":"4265bb79","model":1,"city":null,"longitude":"121.610245","latitude":"31.148668","address":"NO:48","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":null,"battery":null,"status":"02","capacity":2,"listShareTime":[],"user":null,"isOrder":null,"isOwner":null,"version":null,"path":null,"time":null,"week":null,"paramMap":null,"deviceAscription":1},"code":"A00000","msg":"获取设备成功"}';
+		$arr=url2arr($url,$json);
+		return $arr;
+	}
+	//#########MODEL########################
+	public function handOverDevice($wechatid,$dvcid){
+		$url=C('javaback').'/deivce/handOverDevice.action?wechatId='.$wechatid.'&deviceId='.$dvcid;
+		$json='';
 		$arr=url2arr($url,$json);
 		return $arr;
 	}

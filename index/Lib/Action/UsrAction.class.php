@@ -216,9 +216,17 @@ class UsrAction extends Action {
 		//处理每个桩的信息
 		$dvclsnw=array();
 		//根据BOB的意思，我们这里只管第一个桩
+		//但是现在有了新情况，由于可能是王商在测试，绑了其他的桩，此时不一定是第一个
 		$i=0;
 		foreach($dvcls as $dvcv){
-			if($i<1){$i=$i+1;}else{break;}
+			if(session('dvcid')){
+				if($dvcv['id']!=session('dvcid')){
+					continue;
+				}
+			}else{
+				if($i<1){$i=$i+1;}else{break;}
+			}
+			
 			//###############################################
 			//由于getByowner里面的状态是有问题的，所以，我们要通过device.getaction的方法来获取某个桩的值
 			$arr_dvc=$dvc->get($dvcv['id']);
@@ -1073,7 +1081,87 @@ class UsrAction extends Action {
          }
         
     }
-
+    //#######
+    public function dobinddvc(){
+    	//#######
+    	$dvc=D('Dvc');
+		//###获取参数
+    	$sn=$_GET['sn'];
+    	$lgtd=$_GET['lgtd'];
+    	$lttd=$_GET['lttd'];
+    	$openid=session('openid');
+    	//###########
+    	$arr_dvco=$dvc->getbysn($sn);
+    	$arr=$dvc->addDevice($openid,$sn,$lgtd,$lttd,$arr_dvco['data']['address']);
+    	//#########
+    	if($arr['code']=='A00000'){
+    		//绑定成功就获取他的dvcid，并存到session里头
+    		$arr_dvco=$dvc->getbysn($sn);
+    		$dvcid=$arr_dvco['data']['id'];
+    		session('dvcid',$dvcid);
+    		
+    		$rslt='1';
+    	}else{
+    		$rlst='0';
+    	}
+    	//########
+    	$data['rslt']=$rslt;
+    	$data['msg']=$arr['msg'];
+    	//####
+    	$this->ajaxReturn($data,'json');
+    }
+    //########
+    public function handdvc(){
+    	$this->assign('ttl','移交设备');
+		$this->display('handdvc');
+    }
+    //#######
+    public function dofindusrls(){
+    	//#######
+    	$usr=D('Usr');
+		//###获取参数
+    	$mobile=$_GET['mobile'];
+    	
+    	//###########
+    	$arr=$usr->getByMoblie($mobile);
+    	
+    	//#########
+    	if($arr['code']=='A00000'){
+    		$rslt='1';
+    	}else{
+    		$rlst='0';
+    	}
+    	//########
+    	$data['rslt']=$rslt;
+    	$data['msg']=$arr['msg'];
+    	$data['usrls']=$arr['data'];
+    	//####
+    	$this->ajaxReturn($data,'json');
+    }
+    //#######
+    public function dohanddvc(){
+    	//#######
+    	$dvc=D('Dvc');
+		//###获取参数
+    	$wechatid=$_GET['wechatid'];
+    	
+    	//###########
+    	$arr=$dvc->handOverDevice($wechatid,session('dvcid'));
+    	
+    	//#########
+    	if($arr['code']=='A00000'){
+    		$rslt='1';
+    		session('dvcid',null);
+    	}else{
+    		$rlst='0';
+    	}
+    	//########
+    	$data['rslt']=$rslt;
+    	$data['msg']=$arr['msg'];
+    	$data['usrls']=$arr['data'];
+    	//####
+    	$this->ajaxReturn($data,'json');
+    }
 
    
 
