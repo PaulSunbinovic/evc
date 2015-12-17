@@ -71,19 +71,11 @@
 				
 			</div>
 			<?php if($usrdto['user']['token']===4){ ?>
-			<div class='col-md-12 col-xs-12 nopadding' style='padding-top:20px'>
-				<div class='col-md-12 col-xs-12' style="height:40px;line-height: 40px;color:#fff;font-size: 18px;">
-					正在操作:{$dvco['sn']}-{$dvco['address']}
-				</div>
-				<div class='col-md-6 col-xs-6'>
-					<a class='btn btn-warning btn-block' href='__URL__/binddvc'>绑定设备</a>
-				</div>
-				
-				<div class='col-md-6 col-xs-6'>
-					<a class="btn btn-info btn-block" href="__URL__/handdvc/dvcid/{$dvco['id']}">移交当前设备</a>
-				</div>
+			<div class='col-md-12 col-xs-12' style='padding-top:20px'>
+				<a class='btn btn-info btn-lg btn-block' href="__URL__/manager/dvcid/{$dvco['id']}">进入管理界面</a>
 				
 			</div>
+			
 			<?php } ?>
 		</div>
 		<!--##########################################-->

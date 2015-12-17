@@ -65,7 +65,9 @@ $(function(){
             'contentType': 'application/json',
             'data': {
                 'wechatid':wechatid,
-                
+                'dvcsn':$('#dvcsn').val(),
+                'groupid':$('#groupid').val(),
+                'deviceAscription':$('#deviceAscription').val(),
             },
             'dataType': 'json',
             'success': function(data) {

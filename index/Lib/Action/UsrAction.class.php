@@ -242,6 +242,7 @@ class UsrAction extends Action {
 				//由于getByowner里面的状态是有问题的，所以，我们要通过device.getaction的方法来获取某个桩的值
 				$arr_dvc=$dvc->get($dvcv['id']);
 				$dvcv=$arr_dvc['data'];
+
 				$this->assign('dvco',$dvcv);
 				//看看这个桩在不在线
 				$arr_online=$dvc->checkIsOnline($dvcv['id']);
@@ -1126,15 +1127,20 @@ class UsrAction extends Action {
     //########
     public function handdvc(){
     	//########
-    	$dvc=D('Dvc');
+    	$dvc=D('Dvc');$grp=D('Group');
     	//#######
     	$dvcid=$_GET['dvcid'];
     	if($dvcid){
     		$arr_dvco=$dvc->get($dvcid);
-    		$str='当前准备移交的设备是:'.$arr_dvco['data']['sn'].'-'.$arr_dvco['data']['address'];
-    	}else{
-    		$str='当前无移交的设备';
+    		
+    		$this->assign('dvco',$arr_dvco);
     	}
+    	//###某个接口from臧艺获得groupls
+    	$arr_grp=$grp->selectGroup('','','');
+    	$grpls=$arr_grp['data'];
+    	$this->assign('grpls',$grpls);
+
+
     	$this->assign('str',$str);
     	$this->assign('ttl','移交设备');
 		$this->display('handdvc');
@@ -1168,14 +1174,16 @@ class UsrAction extends Action {
     	$dvc=D('Dvc');
 		//###获取参数
     	$wechatid=$_GET['wechatid'];
-    	
+    	$dvcsn=$_GET['dvcsn'];
+    	$groupid=$_GET['groupid'];
+    	$deviceAscription=$_GET['deviceAscription'];
     	//###########
-    	$arr=$dvc->handOverDevice($wechatid,session('dvcid'));
+    	$arr=$dvc->handOverDevice($wechatid,$dvcsn,$groupid,$deviceAscription);
     	
     	//#########
     	if($arr['code']=='A00000'){
     		$rslt='1';
-    		session('dvcid',null);
+    		
     	}else{
     		$rlst='0';
     	}
@@ -1186,7 +1194,19 @@ class UsrAction extends Action {
     	//####
     	$this->ajaxReturn($data,'json');
     }
+    //#######
+    public function manager(){
+    	$dvc=D('Dvc');
 
+    	$dvcid=$_GET['dvcid'];
+
+    	$dvco=$dvc->get($dvcid);
+
+
+    	$this->assign('dvco',$dvco);
+    	$this->assign('ttl','管理中心');
+		$this->display('manager');
+    }
    
 
 }

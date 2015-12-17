@@ -29,8 +29,8 @@
 
 <link href="__PUBLIC__/CSS/index/base.css" rel="stylesheet">
 
-<script type="text/javascript" src='__PUBLIC__/JS/index/handdvc.js'></script>
-<link href="__PUBLIC__/CSS/index/handdvc.css" rel="stylesheet">
+<script type="text/javascript" src='__PUBLIC__/JS/index/manager.js'></script>
+<link href="__PUBLIC__/CSS/index/manager.css" rel="stylesheet">
 
 <script>var __url__='__URL__';</script>
 
@@ -41,45 +41,20 @@
 	
 	
 	<div class='col-md-12 col-xs-12 bd'>
-		<div class='col-md-12 col-xs-12' style="margin-top: 20px">
-			设备sn：<input class='form-control' id='dvcsn' value="{$dvco['sn']}"  placeholder='请在此处输入设备sn'>
-		</div>
-		<!--#######寻找用户-->
-		<div class='col-md-12 col-xs-12' style="margin-top: 20px">
-			电话号码：<input class='form-control' id='mobile' placeholder='请输入手机号码以寻找用户'>
-		</div>
-		<div class='col-md-12 col-xs-12' style="margin-top: 20px">
-			用户组：
-			<select class='form-control' id='groupid'>
-				<option value=''>无</option>
-				<volist name='grpls' id='grpv'>
-				<option value="{$grpv['id']}">{$grpv['groupName']}</option>
-				</volist>
-				
-			</select>
-		</div>
-		<div class='col-md-12 col-xs-12' style="margin-top: 20px">
-			设备归属：
-			<select class='form-control' id='deviceAscription'>
-				<option value='1'>电车惠</option>
-				<option value='2'>车友会</option>
-			</select>
-		</div>
-		<div class='col-md-12 col-xs-12' style="margin-top: 20px">
-			<script type="text/javascript">var dofindusrls='__URL__/dofindusrls';</script>
-			<button class='btn btn-info btn-lg btn-block' id='getusrlsbymobile'>获取用户列表</button>
-		</div>
-		<div class='col-md-12 col-xs-12' style="margin-top: 20px">
-			用户列表<br><hr>
-			<ul class="list-group wechatid" id='usrls'>
-			  	
-			</ul>
+		
+		<!--#######按钮列表-->
+		<div class='col-md-12 col-xs-12'>
+			
+			<div class='col-md-12 col-xs-12' style="margin-top: 20px">
+				<a class='btn btn-success btn-lg btn-block' href='__URL__/binddvc'>绑定设备</a>
+			</div>
+			
+			<div class='col-md-12 col-xs-12' style="margin-top: 20px">
+				<a class="btn btn-success btn-lg btn-block" href="__URL__/handdvc/dvcid/{$dvco['id']}">移交设备</a>
+			</div>
 		</div>
 		
-		<div class='col-md-12 col-xs-12' style="margin-top: 20px">
-			<script type="text/javascript">var dohanddvc='__URL__/dohanddvc';</script>
-			<button class='btn btn-success btn-lg btn-block' id='dohanddvc'>移交设备</button>
-		</div>
+		
 	</div>
 	
 
