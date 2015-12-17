@@ -131,8 +131,8 @@ class DvcModel{
 		return $arr;
 	}
 	//#########MODEL########################
-	public function handOverDevice($wechatid,$dvcid,$groupid,$deviceAscription){
-		$url=C('javaback').'/device/handOverDevice.action?wechatId='.$wechatid.'&deviceSn='.$dvcsn.'&groupId='.$groupid.'&deviceAscription='.$deviceAscription;
+	public function handOverDevice($wechatid,$dvcsn,$groupid,$deviceAscription){
+		$url=C('javaback').'/device/handOverDevice.action?wechatId='.$wechatid.'&sn='.$dvcsn.'&groupId='.$groupid.'&deviceAscription='.$deviceAscription;
 		$json='';
 		$arr=url2arr($url,$json);
 		return $arr;
