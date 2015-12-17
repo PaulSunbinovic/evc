@@ -1133,7 +1133,7 @@ class UsrAction extends Action {
     	if($dvcid){
     		$arr_dvco=$dvc->get($dvcid);
     		
-    		$this->assign('dvco',$arr_dvco);
+    		$this->assign('dvco',$arr_dvco['data']);
     	}
     	//###某个接口from臧艺获得groupls
     	$arr_grp=$grp->selectGroup('','','');
@@ -1200,7 +1200,8 @@ class UsrAction extends Action {
 
     	$dvcid=$_GET['dvcid'];
 
-    	$dvco=$dvc->get($dvcid);
+    	$arr_dvco=$dvc->get($dvcid);
+    	$dvco=$arr_dvco['data'];
 
 
     	$this->assign('dvco',$dvco);
