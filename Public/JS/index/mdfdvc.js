@@ -5,29 +5,35 @@ $(function(){
 		var sn=$('#sn');
 		var lgtd=$('#lgtd');
 		var lttd=$('#lttd');
+        var address=$('#address');
+        var version=$('#version');
+        var groupid=$('#groupid');
+        var deviceAscription=$('#deviceAscription');
 		//###检查是否是空
 		if(sn.val()==''){alert('SN码不能为空');return false;}
-		//if(lgtd.val()==''){alert('经度不能为空');return false;}
-		//if(lttd.val()==''){alert('纬度不能为空');return false;}
+		if(lgtd.val()==''){alert('经度不能为空');return false;}
+		if(lttd.val()==''){alert('纬度不能为空');return false;}
 		//###ajax
 		$.ajax({
             'type': 'GET',
-            'url': dobinddvc,
+            'url': domdfdvc,
             'async':false,  
             'contentType': 'application/json',
             'data': {
+                'dvcid':dvcid,
                 'sn':sn.val(),
                 'lgtd':lgtd.val(),
                 'lttd':lttd.val(),
+                'address':address.val(),
+                'version':version.val(),
+                'groupid':groupid.val(),
+                'deviceAscription':deviceAscription.val(),
+                'path':path,
             },
             'dataType': 'json',
             'success': function(data) {
-            	if(data['rslt']==1){
-            		alert('绑定成功！');
-            		window.location.href=__url__+'/usrct/dvcid/'+data['dvcid'];
-            	}else{
-            		alert(data['msg']);
-            	}
+            	alert(data['msg']);
+                history.go(-1);
             	
                 console.log("success");
             },

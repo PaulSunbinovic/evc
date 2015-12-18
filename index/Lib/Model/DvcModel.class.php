@@ -16,7 +16,7 @@ class DvcModel{
 	//http://114.215.209.115/addDevice.action?wechatId=12345&sn=11111111&longitude&latitude&model=1&address
 	//http://120.26.80.165/device/get.action?sn=4265bb79
 	//http://120.26.80.165/device/handOverDevice.action?wechatId=12345&deviceId=100~$groupid,$deviceAscription
-
+	//http://120.26.80.165/device/updateDeviceInfo.action?sn=12345&id=100&sn=111&longitude=111&latitude=111&address=111&version=111&groupid=111&path=111&deviceAscription=111
 	//#########MODEL########################
 	public function test($id){
 		$url='';
@@ -131,8 +131,15 @@ class DvcModel{
 		return $arr;
 	}
 	//#########MODEL########################
-	public function handOverDevice($wechatid,$dvcsn,$groupid,$deviceAscription){
-		$url=C('javaback').'/device/handOverDevice.action?wechatId='.$wechatid.'&sn='.$dvcsn.'&groupId='.$groupid.'&deviceAscription='.$deviceAscription;
+	public function handOverDevice($wechatid,$dvcsn,$address,$groupid,$deviceAscription){
+		$url=C('javaback').'/device/handOverDevice.action?wechatId='.$wechatid.'&sn='.$dvcsn.'&address='.$address.'&groupId='.$groupid.'&deviceAscription='.$deviceAscription;
+		$json='';
+		$arr=url2arr($url,$json);
+		return $arr;
+	}
+	//#########MODEL########################
+	public function updateDeviceInfo($dvcid,$sn,$lgtd,$lttd,$address,$version,$groupid,$path,$deviceAscription){
+		$url=C('javaback').'/device/updateDeviceInfo.action?id='.$dvcid.'&sn='.$sn.'&longitude='.$lgtd.'&latitude='.$lttd.'&address='.$address.'&version='.$version.'&groupid='.$groupid.'&path='.$path.'&deviceAscription='.$deviceAscription;
 		$json='';
 		$arr=url2arr($url,$json);
 		return $arr;

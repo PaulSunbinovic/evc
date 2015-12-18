@@ -66,6 +66,7 @@ $(function(){
             'data': {
                 'wechatid':wechatid,
                 'dvcsn':$('#dvcsn').val(),
+                'address':$('#address').val(),
                 'groupid':$('#groupid').val(),
                 'deviceAscription':$('#deviceAscription').val(),
             },

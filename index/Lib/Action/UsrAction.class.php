@@ -1025,22 +1025,7 @@ class UsrAction extends Action {
 		$this->display('shouzhi');
 	}
 
-	//###########绑定桩
-	public function binddvc(){
-		$ss=D('SS');
-		//##处理ss
-		$usrdto=$ss->setss();
-
-		//###处理微信
-		import('@.WX.JssdkAction');
-		$jssdk = new JssdkAction(C('appid'), C('appsecret'));
-		$signPackage = $jssdk->GetSignPackage();
-		$this->assign('spkg',$signPackage);
-
-		//###跳转
-		$this->assign('ttl','绑定设备');
-		$this->display('binddvc');
-	}
+	
 
 	//###########移交桩
 
@@ -1095,6 +1080,22 @@ class UsrAction extends Action {
          }
         
     }
+    //###########绑定桩
+	public function binddvc(){
+		$ss=D('SS');
+		//##处理ss
+		$usrdto=$ss->setss();
+
+		//###处理微信
+		import('@.WX.JssdkAction');
+		$jssdk = new JssdkAction(C('appid'), C('appsecret'));
+		$signPackage = $jssdk->GetSignPackage();
+		$this->assign('spkg',$signPackage);
+
+		//###跳转
+		$this->assign('ttl','绑定设备');
+		$this->display('binddvc');
+	}
     //#######
     public function dobinddvc(){
     	//#######
@@ -1175,10 +1176,11 @@ class UsrAction extends Action {
 		//###获取参数
     	$wechatid=$_GET['wechatid'];
     	$dvcsn=$_GET['dvcsn'];
+    	$address=$_GET['address'];
     	$groupid=$_GET['groupid'];
     	$deviceAscription=$_GET['deviceAscription'];
     	//###########
-    	$arr=$dvc->handOverDevice($wechatid,$dvcsn,$groupid,$deviceAscription);
+    	$arr=$dvc->handOverDevice($wechatid,$dvcsn,$address,$groupid,$deviceAscription);
     	
     	//#########
     	if($arr['code']=='A00000'){
@@ -1208,6 +1210,63 @@ class UsrAction extends Action {
     	$this->assign('ttl','管理中心');
 		$this->display('manager');
     }
-   
+   	//###########绑定桩
+	public function mdfdvc(){
+		$ss=D('SS');$dvc=D('Dvc');$grp=D('Group');
+
+		$dvcid=$_GET['dvcid'];
+		//##########
+		$arr_dvco=$dvc->get($dvcid);
+		$dvco=$arr_dvco['data'];
+		$this->assign('dvco',$dvco);
+
+		//###某个接口from臧艺获得groupls
+    	$arr_grp=$grp->selectGroup('','','');
+    	$grpls=$arr_grp['data'];
+    	$this->assign('grpls',$grpls);
+
+		//##处理ss
+		$usrdto=$ss->setss();
+
+		//###处理微信
+		import('@.WX.JssdkAction');
+		$jssdk = new JssdkAction(C('appid'), C('appsecret'));
+		$signPackage = $jssdk->GetSignPackage();
+		$this->assign('spkg',$signPackage);
+
+		//###跳转
+		$this->assign('ttl','修改设备');
+		$this->display('mdfdvc');
+	}
+    //#######
+    public function domdfdvc(){
+    	//#######
+    	$dvc=D('Dvc');
+		//###获取参数
+		$dvcid=$_GET['dvcid'];
+		$path=$_GET['path'];
+    	$sn=$_GET['sn'];
+    	$lgtd=$_GET['lgtd'];
+    	$lttd=$_GET['lttd'];
+    	$address=$_GET['address'];
+    	$version=$_GET['version'];
+        $groupid=$_GET['groupid'];
+        $deviceAscription=$_GET['deviceAscription'];
+    	//###########
+    	$arr=$dvc->updateDeviceInfo($dvcid,$sn,$lgtd,$lttd,$address,$version,$groupid,$path,$deviceAscription);
+    	
+    	//#########
+    	if($arr['code']=='A00000'){
+    		//更改成功
+    		$rslt='1';
+    	}else{
+    		$rlst='0';
+    	}
+    	//########
+    	$data['rslt']=$rslt;
+    	$data['msg']=$arr['msg'];
+    	//####
+    	$this->ajaxReturn($data,'json');
+    }
 
 }
