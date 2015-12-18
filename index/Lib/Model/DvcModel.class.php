@@ -138,8 +138,8 @@ class DvcModel{
 		return $arr;
 	}
 	//#########MODEL########################
-	public function updateDeviceInfo($dvcid,$sn,$lgtd,$lttd,$address,$version,$groupid,$path,$deviceAscription){
-		$url=C('javaback').'/device/updateDeviceInfo.action?id='.$dvcid.'&sn='.$sn.'&longitude='.$lgtd.'&latitude='.$lttd.'&address='.$address.'&version='.$version.'&groupid='.$groupid.'&path='.$path.'&deviceAscription='.$deviceAscription;
+	public function updateDeviceInfo($dvcid,$owner,$sn,$model,$city,$lgtd,$lttd,$address,$peripheral,$ip,$serverIp,$serverPort,$pic,$battery,$status,$capacity,$listShareTime,$user,$isOrder,$isOwner,$version,$time,$week,$paramMap,$deviceAscription,$groupId,$deviceType){
+		$url=C('javaback').'/device/updateDeviceInfo.action?id='.$dvcid.'&owner='.$owner.'&sn='.$sn.'&model='.$model.'&city='.$city.'&longitude='.$lgtd.'&latitude='.$lttd.'&address='.$address.'&peripheral='.$peripheral.'&ip='.$ip.'&serverIp='.$serverIp.'&serverPort='.$serverPort.'&pic='.$pic.'&battery='.$battery.'&status='.$status.'&capacity='.$capacity.'&listShareTime='.$listShareTime.'&user='.$user.'&isOrder='.$isOrder.'&isOwner='.$isOwner.'&version='.$version.'&time='.$time.'&week='.$week.'&paramMap='.$paramMap.'&deviceAscription='.$deviceAscription.'&groupId='.$groupId.'&deviceType='.$deviceType;
 		$json='';
 		$arr=url2arr($url,$json);
 		return $arr;

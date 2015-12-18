@@ -1246,18 +1246,38 @@ class UsrAction extends Action {
     public function domdfdvc(){
     	//#######
     	$dvc=D('Dvc');
+    	
 		//###获取参数
 		$dvcid=$_GET['dvcid'];
-		$path=$_GET['path'];
-    	$sn=$_GET['sn'];
-    	$lgtd=$_GET['lgtd'];
+		$owner=$_GET['owner'];
+		$sn=$_GET['sn'];
+		$model=$_GET['model'];
+		$city=$_GET['city'];
+		$lgtd=$_GET['lgtd'];
     	$lttd=$_GET['lttd'];
     	$address=$_GET['address'];
+    	$peripheral=$_GET['peripheral'];
+    	$ip=$_GET['ip'];
+    	$serverIp=$_GET['serverIp'];
+    	$serverPort=$_GET['serverPort'];
+    	$pic=$_GET['pic'];
+    	$battery=$_GET['battery'];
+    	$status=$_GET['status'];
+    	$capacity=$_GET['capacity'];
+    	$listShareTime=$_GET['listShareTime'];
+    	$user=$_GET['user'];
+    	$isOrder=$_GET['isOrder'];
+    	$isOwner=$_GET['isOwner'];
     	$version=$_GET['version'];
-        $groupid=$_GET['groupid'];
-        $deviceAscription=$_GET['deviceAscription'];
+    	$time=$_GET['time'];
+    	$week=$_GET['week'];
+    	$paramMap=$_GET['paramMap'];
+    	$deviceAscription=$_GET['deviceAscription'];
+    	$groupId=$_GET['groupId'];
+    	$deviceType=$_GET['deviceType'];
+
     	//###########
-    	$arr=$dvc->updateDeviceInfo($dvcid,$sn,$lgtd,$lttd,$address,$version,$groupid,$path,$deviceAscription);
+    	$arr=$dvc->updateDeviceInfo($dvcid,$owner,$sn,$model,$city,$lgtd,$lttd,$address,$peripheral,$ip,$serverIp,$serverPort,$pic,$battery,$status,$capacity,$listShareTime,$user,$isOrder,$isOwner,$version,$time,$week,$paramMap,$deviceAscription,$groupId,$deviceType);
     	
     	//#########
     	if($arr['code']=='A00000'){

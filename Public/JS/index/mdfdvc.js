@@ -71,14 +71,41 @@ function changedvc(){
                 dvco=data['dvco'];
 
                 dvcid=dvco['id'];
+                owner=dvco['owner'];
                 sn.val(dvco['sn']);
+                model=dvco['model'];
+                city=dvco['city'];
                 lgtd.val(dvco['longitude']);
                 lttd.val(dvco['latitude']);
                 address.val(dvco['address']);
+                peripheral=dvco['peripheral'];
+                ip=dvco['ip'];
+                serverIp=dvco['serverIp'];
+                serverPort=dvco['serverPort'];
+                pic=dvco['pic'];
+                battery=dvco['battery'];
+                status=dvco['status'];
+                capacity=dvco['capacity'];
+                listShareTime=dvco['listShareTime'];
+                user=dvco['user'];
+                isOrder=dvco['isOrder'];
+                listShareTime=dvco['listShareTime'];
+                isOwner=dvco['isOwner'];
                 version.val(dvco['version']);
-                groupid.val(dvco['groupId']);
-                deviceAscription.val(dvco['deviceAscription']);
                 path=dvco['path'];
+                time=dvco['time'];
+                week=dvco['week'];
+                paramMap=dvco['paramMap'];
+                deviceAscription.val(dvco['deviceAscription']);
+                groupid.val(dvco['groupId']);
+                deviceType=dvco['deviceType'];
+
+
+                
+                
+               
+                
+                
             }else{
                  alert(data['msg']);
             }
