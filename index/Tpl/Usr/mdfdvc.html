@@ -121,10 +121,18 @@
 			//############其他的参数
 			var dvcid="{$dvco['id']}";var path="{$dvco['path']}";
 			</script>
+			SN码：
+			<script>var dochangedvc='__URL__/dochangedvc';</script>
+			<div class="input-group">
+			  <input type="text" class="form-control" placeholder="请在此处设置SN码" aria-describedby="basic-addon2" value="{$dvco['sn']}" id ='sn'>
+			  <span class="input-group-addon" id="basic-addon2" onclick="changedvc()">更换设备</span>
+			</div>
+			
+
+			名称：<input class='form-control' placeholder='请在此处设置address' id='address' value="{$dvco['address']}">
 			经度：当前经度 <jingweidu id='lgtdnw'></jingweidu><input class='form-control' id='lgtd' value="{$dvco['longitude']}">
 			纬度：当前纬度 <jingweidu id='lttdnw'></jingweidu><input class='form-control' id='lttd' value="{$dvco['latitude']}">
-			SN码：<input class='form-control' placeholder='请在此处设置SN码' id='sn' value="{$dvco['sn']}">
-			address：<input class='form-control' placeholder='请在此处设置address' id='address' value="{$dvco['address']}">
+			
 			版本：<input class='form-control' placeholder='请在此处设置版本' id='version'  value="{$dvco['version']}">
 			用户组id：
 			<select class='form-control' id='groupid'>
@@ -142,12 +150,13 @@
 			</select>
 			<script>$('#deviceAscription').val("{$dvco['deviceAscription']}");</script>
 		</div>
+		
 		<div class='col-md-12 col-xs-12'>
 			<button class='btn btn-info btn-lg btn-block' style='margin-top:20px' onclick='window.location.reload()'>若无经纬度，请点击此处刷新重新获取</button>
 		</div>
 		
 		<div class='col-md-12 col-xs-12'>
-			<script type="text/javascript">var dobinddvc='__URL__/domdfdvc';</script>
+			<script type="text/javascript">var domdfdvc='__URL__/domdfdvc';</script>
 			<button class='btn btn-success btn-lg btn-block' style='margin-top:20px' id='mdfdvc'>修改设备信息</button>
 		</div>
 	</div>

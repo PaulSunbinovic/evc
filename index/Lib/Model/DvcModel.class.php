@@ -14,7 +14,7 @@ class DvcModel{
 	//http://120.26.80.165/device/removeJob.action?wechatId=12345&deviceId=1
 	//http://114.215.209.115/device/getCapacity.action?wechatId=12345&deviceId=1
 	//http://114.215.209.115/addDevice.action?wechatId=12345&sn=11111111&longitude&latitude&model=1&address
-	//http://120.26.80.165/device/get.action?sn=4265bb79
+	//http://120.26.80.165/device/getDeviceBySn.action?sn=4265bb79
 	//http://120.26.80.165/device/handOverDevice.action?wechatId=12345&deviceId=100~$groupid,$deviceAscription
 	//http://120.26.80.165/device/updateDeviceInfo.action?sn=12345&id=100&sn=111&longitude=111&latitude=111&address=111&version=111&groupid=111&path=111&deviceAscription=111
 	//#########MODEL########################
@@ -125,7 +125,7 @@ class DvcModel{
 	}
 	//#########MODEL########################
 	public function getbysn($sn){
-		$url=C('javaback').'/device/get.action?sn='.$sn;
+		$url=C('javaback').'/device/getDeviceBySn.action?sn='.$sn;
 		$json='{"data":{"id":48,"owner":134,"sn":"4265bb79","model":1,"city":null,"longitude":"121.610245","latitude":"31.148668","address":"NO:48","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":null,"battery":null,"status":"02","capacity":2,"listShareTime":[],"user":null,"isOrder":null,"isOwner":null,"version":null,"path":null,"time":null,"week":null,"paramMap":null,"deviceAscription":1},"code":"A00000","msg":"获取设备成功"}';
 		$arr=url2arr($url,$json);
 		return $arr;

@@ -1133,6 +1133,8 @@ class UsrAction extends Action {
     	$dvcid=$_GET['dvcid'];
     	if($dvcid){
     		$arr_dvco=$dvc->get($dvcid);
+    		$sn=$arr_dvco['data']['sn'];
+    		$arr_dvco=$dvc->getbysn($sn);
     		
     		$this->assign('dvco',$arr_dvco['data']);
     	}
@@ -1218,6 +1220,8 @@ class UsrAction extends Action {
 		//##########
 		$arr_dvco=$dvc->get($dvcid);
 		$dvco=$arr_dvco['data'];
+		$arr_dvco=$dvc->getbysn($dvco['sn']);
+		$dvco=$arr_dvco['data'];
 		$this->assign('dvco',$dvco);
 
 		//###某个接口from臧艺获得groupls
@@ -1259,6 +1263,33 @@ class UsrAction extends Action {
     	if($arr['code']=='A00000'){
     		//更改成功
     		$rslt='1';
+    	}else{
+    		$rlst='0';
+    	}
+    	//########
+    	$data['rslt']=$rslt;
+    	$data['msg']=$arr['msg'];
+    	//####
+    	$this->ajaxReturn($data,'json');
+    }
+    //#######
+    public function dochangedvc(){
+    	//#######
+    	$dvc=D('Dvc');
+		//###获取参数
+		$sn=$_GET['sn'];
+    	
+    	//###########
+    	$arr=$dvc->getbysn($sn);
+
+
+    	
+    	//#########
+    	if($arr['code']=='A00000'){
+    		//更改成功
+    		$rslt='1';
+    		$dvco=$arr['data'];
+    		$data['dvco']=$dvco;
     	}else{
     		$rlst='0';
     	}
