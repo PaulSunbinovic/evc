@@ -9,6 +9,7 @@ $(function(){
         var version=$('#version');
         var groupid=$('#groupid');
         var deviceAscription=$('#deviceAscription');
+        var newSn=$('#newSn');
 		//###检查是否是空
 		if(sn.val()==''){alert('SN码不能为空');return false;}
 		if(lgtd.val()==''){alert('经度不能为空');return false;}
@@ -47,6 +48,7 @@ $(function(){
                 'deviceAscription':deviceAscription.val(),
                 'groupid':groupid.val(),
                 'deviceType':deviceType,
+                'newSn':newSn.val(),
             },
             'dataType': 'json',
             'success': function(data) {

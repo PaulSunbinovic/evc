@@ -97,8 +97,8 @@ function paintpnt(){
 	        //'crmdlid':crmdlid,   
 	    },
 	    'dataType': 'json',
-	    'success': function(data) {
-	    		for(var i=0;i<data['dvcls'].length;i++){
+	    'success': function(data) {//var string='';
+	    		for(var i=0;i<data['dvcls'].length;i++){//string=string+data['dvcls'][i]['address']+";\r\n";
 	    			var lgtd=data['dvcls'][i]['longitude'];
 	    			var lttd=data['dvcls'][i]['latitude'];
 	    			var ads=data['dvcls'][i]['address'];
@@ -179,7 +179,7 @@ function paintpnt(){
 					var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
 					lct(p[dvcid],infoWindow,'','','',icon,ads+str);
 	    		}
-	           
+	           //alert(string);map.panTo(new BMap.Point(121.47940183013,31.312701688104));      
 	    		//alert(data['dvcls'][0]['latitude']);
 	    		showpathifhasodr();//这个函数在index.html里头，用来显示路径如果有ondoing订单的话
 	            console.log("success");

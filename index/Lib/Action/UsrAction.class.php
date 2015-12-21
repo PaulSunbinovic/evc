@@ -1276,9 +1276,9 @@ class UsrAction extends Action {
     	$deviceAscription=$_GET['deviceAscription'];
     	$groupId=$_GET['groupId'];
     	$deviceType=$_GET['deviceType'];
-
+    	$newSn=$_GET['newSn'];
     	//###########
-    	$arr=$dvc->updateDeviceInfo($dvcid,$owner,$sn,$model,$city,$lgtd,$lttd,$address,$peripheral,$ip,$serverIp,$serverPort,$pic,$battery,$status,$capacity,$listShareTime,$user,$isOrder,$isOwner,$version,$path,$time,$week,$paramMap,$deviceAscription,$groupId,$deviceType);
+    	$arr=$dvc->updateDeviceInfo($dvcid,$owner,$sn,$model,$city,$lgtd,$lttd,$address,$peripheral,$ip,$serverIp,$serverPort,$pic,$battery,$status,$capacity,$listShareTime,$user,$isOrder,$isOwner,$version,$path,$time,$week,$paramMap,$deviceAscription,$groupId,$deviceType,$newSn);
     	
     	//#########
     	if($arr['code']=='A00000'){
