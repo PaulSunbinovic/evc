@@ -66,6 +66,29 @@ function url2arr($url,$json){
 
 }
 
+function arr2strforjavascript($arr,$arr_except){
+	$str='';
+	foreach ($arr as $key => $value) {
+		# code...
+		$hasexcept=0;
+		# 让其一个个比较，如果都对不上就可以拿来整，否则直接淘汰
+		foreach ($arr_except as $v) {
+			# code...
+			if($key==$v){
+				$hasexcept=1;
+				break;
+			}
+		}
+		//分析
+		if ($hasexcept===0) {
+			if($str){$str=$str.'&'.$key.'='.$value;}else{$str=$key.'='.$value;}
+		}else{
+			continue;//跳过
+		}
 
+		
+	}
+	return $str;
+}
 
 ?>

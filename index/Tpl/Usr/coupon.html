@@ -41,7 +41,7 @@
 	
 
 	<include file='Cmn:hd_green' />
-	<div class='col-md-12 col-xs-12 nopadding'>
+	<div class='col-md-12 col-xs-12 nopadding' style="margin-top:50px">
 		<volist name='couponls' id='couponv'>
 			<div class='col-md-12 col-xs-12 nopadding' style='height:100px;margin-top:5px;background-image: url(__PUBLIC__/IMG/coupon/coupon_III.png);height: 100px'>
 				
@@ -52,7 +52,7 @@
 					<div class="pull-left" style="background-image: url(__PUBLIC__/IMG/coupon/coupon_III.png);height:100px;line-height: 27px;padding-top:10px;padding-bottom: 10px;background-color: #ddd">
 						<lbl style='color:#ccc;padding-right: 10px'>券&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</lbl>{$couponv['cDescribe']}<br>
 						<lbl style='color:#ccc;padding-right: 10px'>使用条件</lbl>无条件<br>
-						<lbl style='color:#ccc;padding-right: 10px'>有效期至</lbl>{$couponv['expireTime']}
+						<lbl style='color:#ccc;padding-right: 10px'>有效期至</lbl><qixian style='font-size:10px'>{$couponv['expireTime']}</qixian>
 					</div>
 				</div>
 				<div class='col-md-2 col-xs-2 nopadding'>
@@ -64,7 +64,7 @@
 	</div>
 	
 	<?php if($hascoupon=='n'){ ?>
-	<div class='col-md-12 col-xs-12 nopadding' style='background-color: #fff;height:100px;line-height: 100px;margin-top:5px;text-align: center'>
+	<div class='col-md-12 col-xs-12 nopadding' style='background-color: #fff;height:100px;line-height: 100px;margin-top:55px;text-align: center'>
 		您当前没有优惠券
 		
 	</div>

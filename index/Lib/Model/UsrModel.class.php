@@ -4,6 +4,7 @@ class UsrModel{
 	//http://120.26.80.165/user/get.action?wechatId=12345
 	//http://114.215.209.115/userAccount/getUserAccount.action?wechatId=ojxMBuPfL9ru7RCI1o2iSjw_8Ix0
 	//http://120.26.80.165/user/getByMoblie.action?mobile=15888836739
+	//http://120.26.80.165/user/changeUser.action?//##参数全传
 
 	//#########MODEL########################
 	public function test($id){
@@ -31,6 +32,18 @@ class UsrModel{
 	//#########MODEL########################
 	public function getByMoblie($mobile){
 		$url=C('javaback').'/user/getByMobile.action?mobile='.$mobile;
+		$json='';
+		$arr=url2arr($url,$json);
+		return $arr;
+	}
+	//http://120.26.80.165/user/changeUser.action?//##参数全传
+
+	//#########MODEL########################
+	public function changeUser($para){
+
+		$para=str_replace(" ","+",$para);
+
+		$url=C('javaback').'/user/changeUser.action?'.$para;
 		$json='';
 		$arr=url2arr($url,$json);
 		return $arr;

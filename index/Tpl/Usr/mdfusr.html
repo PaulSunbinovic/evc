@@ -29,40 +29,42 @@
 
 <link href="__PUBLIC__/CSS/index/base.css" rel="stylesheet">
 
-<script type="text/javascript" src='__PUBLIC__/JS/index/manager.js'></script>
-<link href="__PUBLIC__/CSS/index/manager.css" rel="stylesheet">
+<script type="text/javascript" src='__PUBLIC__/JS/index/mdfusr.js'></script>
+<link href="__PUBLIC__/CSS/index/mdfusr.css" rel="stylesheet">
 
-<script>var __url__='__URL__';</script>
+<script type="text/javascript">var __url__='__URL__';</script>
 
 </head>
 <body>
 	
 	<include file='Cmn:hd_green_back' />
 	
-	
 	<div class='col-md-12 col-xs-12 bd'>
-		
-		<!--#######按钮列表-->
-		<div class='col-md-12 col-xs-12'>
-			
-			<div class='col-md-12 col-xs-12' style="margin-top: 20px">
-				<a class='btn btn-success btn-lg btn-block' href='__URL__/binddvc'><i class='glyphicon glyphicon-ok'></i> 绑定设备</a>
-			</div>
-			
-			<div class='col-md-12 col-xs-12' style="margin-top: 20px">
-				<a class="btn btn-success btn-lg btn-block" href="__URL__/handdvc/dvcid/{$dvco['id']}"><i class='glyphicon glyphicon-refresh'></i> 移交设备</a>
-			</div>
-
-			<div class='col-md-12 col-xs-12' style="margin-top: 20px">
-				<a class="btn btn-success btn-lg btn-block" href="__URL__/mdfusr"><i class='glyphicon glyphicon-user'></i> 修改用户</a>
-			</div>
-
-			<div class='col-md-12 col-xs-12' style="margin-top: 20px">
-				<a class="btn btn-success btn-lg btn-block" href="__URL__/mdfdvc/dvcid/{$dvco['id']}"><i class='glyphicon glyphicon-cog'></i> 修改设备</a>
-			</div>
+		<!--#######寻找用户-->
+		<div class='col-md-12 col-xs-12' style="margin-top: 20px">
+			电话号码：<input class='form-control' id='mobile' placeholder='请输入手机号码以寻找用户'>
 		</div>
-		
-		
+		<div class='col-md-12 col-xs-12' style="margin-top: 20px">
+			<script type="text/javascript">var dofindusrls='__URL__/dofindusrls';</script>
+			<button class='btn btn-info btn-lg btn-block' id='getusrlsbymobile'>获取用户列表</button>
+		</div>
+		<div class='col-md-12 col-xs-12' style="margin-top: 20px">
+			用户列表<br><hr>
+			<ul class="list-group wechatid" id='usrls'>
+			  	
+			</ul>
+		</div>
+		<!--用户数据-->
+		<script type="text/javascript">
+		var dogetusro='__URL__/dogetusro';var para='';
+		</script>
+		<div class='col-md-12 col-xs-12' style="margin-top: 20px">
+			用户名：<input class='form-control' id='realName'>
+		</div>
+		<script>var domdfusr='__URL__/domdfusr';</script>
+		<div class='col-md-12 col-xs-12' style="margin-top: 20px">
+			<button class='btn btn-success btn-lg btn-block' id='domdfusr'>修改用户</button>
+		</div>
 	</div>
 	
 

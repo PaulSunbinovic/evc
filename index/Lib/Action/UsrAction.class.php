@@ -1320,5 +1320,60 @@ class UsrAction extends Action {
     	//####
     	$this->ajaxReturn($data,'json');
     }
+    //#########
+    public function mdfusr(){
+    	$this->assign('ttl','修改用户');
+    	$this->display('mdfusr');
+    }
+    //#######
+    public function dogetusro(){
+    	$usr=D('Usr');
+    	//####
+    	$wechatid=$_GET['wechatid'];
+    	//#####
+    	$arr=$usr->get($wechatid);
+
+    	if($arr['code']=='A00000'){
+			$rslt=1;
+    		$usro=$arr['data']['user'];
+	    	$data['usro']=$usro;
+	    	//####把用不着的数据进行整合
+	    	//除外
+	    	$arr_except=array();
+	    	array_push($arr_except,'realName');
+	    	
+	    	$str=arr2strforjavascript($usro,$arr_except);
+	    	$data['para']=$str;
+    	}else{
+    		$rslt=0;
+    	}
+    	$data['rslt']=$rslt;
+
+
+    	
+    	//###
+    	$this->ajaxReturn($data,'json');
+
+    }
+    //#####
+    public function domdfusr(){
+    	$usr=D('Usr');
+
+    	$realName=$_GET['realName'];
+    	$para=$_GET['para'];
+
+    	$para=$para.'&realName='.$realName;
+
+    	$arr=$usr->changeUser($para);
+    	if($arr['code']=='A00000'){
+    		$rslt=1;
+    	}else{
+    		$rslt=0;
+    	}
+
+    	$data['rslt']=$rslt;
+    	$data['msg']=$arr['msg'];
+    	$this->ajaxReturn($data,'json');
+    }
 
 }
