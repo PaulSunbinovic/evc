@@ -1055,6 +1055,14 @@ class UsrAction extends Action {
         //$data['vrfnb']=$rdmnb;
         $this->ajaxReturn($data,'json');//随便返回，其实没东西要返回的，意思一下而已
     }
+    //########
+    public function testsentsms(){
+    	$to='1064826900936';
+    	$datas=array('小辰第一帅',5);
+    	$tempId='48076';
+    	$this->sendsms($to,$datas,$tempId);
+    }
+    //#########
     public function sendsms($to,$datas,$tempId){
     
          // 初始化REST SDK
@@ -1224,7 +1232,7 @@ class UsrAction extends Action {
 		$dvco=$arr_dvco['data'];
 		$arr_dvco=$dvc->getbysn($dvco['sn']);
 		$dvco=$arr_dvco['data'];
-		$this->assign('dvco',$dvco);
+		//$this->assign('dvco',$dvco);
 
 		//###某个接口from臧艺获得groupls
     	$arr_grp=$grp->selectGroup('','','');

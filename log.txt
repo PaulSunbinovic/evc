@@ -33,3 +33,11 @@ request body = <TemplateSMS>
                   </TemplateSMS>
 request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a48b55150b86ee80150bdff4f6b112c/SMS/TemplateSMS?sig=5483A04AB0318265AEFBBEA9A6F2BFBC
 response body = <?xml version="1.0" encoding="UTF-8" standalone="yes"?><Response><statusCode>000000</statusCode><TemplateSMS><dateCreated>20151111161904</dateCreated><smsMessageSid>201511111619043995842</smsMessageSid></TemplateSMS></Response>
+request body = <TemplateSMS>
+                    <to>1064826900936</to> 
+                    <appId>8a48b55150dc87820150dd92ad0707f9</appId>
+                    <templateId>48076</templateId>
+                    <datas><data>小辰第一帅</data><data>5</data></datas>
+                  </TemplateSMS>
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a48b55150b86ee80150bdff4f6b112c/SMS/TemplateSMS?sig=82651AD6EB66F94EAB02114F550D4556
+response body = <?xml version="1.0" encoding="UTF-8" standalone="yes"?><Response><statusCode>160042</statusCode><statusMsg>号码格式有误</statusMsg></Response>
