@@ -68,6 +68,8 @@ class UsrAction extends Action {
 		$nickName=$_GET['nickName'];
 		$mobile=$_GET['mobile'];
 		
+		//由于昵称可能会有空格，需要把空格给呵呵哒
+		$nickName=str_replace(' ', '+', $nickName);
 
 		//先验证验证码是否对得上
 		$vrfnb=$_GET['vrfnb'];
