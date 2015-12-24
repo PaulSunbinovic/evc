@@ -62,6 +62,7 @@ function url2arr($url,$json){
 		logger('json: '.$json,'log/log_'.date('Y-m-d',time()).'.txt');
 	//}
 	$arr['url']=$url;
+	//if($arr['code']=='A00000'){$arr['rslt']=1;}else{$arr['rstl']=0;}
 	return $arr;
 
 }

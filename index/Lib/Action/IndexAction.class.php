@@ -237,7 +237,8 @@ class IndexAction extends Action {
 			$odr->where("openid='".$openid."'")->delete();
 		}else if($mtd=='get'){
 			$openid=$_GET['openid'];
-			$odro=$odr->where("openid='".$openid."'")->find();
+			//只有最近的一个才是真的他要充值的东西，其他的都是半路放弃的
+			$odro=$odr->where("openid='".$openid."'")->order('id DESC')->find();
 			$odrid=$odro['odrid'];
 			echo $odrid;
 		}

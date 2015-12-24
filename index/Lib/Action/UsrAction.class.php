@@ -181,6 +181,90 @@ class UsrAction extends Action {
 		$this->assign('ttl','车主中心');
 		$this->display('carmstct');
 	}
+	//###########################################
+	public function gongzhuangmstct(){
+		$ss=D('SS');$odr=D('Odr');$dvc=D('Dvc');$usr=D('Usr');$coupon=D('Coupon');
+
+		//############获得openid
+		$openid=session('openid');
+
+
+		//#######
+		$sn=$_GET['sn'];
+		$this->assign('sn',$sn);
+
+		//#####################查看余额
+		$arr_usraccnt=$usr->getUserAccount($openid);
+		$balance=floatval($arr_usraccnt['data']['balance']);
+		$balance=$balance/100;
+		$balance=round($balance,2);
+		$this->assign('balance',$balance);
+
+		//####################查看优惠券
+		$arr_coupon=$coupon->listCoupon($openid);
+		$couponls=$arr_coupon['data'];
+		$this->assign('couponnumber',count($couponls));
+		
+		//##########################
+		$usrdto=$ss->setss();
+
+		
+		$this->assign('ttl','公桩车主中心');
+		$this->display('gongzhuangmstct');
+	}
+	//############################
+	public function doappointByScan(){
+		$dvc=D('Dvc');
+
+		$sn=$_GET['sn'];
+		$openid=session('openid');
+
+		$arr=$dvc->appointByScan($sn,$openid);
+
+		if($arr['code']=='A00000'){
+						
+			$dvcid=$arr['data']['deviceId'];
+			$data['dvcid']=$dvcid;
+
+			$odrid=$arr['data']['orderId'];
+			$data['odrid']=$odrid;
+
+			//然后就打开opration桩
+			$arr=$dvc->operate($dvcid,$openid,'on');
+			if($arr['code']=='A00000'){
+				$rslt=1;
+			}else{
+				$rslt=0;
+			}
+			$data['msg']=$arr['msg'];
+		}else{
+			$rslt=0;
+			$data['msg']=$arr['msg'];
+		}
+
+		$data['rslt']=$rslt;
+		
+
+		$this->assign($data,'json');
+	}
+	###########
+	public function doappointCancelWithScan(){
+		$dvc=D('Dvc');
+
+		$odrid=$_GET['odrid'];$openid=session('openid');
+
+		$arr=$dvc->appointCancelWithScan($openid,$odrid);
+
+		if($arr['code']=='A00000'){
+			$rslt=1;
+		}else{
+			$rslt=0;
+		}
+		$data['rslt']=$rslt;
+		$data['msg']=$arr['msg'];
+
+		$this->ajaxReturn($data,'json');
+	}
 	//#########################################
 	public function usrct(){
 		$ss=D('SS');$odr=D('Odr');$dvc=D('Dvc');$usr=D('Usr');$coupon=D('Coupon');

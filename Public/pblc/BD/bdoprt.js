@@ -43,7 +43,8 @@ function lct(pnt,ifwd,lvl,ctr,clr,icn,ads){
 		 backgroundColor:'#ccc',
 		 
 	 });
-	marker.setLabel(label);
+	//bob表示不要label
+	//marker.setLabel(label);
 }
 
 //开发模式
