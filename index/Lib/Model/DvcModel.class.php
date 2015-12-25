@@ -17,8 +17,7 @@ class DvcModel{
 	//http://120.26.80.165/device/getDeviceBySn.action?sn=4265bb79
 	//http://120.26.80.165/device/handOverDevice.action?wechatId=12345&deviceId=100~$groupid,$deviceAscription
 	//http://120.26.80.165/device/updateDeviceInfo.action?sn=12345&id=100&sn=111&longitude=111&latitude=111&address=111&version=111&groupid=111&path=111&deviceAscription=111
-	//http://120.26.80.165/device/appointByScan.action?sn=aaa&wechatId=aaa
-	//http://120.26.80.165/device/appointCancelWithScan.action?wechatId=aaa&orderId=bbb
+	
 	//#########MODEL########################
 	public function test($id){
 		$url='';
@@ -146,21 +145,7 @@ class DvcModel{
 		$arr=url2arr($url,$json);
 		return $arr;
 	}
-	//#########MODEL########################
-	public function appointByScan($sn,$openid){
-		$url=C('javaback').'/appointByScan.action?sn='.$sn.'&wechatId='.$openid;
-		$json='';
-		$arr=url2arr($url,$json);
-		return $arr;
-	}
-	//http://120.26.80.165/device/appointCancelWithScan.action?wechatId=aaa&orderId=bbb
-	//#########MODEL########################
-	public function appointCancelWithScan($openid,$odrid){
-		$url=C('javaback').'/device/appointCancelWithScan.action?wechatId='.$openid.'&orderId='.$odrid;
-		$json='';
-		$arr=url2arr($url,$json);
-		return $arr;
-	}
+	
 }
 ?>
  

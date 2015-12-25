@@ -8,6 +8,8 @@ class OdrModel{
 	//http://114.215.209.115/order/checkOrderIsTimeOut.action?wechatId=ojxMBuPfL9ru7RCI1o2iSjw_8Ix0&deviceId=&orderId=332
 	//http://114.215.209.115/order/appointCancel.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8&deviceId=&orderId=460
 	//http://114.215.209.115/order/handleOrderById.action?wechatId=ojxMBuJe07gSZDUwp0ZHGHEMHOR8&orderId=460
+	//http://120.26.80.165/device/appointByScan.action?sn=aaa&wechatId=aaa
+	//http://120.26.80.165/device/appointCancelWithScan.action?wechatId=aaa&orderId=bbb
 	//#########MODEL########################
 	public function test($id){
 		$url='';
@@ -63,6 +65,21 @@ class OdrModel{
 	public function handleOrderById($openid,$odrid){
 		$url=C('javaback').'/order/handleOrderById.action?wechatId='.$openid.'&orderId='.$odrid;
 		$json='{"data":{"id":460,"userId":6,"macId":null,"deviceId":9,"price":null,"startDegree":0,"endDegree":174,"carId":null,"status":6,"totalPrice":28884,"createTime":"2015-11-22 11:36:49","updateTime":"2015-11-23 01:29:15","endTime":null,"version":2,"freeFlag":0,"paramMap":null,"statusFinal":true},"code":"A00000","msg":""}';
+		$arr=url2arr($url,$json);
+		return $arr;
+	}
+	//#########MODEL########################
+	public function appointByScan($sn,$openid){
+		$url=C('javaback').'/order/appointByScan.action?sn='.$sn.'&wechatId='.$openid;
+		$json='';
+		$arr=url2arr($url,$json);
+		return $arr;
+	}
+	//http://120.26.80.165/device/appointCancelWithScan.action?wechatId=aaa&orderId=bbb
+	//#########MODEL########################
+	public function appointCancelWithScan($openid,$odrid){
+		$url=C('javaback').'/order/appointCancelWithScan.action?wechatId='.$openid.'&orderId='.$odrid;
+		$json='';
 		$arr=url2arr($url,$json);
 		return $arr;
 	}

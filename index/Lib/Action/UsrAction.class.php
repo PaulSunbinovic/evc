@@ -214,12 +214,12 @@ class UsrAction extends Action {
 	}
 	//############################
 	public function doappointByScan(){
-		$dvc=D('Dvc');
+		$odr=D('Odr');$dvc=D('Dvc');
 
 		$sn=$_GET['sn'];
 		$openid=session('openid');
 
-		$arr=$dvc->appointByScan($sn,$openid);
+		$arr=$odr->appointByScan($sn,$openid);
 
 		if($arr['code']=='A00000'){
 						
@@ -245,15 +245,15 @@ class UsrAction extends Action {
 		$data['rslt']=$rslt;
 		
 
-		$this->assign($data,'json');
+		$this->ajaxReturn($data,'json');
 	}
 	###########
 	public function doappointCancelWithScan(){
-		$dvc=D('Dvc');
+		$dvc=D('Dvc');$odr=D('Odr');
 
 		$odrid=$_GET['odrid'];$openid=session('openid');
 
-		$arr=$dvc->appointCancelWithScan($openid,$odrid);
+		$arr=$odr->appointCancelWithScan($openid,$odrid);
 
 		if($arr['code']=='A00000'){
 			$rslt=1;
