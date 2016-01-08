@@ -18,8 +18,8 @@ $(function(){
             }else if(data.rslt=='2'){//预约成功了，但是开启失败了，也是需要取消掉这个预约的
                 //错误就不用改变原来dvcsttsls中的状态
                 $('#result').html(data['msg']);
-                var odrid=data['odrid'];
-                doappointCancelWithScan(odrid);
+                var odrid=data['odrid'];alert(odrid);
+                appointCancelWithScan(odrid);
             }else{//成功的alert只为测试用的
                 var wantoprt='on';var online='y';var onodr='n';
                 var dvcid=data['dvcid'];var odrid=data['odrid'];
@@ -34,7 +34,7 @@ $(function(){
                                 //check_dvc(stts,dvcid,online,onodr);
                                 $('#cancel_loading').trigger('click');
                                 $('#result').html('操作失败！');
-                                doappointCancelWithScan(odrid);
+                                appointCancelWithScan(odrid);
                                 
                                 int=window.clearInterval(int);
                             }
@@ -86,7 +86,7 @@ $(function(){
     });
 })
 
-function doappointCancelWithScan(orderid){
+function appointCancelWithScan(orderid){
     $.ajax({
         'type': 'GET',
         'url': doappointCancelWithScan,
