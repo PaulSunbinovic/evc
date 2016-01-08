@@ -241,7 +241,7 @@ class UsrAction extends Action {
 			if($arr['code']=='A00000'){
 				$rslt=1;
 			}else{
-				$rslt=0;
+				$rslt=2;
 			}
 			$data['msg']=$arr['msg'];
 		}else{

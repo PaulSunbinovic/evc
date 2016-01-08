@@ -11,10 +11,15 @@ $(function(){
         },
         'dataType': 'json',
         'success': function(data) {
-           if(data.rslt=='0'){
+           if(data.rslt=='0'){//预约都失败了
                 //错误就不用改变原来dvcsttsls中的状态
                 $('#result').html(data['msg']);
                 
+            }else if(data.rslt=='2'){//预约成功了，但是开启失败了，也是需要取消掉这个预约的
+                //错误就不用改变原来dvcsttsls中的状态
+                $('#result').html(data['msg']);
+                var odrid=data['odrid'];
+                doappointCancelWithScan(odrid);
             }else{//成功的alert只为测试用的
                 var wantoprt='on';var online='y';var onodr='n';
                 var dvcid=data['dvcid'];var odrid=data['odrid'];
@@ -29,27 +34,8 @@ $(function(){
                                 //check_dvc(stts,dvcid,online,onodr);
                                 $('#cancel_loading').trigger('click');
                                 $('#result').html('操作失败！');
+                                doappointCancelWithScan(odrid);
                                 
-                                $.ajax({
-                                    'type': 'GET',
-                                    'url': doappointCancelWithScan,
-                                    'async':false,  
-                                    'contentType': 'application/json',
-                                    'data': {
-                                        'odrid':odrid,
-                             
-                                    },
-                                    'dataType': 'json',
-                                    'success': function(data) {
-                                        //假定是肯定取消成功的，因为，如果取消自动取消失败，会给用户感觉，我操，你什么时候给我在取消啊
-
-                                       // break;
-                                        console.log("success");
-                                    },
-                                    'error':function() {
-                                        console.log("error");
-                                    }
-                                });
                                 int=window.clearInterval(int);
                             }
                             i=i+1;
@@ -100,3 +86,25 @@ $(function(){
     });
 })
 
+function doappointCancelWithScan(orderid){
+    $.ajax({
+        'type': 'GET',
+        'url': doappointCancelWithScan,
+        'async':false,  
+        'contentType': 'application/json',
+        'data': {
+            'odrid':orderid,
+ 
+        },
+        'dataType': 'json',
+        'success': function(data) {
+            //假定是肯定取消成功的，因为，如果取消自动取消失败，会给用户感觉，我操，你什么时候给我在取消啊
+
+           // break;
+            console.log("success");
+        },
+        'error':function() {
+            console.log("error");
+        }
+    });
+}
