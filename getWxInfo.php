@@ -12,6 +12,9 @@ $state=$_GET['state'];
 $appid='wx682ad2cc417fe8b9';
 $appsecret='c4c1b2004388a3a529f39fc42c0c60e9';
 $userinfo = getUserInfo($code,$appid,$appsecret);
+echo $userinfo;
+
+/*
 print_r($userinfo);die;
 
 
@@ -70,7 +73,7 @@ if($arr_usr['data']){//若库里有
 	}
 	
 }
-	
+*/
 
 
 

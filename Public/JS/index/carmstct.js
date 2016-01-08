@@ -1,3 +1,6 @@
+$(function(){
+    setTimeout("window.location.reload()",600000)
+})
 var admit_double_swc=1;
 //########################开关相关
 //开关总协调

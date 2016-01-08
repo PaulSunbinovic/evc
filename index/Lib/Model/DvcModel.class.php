@@ -44,7 +44,7 @@ class DvcModel{
 	//################################
 	public function get($dvcid){
 		$url=C('javaback').'/device/get.action?deviceId='.$dvcid;
-		$json='{"data":{"id":9,"owner":14,"sn":"c45d7306","model":1,"city":null,"longitude":"120.208989","latitude":"30.213697","address":"钱龙大厦","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":"01","capacity":1,"listShareTime":[{"id":1,"deviceId":9,"startTime":"9:00:00","endTime":"14:00:00","userId":null,"createTime":null},{"id":2,"deviceId":9,"startTime":"10:00:00","endTime":"18:00:00","userId":null,"createTime":null}],"isOrder":null,"version":null,"path":null,"time":"17:10","week":"SAT"},"code":"A00000","msg":"获取设备成功"}';
+		$json='{"data":{"id":100,"owner":28,"sn":"a9926ee9","model":1,"city":null,"longitude":"","latitude":"","address":"钱龙测试","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"11","battery":0,"status":"02","capacity":2,"listShareTime":[{"id":null,"deviceId":100,"startTime":"00:00:00","endTime":"23:59:59","createTime":1448259133000,"isEnable":1}],"user":null,"isOrder":0,"isOwner":null,"version":1001,"path":"/opt/15V1_02Release.bin","time":null,"week":null,"paramMap":null,"deviceAscription":1,"groupId":1,"deviceType":1,"countEnable":1,"countAll":590,"onlineAll":0,"countTd":590,"onlineTd":0},"code":"A00000","msg":"获取设备成功"}';
 		$arr=url2arr($url,$json);
 		return $arr;
 	}

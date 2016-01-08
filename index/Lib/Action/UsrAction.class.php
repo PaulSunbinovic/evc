@@ -188,10 +188,17 @@ class UsrAction extends Action {
 		//############获得openid
 		$openid=session('openid');
 
-
 		//#######
 		$sn=$_GET['sn'];
+		//如果有sn说明是扫码进来的还没有开启过没有预约过
+		//如果没有sn说明已经是开启了（也就是预约了）
 		$this->assign('sn',$sn);
+
+		if(!$openid){
+			header('location:https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx682ad2cc417fe8b9&redirect_uri='.C('HOST').'/oauth2_openid.php&response_type=code&scope=snsapi_base&state=gongzhuangmstct_'.$sn.'&connect_redirect=1#wechat_redirect');
+		}
+
+		
 
 		//#####################查看余额
 		$arr_usraccnt=$usr->getUserAccount($openid);
@@ -1141,8 +1148,8 @@ class UsrAction extends Action {
     }
     //########
     public function testsentsms(){
-    	$to='1064826900936';
-    	$datas=array('小辰第一帅',5);
+    	$to='13567196593';
+    	$datas=array('#@1064826900936#evchar',5);
     	$tempId='48076';
     	$this->sendsms($to,$datas,$tempId);
     }

@@ -5,12 +5,8 @@
 class TestAction extends Action {
 
 	public function test(){
-		$usr=D('Usr');
-		$dvc=D('Dvc');
-		$car=D('Car');
-
-		$arr=$dvc->getAll('111','222');
-		p($arr);
+		$url=__ROOT__.'/getWxInfo.php';
+		$arr=https_request($url);p($arr);die;
 	}
 	
     public function setpara(){
@@ -144,6 +140,16 @@ class TestAction extends Action {
 				'nick_name'=>'糖小白',
 				'head_img_url'=>'http://wx.qlogo.cn/mmopen/ajNVdqHZLLDtCaGyUYM1zHfNyhjIC1CvyqXh0dFQOFL8ZkGx4Tnnic1cPpuicQYkXYoWWc9eEJlolZq7e8eojia3w/0',
 				'mobile'=>'13817116106',
+
+			);        
+       	array_push($personls,$person);
+       	//#####################
+		$person=array(
+				'id'=>'154',
+				'wechat_id'=>'ojxMBuN7h1mIXSGj6xN48majXDxM',
+				'nick_name'=>'石榴',
+				'head_img_url'=>'http://wx.qlogo.cn/mmopen/dibCvqHg4Wndtpupkeiau92hMRzTianbeIoGtmzdpTYzLr6HkkY7HE0jzqEhRO5StvQb8xDllYFxZoKg0oBOZzenV68yaYRRSaO/0',
+				'mobile'=>'15618690317',
 
 			);        
        	array_push($personls,$person);

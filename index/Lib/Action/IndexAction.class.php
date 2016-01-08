@@ -18,7 +18,7 @@ class IndexAction extends Action {
 
 
     public function index(){
-    	$ss=D('SS');$odr=D('Odr');
+    	$ss=D('SS');$odr=D('Odr');$dvc=D('Dvc');
     	//###############设置微信
     	import('@.WX.JssdkAction');
 		$jssdk = new JssdkAction(C('appid'), C('appsecret'));
@@ -53,6 +53,11 @@ class IndexAction extends Action {
 		$odro=$arr_odro['data'];
 		if($odro['status']===0||$odro['status']===4){
 			$dvcid_odr=$odro['deviceId'];
+			//如果是公桩的话需要给前端提示，这样前端会引导他去公桩的车主中心
+			$arr_dvco=$dvc->get($dvcid_odr);
+			if($arr_dvco['data']['groupId']){
+				$dvcid_odr='gong';
+			}
 		}else{
 			$dvcid_odr='n';
 		}

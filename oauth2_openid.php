@@ -49,6 +49,9 @@ if($arr_usr['data']){//若库里有
 	}else if(strpos($state, 'qr')==0){
 		$tmp=explode('_',$state);
 		header("location: ".$urlprx."/index.php/Cmn/qr/dvcid/".$tmp[1]);
+	}else if(strpos($state, 'gongzhuangmstct')==0){
+		$tmp=explode('_',$state);
+		header("location: ".$urlprx."/index.php/Usr/gongzhuangmstct/sn/".$tmp[1]);
 	}
 	
 	

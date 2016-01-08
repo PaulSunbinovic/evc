@@ -1,4 +1,6 @@
 $(function(){
+    //如果没有传sn说明不是扫码进来开桩预约的，而是已经开桩预约好了的重新进来瞅瞅的
+    if(sn==''){$('#result').html('预约成功！');return;}
     $.ajax({
         'type': 'GET',
         'url': doappointByScan,
@@ -15,7 +17,7 @@ $(function(){
                 
             }else{//成功的alert只为测试用的
                 var wantoprt='on';var online='y';var onodr='n';
-                var dvcid=data['dvcid'];var odrid=data['orderid'];
+                var dvcid=data['dvcid'];var odrid=data['odrid'];
                 //开启loading,知道失败和成功才结束
                 $('#modal_loading').trigger('click');
                 //每2秒钟访问一次桩，访问5次，持续10秒，直到检测操作执行掉了
