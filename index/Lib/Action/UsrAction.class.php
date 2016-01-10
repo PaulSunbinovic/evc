@@ -216,7 +216,7 @@ class UsrAction extends Action {
 		$usrdto=$ss->setss();
 
 		
-		$this->assign('ttl','公桩车主中心');
+		$this->assign('ttl','车主中心');
 		$this->display('gongzhuangmstct');
 	}
 	//############################

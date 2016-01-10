@@ -65,10 +65,10 @@ $(function(){
             'contentType': 'application/json',
             'data': {
                 'wechatid':wechatid,
-                'dvcsn':$('#dvcsn').val(),
-                'address':$('#address').val(),
+                'dvcsn':$.trim($('#dvcsn').val()),
+                'address':$.trim($('#address').val()),
                 'groupid':$('#groupid').val(),
-                'deviceAscription':$('#deviceAscription').val(),
+                'deviceAscription':$.trim($('#deviceAscription').val()),
             },
             'dataType': 'json',
             'success': function(data) {
