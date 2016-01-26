@@ -138,7 +138,11 @@ function jsApiCall()
 		//------------------------
 		<?php echo $json; ?>,
 		function(res){
-			history.go(-2);
+			//history.go(-2);
+			//alert(3);
+			var t=setTimeout("window.location.href='http://www.evchar.cn/evc/index.php/Usr/usrct/'",2000)
+			//window.location.href='http://www.evchar.cn/evc/index.php/Usr/usrct/';
+			//window.href.reload();
 			// WeixinJSBridge.log(res.err_msg);
 			// alert(res.err_code+res.err_desc+res.err_msg);
 		}
@@ -148,9 +152,9 @@ function jsApiCall()
 function callpay()
 {
 	if (typeof WeixinJSBridge == "undefined"){
-	    if( document.addEventListener ){
-	        document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
-	    }else if (document.attachEvent){
+	    if( document.addEventListener ){//alert(1);
+	        document.addEventListener('WeixinJSBridgeReady', jsApiCall, true);//默认是false这样是不会执行上面到跳转界面，当使用true到时候，是可以跳转了
+	    }else if (document.attachEvent){//alert(2);
 	        document.attachEvent('WeixinJSBridgeReady', jsApiCall); 
 	        document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
 	    }
