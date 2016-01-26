@@ -119,6 +119,7 @@ class DvcModel{
 
 	//#########MODEL########################
 	public function addDevice($openid,$sn,$lgtd,$lttd,$address){
+		$sn=urlencode($sn);$lgtd=urlencode($lgtd);$lttd=urlencode($lttd);$address=urlencode($address);
 		$url=C('javaback').'/device/addDevice.action?wechatId='.$openid.'&sn='.$sn.'&longitude='.$lgtd.'&latitude='.$lttd.'&model=1&address='.$address;
 		$json='';
 		$arr=url2arr($url,$json);
