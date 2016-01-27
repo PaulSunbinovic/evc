@@ -63,12 +63,12 @@ function https_request($url,$data=null){
 }
 
 //【番外】先看看目前这位仁兄多少钱
-$url_findmoney='http://120.26.80.165/userAccount/getUserAccount.action?wechatId='.$openid;
+$url_findmoney='http://120.26.80.165/userAccount/getUserAccount.action?wechatId='.$openId;
 $json=https_request($url_findmoney);
 $arr=json_decode($json,true);
 $money_start=$arr['data']['balance'];
 $money_should=$money_start+$money;
-
+//var_dump($money_should);
 
 function logger($log_content,$log_filename){
 	//日志大小 10000
@@ -135,14 +135,37 @@ $editAddress = $tools->GetEditAddressParameters();
  */
 ?>
 
-
+<script src="http://www.evchar.cn/evc/Public/pblc/btstp3/js/jquery.js"></script>
 <script type="text/javascript">
 //【番外】
-var url_findmoney=<?php echo $url_findmoney ?>;
-var money_should=<?php echo $money_should ?>;
+var jishu=0;
+var dogetbalance='http://www.evchar.cn/evc/index.php/Usr/dogetbalance';
+var money_should='<?php echo $money_should; ?>';
+var openid='<?php echo $openId ?>';
+function checkmoney(){
+	if(jishu==10){alert('支付失败，请联系客服');history.go(-2);}else{jishu++;
+		$.ajax({
+	        'type': 'GET',
+	        'url': dogetbalance,
+	        'async':false,  
+	        'contentType': 'application/json',
+	        'data': {'openid':openid},
+	        'dataType': 'json',
+	        'success': function(data) {
+	        	var balance=data['balance'];
+	        	if(balance==money_should){
+	        		window.location.href='http://www.evchar.cn/evc/index.php/Usr/usrct/';
+	        	}
+	        	console.log("success");
+	        },
+	        'error':function() {
+	            console.log("error");
+	        }
+	    });
+	}
+}
 //直接付便是
 callpay();
-var dogetmoney='http://120.26.80.165/userAccount/getUserAccount.action?wechatId='+<?php echo $openid ?>;
 //调用微信JS api 支付
 function jsApiCall()
 {
@@ -154,15 +177,16 @@ function jsApiCall()
 		function(res){
 			//history.go(-2);
 			//alert(3);
-			alert(url_findmoney+'||'+money_should);
-			for(var i=0;i<10;i++){
-				if(i<10){
-					var t=setTimeout("checkmoney()",1000);
-				}else{
-					alert('支付失败，请联系客服');history.go(-2);
-				}
+			self.setInterval("checkmoney()",1000);
+
+			// for(var i=0;i<10;i++){alert(i);
+			// 	if(i!=9){
+			// 		setTimeout("alert(1)",1000);
+			// 	}else{
+			// 		alert('支付失败，请联系客服');history.go(-2);
+			// 	}
 				
-			}
+			// }
 			
 			
 			
@@ -174,26 +198,7 @@ function jsApiCall()
 		}
 	);
 }
-function checkmoney(){
-	$.ajax({
-        'type': 'GET',
-        'url': url_findmoney,
-        'async':false,  
-        'contentType': 'application/json',
-        'data': {},
-        'dataType': 'json',
-        'success': function(data) {
-        	var balance=data['data']['balance'];alert(balance);
-        	if(balance==money_should){
-        		window.location.href='http://www.evchar.cn/evc/index.php/Usr/usrct/'
-        	}
-        	console.log("success");
-        },
-        'error':function() {
-            console.log("error");
-        }
-    });
-}
+
 function callpay()
 {
 	if (typeof WeixinJSBridge == "undefined"){

@@ -1477,4 +1477,15 @@ class UsrAction extends Action {
     	$this->ajaxReturn($data,'json');
     }
 
+    public function dogetbalance(){
+    	$usr=D('Usr');
+    	$openid=$_GET['openid'];
+
+    	$arr_usraccnt=$usr->getUserAccount($openid);
+		$data['balance']=$arr_usraccnt['data']['balance'];
+
+		$this->ajaxReturn($data,'json');
+    
+    }
+
 }
