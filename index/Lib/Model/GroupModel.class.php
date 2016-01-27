@@ -31,7 +31,7 @@ class GroupModel{
 	
 
 	//#########MODEL########################
-	public function test($id){
+	public function isInterests($id){
 		$url='';
 		$json='';
 		$arr=url2arr($url,$json);
