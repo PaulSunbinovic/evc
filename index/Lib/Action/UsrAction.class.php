@@ -274,7 +274,7 @@ class UsrAction extends Action {
 	}
 	//#########################################
 	public function usrct(){
-		$ss=D('SS');$odr=D('Odr');$dvc=D('Dvc');$usr=D('Usr');$coupon=D('Coupon');
+		$ss=D('SS');$odr=D('Odr');$dvc=D('Dvc');$usr=D('Usr');$coupon=D('Coupon');$grp=D('Group');
 
 		//############获得openid
 		$openid=session('openid');
@@ -399,6 +399,9 @@ class UsrAction extends Action {
 			
 			$this->assign('dvcls',$dvclsnw);
 			
+			//判断是否是分成者
+			$arr_interest=$grp->isInterests($openid);
+			$this->assign('isInterests',$arr_interest['data']);
 
 			$this->assign('ttl','个人中心');
 			$this->display('usrct');
@@ -1487,5 +1490,58 @@ class UsrAction extends Action {
 		$this->ajaxReturn($data,'json');
     
     }
+    ###########收益显示
+    public function shouyidisplay(){
+    	header("Content-Type:text/html; charset=utf-8");
+    	$usr=D('Usr');$grp=D('Group');$vbi=D('VBIncome');
+
+    	$openid=session('openid');
+    	$arr_usro=$usr->get($openid);
+    	$usro=$arr_usro['data']['user'];
+    	$this->assign('usro',$usro);
+    	
+    	//获取昨日收益和总收益
+    	$arr_money=$grp->countMoney($openid);
+    	$yestoday=$arr_money['data']['yesterday'];
+    	$total=$arr_money['data']['total'];
+    	$this->assign('yestoday',$yestoday);
+    	$this->assign('total',$total);
+
+    	//获取近一周的收益
+    	$tm_today=time();
+    	$tm_sevendaysago=$tm_today-6*24*60*60;
+    	$starttime=date('Y-m-d',$tm_sevendaysago);
+    	$endtime=date('Y-m-d',$tm_today);
+    	$arr_vbi=$vbi->listVBIncomePerday($openid,'',$starttime,$endtime);
+    	$vbils=$arr_vbi['data'];
+    	//由于如果没有收益当天，明慧就不传信息过来，所以需要一个判断
+    	$arr=array();
+    	for($i=0;$i<7;$i++){
+    		$tm=$tm_sevendaysago+$i*24*60*60;
+    		$tm_str=date('Y-m-d',$tm);
+    		$data['tm']=$tm_str;
+    		$flag=0;
+    		foreach($vbils as $vbiv){
+    			//萃取createTime
+    			if($tm_str==date('Y-m-d',strtotime($vbiv['createTime']))){
+    				//说明遍历到了
+    				$flag=1;
+    				$data['money']=$vbiv['paramMap']['perTotalMoney'];
+    			}
+    		}
+    		if($flag==0){$data['money']=0;}
+    		array_push($arr,$data);
+    	}
+    	$this->assign('shouyils',$arr);
+
+    	//我的充电站集合
+    	$arr_grpls=$grp->selectListGroupByUser($openid);
+    	$grpls=$arr_grpls['data'];
+    	$this->assign('grpls',$grpls);
+
+    	$this->assign('ttl',$usro['nickName']);
+    	$this->display('shouyidisplay');
+    }
+
 
 }

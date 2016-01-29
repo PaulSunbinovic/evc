@@ -29,7 +29,7 @@
 
 <link href="__PUBLIC__/CSS/index/base.css" rel="stylesheet">
 
-<script type="text/javascript" src='__PUBLIC__/JS/index/usrct.js'></script>
+<script type="text/javascript" src='__PUBLIC__/JS/index/shouyidisplay.js'></script>
 <link href="__PUBLIC__/CSS/index/usrct.css" rel="stylesheet">
 </head>
 <body style='background-color: #ddd'>
@@ -42,33 +42,15 @@
 
 	<include file='Cmn:hd_green_back' />
 	<div class='col-md-12 col-xs-12 nopadding' style="margin-top:50px">
-		<volist name='couponls' id='couponv'>
-			<div class='col-md-12 col-xs-12 nopadding' style='height:100px;margin-top:5px;background-image: url(__PUBLIC__/IMG/coupon/coupon_III.png);height: 100px'>
-				
-				<div class='col-md-10 col-xs-10 nopadding' >
-					<div class="pull-left" style="background-image: url(__PUBLIC__/IMG/coupon/coupon_I.png);width:34px;height:100px;background-color: #ddd"></div>
-					<div class="pull-left" style="background-color: #00af50;font-size: 35px;color:#fff;line-height: 100px;text-align: center" >{$couponv['cValue']}</div>
-					<div class="pull-left" style="background-image: url(__PUBLIC__/IMG/coupon/coupon_II.png);width:56px;height:100px;background-color: #ddd"></div>
-					<div class="pull-left" style="background-image: url(__PUBLIC__/IMG/coupon/coupon_III.png);height:100px;line-height: 27px;padding-top:10px;padding-bottom: 10px;background-color: #ddd">
-						<lbl style='color:#ccc;padding-right: 10px'>券&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</lbl>{$couponv['cDescribe']}<br>
-						<lbl style='color:#ccc;padding-right: 10px'>使用条件</lbl>无条件<br>
-						<lbl style='color:#ccc;padding-right: 10px'>有效期至</lbl><qixian style='font-size:10px'>{$couponv['expireTime']}</qixian>
-					</div>
-				</div>
-				<div class='col-md-2 col-xs-2 nopadding'>
-					<div class="pull-right" style="background-image: url(__PUBLIC__/IMG/coupon/coupon_IIII.png);width:70px;height:100px; background-color: #ddd"></div>			
-				</div>
-				
+		<div class='col-md-12 col-xs-12 nopadding' style="text-align: center;background-color: 00af50;color:#fff">
+			<div style="height:300px;">
+				<div style="padding-top: 50px">昨日收益（元）</div>
+				<div>{$yestoday}</div>
 			</div>
-		</volist>
+		</div>
 	</div>
 	
-	<?php if($hascoupon=='n'){ ?>
-	<div class='col-md-12 col-xs-12 nopadding' style='background-color: #fff;height:100px;line-height: 100px;margin-top:55px;text-align: center'>
-		您当前没有优惠券
-		
-	</div>
-	<?php } ?>
+	
 	
 
 
