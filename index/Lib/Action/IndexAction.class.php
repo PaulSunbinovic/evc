@@ -142,7 +142,7 @@ class IndexAction extends Action {
 		$data['msg']=$arr['msg'];
 	}
 
-	function dofnddvcls(){
+	function dofnddvcls(){//接口失效了
 		$url=C('javaback').'/device/search.action?addr='.$_GET['ctt'];
 		if(session('openid')){
 			$openid=session('openid');
