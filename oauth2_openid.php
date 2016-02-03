@@ -12,6 +12,7 @@ $state=$_GET['state'];
 $appid='wx682ad2cc417fe8b9';
 $appsecret='c4c1b2004388a3a529f39fc42c0c60e9';
 $userinfo = getUserInfo($code,$appid,$appsecret);
+if(!$userinfo){header("location: ".$urlprx."/index.php/Usr/guanzhuwomen";}
 
 
 session_start();//session开始后 之前的$X都无效了

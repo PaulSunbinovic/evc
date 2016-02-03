@@ -2,7 +2,10 @@
 // 本类由系统自动生成，仅供测试用途
 class UsrAction extends Action {
 
-
+	public function guanzhuwomen(){
+		$this->assign('ttl','关注我们，享受充电');
+    	$this->display('guanzhuwomen');
+	}
 
 	
 	public function regist(){
