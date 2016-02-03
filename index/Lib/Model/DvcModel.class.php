@@ -17,6 +17,7 @@ class DvcModel{
 	//http://120.26.80.165/device/getDeviceBySn.action?sn=4265bb79
 	//http://120.26.80.165/device/handOverDevice.action?wechatId=12345&deviceId=100~$groupid,$deviceAscription
 	//http://120.26.80.165/device/updateDeviceInfo.action?sn=12345&id=100&sn=111&longitude=111&latitude=111&address=111&version=111&groupid=111&path=111&deviceAscription=111
+	//http://114.215.209.115/device/search.action?addr=地坛
 	
 	//#########MODEL########################
 	public function test($id){
@@ -144,6 +145,15 @@ class DvcModel{
 		$address=urlencode($address);
 		$url=C('javaback').'/device/updateDeviceInfo.action?id='.$dvcid.'&owner='.$owner.'&sn='.$sn.'&model='.$model.'&city='.$city.'&longitude='.$lgtd.'&latitude='.$lttd.'&address='.$address.'&peripheral='.$peripheral.'&ip='.$ip.'&serverIp='.$serverIp.'&serverPort='.$serverPort.'&pic='.$pic.'&battery='.$battery.'&status='.$status.'&capacity='.$capacity.'&listShareTime='.$listShareTime.'&user='.$user.'&isOrder='.$isOrder.'&isOwner='.$isOwner.'&version='.$version.'&path='.$path.'&time='.$time.'&week='.$week.'&paramMap='.$paramMap.'&deviceAscription='.$deviceAscription.'&groupId='.$groupId.'&deviceType='.$deviceType.'&newSn='.$newSn;
 		$json='';
+		$arr=url2arr($url,$json);
+		return $arr;
+	}
+	//http://114.215.209.115/device/search.action?addr=地坛
+	
+	//#########MODEL########################
+	public function search($addr){
+		$url=C('javaback').'/device/search.action?addr='.urlencode($addr);
+		$json='{"data":[{"id":18,"owner":6,"sn":"56725569","model":1,"city":null,"longitude":"120.202148","latitude":"30.215089","address":"地坛公园","peripheral":"","ip":"","serverIp":"","serverPort":"","pic":"","battery":0,"status":"02","capacity":2,"listShareTime":[],"user":null,"isOrder":null,"isOwner":null,"version":1001,"path":"","time":null,"week":null,"paramMap":null,"deviceAscription":1,"groupId":null,"deviceType":1,"countEnable":1,"countAll":32130,"onlineAll":0,"countTd":1015,"onlineTd":0}],"code":"A00000","msg":"获取设备列表成功"}';
 		$arr=url2arr($url,$json);
 		return $arr;
 	}

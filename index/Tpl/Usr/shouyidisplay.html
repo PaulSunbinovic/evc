@@ -40,13 +40,63 @@
 	-->
 	
 
-	<include file='Cmn:hd_green_back' />
+	<include file='Cmn:hd_green_tousrct' />
 	<div class='col-md-12 col-xs-12 nopadding' style="margin-top:50px">
-		<div class='col-md-12 col-xs-12 nopadding' style="text-align: center;background-color: 00af50;color:#fff">
-			<div style="height:300px;">
-				<div style="padding-top: 50px">昨日收益（元）</div>
-				<div>{$yestoday}</div>
+		<div class='col-md-12 col-xs-12 nopadding' style="text-align: center;background-color: #00af50;color:#fff">
+			<div style="height:220px;">
+				<div style="padding-top: 20px;font-size: 20px">昨日收益（元）</div>
+				<div style='font-size: 60px'>{$yestoday}</div>
+				<div style='font-size: 20px'>总收益（元）</div>
+				<div style='font-size: 30px'>{$total}</div>
 			</div>
+		</div>
+		<div class='col-md-12 col-xs-12 nopadding' style='background-color: #fff'><div class='col-md-2 col-xs-2 nopadding' style='font-size: 10px;height: 30px;line-height: 30px'>收益（元）</div></div>
+		<div id="container" style="min-width: 310px; height: 300px; margin: 0 auto;padding-top:20px"></div>
+		<script type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+       
+        xAxis: {
+            categories: [
+            <volist name='shouyils' id='shouyiv'>"{$shouyiv['tm']}",</volist>
+            ]
+        },
+       
+        series: [{
+            name: '',
+            data: [
+            <volist name='shouyils' id='shouyiv'>{$shouyiv['money']},</volist>
+            ]
+        }]
+    });
+});
+		</script>
+		<script src="__PUBLIC__/pblc/HIGHCHART/js/highcharts.js"></script>
+		
+		<div style="margin-top: 250px">
+			<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px;margin-top:10px'>
+				<div class='col-md-5 col-xs-5 nopadding' style='font-size: 14px'>
+					<div class='pull-left'>
+					<i class='glyphicon glyphicon-list-alt' style='color:#6f7c88'></i> 我的充电站
+					</div>
+				</div>
+				
+			</div>
+			<volist name='grpls' id='grpv'>
+			<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px;'>
+				<div class='col-md-5 col-xs-5 nopadding' style='font-size: 14px'>
+					<div class='pull-left'>
+					{$grpv['groupName']}
+					</div>
+				</div>
+				
+				<div class='col-md-7 col-xs-7 nopadding' style='font-size: 14px;color:#888' onclick="window.location.href='__URL__/shouyi_everyday/grpid/{$grpv[id]}'">
+					<div class='pull-right'>
+					<i class='glyphicon glyphicon-menu-right'></i>
+					</div>
+				</div>
+			</div>
+			</volist>
 		</div>
 	</div>
 	

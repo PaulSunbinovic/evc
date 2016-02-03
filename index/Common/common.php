@@ -92,4 +92,7 @@ function arr2strforjavascript($arr,$arr_except){
 	return $str;
 }
 
+function xiaoshu($num,$weishu){
+	return number_format($num, $weishu, '.', '');
+}
 ?>

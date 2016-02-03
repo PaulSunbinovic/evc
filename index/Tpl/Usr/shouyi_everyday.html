@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit">
+<!-- 避免IE使用兼容模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>电车惠</title>
+<script src="__PUBLIC__/pblc/btstp3/js/jquery.js"></script>
+<script src="__PUBLIC__/pblc/btstp3/js/jquery-migrate-1.1.0.min.js"></script>
+
+<!-- 移动设备 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<!-- bootstrap -->
+<link href="__PUBLIC__/pblc/btstp3/css/bootstrap.css" rel="stylesheet">
+<link href="data:text/css;charset=utf-8," data-href="__PUBLIC__/pblc/btstp3/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="__PUBLIC__/pblc/btstp3/css/patch.css" rel="stylesheet">
+<script src="__PUBLIC__/pblc/btstp3/js/ie-emulation-modes-warning.js"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="__PUBLIC__/ICON/apple-touch-icon.png">
+<link rel="icon" href="ICON/favicon.ico">
+
+
+<link href="__PUBLIC__/CSS/index/base.css" rel="stylesheet">
+
+<script type="text/javascript">var __url__='__URL__';</script>
+<link href="__PUBLIC__/CSS/index/shouyi_everyday.css" rel="stylesheet">
+</head>
+<body style='background-color: #ddd'>
+
+	
+	<!--
+	<iframe src="head.html"  frameborder="0" style="width:100%;height:100%;" scrolling="no"></iframe>
+	-->
+	
+
+	<include file='Cmn:hd_green_toshouyidisplay' />
+	<div class='col-md-12 col-xs-12 nopadding' style="margin-top:50px;background-color: #fff;">
+		<!--每日每月选择-->
+		<div class='col-md-12 col-xs-12 nopadding' style="position: fixed;top:50px;background-color: #fff;z-index: 5000">
+			<div class='col-md-12 col-xs-12 nopadding' style="height:50px;line-height: 50px;font-size: 16px;text-align: center">{$grpo['address']}</div>
+			<div class='col-md-12 col-xs-12 nopadding' style="text-align: center;padding-bottom: 10px;border-bottom:1px solid #ccc;">
+				<div class="btn-group" data-toggle="buttons">
+				  
+				  <label class="btn btn-success" style='background-color: #00af50'>
+				    <input type="checkbox" autocomplete="off"> 每日收益（元）
+				  </label>
+				  <label class="btn btn-default" onclick="window.location.href='__URL__/shouyi_everymonth/grpid/{$grpo[id]}'">
+				    <input type="checkbox" autocomplete="off"> 每月收益（元）
+				  </label>
+				</div>
+			</div>
+		</div>
+		<!--订单收益-->
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/pblc/PLDN/iscroll.css">
+		<div id='mainarea' class='col-md-12 col-xs-12' style="margin-top: 100px">
+			
+			<script type="text/javascript">var srlnb=0;//serial number</script>
+			
+        	<volist name='shouyi_everyday_ls' id='shouyi_everyday_v'>
+        		<script type="text/javascript">srlnb++;</script>
+        		<div class="col-md-12 col-xs-12 nopadding wrp">
+        			<div class='col-md-8 col-xs-8'>{$shouyi_everyday_v['time']}</div>
+        			<div class='col-md-3 col-xs-3'>{$shouyi_everyday_v['money']}</div>
+        			<div class='col-md-1 col-xs-1' onclick="window.location.href='__URL__/shouyi_daydevice/tm/{$shouyi_everyday_v[time]}'"><i class='glyphicon glyphicon-menu-right'></i></div>
+        		</div>
+        	</volist>
+					
+		</div>
+			
+		<script type="text/javascript">
+		//########初始化参数
+		var dodnfrsh='__URL__/dodnfrsh_shouyi_everyday';//do slidedown fresh
+		var doupld='__URL__/doupld_shouyi_everyday';//do slideup loading
+		var nwpg=0;//now page 当前页必然是第0页初始时候
+		var exe=1;//一上来就可以执行
+		var grpid={$grpo['id']};
+		</script>
+		<div id='loading' class='col-md-12 col-xs-12' style="text-align: center">加载中...</div>
+		<script>
+		<?php if($hasnext===1){ ?>$('#loading').html('下拉加载更多...');<?php }else{ ?>$('#loading').html('已无更多信息');<?php } ?>
+		</script>
+		<script src="__PUBLIC__/JS/index/shouyi_everyday.js"></script>
+
+	</div>
+	
+	
+	
+
+
+
+
+<!-- bootstrap -->
+<script src="__PUBLIC__/pblc/btstp3/js/bootstrap.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="__PUBLIC__/pblc/btstp3/js/ie10-viewport-bug-workaround.js"></script>
+<script type="text/javascript" src='__PUBLIC__/JS/index/base.js'></script>
+
+
+
+
+
+</body>
+</html>

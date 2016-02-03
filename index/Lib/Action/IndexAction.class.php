@@ -143,24 +143,11 @@ class IndexAction extends Action {
 	}
 
 	function dofnddvcls(){//接口失效了
-		$url=C('javaback').'/device/search.action?addr='.$_GET['ctt'];
-		if(session('openid')){
-			$openid=session('openid');
-			import('@.SS.SSAction');
-			$ss = new SSAction();
-			$usrdto=$ss->setss();
-			$str='&carModelId'.$usrdto['carList'][0]['carModelId'];
-			$url=$url.$str;
-		}
-		if(C('psnvs')==1){
-			$json='{"data":[{"id":1,"owner":2,"sn":"001","model":1,"city":null,"longitude":"121.572673","latitude":"31.212916","address":"我的位置","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},{"id":2,"owner":2,"sn":"002","model":1,"city":null,"longitude":"121.575215","latitude":"31.203762","address":"龙沟新苑桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},{"id":3,"owner":2,"sn":"003","model":1,"city":null,"longitude":"121.557141","latitude":"31.216039","address":"世纪公园桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},{"id":4,"owner":2,"sn":"004","model":1,"city":null,"longitude":"121.570077","latitude":"31.219745","address":"上海浦东嘉里大酒店桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},{"id":5,"owner":2,"sn":"005","model":1,"city":null,"longitude":"121.566699","latitude":"31.214171","address":"上海人家99短租公寓桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},{"id":6,"owner":2,"sn":"006","model":1,"city":null,"longitude":"121.581845","latitude":"31.219382","address":"汤臣湖庭花园桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},{"id":7,"owner":2,"sn":"007","model":1,"city":null,"longitude":"121.564004","latitude":"31.200898","address":"花木新村桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},{"id":8,"owner":2,"sn":"008","model":1,"city":null,"longitude":"121.506252","latitude":"31.245374","address":"上海东方明珠电视塔桩","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""},{"id":9,"owner":1,"sn":"FFFF","model":1,"city":null,"longitude":"120.208989","latitude":"30.213697","address":"钱龙大厦","peripheral":null,"ip":null,"serverIp":null,"serverPort":null,"pic":"","battery":0,"status":""}],"code":"A00000","msg":"获取设备列表成功"}';
-		}else{
-			$json=https_request($url);
-		}
-		
-		//$json=https_request($url);
-		$arr=json_decode($json,true);
-		$data['dvcls']=$arr['data'];
+		$dvc=D('Dvc');
+
+		$addr=$_GET['ctt'];
+		$arr_dvcls=$dvc->search($addr);
+		$data['dvcls']=$arr_dvcls['data'];
 		$this->ajaxReturn($data,'json');
 	}
 	
