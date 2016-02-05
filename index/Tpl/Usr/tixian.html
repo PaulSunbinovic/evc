@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit">
+<!-- 避免IE使用兼容模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>电车惠</title>
+<script src="__PUBLIC__/pblc/btstp3/js/jquery.js"></script>
+<script src="__PUBLIC__/pblc/btstp3/js/jquery-migrate-1.1.0.min.js"></script>
+
+<!-- 移动设备 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<!-- bootstrap -->
+<link href="__PUBLIC__/pblc/btstp3/css/bootstrap.css" rel="stylesheet">
+<link href="data:text/css;charset=utf-8," data-href="__PUBLIC__/pblc/btstp3/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="__PUBLIC__/pblc/btstp3/css/patch.css" rel="stylesheet">
+<script src="__PUBLIC__/pblc/btstp3/js/ie-emulation-modes-warning.js"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="__PUBLIC__/ICON/apple-touch-icon.png">
+<link rel="icon" href="ICON/favicon.ico">
+
+
+<link href="__PUBLIC__/CSS/index/base.css" rel="stylesheet">
+
+<script type="text/javascript">var __url__='__URL__';</script>
+<link href="__PUBLIC__/CSS/index/tixian.css" rel="stylesheet">
+<script type="text/javascript" src='__PUBLIC__/JS/index/tixian.js'></script>
+</head>
+<body style='background-color: #ddd'>
+	<script type="text/javascript">var dotixian='__URL__/dotixian';</script>
+	
+	<!--
+	<iframe src="head.html"  frameborder="0" style="width:100%;height:100%;" scrolling="no"></iframe>
+	-->
+	
+
+	<include file='Cmn:hd_green_back' />
+	<div class='col-md-12 col-xs-12' style="margin-top:50px;">
+		<!--每日每月选择-->
+		<div class='col-md-12 col-xs-12 nopadding' style="margin-top:16px;background-color: #fff;border-radius: 6px;">
+			<form>
+			<div class='col-md-12 col-xs-12 nopadding' style="height:50px;line-height: 50px;font-size: 18px;text-align: center;border-bottom: 1px solid #ccc"><tixian style='margin-left:30px'>提现</tixian><a class='pull-right btn btn-success' style="font-size: 18px;margin-top: 5px;margin-right: 5px;background-color: #00af50">?</a></div>
+
+			<div class='col-md-12 col-xs-12 nopadding' style="line-height: 40px;font-size: 16px;text-align: center;padding-top: 25px">
+			<div class='col-md-3 col-xs-3'>到银行卡</div>
+			<div class='col-md-9 col-xs-9' style='padding-top: 2px'><input class='form-control' placeholder='请输入正确的银行卡号' id='bankcardno' name='bankcardno'></div>
+			</div>
+
+			<div class='col-md-12 col-xs-12 nopadding' style="height:40px;line-height: 40px;font-size: 16px;text-align: center;">
+			<div class='col-md-3 col-xs-3'>姓名</div>
+			<div class='col-md-9 col-xs-9' style='padding-top: 2px'><input class='form-control' placeholder='请输入持卡人姓名' id='uname' name='uname'></div>
+			</div>
+
+			<div class='col-md-12 col-xs-12 nopadding' style="line-height: 40px;font-size: 16px;text-align: center;padding-bottom:25px;border-bottom: 1px solid #ccc ">
+			<div class='col-md-3 col-xs-3'>开户行</div>
+			<div class='col-md-9 col-xs-9' style='padding-top: 2px'><input id='bankname' class='form-control' placeholder='' name='bankname'></div>
+			</div>
+
+			<div class='col-md-12 col-xs-12 nopadding' style="line-height: 40px;font-size: 16px;text-align: center;padding-top: 25px">
+			<div class='col-md-3 col-xs-3'>提现金额</div>
+			<div class='col-md-9 col-xs-9' style='padding-top: 2px'><input class='form-control' id='withdrawvalue' name='withdrawvalue'></div>
+			</div>
+
+			<div class='col-md-12 col-xs-12 nopadding' style="height:50px;line-height: 50px;font-size: 16px;text-align: center;">
+			<div class='pull-right' style="padding-right: 30px">余额：<mny style='color:#00af50;font-size: 20px'>{$balance}</mny>&nbsp;&nbsp;元</div>
+			</div>
+
+			
+
+			<div id='gather'></div>
+			</form>
+
+			<div class='col-md-12 col-xs-12' style="line-height: 40px;font-size: 16px;text-align: center;padding-top:25px;padding-bottom:25px;text-align: center">
+			<div class='col-md-6 col-xs-6 col-md-offset-3 col-xs-offset-3 nopadding'><a class='btn btn-success btn-lg btn-block' style="background-color: #00af50" id='tixian'>提现</a></div>
+			</div>
+		</div>
+
+	</div>
+
+		
+		
+
+	
+	
+	
+	
+
+
+
+
+<!-- bootstrap -->
+<script src="__PUBLIC__/pblc/btstp3/js/bootstrap.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="__PUBLIC__/pblc/btstp3/js/ie10-viewport-bug-workaround.js"></script>
+<script type="text/javascript" src='__PUBLIC__/JS/index/base.js'></script>
+
+
+
+
+
+</body>
+</html>

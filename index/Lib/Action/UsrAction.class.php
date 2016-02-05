@@ -1856,5 +1856,55 @@ class UsrAction extends Action {
     	$this->display('shouyi_monthdevice');
     }
 
+    #######
+    public function tixian(){
+    	$usr=D('Usr');
+
+    	$openid=session('openid');
+    	$arr_usro=$usr->get($openid);
+    	$usro=$arr_usro['data']['user'];
+    	$this->assign('usro',$usro);
+
+    	//#####################查看余额
+		$arr_usraccnt=$usr->getUserAccount($openid);
+		$balance=floatval($arr_usraccnt['data']['balance']);
+		$balance=$balance/100;
+		$balance=xiaoshu($balance,2);
+		$this->assign('balance',$balance);
+
+
+    	$this->assign('ttl',$usro['nickName']);
+    	$this->display('tixian');
+
+    }
+
+    #######
+    public function dotixian(){
+    	$with=D('WithdrawRecord');
+
+    	$openid=session('openid');
+    	$uname=trim($_GET['uname']);$bankcardno=trim($_GET['bankcardno']);$bankname=trim($_GET['bankname']);$withdrawvalue=$_GET['withdrawvalue']*100;
+
+    	$arr=$with->createWithdrawRecord($uname,$openid,$bankcardno,$bankname,$withdrawvalue);
+
+    	if($arr['code']=='A00000'){$rslt=1;}else{$rslt=0;}
+    	$data['rslt']=$rslt;
+    	$data['msg']=$arr['msg'];
+    	$this->ajaxReturn($data,'json');
+
+    }
+
+    ######
+    public function tixiansuccess(){
+    	$usr=D('Usr');
+
+    	$openid=session('openid');
+    	$arr_usro=$usr->get($openid);
+    	$usro=$arr_usro['data']['user'];
+
+    	$this->assign('ttl',$usro['nickName']);
+    	$this->display('tixiansuccess');
+    }
+
     
 }
