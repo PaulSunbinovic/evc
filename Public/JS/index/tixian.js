@@ -20,7 +20,7 @@ $(function(){
             'data': $('#gather').parent().serialize(),
             'dataType': 'json',
             'success': function(data) {
-                if(data['rslt']==1){alert(data['msg']);window.href.href=__url__+'/usrct';}else{alert(data['msg']);}
+                if(data['rslt']==1){window.location.href=__url__+'/tixiansuccess';}else{alert(data['msg']);}
                 console.log("success");
             },
             'error':function() {
