@@ -46,7 +46,7 @@
 		<!--每日每月选择-->
 		<div class='col-md-12 col-xs-12 nopadding' style="margin-top:16px;background-color: #fff;border-radius: 6px;">
 			<form>
-			<div class='col-md-12 col-xs-12 nopadding' style="height:50px;line-height: 50px;font-size: 18px;text-align: center;border-bottom: 1px solid #ccc"><tixian style='margin-left:30px'>提现</tixian><a class='pull-right btn btn-success' style="font-size: 18px;margin-top: 5px;margin-right: 5px;background-color: #00af50">?</a></div>
+			<div class='col-md-12 col-xs-12 nopadding' style="height:50px;line-height: 50px;font-size: 18px;text-align: center;border-bottom: 1px solid #ccc"><tixian style='margin-left:30px'>提现</tixian><a class='pull-right btn btn-success' style="font-size: 18px;margin-top: 5px;margin-right: 5px;background-color: #00af50" id='help'>?</a></div>
 
 			<div class='col-md-12 col-xs-12 nopadding' style="line-height: 40px;font-size: 16px;text-align: center;padding-top: 25px">
 			<div class='col-md-4 col-xs-4'>到帐银行卡</div>
@@ -87,7 +87,29 @@
 		
 		
 
-	
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style='display: none' id='assist'>
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog"  style='top:100px;'>
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">提现规则</h4>
+      </div>
+      <div class="modal-body">
+        1.每月15号、30号可以提现一次<br>2.余额100元起（包括100）可以提现，少于100元不可以提现<br>3.申请成功后5个工作日内到账
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger btn-lg btn-block" data-dismiss="modal">关闭</button>
+        
+      </div>
+    </div>
+  </div>
+</div>	
 	
 	
 	

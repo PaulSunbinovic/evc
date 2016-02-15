@@ -11,6 +11,7 @@ $(function(){
 		if($.trim(bankname.val())==''){alert('开户行名称不能为空');bankname.focus();return;}
 		if($.trim(withdrawvalue.val())==''){alert('提现金额不能为空');withdrawvalue.focus();return;}
 		if(isNaN(withdrawvalue.val())==true){alert('提现金额必须是数字');withdrawvalue.focus();return;}
+        if(withdrawvalue.val()<100){alert('少于100元不可以提现');withdrawvalue.focus();return;}
 
 		$.ajax({
             'type': 'GET',
@@ -28,4 +29,8 @@ $(function(){
             }
         });
 	})
+
+    $('#help').click(function(){
+        $('#assist').trigger('click');
+    })
 })

@@ -909,6 +909,10 @@ class UsrAction extends Action {
 		
 		$this->assign('paymentls',$paymentls);
 
+		######只有每个月的15和30可以提现
+		$ri=date('d',time());
+		if($ri=='15'||$ri=='30'){$this->assign('allowtixian',1);}else{$this->assign('allowtixian',0);}
+
 		
 
 		$this->assign('ttl','我的余额');
