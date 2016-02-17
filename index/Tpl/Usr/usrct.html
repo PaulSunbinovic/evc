@@ -175,6 +175,23 @@
 	    	</volist>
 		</div>
 
+		<!--利润分成-->
+		<?php if($isInterests==true){ ?>
+		<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px;margin-top:10px'>
+			<div class='col-md-5 col-xs-5 nopadding' style='font-size: 14px'>
+				<div class='pull-left'>
+				<i class='glyphicon glyphicon-th-list' style='color:#6f7c88'></i> 收益查看
+				</div>
+			</div>
+			<div class='col-md-7 col-xs-7 nopadding' style='font-size: 14px;color:#888' onclick="window.location.href='__URL__/shouyidisplay'">
+				<div class='pull-right'>
+				<i class='glyphicon glyphicon-menu-right'></i>
+				</div>
+			</div>
+
+		</div>
+		<?php } ?>
+
 		<!--#############历史订单-->
 		<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px;margin-top:10px'>
 			<div class='col-md-5 col-xs-5 nopadding' style='font-size: 14px'>
@@ -206,22 +223,7 @@
 		</div>
 
 		 
-		<!--利润分成-->
-		<?php if($isInterests==true){ ?>
-		<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px;margin-top:10px'>
-			<div class='col-md-5 col-xs-5 nopadding' style='font-size: 14px'>
-				<div class='pull-left'>
-				<i class='glyphicon glyphicon-th-list' style='color:#6f7c88'></i> 费用清单
-				</div>
-			</div>
-			<div class='col-md-7 col-xs-7 nopadding' style='font-size: 14px;color:#888' onclick="window.location.href='__URL__/shouyidisplay'">
-				<div class='pull-right'>
-				<i class='glyphicon glyphicon-menu-right'></i>
-				</div>
-			</div>
-
-		</div>
-		<?php } ?>
+		
 		
 	</div>
 	

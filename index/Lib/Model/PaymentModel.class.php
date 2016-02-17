@@ -61,6 +61,19 @@ class PaymentModel{
 					$paymentmark='+';
 					$paymentcolor=$color_green;
 					break;
+
+
+				case 7:
+					$paymentdesc='公桩分成';
+					$paymentmark='+';
+					$paymentcolor=$color_green;
+					break;
+
+				case 8:
+					$paymentdesc='提现';
+					$paymentmark='-';
+					$paymentcolor=$color_red;
+					break;
 				
 			}
 			//#####处理时间
