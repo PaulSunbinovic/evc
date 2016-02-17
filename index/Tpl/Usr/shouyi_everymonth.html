@@ -33,7 +33,7 @@
 <link href="__PUBLIC__/CSS/index/shouyi_everymonth.css" rel="stylesheet">
 </head>
 <body style='background-color: #ddd'>
-
+	<script>var grpid="{$grpid}";</script>
 	
 	<!--
 	<iframe src="head.html"  frameborder="0" style="width:100%;height:100%;" scrolling="no"></iframe>
@@ -68,7 +68,7 @@
         		<div class="col-md-12 col-xs-12 nopadding wrp">
         			<div class='col-md-8 col-xs-8'>{$shouyi_everymonth_v['paramMap']['yearAndMonth']}</div>
         			<div class='col-md-3 col-xs-3'>{$shouyi_everymonth_v['money']}</div>
-        			<div class='col-md-1 col-xs-1' onclick="window.location.href='__URL__/shouyi_monthdevice/month/{$shouyi_everymonth_v[paramMap][yearAndMonth]}'"><i class='glyphicon glyphicon-menu-right'></i></div>
+        			<div class='col-md-1 col-xs-1' onclick="window.location.href='__URL__/shouyi_monthdevice/month/{$shouyi_everymonth_v[paramMap][yearAndMonth]}/grpid/{$grpid}'"><i class='glyphicon glyphicon-menu-right'></i></div>
         		</div>
         	</volist>
 					

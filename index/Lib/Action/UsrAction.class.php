@@ -1556,7 +1556,7 @@ class UsrAction extends Action {
     	header("Content-Type:text/html; charset=utf-8");
     	$grp=D('Group');$vbi=D('VBIncome');
 
-    	$grpid=$_GET['grpid'];
+    	$grpid=$_GET['grpid'];$this->assign('grpid',$grpid);
     	$openid=session('openid');
 
     	//寻找grpo
@@ -1597,7 +1597,7 @@ class UsrAction extends Action {
 		//####参数获取
 		$openid=session('openid');
 		$nwpg=$_GET['nwpg'];
-		$grpid=$_GET['grpid'];
+		$grpid=$_GET['grpid'];$this->assign('grpid',$grpid);
 		
 		$pg_want=(int)$nwpg+1;
 
@@ -1650,7 +1650,7 @@ class UsrAction extends Action {
     	header("Content-Type:text/html; charset=utf-8");
     	$grp=D('Group');$vbi=D('VBIncome');
 
-    	$grpid=$_GET['grpid'];
+    	$grpid=$_GET['grpid'];$this->assign('grpid',$grpid);
     	$openid=session('openid');
 
     	//寻找grpo
