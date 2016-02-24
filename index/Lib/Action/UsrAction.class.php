@@ -406,6 +406,16 @@ class UsrAction extends Action {
 			$arr_interest=$grp->isInterests($openid);
 			$this->assign('isInterests',$arr_interest['data']);
 
+			//判断他拥有的庄里头有多少个私桩
+			//获取桩
+			$arr_dvc_owner=$dvc->getByOwner(session('openid'));
+			$dvcls=$arr_dvc_owner['data'];
+			$count_private_dvc=0;
+			foreach($dvcls as $dvcv){
+				if($dvcv['deviceType']==1){$count_private_dvc++;}
+			}
+			$this->assign('count_private_dvc',$count_private_dvc);
+
 			$this->assign('ttl','个人中心');
 			$this->display('usrct');
 		}
@@ -1500,7 +1510,7 @@ class UsrAction extends Action {
     ###########收益显示
     public function shouyidisplay(){
     	header("Content-Type:text/html; charset=utf-8");
-    	$usr=D('Usr');$grp=D('Group');$vbi=D('VBIncome');
+    	$usr=D('Usr');$grp=D('Group');$vbpi=D('VBPIncome');
 
     	$openid=session('openid');
     	$arr_usro=$usr->get($openid);
@@ -1519,8 +1529,8 @@ class UsrAction extends Action {
     	$tm_sevendaysago=$tm_today-6*24*60*60;
     	$starttime=date('Y-m-d',$tm_sevendaysago);
     	$endtime=date('Y-m-d',$tm_today);
-    	$arr_vbi=$vbi->listVBIncomePerday($openid,'',$starttime,$endtime);
-    	$vbils=$arr_vbi['data'];
+    	$arr_vbpi=$vbpi->listVBPIncomePerday($openid,$starttime,$endtime);
+    	$vbpils=$arr_vbpi['data'];
     	//由于如果没有收益当天，明慧就不传信息过来，所以需要一个判断
     	$arr=array();
     	for($i=0;$i<7;$i++){
@@ -1528,7 +1538,7 @@ class UsrAction extends Action {
     		$data['tm']=date('m-d',$tm);
     		$tm_str=date('Y-m-d',$tm);
     		$flag=0;
-    		foreach($vbils as $vbiv){
+    		foreach($vbpils as $vbpiv){
     			//萃取createTime
     			if($tm_str==date('Y-m-d',strtotime($vbiv['createTime']))){
     				//说明遍历到了
@@ -1543,9 +1553,9 @@ class UsrAction extends Action {
     	$this->assign('shouyils',$arr);
 
     	//我的充电站集合
-    	$arr_grpls=$grp->selectListGroupByUser($openid);
-    	$grpls=$arr_grpls['data'];
-    	$this->assign('grpls',$grpls);
+    	$arr_gdls=$grp->selectListGroupByUser($openid);
+    	$gdls=$arr_gdls['data'];
+    	$this->assign('gdls',$gdls);
 
     	$this->assign('ttl',$usro['nickName']);
     	$this->display('shouyidisplay');
@@ -1554,20 +1564,35 @@ class UsrAction extends Action {
     #################
     public function shouyi_everyday(){
     	header("Content-Type:text/html; charset=utf-8");
-    	$grp=D('Group');$vbi=D('VBIncome');
+    	$grp=D('Group');$vbi=D('VBIncome');$vpi=D('VPIncome');$dvc=D('Dvc');
 
-    	$grpid=$_GET['grpid'];$this->assign('grpid',$grpid);
+    	$gdid=$_GET['gdid'];$this->assign('gdid',$gdid);
     	$openid=session('openid');
 
-    	//寻找grpo
-    	$arr_grpls=$grp->selectGroup($grpid);
-    	$grpo=$arr_grpls['data'][0];
-    	$this->assign('grpo',$grpo);
+    	$type=$_GET['type'];$this->assign('type',$type);
+
+    	if($type==0){
+	    	//寻找grpo
+	    	$arr_grpls=$grp->selectGroup($gdid);
+	    	$gdo=$arr_grpls['data'][0];
+	    	$ttl=$gdo['groupName'];
+	    }else if($type==1){
+	    	$arr_dvco=$dvc->get($gdid);$gdo=$arr_dvco['data'];
+	    	$ttl=$gdo['deviceName'];
+	    }
+	    $this->assign('gdo',$gdo);
 
     	//每日收益
     	//获取到今日，起始日暂定是公司起始日把，就2016年2月1日好了
     	$starttime='2015-01-01';$endtime=date('Y-m-d',time());
-    	$arr=$vbi->listVBIncomePerday($openid,$grpid,$starttime,$endtime,'',1,10);
+    	if($type==1){
+    		//私桩
+    		$arr=$vpi->listVPIncomePerday($openid,$gdid,$starttime,$endtime,'',1,10);
+    	}else{
+    		//公桩
+    		$arr=$vbi->listVBIncomePerday($openid,$gdid,$starttime,$endtime,'',1,10);
+    	}
+    	
     	$shouyi_everyday_ls=$arr['data'];
     	$arr_nw=array();
     	foreach($shouyi_everyday_ls as $shouyi_everyday_v){
@@ -1582,22 +1607,30 @@ class UsrAction extends Action {
     	}
     	$this->assign('shouyi_everyday_ls',$arr_nw);
     	//#########查看下一页有没有货
-		$arr_next=$vbi->listVBIncomePerday($openid,$grpid,$starttime,$endtime,'',2,10);
+    	if($type==1){
+    		//私桩
+    		$arr_next=$vpi->listVPIncomePerday($openid,$gdid,$starttime,$endtime,'',2,10);
+    	}else{
+    		//公桩
+    		$arr_next=$vbi->listVBIncomePerday($openid,$gdid,$starttime,$endtime,'',2,10);
+    	}
+		
 		if($arr_next['data']){
 			$this->assign('hasnext',1);
 		}
 
-    	$this->assign('ttl',$grpo['groupName']);
+    	$this->assign('ttl',$ttl);
     	$this->display('shouyi_everyday');
     }
 
     //################
 	public function doupld_shouyi_everyday(){
-		$vbi=D('VBIncome');		
+		$vbi=D('VBIncome');	$vpi=D('VPIncome');	
 		//####参数获取
 		$openid=session('openid');
 		$nwpg=$_GET['nwpg'];
-		$grpid=$_GET['grpid'];$this->assign('grpid',$grpid);
+		$gdid=$_GET['gdid'];
+		$type=$_GET['type'];
 		
 		$pg_want=(int)$nwpg+1;
 
@@ -1605,7 +1638,13 @@ class UsrAction extends Action {
 		//每日收益
     	//获取到今日，起始日暂定是公司起始日把，就2016年2月1日好了
     	$starttime='2015-01-01';$endtime=date('Y-m-d',time());
-    	$arr=$vbi->listVBIncomePerday($openid,$grpid,$starttime,$endtime,'',$pg_want+1,10);
+    	if($type==1){
+    		//私桩
+    		$arr=$vpi->listVPIncomePerday($openid,$gdid,$starttime,$endtime,'',$pg_want+1,10);
+    	}else{
+    		//公桩
+    		$arr=$vbi->listVBIncomePerday($openid,$gdid,$starttime,$endtime,'',$pg_want+1,10);
+    	}
     	$shouyi_everyday_ls=$arr['data'];
     	$arr_nw=array();
     	foreach($shouyi_everyday_ls as $shouyi_everyday_v){
@@ -1623,7 +1662,13 @@ class UsrAction extends Action {
 		if(count($shouyi_everyday_ls)!==0){
 			$rslt=1;
 			$nwpg=$pg_want;
-			$arr_next=$vbi->listVBIncomePerday($openid,$grpid,$starttime,$endtime,'',$pg_want+2,10);
+			if($type==1){
+    			//私桩
+    			$arr_next=$vpi->listVPIncomePerday($openid,$gdid,$starttime,$endtime,'',$pg_want+2,10);
+	    	}else{
+	    		//公桩
+	    		$arr_next=$vbi->listVBIncomePerday($openid,$gdid,$starttime,$endtime,'',$pg_want+2,10);
+	    	}
 			if($arr_next['data']){
 				$hasnext=1;
 			}else{
@@ -1648,20 +1693,34 @@ class UsrAction extends Action {
 	#################
     public function shouyi_everymonth(){
     	header("Content-Type:text/html; charset=utf-8");
-    	$grp=D('Group');$vbi=D('VBIncome');
+    	$grp=D('Group');$vbi=D('VBIncome');$vpi=D('VPIncome');$dvc=D('Dvc');
 
-    	$grpid=$_GET['grpid'];$this->assign('grpid',$grpid);
+    	$gdid=$_GET['gdid'];$this->assign('gdid',$gdid);
     	$openid=session('openid');
-
+    	$type=$_GET['type'];$this->assign('type',$type);
     	//寻找grpo
-    	$arr_grpls=$grp->selectGroup($grpid);
-    	$grpo=$arr_grpls['data'][0];
-    	$this->assign('grpo',$grpo);
+    	if($type==0){
+	    	//寻找grpo
+	    	$arr_grpls=$grp->selectGroup($gdid);
+	    	$gdo=$arr_grpls['data'][0];
+	    	$ttl=$gdo['groupName'];
+	    }else if($type==1){
+	    	$arr_dvco=$dvc->get($gdid);$gdo=$arr_dvco['data'];
+	    	$ttl=$gdo['deviceName'];
+	    }
+	    $this->assign('gdo',$gdo);
+    	
 
     	//每日收益
     	//获取到今日，起始日暂定是公司起始日把，就2016年2月1日好了
     	$starttime='2015-01-01';$endtime=date('Y-m-d',time());
-    	$arr=$vbi->listVBIncomePerMonth($openid,$grpid,$starttime,$endtime,1,10);
+    	if($type==1){
+    		//私桩
+    		$arr=$vpi->listVPIncomePerMonth($openid,$gdid,$starttime,$endtime,1,10);
+    	}else{
+    		//公桩
+    		$arr=$vbi->listVBIncomePerMonth($openid,$gdid,$starttime,$endtime,1,10);
+    	}
     	$shouyi_everymonth_ls=$arr['data'];
     	$arr_nw=array();
     	foreach($shouyi_everymonth_ls as $shouyi_everymonth_v){
@@ -1672,22 +1731,30 @@ class UsrAction extends Action {
     	}
     	$this->assign('shouyi_everymonth_ls',$arr_nw);
     	//#########查看下一页有没有货
-		$arr_next=$vbi->listVBIncomePerMonth($openid,$grpid,$starttime,$endtime,2,10);
-		if($arr_next['data']){
+		//#########查看下一页有没有货
+    	if($type==1){
+    		//私桩
+    		$arr_next=$vpi->listVPIncomePerMonth($openid,$gdid,$starttime,$endtime,2,10);
+    	}else{
+    		//公桩
+    		$arr_next=$vbi->listVBIncomePerMonth($openid,$gdid,$starttime,$endtime,2,10);
+    	}
+    	if($arr_next['data']){
 			$this->assign('hasnext',1);
 		}
 
-    	$this->assign('ttl',$grpo['groupName']);
+    	$this->assign('ttl',$ttl);
     	$this->display('shouyi_everymonth');
     }
 
     //################
 	public function doupld_shouyi_everymonth(){
-		$vbi=D('VBIncome');		
+		$vbi=D('VBIncome');	$vpi=D('VPIncome');	
 		//####参数获取
 		$openid=session('openid');
 		$nwpg=$_GET['nwpg'];
-		$grpid=$_GET['grpid'];
+		$gdid=$_GET['gdid'];
+		$type=$_GET['type'];
 		
 		$pg_want=(int)$nwpg+1;
 
@@ -1695,7 +1762,13 @@ class UsrAction extends Action {
 		//每日收益
     	//获取到今日，起始日暂定是公司起始日把，就2016年2月1日好了
     	$starttime='2015-01-01';$endtime=date('Y-m-d',time());
-    	$arr=$vbi->listVBIncomePerMonth($openid,$grpid,$starttime,$endtime,$pg_want+1,10);
+    	if($type==1){
+    		//私桩
+    		$arr=$vpi->listVPIncomePerMonth($openid,$gdid,$starttime,$endtime,$pg_want+1,10);
+    	}else{
+    		//公桩
+    		$arr=$vbi->listVBIncomePerMonth($openid,$gdid,$starttime,$endtime,$pg_want+1,10);
+    	}
     	$shouyi_everymonth_ls=$arr['data'];
     	$arr_nw=array();
     	foreach($shouyi_everymonth_ls as $shouyi_everymonth_v){
@@ -1709,7 +1782,13 @@ class UsrAction extends Action {
 		if(count($shouyi_everymonth_ls)!==0){
 			$rslt=1;
 			$nwpg=$pg_want;
-			$arr_next=$vbi->listVBIncomePerMonth($openid,$grpid,$starttime,$endtime,$pg_want+2,10);
+			if($type==1){
+	    		//私桩
+	    		$arr_next=$vpi->listVPIncomePerMonth($openid,$gdid,$starttime,$endtime,$pg_want+2,10);
+	    	}else{
+	    		//公桩
+	    		$arr_next=$vbi->listVBIncomePerMonth($openid,$grpid,$starttime,$endtime,$pg_want+2,10);
+	    	}
 			if($arr_next['data']){
 				$hasnext=1;
 			}else{
@@ -1734,32 +1813,54 @@ class UsrAction extends Action {
 	#################
     public function shouyi_daydevice(){
     	header("Content-Type:text/html; charset=utf-8");
-    	$grp=D('Group');$vbi=D('VBIncome');$dvc=D('Dvc');
+    	$grp=D('Group');$vbi=D('VBIncome');$vpi=D('VPIncome');$dvc=D('Dvc');
 
-    	$grpid=$_GET['grpid'];
+    	$gdid=$_GET['gdid'];
+    	$type=$_GET['type'];
     	$openid=session('openid');
     	$tm=$_GET['tm'];
     	$this->assign('tm',$tm);
 
     	//寻找grpo
-    	$arr_grpls=$grp->selectGroup($grpid);
-    	$grpo=$arr_grpls['data'][0];
-    	$this->assign('grpo',$grpo);
+    	if($type==0){
+	    	//寻找grpo
+	    	$arr_grpls=$grp->selectGroup($gdid);
+	    	$gdo=$arr_grpls['data'][0];
+	    	$ttl=$gdo['groupName'];
+	    	
+	    }else if($type==1){
+	    	$arr_dvco=$dvc->get($gdid);$gdo=$arr_dvco['data'];
+	    	$ttl=$gdo['deviceName'];
+	    }
+	    $this->assign('gdo',$gdo);
+    	
 
     	//先看当日的收益
-    	$arr=$vbi->listVBIncomePerday($openid,$grpid,$tm,$tm,'',1,10);
+    	if($type==0){
+	    	$arr=$vbi->listVBIncomePerday($openid,$gdid,$tm,$tm,'',1,10);
+	    }else if($type==1){
+	    	$arr=$vpi->listVPIncomePerday($openid,$gdid,$tm,$tm,'',1,10);
+	    	
+	    }
     	$money=$arr['data'][0]['paramMap']['perTotalMoney'];
     	$money=xiaoshu($money/100,2);
     	$this->assign('money',$money);
 
 
     	//某日某组的每个桩的收益情况
-    	$arr=$vbi->listVBIcomeDeviceByDay($openid,$grpid,$tm,$tm,1,100);
+    	if($type==0){
+	    	$arr=$vbi->listVBIcomeDeviceByDay($openid,$gdid,$tm,$tm,1,100);
+	    }else if($type==1){
+	    	$arr=$vpi->listVPIncomePerday($openid,$gdid,$tm,$tm,'',1,10);
+	    	
+	    }
+    	
     	$shouyils=$arr['data'];
     	$arr_nw=array();
     	foreach($shouyils as $shouyiv){
     		//获取桩的信息
-    		$arr_dvco=$dvc->get($shouyiv['deviceId']);
+    		if($shouyiv['deviceId']){$dvcid=$shouyiv['deviceId'];}else{$dvcid=$shouyiv['id'];}
+    		$arr_dvco=$dvc->get($dvcid);
     		$shouyiv['dvco']=$arr_dvco['data'];
     		//处理度数
     		$dushu=$shouyiv['paramMap']['perTotalNumber'];
@@ -1786,19 +1887,22 @@ class UsrAction extends Action {
 		// 	$this->assign('hasnext',1);
 		// }
 
-    	$this->assign('ttl',$grpo['groupName']);
+    	$this->assign('ttl',$ttl);
     	$this->display('shouyi_daydevice');
     }
 
     #################
     public function shouyi_monthdevice(){
     	header("Content-Type:text/html; charset=utf-8");
-    	$grp=D('Group');$vbi=D('VBIncome');$dvc=D('Dvc');
+    	$grp=D('Group');$vbi=D('VBIncome');$vpi=D('VPIncome');$dvc=D('Dvc');
 
-    	$grpid=$_GET['grpid'];
+    	$gdid=$_GET['gdid'];
+    	$type=$_GET['type'];
     	$openid=session('openid');
     	$month=$_GET['month'];
     	$this->assign('month',$month);
+
+    	
 
     	$tm=strtotime($month);
     	$yr=date('Y',$tm);$mt=date('m',$tm);
@@ -1812,24 +1916,43 @@ class UsrAction extends Action {
     	
 
     	//寻找grpo
-    	$arr_grpls=$grp->selectGroup($grpid);
-    	$grpo=$arr_grpls['data'][0];
-    	$this->assign('grpo',$grpo);
+    	if($type==0){
+	    	//寻找grpo
+	    	$arr_grpls=$grp->selectGroup($gdid);
+	    	$gdo=$arr_grpls['data'][0];
+	    	$ttl=$gdo['groupName'];
+	    	
+	    }else if($type==1){
+	    	$arr_dvco=$dvc->get($gdid);$gdo=$arr_dvco['data'];
+	    	$ttl=$gdo['deviceName'];
+	    }
+	    $this->assign('gdo',$gdo);
 
     	//先看当月的收益
-    	$arr=$vbi->listVBIncomePerMonth($openid,$grpid,$starttime,$endtime,1,10);
+    	if($type==0){
+	    	$arr=$vbi->listVBIncomePerMonth($openid,$gdid,$starttime,$endtime,1,10);
+	    }else if($type==1){
+	    	$arr=$vpi->listVPIncomePerMonth($openid,$gdid,$starttime,$endtime,1,10);
+	    	
+	    }
     	$money=$arr['data'][0]['paramMap']['perTotalMoney'];
     	$money=xiaoshu($money/100,2);
     	$this->assign('money',$money);
-
+    	
 
     	//某日某组的每个桩的收益情况
-    	$arr=$vbi->listVBIcomeDeviceByMonth($openid,$grpid,$starttime,$endtime,1,100);
+    	if($type==0){
+	    	$arr=$vbi->listVBIcomeDeviceByMonth($openid,$grpid,$starttime,$endtime,1,100);
+	    }else if($type==1){
+	    	$arr=$vpi->listVPIncomePerMonth($openid,$gdid,$starttime,$endtime,1,10);
+	    	
+	    }
+    	
     	$shouyils=$arr['data'];
     	$arr_nw=array();
     	foreach($shouyils as $shouyiv){
     		//获取桩的信息
-    		$arr_dvco=$dvc->get($shouyiv['deviceId']);
+    		if($shouyiv['deviceId']){$dvcid=$shouyiv['deviceId'];}else{$dvcid=$shouyiv['id'];}
     		$shouyiv['dvco']=$arr_dvco['data'];
     		//处理度数
     		$dushu=$shouyiv['paramMap']['perTotalNumber'];
@@ -1856,7 +1979,7 @@ class UsrAction extends Action {
 		// 	$this->assign('hasnext',1);
 		// }
 
-    	$this->assign('ttl',$grpo['groupName']);
+    	$this->assign('ttl',$ttl);
     	$this->display('shouyi_monthdevice');
     }
 

@@ -33,7 +33,7 @@
 <link href="__PUBLIC__/CSS/index/shouyi_everymonth.css" rel="stylesheet">
 </head>
 <body style='background-color: #ddd'>
-	<script>var grpid="{$grpid}";</script>
+	<script>var gdid="{$gdid}";</script>
 	
 	<!--
 	<iframe src="head.html"  frameborder="0" style="width:100%;height:100%;" scrolling="no"></iframe>
@@ -44,11 +44,11 @@
 	<div class='col-md-12 col-xs-12 nopadding' style="margin-top:50px;background-color: #fff;">
 		<!--每日每月选择-->
 		<div class='col-md-12 col-xs-12 nopadding' style="position: fixed;top:50px;background-color: #fff;z-index: 5000">
-			<div class='col-md-12 col-xs-12 nopadding' style="height:50px;line-height: 50px;font-size: 16px;text-align: center">{$grpo['address']}</div>
+			<div class='col-md-12 col-xs-12 nopadding' style="height:50px;line-height: 50px;font-size: 16px;text-align: center">{$gdo['address']}</div>
 			<div class='col-md-12 col-xs-12 nopadding' style="text-align: center;padding-bottom: 10px;border-bottom:1px solid #ccc;">
 				<div class="btn-group" data-toggle="buttons">
 				  
-				  <label class="btn btn-default" onclick="window.location.href='__URL__/shouyi_everyday/grpid/{$grpo[id]}'">
+				  <label class="btn btn-default" onclick="window.location.href='__URL__/shouyi_everyday/gdid/{$gdid}/type/{$type}'">
 				    <input type="checkbox" autocomplete="off"> 每日收益（元）
 				  </label>
 				  <label class="btn btn-success" style='background-color: #00af50'>
@@ -68,7 +68,7 @@
         		<div class="col-md-12 col-xs-12 nopadding wrp">
         			<div class='col-md-8 col-xs-8'>{$shouyi_everymonth_v['paramMap']['yearAndMonth']}</div>
         			<div class='col-md-3 col-xs-3'>{$shouyi_everymonth_v['money']}</div>
-        			<div class='col-md-1 col-xs-1' onclick="window.location.href='__URL__/shouyi_monthdevice/month/{$shouyi_everymonth_v[paramMap][yearAndMonth]}/grpid/{$grpid}'"><i class='glyphicon glyphicon-menu-right'></i></div>
+        			<div class='col-md-1 col-xs-1' onclick="window.location.href='__URL__/shouyi_monthdevice/month/{$shouyi_everymonth_v[paramMap][yearAndMonth]}/gdid/{$gdid}/type/{$type}'"><i class='glyphicon glyphicon-menu-right'></i></div>
         		</div>
         	</volist>
 					
@@ -80,7 +80,8 @@
 		var doupld='__URL__/doupld_shouyi_everymonth';//do slideup loading
 		var nwpg=0;//now page 当前页必然是第0页初始时候
 		var exe=1;//一上来就可以执行
-		var grpid={$grpo['id']};
+		var gdid={$gdid};
+		var type={$type};
 		</script>
 		<div id='loading' class='col-md-12 col-xs-12' style="text-align: center">加载中...</div>
 		<script>

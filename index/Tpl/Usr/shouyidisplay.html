@@ -82,15 +82,15 @@ $(function () {
 				</div>
 				
 			</div>
-			<volist name='grpls' id='grpv'>
+			<volist name='gdls' id='gdv'>
 			<div class='col-md-12 col-xs-12' style='border-bottom: 1px solid  #ccc;background-color: #fff;height:60px;line-height: 60px;'>
 				<div class='col-md-5 col-xs-5 nopadding' style='font-size: 14px'>
 					<div class='pull-left'>
-					{$grpv['groupName']}
+					{$gdv['groupName']}
 					</div>
 				</div>
 				
-				<div class='col-md-7 col-xs-7 nopadding' style='font-size: 14px;color:#888' onclick="window.location.href='__URL__/shouyi_everyday/grpid/{$grpv[id]}'">
+				<div class='col-md-7 col-xs-7 nopadding' style='font-size: 14px;color:#888' onclick="window.location.href='__URL__/shouyi_everyday/gdid/{$gdv[id]}/type/{$gdv[type]}'">
 					<div class='pull-right'>
 					<i class='glyphicon glyphicon-menu-right'></i>
 					</div>
