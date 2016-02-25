@@ -1540,10 +1540,10 @@ class UsrAction extends Action {
     		$flag=0;
     		foreach($vbpils as $vbpiv){
     			//萃取createTime
-    			if($tm_str==date('Y-m-d',strtotime($vbiv['createTime']))){
+    			if($tm_str==date('Y-m-d',strtotime($vbpiv['createTime']))){
     				//说明遍历到了
     				$flag=1;
-    				$money=$vbiv['paramMap']['perTotalMoney'];
+    				$money=$vbpiv['paramMap']['chartPerTotalMoney'];
     				$data['money']=xiaoshu($money/100,2);
     			}
     		}
