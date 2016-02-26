@@ -63,7 +63,7 @@ $(document).ready(function(){
                             for(var i=0;i<data['shouyi_everymonth_ls'].length;i++){
                                 var shouyi_everymonth_v=data['shouyi_everymonth_ls'][i];
                                 srlnb++;
-                                var str="<div class='col-md-12 col-xs-12 nopadding wrp'><div class='col-md-8 col-xs-8'>"+shouyi_everymonth_v['paramMap']['yearAndMonth']+"</div><div class='col-md-3 col-xs-3'>"+shouyi_everymonth_v['money']+"</div><div class='col-md-1 col-xs-1' onclick='window.location.href=\""+__url__+"/shouyi_monthdevice/month/"+shouyi_everymonth_v['paramMap']['yearAndMonth']+"/gdid/"+gdid+"/type/"+type+"\"'><i class='glyphicon glyphicon-menu-right'></i></div></div>";
+                                var str="<div class='col-md-12 col-xs-12 nopadding wrp'><div class='col-md-7 col-xs-7'>"+shouyi_everymonth_v['paramMap']['yearAndMonth']+"</div><div class='col-md-3 col-xs-3'>"+shouyi_everymonth_v['money']+"</div><div class='col-md-2 col-xs-2' onclick='window.location.href=\""+__url__+"/shouyi_monthdevice/month/"+shouyi_everymonth_v['paramMap']['yearAndMonth']+"/gdid/"+gdid+"/type/"+type+"\"'><i class='glyphicon glyphicon-menu-right'></i></div></div>";
                                 $('#mainarea').append(str);
                             }
                             nwpg=data['nwpg'];
