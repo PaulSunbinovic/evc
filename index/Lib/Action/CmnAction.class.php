@@ -102,7 +102,7 @@ class CmnAction extends Action {
 			
 		}else{
 			$mtd='url';
-			$url='https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx682ad2cc417fe8b9&redirect_uri='.C('HOST').'/oauth2_openid.php&response_type=code&scope=snsapi_base&state='.$x.'#wechat_redirect';
+			$url='https://open.weixin.qq.com/connect/oauth2/authorize?appid='.C('appid').'&redirect_uri='.C('HOST').'/oauth2_openid.php&response_type=code&scope=snsapi_base&state='.$x.'#wechat_redirect';
 		
 		}
 		
@@ -120,7 +120,7 @@ class CmnAction extends Action {
 		
 		//不管session对于openid有的没的
 		//都重新授权一遍
-		$url='https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx682ad2cc417fe8b9&redirect_uri='.C('HOST').'/oauth2_openid.php&response_type=code&scope=snsapi_base&state=qr&aaa=111#wechat_redirect';
+		$url='https://open.weixin.qq.com/connect/oauth2/authorize?appid='.C('appid').'&redirect_uri='.C('HOST').'/oauth2_openid.php&response_type=code&scope=snsapi_base&state=qr&aaa=111#wechat_redirect';
 	}
 	public function qr(){
 		$openid=session('openid');

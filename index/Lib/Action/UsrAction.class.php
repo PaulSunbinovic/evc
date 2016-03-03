@@ -198,7 +198,7 @@ class UsrAction extends Action {
 		$this->assign('sn',$sn);
 
 		if(!$openid){
-			header('location:https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx682ad2cc417fe8b9&redirect_uri='.C('HOST').'/oauth2_openid.php&response_type=code&scope=snsapi_base&state=gongzhuangmstct_'.$sn.'&connect_redirect=1#wechat_redirect');
+			header('location:https://open.weixin.qq.com/connect/oauth2/authorize?appid='.C('appid').'&redirect_uri='.C('HOST').'/oauth2_openid.php&response_type=code&scope=snsapi_base&state=gongzhuangmstct_'.$sn.'&connect_redirect=1#wechat_redirect');
 		}
 
 		

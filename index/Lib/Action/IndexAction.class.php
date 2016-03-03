@@ -117,7 +117,7 @@ class IndexAction extends Action {
 	   		}
 	   		$data['msg']=$arr_odr['msg'];
 		}else{
-			$url='https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx682ad2cc417fe8b9&redirect_uri='.C('HOST').'/oauth2_openid.php&response_type=code&scope=snsapi_base&state=regist#wechat_redirect';
+			$url='https://open.weixin.qq.com/connect/oauth2/authorize?appid='.C('appid').'&redirect_uri='.C('HOST').'/oauth2_openid.php&response_type=code&scope=snsapi_base&state=regist#wechat_redirect';
 			$data['url']=$url;
 			$data['rslt']='norgst';
 		}

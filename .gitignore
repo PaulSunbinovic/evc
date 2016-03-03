@@ -3,3 +3,8 @@ index/Runtime/
 index/wxpay/logs/
 access_token.json
 jsapi_ticket.json
+index/Conf/
+getWxInfo.php
+oauth2_openid.php
+wxpay/lib/WxPay.Config.php
+wxpay/cert/
