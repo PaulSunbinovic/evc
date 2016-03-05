@@ -70,6 +70,7 @@ class UsrAction extends Action {
 		$headImgUrl=$_GET['headImgUrl'];
 		$nickName=$_GET['nickName'];
 		$mobile=$_GET['mobile'];
+		$wechatVersion=C('wechatVersion');
 		
 		//由于昵称可能会有空格，需要把空格给呵呵哒
 		$nickName=str_replace(' ', '+', $nickName);
