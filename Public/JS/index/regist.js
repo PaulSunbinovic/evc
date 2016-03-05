@@ -60,12 +60,14 @@ $(function () {
                 if(data['rslt']=='ok'){
                 	gotourl=data.url;
                 	$('#modal').trigger('click');
-                }               
+                }else if(data['rslt']=='mok'){
+                	gotourl=data.url;
+                }              
 				
                 console.log("success");
             },
             'error':function() {
-                    console.log("error");
+                console.log("error");
             }
         });
 		

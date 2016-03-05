@@ -97,6 +97,9 @@ class UsrAction extends Action {
 			if($arr['code']=='A00000'){
 				session('openid',$wechatId);
 				$data['rslt']='ok';
+			}else if($arr['code']=='A00005'){
+				session('openid',$wechatId);
+				$data['rslt']='mok';//migrant ok
 			}else{
 				$data['rslt']='error';
 			}
@@ -1503,6 +1506,7 @@ class UsrAction extends Action {
 
     	$arr_usraccnt=$usr->getUserAccount($openid);
 		$data['balance']=$arr_usraccnt['data']['balance'];
+		$data['host']=C('HOST');
 
 		$this->ajaxReturn($data,'json');
     

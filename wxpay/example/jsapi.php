@@ -154,7 +154,7 @@ function checkmoney(){
 	        'success': function(data) {
 	        	var balance=data['balance'];
 	        	if(balance==money_should){
-	        		window.location.href='http://www.evchar.cn/evc/index.php/Usr/usrct/';
+	        		window.location.href=data['host']+'/index.php/Usr/usrct/';
 	        	}
 	        	console.log("success");
 	        },
