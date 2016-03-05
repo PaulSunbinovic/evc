@@ -81,7 +81,7 @@ class UsrAction extends Action {
         $vrfo=$vrf->where("openid='".$wechatId."'")->find();
         if($vrfo['vrfnb']==$vrfnb){
             $url=C('javaback').'/user/init.action';
-			$url=$url.'?wechatId='.$wechatId.'&headImgUrl='.$headImgUrl.'&nickName='.$nickName.'&mobile='.$mobile;
+			$url=$url.'?wechatId='.$wechatId.'&headImgUrl='.$headImgUrl.'&nickName='.$nickName.'&mobile='.$mobile.'&wechatVersion='.$wechatVersion;
 			if(C('psnvs')==1){
 				$json='{"data":[],"code":"A00000","msg":"注册成功"}';
 			}else{
