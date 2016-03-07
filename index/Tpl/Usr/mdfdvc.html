@@ -5,7 +5,7 @@
 <meta name="renderer" content="webkit">
 <!-- 避免IE使用兼容模式 -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>电车惠</title>
+<title><?php echo C('global_title') ?></title>
 <script src="__PUBLIC__/pblc/btstp3/js/jquery.js"></script>
 <script src="__PUBLIC__/pblc/btstp3/js/jquery-migrate-1.1.0.min.js"></script>
 
@@ -153,7 +153,7 @@
 			<script>$('#groupid').val("{$dvco['groupId']}");</script>
 			设备归属：
 			<select class='form-control' id='deviceAscription'>
-				<option value='1'>电车惠</option>
+				<option value='1'><?php echo C('global_title') ?></option>
 				<option value='2'>车友会</option>
 			</select>
 			<script>$('#deviceAscription').val("{$dvco['deviceAscription']}");</script>
