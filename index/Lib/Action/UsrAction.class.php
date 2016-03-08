@@ -109,7 +109,7 @@ class UsrAction extends Action {
 
 			
 			$data['msg']=$msg;
-			$data['url']=__URL__.'/'.$_GET['x'];
+			$data['url']=__URL__.'/usrct';
 
 			$this->ajaxReturn($data,'json');
            

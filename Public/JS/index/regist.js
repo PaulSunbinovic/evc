@@ -60,9 +60,13 @@ $(function () {
                 if(data['rslt']=='ok'){
                 	gotourl=data.url;
                 	$('#modal').trigger('click');
+                	window.location.href=gotourl;
                 }else if(data['rslt']=='mok'){
                 	gotourl=data.url;
-                }              
+                	window.location.href=gotourl;
+                }else{
+                	alert(data['msg']);
+                }           
 				
                 console.log("success");
             },
